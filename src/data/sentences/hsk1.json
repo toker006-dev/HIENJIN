@@ -1,0 +1,349 @@
+[
+  {
+    "id": "hsk1-爱",
+    "level": 1,
+    "target": "爱",
+    "words": [
+      "我",
+      "爱",
+      "你"
+    ],
+    "lao": "ຂ້ອຍຮັກເຈົ້າ",
+    "info": {
+      "pinyin": "ài",
+      "pos": "verb",
+      "meaningLao": "ຮັກ"
+    }
+  },
+  {
+    "id": "hsk1-八",
+    "level": 1,
+    "target": "八",
+    "words": [
+      "他",
+      "有",
+      "八",
+      "本",
+      "书"
+    ],
+    "lao": "ລາວມີປຶ້ມແປດຫົວ",
+    "info": {
+      "pinyin": "bā",
+      "pos": "numeral",
+      "meaningLao": "ແປດ"
+    }
+  },
+  {
+    "id": "hsk1-爸爸",
+    "level": 1,
+    "target": "爸爸",
+    "words": [
+      "我",
+      "爸爸",
+      "是",
+      "医生"
+    ],
+    "lao": "ພໍ່ຂອງຂ້ອຍເປັນທ່ານໝໍ",
+    "info": {
+      "pinyin": "bàba",
+      "pos": "noun",
+      "meaningLao": "ພໍ່"
+    }
+  },
+  {
+    "id": "hsk1-杯子",
+    "level": 1,
+    "target": "杯子",
+    "words": [
+      "这",
+      "个",
+      "杯子",
+      "很",
+      "漂亮"
+    ],
+    "lao": "ຈອກໜ່ວຍນີ້ງາມຫຼາຍ",
+    "info": {
+      "pinyin": "bēizi",
+      "pos": "noun",
+      "meaningLao": "ຈອກ"
+    }
+  },
+  {
+    "id": "hsk1-北京",
+    "level": 1,
+    "target": "北京",
+    "words": [
+      "我",
+      "想",
+      "去",
+      "北京"
+    ],
+    "lao": "ຂ້ອຍຢາກໄປປັກກິ່ງ",
+    "info": {
+      "pinyin": "Běijīng",
+      "pos": "noun",
+      "meaningLao": "ປັກກິ່ງ"
+    }
+  },
+  {
+    "id": "hsk1-本",
+    "level": 1,
+    "target": "本",
+    "words": [
+      "我",
+      "想",
+      "买",
+      "一",
+      "本",
+      "书"
+    ],
+    "lao": "ຂ້ອຍຢາກຊື້ປຶ້ມຫົວໜຶ່ງ",
+    "info": {
+      "pinyin": "běn",
+      "pos": "measure word",
+      "meaningLao": "ຫົວ"
+    }
+  },
+  {
+    "id": "hsk1-不",
+    "level": 1,
+    "target": "不",
+    "words": [
+      "我",
+      "不",
+      "喝",
+      "茶"
+    ],
+    "lao": "ຂ້ອຍບໍ່ດື່ມຊາ",
+    "info": {
+      "pinyin": "bù",
+      "pos": "adverb",
+      "meaningLao": "ບໍ່"
+    }
+  },
+  {
+    "id": "hsk1-不客气",
+    "level": 1,
+    "target": "不客气",
+    "words": [
+      "不客气",
+      "请",
+      "坐"
+    ],
+    "lao": "ບໍ່ເປັນຫຍັງ, ເຊີນນັ່ງ",
+    "info": {
+      "pinyin": "bùkèqi",
+      "pos": "phrase",
+      "meaningLao": "ບໍ່ເປັນຫຍັງ"
+    }
+  },
+  {
+    "id": "hsk1-菜",
+    "level": 1,
+    "target": "菜",
+    "words": [
+      "你",
+      "想",
+      "吃",
+      "什么",
+      "菜"
+    ],
+    "lao": "ເຈົ້າຢາກກິນອາຫານຫຍັງ",
+    "info": {
+      "pinyin": "cài",
+      "pos": "noun",
+      "meaningLao": "ອາຫານ"
+    }
+  },
+  {
+    "id": "hsk1-茶",
+    "level": 1,
+    "target": "茶",
+    "words": [
+      "你",
+      "想",
+      "喝",
+      "茶",
+      "吗"
+    ],
+    "lao": "ເຈົ້າຢາກດື່ມນ້ຳຊາບໍ່",
+    "info": {
+      "pinyin": "chá",
+      "pos": "noun",
+      "meaningLao": "ຊາ"
+    }
+  },
+  {
+    "id": "hsk1-吃",
+    "level": 1,
+    "target": "吃",
+    "words": [
+      "我",
+      "喜欢",
+      "吃",
+      "水果"
+    ],
+    "lao": "ຂ້ອຍມັກກິນໝາກໄມ້",
+    "info": {
+      "pinyin": "chī",
+      "pos": "verb",
+      "meaningLao": "ກິນ"
+    }
+  },
+  {
+    "id": "hsk1-出租车",
+    "level": 1,
+    "target": "出租车",
+    "words": [
+      "他",
+      "坐",
+      "出租车",
+      "回",
+      "家"
+    ],
+    "lao": "ລາວຂີ່ລົດແທັກຊີກັບບ້ານ",
+    "info": {
+      "pinyin": "chūzūchē",
+      "pos": "noun",
+      "meaningLao": "ແທັກຊີ"
+    }
+  },
+  {
+    "id": "hsk1-打电话",
+    "level": 1,
+    "target": "打电话",
+    "words": [
+      "他",
+      "在",
+      "打电话"
+    ],
+    "lao": "ລາວກຳລັງໂທລະສັບຢູ່",
+    "info": {
+      "pinyin": "dǎdiànhuà",
+      "pos": "verb",
+      "meaningLao": "ໂທໂທລະສັບ"
+    }
+  },
+  {
+    "id": "hsk1-大",
+    "level": 1,
+    "target": "大",
+    "words": [
+      "这",
+      "个",
+      "学校",
+      "很",
+      "大"
+    ],
+    "lao": "ໂຮງຮຽນນີ້ໃຫຍ່ຫຼາຍ",
+    "info": {
+      "pinyin": "dà",
+      "pos": "adjective",
+      "meaningLao": "ໃຫຍ່"
+    }
+  },
+  {
+    "id": "hsk1-的",
+    "level": 1,
+    "target": "的",
+    "words": [
+      "这",
+      "是",
+      "我",
+      "的",
+      "电脑"
+    ],
+    "lao": "ນີ້ແມ່ນຄອມພິວເຕີຂອງຂ້ອຍ",
+    "info": {
+      "pinyin": "de",
+      "pos": "particle",
+      "meaningLao": "ຂອງ"
+    }
+  },
+  {
+    "id": "hsk1-点",
+    "level": 1,
+    "target": "点",
+    "words": [
+      "现在",
+      "几",
+      "点",
+      "了"
+    ],
+    "lao": "ຕອນນີ້ຈັກໂມງແລ້ວ",
+    "info": {
+      "pinyin": "diǎn",
+      "pos": "noun",
+      "meaningLao": "ໂມງ"
+    }
+  },
+  {
+    "id": "hsk1-电脑",
+    "level": 1,
+    "target": "电脑",
+    "words": [
+      "桌子",
+      "上",
+      "有",
+      "电脑"
+    ],
+    "lao": "ຢູ່ເທິງໂຕະມີຄອມພິວເຕີ",
+    "info": {
+      "pinyin": "diànnǎo",
+      "pos": "noun",
+      "meaningLao": "ຄອມພິວເຕີ"
+    }
+  },
+  {
+    "id": "hsk1-电视",
+    "level": 1,
+    "target": "电视",
+    "words": [
+      "我",
+      "喜欢",
+      "看",
+      "电视"
+    ],
+    "lao": "ຂ້ອຍມັກເບິ່ງໂທລະພາບ",
+    "info": {
+      "pinyin": "diànshì",
+      "pos": "noun",
+      "meaningLao": "ໂທລະພາບ"
+    }
+  },
+  {
+    "id": "hsk1-电影",
+    "level": 1,
+    "target": "电影",
+    "words": [
+      "我",
+      "想",
+      "看",
+      "电影"
+    ],
+    "lao": "ຂ້ອຍຢາກເບິ່ງຮູບເງົາ",
+    "info": {
+      "pinyin": "diànyǐng",
+      "pos": "noun",
+      "meaningLao": "ຮູບເງົາ"
+    }
+  },
+  {
+    "id": "hsk1-东西",
+    "level": 1,
+    "target": "东西",
+    "words": [
+      "你",
+      "想",
+      "买",
+      "什么",
+      "东西"
+    ],
+    "lao": "ເຈົ້າຢາກຊື້ເຄື່ອງຫຍັງ",
+    "info": {
+      "pinyin": "dōngxi",
+      "pos": "noun",
+      "meaningLao": "ສິ່ງຂອງ"
+    }
+  }
+]

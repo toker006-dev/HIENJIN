@@ -1,0 +1,2890 @@
+[
+  {
+    "word": "阿姨",
+    "pinyin": "ā yí",
+    "meanings": [
+      "maternal aunt",
+      "step-mother",
+      "childcare worker",
+      "nursemaid",
+      "woman of similar age to one's parents (term of address used by child)"
+    ]
+  },
+  {
+    "word": "啊",
+    "pinyin": "ā",
+    "meanings": [
+      "interjection of surprise",
+      "Ah!",
+      "Oh!",
+      "interjection expressing doubt or requiring answer",
+      "Eh?",
+      "what?",
+      "interjection of surprise or doubt",
+      "Eh?",
+      "My!",
+      "what's up?",
+      "interjection or grunt of agreement",
+      "uhm",
+      "Ah, OK",
+      "expression of recognition",
+      "Oh, it's you!",
+      "modal particle ending sentence, showing affirmation, approval, or consent"
+    ]
+  },
+  {
+    "word": "矮",
+    "pinyin": "ǎi",
+    "meanings": [
+      "low",
+      "short (in length)"
+    ]
+  },
+  {
+    "word": "爱好",
+    "pinyin": "ài hào",
+    "meanings": [
+      "to like; to be fond of; to take pleasure in; to be keen on",
+      "interest; hobby"
+    ]
+  },
+  {
+    "word": "安静",
+    "pinyin": "ān jìng",
+    "meanings": [
+      "quiet",
+      "peaceful",
+      "calm"
+    ]
+  },
+  {
+    "word": "把",
+    "pinyin": "bǎ",
+    "meanings": [
+      "to hold; to grasp",
+      "to hold a baby in position to help it urinate or defecate",
+      "handlebar",
+      "classifier: handful, bundle, bunch",
+      "classifier for things with handles",
+      "(used to put the object before the verb: 把 + {noun} + {verb})",
+      "handle"
+    ]
+  },
+  {
+    "word": "班",
+    "pinyin": "Bān",
+    "meanings": [
+      "surname Ban",
+      "team; class; grade",
+      "(military) squad",
+      "work shift",
+      "classifier for groups of people and scheduled transport vehicles"
+    ]
+  },
+  {
+    "word": "搬",
+    "pinyin": "bān",
+    "meanings": [
+      "to move (i.e. relocate oneself)",
+      "to move (sth relatively heavy or bulky)",
+      "to shift",
+      "to copy indiscriminately"
+    ]
+  },
+  {
+    "word": "办法",
+    "pinyin": "bàn fǎ",
+    "meanings": [
+      "means",
+      "method",
+      "way (of doing sth)"
+    ]
+  },
+  {
+    "word": "办公室",
+    "pinyin": "bàn gōng shì",
+    "meanings": [
+      "office",
+      "business premises",
+      "bureau"
+    ]
+  },
+  {
+    "word": "半",
+    "pinyin": "bàn",
+    "meanings": [
+      "half",
+      "semi-",
+      "incomplete",
+      "(after a number) and a half"
+    ]
+  },
+  {
+    "word": "帮忙",
+    "pinyin": "bāng máng",
+    "meanings": [
+      "to help",
+      "to lend a hand",
+      "to do a favor",
+      "to do a good turn"
+    ]
+  },
+  {
+    "word": "包",
+    "pinyin": "Bāo",
+    "meanings": [
+      "surname Bao",
+      "to cover",
+      "to wrap",
+      "to hold",
+      "to include",
+      "to take charge of",
+      "to contract (to or for)",
+      "package",
+      "wrapper",
+      "container",
+      "bag",
+      "to hold or embrace",
+      "bundle",
+      "packet"
+    ]
+  },
+  {
+    "word": "饱",
+    "pinyin": "bǎo",
+    "meanings": [
+      "to eat till full",
+      "satisfied"
+    ]
+  },
+  {
+    "word": "北方",
+    "pinyin": "běi fāng",
+    "meanings": [
+      "north",
+      "the northern part a country",
+      "China north of the Yellow River"
+    ]
+  },
+  {
+    "word": "被",
+    "pinyin": "bèi",
+    "meanings": [
+      "quilt",
+      "to cover (with)",
+      "(literary) to suffer (a misfortune)",
+      "used to indicate passive voice (placed before the doer of the action like \"by\" in English passive-voice sentences, or, if the doer is not mentioned, before the verb)",
+      "(since c. 2009) (sarcastic or jocular) used to indicate that the following word should be regarded as being in air quotes (as in 被旅游 to \"go on a trip\", for example)"
+    ]
+  },
+  {
+    "word": "鼻子",
+    "pinyin": "bí zi",
+    "meanings": [
+      "nose"
+    ]
+  },
+  {
+    "word": "比较",
+    "pinyin": "bǐ jiào",
+    "meanings": [
+      "to compare",
+      "to contrast",
+      "comparatively",
+      "relatively",
+      "quite",
+      "comparison"
+    ]
+  },
+  {
+    "word": "比赛",
+    "pinyin": "bǐ sài",
+    "meanings": [
+      "competition (sports etc)",
+      "match",
+      "to compete"
+    ]
+  },
+  {
+    "word": "必须",
+    "pinyin": "bì xū",
+    "meanings": [
+      "to have to",
+      "must",
+      "compulsory",
+      "necessarily"
+    ]
+  },
+  {
+    "word": "变化",
+    "pinyin": "biàn huà",
+    "meanings": [
+      "(intransitive) to change; to vary",
+      "change; variation"
+    ]
+  },
+  {
+    "word": "表示",
+    "pinyin": "biǎo shì",
+    "meanings": [
+      "to express",
+      "to show",
+      "to say",
+      "to state",
+      "to indicate",
+      "to mean"
+    ]
+  },
+  {
+    "word": "表演",
+    "pinyin": "biǎo yǎn",
+    "meanings": [
+      "play",
+      "show",
+      "performance",
+      "exhibition",
+      "to perform",
+      "to act",
+      "to demonstrate"
+    ]
+  },
+  {
+    "word": "别人",
+    "pinyin": "bié ren",
+    "meanings": [
+      "other people; others; other person"
+    ]
+  },
+  {
+    "word": "宾馆",
+    "pinyin": "bīn guǎn",
+    "meanings": [
+      "guesthouse",
+      "lodge",
+      "hotel"
+    ]
+  },
+  {
+    "word": "冰箱",
+    "pinyin": "bīng xiāng",
+    "meanings": [
+      "icebox",
+      "freezer cabinet",
+      "refrigerator"
+    ]
+  },
+  {
+    "word": "才",
+    "pinyin": "cái",
+    "meanings": [
+      "ability; talent",
+      "sb of a certain type",
+      "a capable individual",
+      "then and only then",
+      "just now",
+      "(before an expression of quantity) only",
+      "(variant of 才) just now",
+      "(variant of 才) (before an expression of quantity) only"
+    ]
+  },
+  {
+    "word": "菜单",
+    "pinyin": "cài dān",
+    "meanings": [
+      "menu"
+    ]
+  },
+  {
+    "word": "参加",
+    "pinyin": "cān jiā",
+    "meanings": [
+      "to participate",
+      "to take part",
+      "to join"
+    ]
+  },
+  {
+    "word": "草",
+    "pinyin": "cǎo",
+    "meanings": [
+      "variant of 草",
+      "grass",
+      "straw",
+      "manuscript",
+      "draft (of a document)",
+      "careless",
+      "rough",
+      "variant of 肏"
+    ]
+  },
+  {
+    "word": "层",
+    "pinyin": "céng",
+    "meanings": [
+      "to pile on top of one another",
+      "layer; stratum",
+      "floor (of a building); story",
+      "(math.) sheaf",
+      "classifier for layers"
+    ]
+  },
+  {
+    "word": "差",
+    "pinyin": "chā",
+    "meanings": [
+      "difference; discrepancy",
+      "(math.) difference (amount remaining after a subtraction)",
+      "(literary) a little; somewhat; slightly",
+      "different",
+      "wrong; mistaken",
+      "to fall short; to lack",
+      "not up to standard; inferior",
+      "Taiwan pr. [chā]",
+      "to send (on an errand)",
+      "(archaic) person sent on such an errand",
+      "job; official post",
+      "used in 参差"
+    ]
+  },
+  {
+    "word": "超市",
+    "pinyin": "chāo shì",
+    "meanings": [
+      "supermarket (abbr. for 超级市场)"
+    ]
+  },
+  {
+    "word": "衬衫",
+    "pinyin": "chèn shān",
+    "meanings": [
+      "shirt",
+      "blouse"
+    ]
+  },
+  {
+    "word": "成绩",
+    "pinyin": "chéng jì",
+    "meanings": [
+      "achievement",
+      "performance records",
+      "grades"
+    ]
+  },
+  {
+    "word": "城市",
+    "pinyin": "chéng shì",
+    "meanings": [
+      "city; town"
+    ]
+  },
+  {
+    "word": "迟到",
+    "pinyin": "chí dào",
+    "meanings": [
+      "to arrive late"
+    ]
+  },
+  {
+    "word": "出现",
+    "pinyin": "chū xiàn",
+    "meanings": [
+      "to appear",
+      "to arise",
+      "to emerge",
+      "to show up"
+    ]
+  },
+  {
+    "word": "除了",
+    "pinyin": "chú le",
+    "meanings": [
+      "besides",
+      "apart from (... also...)",
+      "in addition to",
+      "except (for)"
+    ]
+  },
+  {
+    "word": "厨房",
+    "pinyin": "chú fáng",
+    "meanings": [
+      "kitchen"
+    ]
+  },
+  {
+    "word": "春",
+    "pinyin": "chūn",
+    "meanings": [
+      "old variant of 春",
+      "surname Chun",
+      "spring (season)",
+      "gay",
+      "joyful",
+      "youthful",
+      "love",
+      "lust",
+      "life"
+    ]
+  },
+  {
+    "word": "词语",
+    "pinyin": "cí yǔ",
+    "meanings": [
+      "word (general term including monosyllables through to short phrases)",
+      "term (e.g. technical term)",
+      "expression"
+    ]
+  },
+  {
+    "word": "聪明",
+    "pinyin": "cōng ming",
+    "meanings": [
+      "intelligent",
+      "clever",
+      "bright",
+      "smart",
+      "acute (of sight and hearing)"
+    ]
+  },
+  {
+    "word": "打扫",
+    "pinyin": "dǎ sǎo",
+    "meanings": [
+      "to clean",
+      "to sweep"
+    ]
+  },
+  {
+    "word": "打算",
+    "pinyin": "dǎ suàn",
+    "meanings": [
+      "to plan",
+      "to intend",
+      "to calculate",
+      "plan",
+      "intention",
+      "calculation"
+    ]
+  },
+  {
+    "word": "带",
+    "pinyin": "dài",
+    "meanings": [
+      "band",
+      "belt",
+      "girdle",
+      "ribbon",
+      "tire",
+      "area",
+      "zone",
+      "region",
+      "to wear",
+      "to carry",
+      "to take along",
+      "to bear (i.e. to have)",
+      "to lead",
+      "to bring",
+      "to look after",
+      "to raise"
+    ]
+  },
+  {
+    "word": "担心",
+    "pinyin": "dān xīn",
+    "meanings": [
+      "anxious",
+      "worried",
+      "uneasy",
+      "to worry",
+      "to be anxious"
+    ]
+  },
+  {
+    "word": "蛋糕",
+    "pinyin": "dàn gāo",
+    "meanings": [
+      "cake"
+    ]
+  },
+  {
+    "word": "当然",
+    "pinyin": "dāng rán",
+    "meanings": [
+      "only natural",
+      "as it should be",
+      "certainly",
+      "of course",
+      "without doubt"
+    ]
+  },
+  {
+    "word": "地",
+    "pinyin": "de",
+    "meanings": [
+      "-ly",
+      "structural particle: used before a verb or adjective, linking it to preceding modifying adverbial adjunct",
+      "earth",
+      "ground",
+      "field",
+      "place",
+      "land"
+    ]
+  },
+  {
+    "word": "地方",
+    "pinyin": "dì fāng",
+    "meanings": [
+      "region",
+      "regional (away from the central administration)",
+      "local",
+      "area",
+      "place",
+      "space",
+      "room",
+      "territory"
+    ]
+  },
+  {
+    "word": "地铁",
+    "pinyin": "dì tiě",
+    "meanings": [
+      "underground railway; subway",
+      "subway train"
+    ]
+  },
+  {
+    "word": "地图",
+    "pinyin": "dì tú",
+    "meanings": [
+      "map"
+    ]
+  },
+  {
+    "word": "灯",
+    "pinyin": "dēng",
+    "meanings": [
+      "lamp",
+      "light",
+      "lantern"
+    ]
+  },
+  {
+    "word": "低",
+    "pinyin": "dī",
+    "meanings": [
+      "low",
+      "beneath",
+      "to lower (one's head)",
+      "to let droop",
+      "to hang down",
+      "to incline"
+    ]
+  },
+  {
+    "word": "电梯",
+    "pinyin": "diàn tī",
+    "meanings": [
+      "elevator",
+      "escalator"
+    ]
+  },
+  {
+    "word": "电子",
+    "pinyin": "diàn zǐ",
+    "meanings": [
+      "electronic",
+      "electron (particle physics)"
+    ]
+  },
+  {
+    "word": "东",
+    "pinyin": "Dōng",
+    "meanings": [
+      "surname Dong",
+      "east",
+      "host (i.e. sitting on east side of guest)",
+      "landlord"
+    ]
+  },
+  {
+    "word": "冬",
+    "pinyin": "dōng",
+    "meanings": [
+      "winter",
+      "surname Dong",
+      "(onom.) beating a drum",
+      "rat-a-tat"
+    ]
+  },
+  {
+    "word": "动物",
+    "pinyin": "dòng wù",
+    "meanings": [
+      "animal"
+    ]
+  },
+  {
+    "word": "短",
+    "pinyin": "duǎn",
+    "meanings": [
+      "short",
+      "brief",
+      "to lack",
+      "weak point",
+      "fault"
+    ]
+  },
+  {
+    "word": "段",
+    "pinyin": "Duàn",
+    "meanings": [
+      "surname Duan",
+      "paragraph",
+      "section",
+      "segment",
+      "stage (of a process)",
+      "classifier for stories, periods of time, lengths of thread etc"
+    ]
+  },
+  {
+    "word": "锻炼",
+    "pinyin": "duàn liàn",
+    "meanings": [
+      "to toughen",
+      "to temper",
+      "to engage in physical exercise",
+      "to work out",
+      "(fig.) to develop one's skills",
+      "to train oneself"
+    ]
+  },
+  {
+    "word": "多么",
+    "pinyin": "duō me",
+    "meanings": [
+      "how (wonderful etc)",
+      "what (a great idea etc)",
+      "however (difficult it may be etc)",
+      "(in interrogative sentences) how (much etc)",
+      "to what extent"
+    ]
+  },
+  {
+    "word": "饿",
+    "pinyin": "è",
+    "meanings": [
+      "to be hungry",
+      "hungry",
+      "to starve (sb)"
+    ]
+  },
+  {
+    "word": "而且",
+    "pinyin": "ér qiě",
+    "meanings": [
+      "(not only ...) but also",
+      "moreover",
+      "in addition",
+      "furthermore"
+    ]
+  },
+  {
+    "word": "耳朵",
+    "pinyin": "ěr duo",
+    "meanings": [
+      "ear",
+      "handle (on a cup)"
+    ]
+  },
+  {
+    "word": "发烧",
+    "pinyin": "fā shāo",
+    "meanings": [
+      "to have a high temperature (from illness)",
+      "to have a fever"
+    ]
+  },
+  {
+    "word": "发现",
+    "pinyin": "fā xiàn",
+    "meanings": [
+      "to notice; to become aware of",
+      "to discover; to find; to detect",
+      "a discovery"
+    ]
+  },
+  {
+    "word": "方便",
+    "pinyin": "fāng biàn",
+    "meanings": [
+      "convenient",
+      "suitable",
+      "to facilitate",
+      "to make things easy",
+      "having money to spare",
+      "(euphemism) to relieve oneself"
+    ]
+  },
+  {
+    "word": "放",
+    "pinyin": "fàng",
+    "meanings": [
+      "to put",
+      "to place",
+      "to release",
+      "to free",
+      "to let go",
+      "to let out",
+      "to set off (fireworks)"
+    ]
+  },
+  {
+    "word": "放心",
+    "pinyin": "fàng xīn",
+    "meanings": [
+      "to feel relieved",
+      "to feel reassured",
+      "to be at ease"
+    ]
+  },
+  {
+    "word": "分",
+    "pinyin": "fēn",
+    "meanings": [
+      "to divide; to separate",
+      "to distribute; to allocate",
+      "to distinguish (good and bad)",
+      "(bound form) branch of (an organization); sub- (as in 局)",
+      "fraction",
+      "one tenth (of certain units)",
+      "unit of length equivalent to 0.33 cm",
+      "minute (unit of time)",
+      "minute (angular measurement unit)",
+      "a point (in sports or games)",
+      "0.01 yuan (unit of money)",
+      "part",
+      "share",
+      "ingredient",
+      "component"
+    ]
+  },
+  {
+    "word": "附近",
+    "pinyin": "fù jìn",
+    "meanings": [
+      "nearby; neighboring",
+      "(in the) vicinity (of); neighborhood"
+    ]
+  },
+  {
+    "word": "复习",
+    "pinyin": "fù xí",
+    "meanings": [
+      "to review",
+      "revision",
+      "variant of 复习"
+    ]
+  },
+  {
+    "word": "敢",
+    "pinyin": "gǎn",
+    "meanings": [
+      "to dare",
+      "daring",
+      "(polite) may I venture"
+    ]
+  },
+  {
+    "word": "感冒",
+    "pinyin": "gǎn mào",
+    "meanings": [
+      "to catch cold",
+      "(common) cold",
+      "(coll.) to be interested in (often used in the negative)",
+      "(Tw) to detest",
+      "can't stand"
+    ]
+  },
+  {
+    "word": "干净",
+    "pinyin": "gān jìng",
+    "meanings": [
+      "clean",
+      "neat"
+    ]
+  },
+  {
+    "word": "刚才",
+    "pinyin": "gāng cái",
+    "meanings": [
+      "just now",
+      "a moment ago",
+      "just now (variant of 刚才)"
+    ]
+  },
+  {
+    "word": "根据",
+    "pinyin": "gēn jù",
+    "meanings": [
+      "according to",
+      "based on",
+      "basis",
+      "foundation"
+    ]
+  },
+  {
+    "word": "跟",
+    "pinyin": "gēn",
+    "meanings": [
+      "heel",
+      "to follow closely",
+      "to go with",
+      "(of a woman) to marry sb",
+      "with",
+      "compared with",
+      "to",
+      "towards",
+      "and (joining two nouns)"
+    ]
+  },
+  {
+    "word": "更",
+    "pinyin": "gēng",
+    "meanings": [
+      "to change or replace",
+      "to experience",
+      "one of the five two-hour periods into which the night was formerly divided",
+      "watch (e.g. of a sentry or guard)",
+      "more",
+      "even more",
+      "further",
+      "still",
+      "still more"
+    ]
+  },
+  {
+    "word": "公园",
+    "pinyin": "gōng yuán",
+    "meanings": [
+      "park (for public recreation)"
+    ]
+  },
+  {
+    "word": "故事",
+    "pinyin": "gù shì",
+    "meanings": [
+      "old practice",
+      "narrative; story; tale"
+    ]
+  },
+  {
+    "word": "刮",
+    "pinyin": "guā",
+    "meanings": [
+      "to scrape",
+      "to blow",
+      "to shave",
+      "to plunder",
+      "to extort",
+      "to blow (of the wind)"
+    ]
+  },
+  {
+    "word": "关",
+    "pinyin": "Guān",
+    "meanings": [
+      "surname Guan",
+      "mountain pass",
+      "to close; to shut; to turn off",
+      "to confine; to lock (sb) up; to shut (sb in a room, a bird in a cage etc)",
+      "to concern; to involve"
+    ]
+  },
+  {
+    "word": "关系",
+    "pinyin": "guān xi",
+    "meanings": [
+      "relation",
+      "relationship",
+      "to concern",
+      "to affect",
+      "to have to do with",
+      "guanxi",
+      "variant of 关系"
+    ]
+  },
+  {
+    "word": "关心",
+    "pinyin": "guān xīn",
+    "meanings": [
+      "to be concerned about",
+      "to care about"
+    ]
+  },
+  {
+    "word": "关于",
+    "pinyin": "guān yú",
+    "meanings": [
+      "pertaining to",
+      "concerning",
+      "with regard to",
+      "about",
+      "a matter of"
+    ]
+  },
+  {
+    "word": "国家",
+    "pinyin": "guó jiā",
+    "meanings": [
+      "country; nation; state"
+    ]
+  },
+  {
+    "word": "果汁",
+    "pinyin": "guǒ zhī",
+    "meanings": [
+      "fruit juice"
+    ]
+  },
+  {
+    "word": "过去",
+    "pinyin": "guò qù",
+    "meanings": [
+      "(in the) past",
+      "former",
+      "previous",
+      "to go over",
+      "to pass by",
+      "(verb suffix)"
+    ]
+  },
+  {
+    "word": "还是",
+    "pinyin": "hái shi",
+    "meanings": [
+      "still (as before)",
+      "had better",
+      "unexpectedly",
+      "or"
+    ]
+  },
+  {
+    "word": "害怕",
+    "pinyin": "hài pà",
+    "meanings": [
+      "to be afraid",
+      "to be scared"
+    ]
+  },
+  {
+    "word": "河",
+    "pinyin": "hé",
+    "meanings": [
+      "river"
+    ]
+  },
+  {
+    "word": "黑板",
+    "pinyin": "hēi bǎn",
+    "meanings": [
+      "blackboard"
+    ]
+  },
+  {
+    "word": "护照",
+    "pinyin": "hù zhào",
+    "meanings": [
+      "passport"
+    ]
+  },
+  {
+    "word": "花",
+    "pinyin": "Huā",
+    "meanings": [
+      "surname Hua",
+      "flower",
+      "blossom",
+      "fancy pattern",
+      "florid",
+      "to spend (money, time)",
+      "(coll.) lecherous",
+      "lustful",
+      "old variant of 花",
+      "variant of 花",
+      "flower",
+      "blossom",
+      "also pr. [wěi]"
+    ]
+  },
+  {
+    "word": "花园",
+    "pinyin": "huā yuán",
+    "meanings": [
+      "garden"
+    ]
+  },
+  {
+    "word": "画",
+    "pinyin": "huà",
+    "meanings": [
+      "to draw; to paint",
+      "picture; painting",
+      "to draw (a line) (variant of 划)",
+      "stroke of a Chinese character (variant of 划)",
+      "(calligraphy) horizontal stroke (variant of 划)"
+    ]
+  },
+  {
+    "word": "坏",
+    "pinyin": "huài",
+    "meanings": [
+      "bad",
+      "spoiled",
+      "broken",
+      "to break down",
+      "(suffix) to the utmost"
+    ]
+  },
+  {
+    "word": "环境",
+    "pinyin": "huán jìng",
+    "meanings": [
+      "environment",
+      "circumstances",
+      "surroundings",
+      "ambient"
+    ]
+  },
+  {
+    "word": "换",
+    "pinyin": "huàn",
+    "meanings": [
+      "to exchange",
+      "to change (clothes etc)",
+      "to substitute",
+      "to switch",
+      "to convert (currency)"
+    ]
+  },
+  {
+    "word": "黄",
+    "pinyin": "Huáng",
+    "meanings": [
+      "surname Huang or Hwang",
+      "yellow",
+      "pornographic",
+      "to fall through"
+    ]
+  },
+  {
+    "word": "会议",
+    "pinyin": "huì yì",
+    "meanings": [
+      "meeting",
+      "conference"
+    ]
+  },
+  {
+    "word": "或者",
+    "pinyin": "huò zhě",
+    "meanings": [
+      "or",
+      "possibly; maybe; perhaps"
+    ]
+  },
+  {
+    "word": "机会",
+    "pinyin": "jī huì",
+    "meanings": [
+      "opportunity",
+      "chance",
+      "occasion"
+    ]
+  },
+  {
+    "word": "极",
+    "pinyin": "jí",
+    "meanings": [
+      "extremely",
+      "pole (geography, physics)",
+      "utmost",
+      "top"
+    ]
+  },
+  {
+    "word": "几乎",
+    "pinyin": "jī hū",
+    "meanings": [
+      "almost; nearly; practically"
+    ]
+  },
+  {
+    "word": "记得",
+    "pinyin": "jì de",
+    "meanings": [
+      "to remember"
+    ]
+  },
+  {
+    "word": "季节",
+    "pinyin": "jì jié",
+    "meanings": [
+      "time",
+      "season",
+      "period"
+    ]
+  },
+  {
+    "word": "检查",
+    "pinyin": "jiǎn chá",
+    "meanings": [
+      "inspection",
+      "to examine",
+      "to inspect"
+    ]
+  },
+  {
+    "word": "简单",
+    "pinyin": "jiǎn dān",
+    "meanings": [
+      "simple",
+      "not complicated"
+    ]
+  },
+  {
+    "word": "见面",
+    "pinyin": "jiàn miàn",
+    "meanings": [
+      "to meet; to see each other"
+    ]
+  },
+  {
+    "word": "健康",
+    "pinyin": "jiàn kāng",
+    "meanings": [
+      "health",
+      "healthy"
+    ]
+  },
+  {
+    "word": "讲",
+    "pinyin": "jiǎng",
+    "meanings": [
+      "to speak",
+      "to explain",
+      "to negotiate",
+      "to emphasize",
+      "to be particular about",
+      "as far as sth is concerned",
+      "speech",
+      "lecture"
+    ]
+  },
+  {
+    "word": "角",
+    "pinyin": "Jué",
+    "meanings": [
+      "surname Jue",
+      "angle",
+      "corner",
+      "horn",
+      "horn-shaped",
+      "unit of money equal to 0.1 yuan, or 10 cents (a dime)",
+      "role (theater)",
+      "to compete",
+      "ancient three legged wine vessel",
+      "third note of pentatonic scale"
+    ]
+  },
+  {
+    "word": "脚",
+    "pinyin": "jiǎo",
+    "meanings": [
+      "foot",
+      "leg (of an animal or an object)",
+      "base (of an object)",
+      "classifier for kicks",
+      "role (variant of 角)"
+    ]
+  },
+  {
+    "word": "教",
+    "pinyin": "Jiào",
+    "meanings": [
+      "surname Jiao",
+      "to teach",
+      "religion",
+      "teaching",
+      "to make",
+      "to cause",
+      "to tell"
+    ]
+  },
+  {
+    "word": "接",
+    "pinyin": "jiē",
+    "meanings": [
+      "to receive",
+      "to answer (the phone)",
+      "to meet or welcome sb",
+      "to connect",
+      "to catch",
+      "to join",
+      "to extend",
+      "to take one's turn on duty",
+      "to take over for sb"
+    ]
+  },
+  {
+    "word": "街道",
+    "pinyin": "jiē dào",
+    "meanings": [
+      "street",
+      "subdistrict",
+      "residential district"
+    ]
+  },
+  {
+    "word": "节目",
+    "pinyin": "jié mù",
+    "meanings": [
+      "program",
+      "item (on a program)"
+    ]
+  },
+  {
+    "word": "节日",
+    "pinyin": "jié rì",
+    "meanings": [
+      "holiday",
+      "festival"
+    ]
+  },
+  {
+    "word": "结婚",
+    "pinyin": "jié hūn",
+    "meanings": [
+      "to marry",
+      "to get married"
+    ]
+  },
+  {
+    "word": "结束",
+    "pinyin": "jié shù",
+    "meanings": [
+      "termination",
+      "to finish",
+      "to end",
+      "to conclude",
+      "to close"
+    ]
+  },
+  {
+    "word": "解决",
+    "pinyin": "jiě jué",
+    "meanings": [
+      "to solve; to resolve; to settle (a problem)",
+      "to eliminate; to wipe out (an enemy, bandits etc)"
+    ]
+  },
+  {
+    "word": "借",
+    "pinyin": "jiè",
+    "meanings": [
+      "to lend",
+      "to borrow",
+      "by means of",
+      "to take (an opportunity)",
+      "variant of 借"
+    ]
+  },
+  {
+    "word": "经常",
+    "pinyin": "jīng cháng",
+    "meanings": [
+      "frequently; constantly; regularly; often",
+      "day-to-day; everyday; daily"
+    ]
+  },
+  {
+    "word": "经过",
+    "pinyin": "jīng guò",
+    "meanings": [
+      "to pass",
+      "to go through",
+      "process",
+      "course"
+    ]
+  },
+  {
+    "word": "经理",
+    "pinyin": "jīng lǐ",
+    "meanings": [
+      "manager",
+      "director"
+    ]
+  },
+  {
+    "word": "久",
+    "pinyin": "jiǔ",
+    "meanings": [
+      "(long) time",
+      "(long) duration of time"
+    ]
+  },
+  {
+    "word": "旧",
+    "pinyin": "jiù",
+    "meanings": [
+      "old",
+      "opposite: new 新",
+      "former",
+      "worn (with age)"
+    ]
+  },
+  {
+    "word": "举行",
+    "pinyin": "jǔ xíng",
+    "meanings": [
+      "to hold (a meeting, ceremony etc)"
+    ]
+  },
+  {
+    "word": "句子",
+    "pinyin": "jù zi",
+    "meanings": [
+      "sentence"
+    ]
+  },
+  {
+    "word": "决定",
+    "pinyin": "jué dìng",
+    "meanings": [
+      "to decide (to do something)",
+      "to resolve",
+      "decision",
+      "certainly"
+    ]
+  },
+  {
+    "word": "可爱",
+    "pinyin": "kě ài",
+    "meanings": [
+      "adorable",
+      "cute",
+      "lovely"
+    ]
+  },
+  {
+    "word": "渴",
+    "pinyin": "kě",
+    "meanings": [
+      "thirsty"
+    ]
+  },
+  {
+    "word": "刻",
+    "pinyin": "kè",
+    "meanings": [
+      "quarter (hour)",
+      "moment",
+      "to carve",
+      "to engrave",
+      "to cut",
+      "oppressive",
+      "classifier for short time intervals"
+    ]
+  },
+  {
+    "word": "客人",
+    "pinyin": "kè rén",
+    "meanings": [
+      "visitor",
+      "guest",
+      "customer",
+      "client"
+    ]
+  },
+  {
+    "word": "空调",
+    "pinyin": "kōng tiáo",
+    "meanings": [
+      "air conditioning",
+      "air conditioner (including units that have a heating mode)"
+    ]
+  },
+  {
+    "word": "口",
+    "pinyin": "kǒu",
+    "meanings": [
+      "mouth",
+      "classifier for things with mouths (people, domestic animals, cannons, wells etc)",
+      "classifier for bites or mouthfuls"
+    ]
+  },
+  {
+    "word": "哭",
+    "pinyin": "kū",
+    "meanings": [
+      "to cry; to weep"
+    ]
+  },
+  {
+    "word": "裤子",
+    "pinyin": "kù zi",
+    "meanings": [
+      "variant of 裤子, trousers",
+      "pants",
+      "trousers",
+      "pants"
+    ]
+  },
+  {
+    "word": "筷子",
+    "pinyin": "kuài zi",
+    "meanings": [
+      "chopsticks"
+    ]
+  },
+  {
+    "word": "蓝",
+    "pinyin": "Lán",
+    "meanings": [
+      "surname Lan",
+      "blue",
+      "indigo plant"
+    ]
+  },
+  {
+    "word": "老",
+    "pinyin": "lǎo",
+    "meanings": [
+      "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity",
+      "old (of people)",
+      "venerable (person)",
+      "experienced",
+      "of long standing",
+      "always",
+      "all the time",
+      "of the past",
+      "very",
+      "outdated",
+      "(of meat etc) tough"
+    ]
+  },
+  {
+    "word": "了解",
+    "pinyin": "liǎo jiě",
+    "meanings": [
+      "to understand",
+      "to realize",
+      "to find out",
+      "to understand",
+      "to realize",
+      "to find out"
+    ]
+  },
+  {
+    "word": "离开",
+    "pinyin": "lí kāi",
+    "meanings": [
+      "to depart; to leave"
+    ]
+  },
+  {
+    "word": "礼物",
+    "pinyin": "lǐ wù",
+    "meanings": [
+      "gift; present"
+    ]
+  },
+  {
+    "word": "历史",
+    "pinyin": "lì shǐ",
+    "meanings": [
+      "history"
+    ]
+  },
+  {
+    "word": "脸",
+    "pinyin": "liǎn",
+    "meanings": [
+      "face"
+    ]
+  },
+  {
+    "word": "练习",
+    "pinyin": "liàn xí",
+    "meanings": [
+      "to practice",
+      "exercise",
+      "drill",
+      "practice"
+    ]
+  },
+  {
+    "word": "辆",
+    "pinyin": "liàng",
+    "meanings": [
+      "classifier for vehicles"
+    ]
+  },
+  {
+    "word": "邻居",
+    "pinyin": "lín jū",
+    "meanings": [
+      "neighbor",
+      "next door"
+    ]
+  },
+  {
+    "word": "楼",
+    "pinyin": "Lóu",
+    "meanings": [
+      "surname Lou",
+      "house with more than 1 story",
+      "storied building",
+      "floor"
+    ]
+  },
+  {
+    "word": "绿",
+    "pinyin": "lǜ",
+    "meanings": [
+      "green",
+      "(slang) (derived from 绿帽子) to cheat on (one's spouse or boyfriend or girlfriend)"
+    ]
+  },
+  {
+    "word": "马",
+    "pinyin": "Mǎ",
+    "meanings": [
+      "surname Ma",
+      "abbr. for Malaysia 马来西亚",
+      "horse",
+      "horse or cavalry piece in Chinese chess",
+      "knight in Western chess"
+    ]
+  },
+  {
+    "word": "马上",
+    "pinyin": "mǎ shàng",
+    "meanings": [
+      "at once",
+      "right away",
+      "immediately",
+      "on horseback (i.e. by military force)"
+    ]
+  },
+  {
+    "word": "满意",
+    "pinyin": "mǎn yì",
+    "meanings": [
+      "satisfied",
+      "pleased",
+      "to one's satisfaction"
+    ]
+  },
+  {
+    "word": "帽子",
+    "pinyin": "mào zi",
+    "meanings": [
+      "hat",
+      "cap",
+      "(fig.) label",
+      "bad name"
+    ]
+  },
+  {
+    "word": "米",
+    "pinyin": "Mǐ",
+    "meanings": [
+      "surname Mi",
+      "rice",
+      "meter (classifier)"
+    ]
+  },
+  {
+    "word": "面包",
+    "pinyin": "miàn bāo",
+    "meanings": [
+      "bread"
+    ]
+  },
+  {
+    "word": "面条",
+    "pinyin": "miàn tiáo",
+    "meanings": [
+      "noodles"
+    ]
+  },
+  {
+    "word": "明白",
+    "pinyin": "míng bai",
+    "meanings": [
+      "clear",
+      "obvious",
+      "unequivocal",
+      "to understand",
+      "to realize"
+    ]
+  },
+  {
+    "word": "拿",
+    "pinyin": "ná",
+    "meanings": [
+      "old variant of 拿",
+      "variant of 拿",
+      "to hold",
+      "to seize",
+      "to catch",
+      "to apprehend",
+      "to take",
+      "(used in the same way as 把: to mark the following noun as a direct object)"
+    ]
+  },
+  {
+    "word": "奶奶",
+    "pinyin": "nǎi nai",
+    "meanings": [
+      "(informal) grandma (paternal grandmother)",
+      "(respectful) mistress of the house",
+      "(coll.) boobies",
+      "breasts"
+    ]
+  },
+  {
+    "word": "南",
+    "pinyin": "Nán",
+    "meanings": [
+      "surname Nan",
+      "south"
+    ]
+  },
+  {
+    "word": "难",
+    "pinyin": "nán",
+    "meanings": [
+      "difficult (to...)",
+      "problem",
+      "difficulty",
+      "difficult",
+      "not good",
+      "disaster",
+      "distress",
+      "to scold"
+    ]
+  },
+  {
+    "word": "难过",
+    "pinyin": "nán guò",
+    "meanings": [
+      "to feel sad",
+      "to feel unwell",
+      "(of life) to be difficult"
+    ]
+  },
+  {
+    "word": "年级",
+    "pinyin": "nián jí",
+    "meanings": [
+      "grade",
+      "year (in school, college etc)"
+    ]
+  },
+  {
+    "word": "年轻",
+    "pinyin": "nián qīng",
+    "meanings": [
+      "young"
+    ]
+  },
+  {
+    "word": "鸟",
+    "pinyin": "diǎo",
+    "meanings": [
+      "variant of 屌",
+      "penis",
+      "bird",
+      "\"bird\" radical in Chinese characters (Kangxi radical 196)",
+      "(dialect) to pay attention to",
+      "(intensifier) damned",
+      "goddamn"
+    ]
+  },
+  {
+    "word": "努力",
+    "pinyin": "nǔ lì",
+    "meanings": [
+      "to make an effort; to try hard; to strive",
+      "hard-working; conscientious"
+    ]
+  },
+  {
+    "word": "爬山",
+    "pinyin": "pá shān",
+    "meanings": [
+      "to climb a mountain",
+      "to mountaineer",
+      "hiking",
+      "mountaineering"
+    ]
+  },
+  {
+    "word": "盘子",
+    "pinyin": "pán zi",
+    "meanings": [
+      "tray",
+      "plate",
+      "dish"
+    ]
+  },
+  {
+    "word": "胖",
+    "pinyin": "pán",
+    "meanings": [
+      "healthy",
+      "at ease",
+      "fat",
+      "plump"
+    ]
+  },
+  {
+    "word": "啤酒",
+    "pinyin": "pí jiǔ",
+    "meanings": [
+      "beer (loanword)"
+    ]
+  },
+  {
+    "word": "葡萄",
+    "pinyin": "pú tao",
+    "meanings": [
+      "grape"
+    ]
+  },
+  {
+    "word": "普通话",
+    "pinyin": "pǔ tōng huà",
+    "meanings": [
+      "Mandarin (common language)",
+      "Putonghua (common speech of the Chinese language)",
+      "ordinary speech"
+    ]
+  },
+  {
+    "word": "其实",
+    "pinyin": "qí shí",
+    "meanings": [
+      "actually; in fact; really"
+    ]
+  },
+  {
+    "word": "其他",
+    "pinyin": "qí tā",
+    "meanings": [
+      "other",
+      "(sth or sb) else",
+      "the rest"
+    ]
+  },
+  {
+    "word": "奇怪",
+    "pinyin": "qí guài",
+    "meanings": [
+      "strange",
+      "odd",
+      "to marvel",
+      "to be baffled"
+    ]
+  },
+  {
+    "word": "骑",
+    "pinyin": "jì",
+    "meanings": [
+      "(Tw) saddle horse",
+      "mounted soldier",
+      "to sit astride",
+      "to ride (a horse, bike etc)",
+      "classifier for saddle horses"
+    ]
+  },
+  {
+    "word": "铅笔",
+    "pinyin": "qiān bǐ",
+    "meanings": [
+      "(lead) pencil"
+    ]
+  },
+  {
+    "word": "清楚",
+    "pinyin": "qīng chu",
+    "meanings": [
+      "clear",
+      "distinct",
+      "to understand thoroughly",
+      "to be clear about"
+    ]
+  },
+  {
+    "word": "秋",
+    "pinyin": "Qiū",
+    "meanings": [
+      "surname Qiu",
+      "autumn",
+      "fall",
+      "harvest time",
+      "old variant of 秋",
+      "see 秋千"
+    ]
+  },
+  {
+    "word": "裙子",
+    "pinyin": "qún zi",
+    "meanings": [
+      "skirt"
+    ]
+  },
+  {
+    "word": "然后",
+    "pinyin": "rán hòu",
+    "meanings": [
+      "then; after that; afterwards"
+    ]
+  },
+  {
+    "word": "热情",
+    "pinyin": "rè qíng",
+    "meanings": [
+      "cordial",
+      "enthusiastic",
+      "passion",
+      "passionate",
+      "passionately"
+    ]
+  },
+  {
+    "word": "认为",
+    "pinyin": "rèn wéi",
+    "meanings": [
+      "to believe; to think; to consider; to feel"
+    ]
+  },
+  {
+    "word": "认真",
+    "pinyin": "rèn zhēn",
+    "meanings": [
+      "conscientious",
+      "earnest",
+      "serious",
+      "to take seriously",
+      "to take to heart"
+    ]
+  },
+  {
+    "word": "容易",
+    "pinyin": "róng yì",
+    "meanings": [
+      "easy; straightforward",
+      "likely; liable to; apt to"
+    ]
+  },
+  {
+    "word": "如果",
+    "pinyin": "rú guǒ",
+    "meanings": [
+      "if",
+      "in case",
+      "in the event that"
+    ]
+  },
+  {
+    "word": "伞",
+    "pinyin": "sǎn",
+    "meanings": [
+      "umbrella",
+      "parasol",
+      "damask silk",
+      "variant of 伞"
+    ]
+  },
+  {
+    "word": "上网",
+    "pinyin": "shàng wǎng",
+    "meanings": [
+      "to go online",
+      "to connect to the Internet",
+      "(of a document etc) to be uploaded to the Internet",
+      "(tennis, volleyball etc) to move in close to the net"
+    ]
+  },
+  {
+    "word": "生气",
+    "pinyin": "shēng qì",
+    "meanings": [
+      "to get angry",
+      "to take offense",
+      "angry",
+      "vitality",
+      "liveliness"
+    ]
+  },
+  {
+    "word": "声音",
+    "pinyin": "shēng yīn",
+    "meanings": [
+      "voice",
+      "sound"
+    ]
+  },
+  {
+    "word": "使",
+    "pinyin": "shǐ",
+    "meanings": [
+      "to make",
+      "to cause",
+      "to enable",
+      "to use",
+      "to employ",
+      "to send",
+      "to instruct sb to do sth",
+      "envoy",
+      "messenger"
+    ]
+  },
+  {
+    "word": "世界",
+    "pinyin": "shì jiè",
+    "meanings": [
+      "world"
+    ]
+  },
+  {
+    "word": "瘦",
+    "pinyin": "shòu",
+    "meanings": [
+      "thin",
+      "to lose weight",
+      "(of clothing) tight",
+      "(of meat) lean",
+      "(of land) unproductive"
+    ]
+  },
+  {
+    "word": "叔叔",
+    "pinyin": "shū shu",
+    "meanings": [
+      "father's younger brother",
+      "uncle",
+      "Taiwan pr. [shú shu]"
+    ]
+  },
+  {
+    "word": "舒服",
+    "pinyin": "shū fu",
+    "meanings": [
+      "comfortable",
+      "feeling well"
+    ]
+  },
+  {
+    "word": "树",
+    "pinyin": "shù",
+    "meanings": [
+      "tree",
+      "to cultivate",
+      "to set up"
+    ]
+  },
+  {
+    "word": "数学",
+    "pinyin": "shù xué",
+    "meanings": [
+      "mathematics",
+      "mathematical"
+    ]
+  },
+  {
+    "word": "刷",
+    "pinyin": "shuā",
+    "meanings": [
+      "to brush",
+      "to paint",
+      "to daub",
+      "to paste up",
+      "to skip class (of students)",
+      "to fire from a job",
+      "to select"
+    ]
+  },
+  {
+    "word": "双",
+    "pinyin": "Shuāng",
+    "meanings": [
+      "surname Shuang",
+      "two",
+      "double",
+      "pair",
+      "both",
+      "even (number)"
+    ]
+  },
+  {
+    "word": "水平",
+    "pinyin": "shuǐ píng",
+    "meanings": [
+      "level (of achievement etc)",
+      "standard",
+      "horizontal"
+    ]
+  },
+  {
+    "word": "司机",
+    "pinyin": "sī jī",
+    "meanings": [
+      "chauffeur; driver"
+    ]
+  },
+  {
+    "word": "虽然",
+    "pinyin": "suī rán",
+    "meanings": [
+      "although; even though (often used correlatively with 是 or 是 etc)"
+    ]
+  },
+  {
+    "word": "太阳",
+    "pinyin": "tài yang",
+    "meanings": [
+      "sun",
+      "abbr. for 太阳穴"
+    ]
+  },
+  {
+    "word": "糖",
+    "pinyin": "táng",
+    "meanings": [
+      "sugar",
+      "sweets",
+      "candy",
+      "old variant of 糖"
+    ]
+  },
+  {
+    "word": "特别",
+    "pinyin": "tè bié",
+    "meanings": [
+      "unusual; special",
+      "very; especially; particularly",
+      "expressly; for a specific purpose",
+      "(often followed by 是) in particular"
+    ]
+  },
+  {
+    "word": "疼",
+    "pinyin": "téng",
+    "meanings": [
+      "(it) hurts; sore",
+      "to love dearly"
+    ]
+  },
+  {
+    "word": "提高",
+    "pinyin": "tí gāo",
+    "meanings": [
+      "to raise",
+      "to increase",
+      "to improve"
+    ]
+  },
+  {
+    "word": "体育",
+    "pinyin": "tǐ yù",
+    "meanings": [
+      "sports",
+      "physical education"
+    ]
+  },
+  {
+    "word": "甜",
+    "pinyin": "tián",
+    "meanings": [
+      "sweet"
+    ]
+  },
+  {
+    "word": "条",
+    "pinyin": "tiáo",
+    "meanings": [
+      "strip",
+      "item",
+      "article",
+      "clause (of law or treaty)",
+      "classifier for long thin things (ribbon, river, road, trousers etc)"
+    ]
+  },
+  {
+    "word": "同事",
+    "pinyin": "tóng shì",
+    "meanings": [
+      "colleague; co-worker"
+    ]
+  },
+  {
+    "word": "同意",
+    "pinyin": "tóng yì",
+    "meanings": [
+      "to agree",
+      "to consent",
+      "to approve"
+    ]
+  },
+  {
+    "word": "头发",
+    "pinyin": "tóu fa",
+    "meanings": [
+      "hair (on the head)"
+    ]
+  },
+  {
+    "word": "突然",
+    "pinyin": "tū rán",
+    "meanings": [
+      "sudden; abrupt; unexpected"
+    ]
+  },
+  {
+    "word": "图书馆",
+    "pinyin": "tú shū guǎn",
+    "meanings": [
+      "library"
+    ]
+  },
+  {
+    "word": "腿",
+    "pinyin": "tuǐ",
+    "meanings": [
+      "leg",
+      "hip bone",
+      "old variant of 腿"
+    ]
+  },
+  {
+    "word": "完成",
+    "pinyin": "wán chéng",
+    "meanings": [
+      "to complete; to accomplish"
+    ]
+  },
+  {
+    "word": "碗",
+    "pinyin": "wǎn",
+    "meanings": [
+      "variant of 碗",
+      "variant of 碗",
+      "variant of 碗",
+      "bowl",
+      "cup"
+    ]
+  },
+  {
+    "word": "万",
+    "pinyin": "mò",
+    "meanings": [
+      "used in 俟",
+      "surname Wan",
+      "ten thousand",
+      "a great number"
+    ]
+  },
+  {
+    "word": "忘记",
+    "pinyin": "wàng jì",
+    "meanings": [
+      "to forget"
+    ]
+  },
+  {
+    "word": "为了",
+    "pinyin": "wèi le",
+    "meanings": [
+      "for; for the purpose of; in order to"
+    ]
+  },
+  {
+    "word": "为什么",
+    "pinyin": "wèi shén me",
+    "meanings": [
+      "why?",
+      "for what reason?"
+    ]
+  },
+  {
+    "word": "位",
+    "pinyin": "wèi",
+    "meanings": [
+      "position",
+      "location",
+      "place",
+      "seat",
+      "classifier for people (honorific)",
+      "classifier for binary bits (e.g. 十六位 16-bit or 2 bytes)",
+      "(physics) potential"
+    ]
+  },
+  {
+    "word": "文化",
+    "pinyin": "wén huà",
+    "meanings": [
+      "culture",
+      "civilization",
+      "cultural"
+    ]
+  },
+  {
+    "word": "习惯",
+    "pinyin": "xí guàn",
+    "meanings": [
+      "habit",
+      "custom",
+      "usual practice",
+      "to be used to"
+    ]
+  },
+  {
+    "word": "洗手间",
+    "pinyin": "xǐ shǒu jiān",
+    "meanings": [
+      "toilet",
+      "lavatory",
+      "washroom"
+    ]
+  },
+  {
+    "word": "洗澡",
+    "pinyin": "xǐ zǎo",
+    "meanings": [
+      "to bathe",
+      "to take a shower"
+    ]
+  },
+  {
+    "word": "西",
+    "pinyin": "Xī",
+    "meanings": [
+      "the West",
+      "abbr. for Spain 牙",
+      "Spanish",
+      "west"
+    ]
+  },
+  {
+    "word": "夏",
+    "pinyin": "Xià",
+    "meanings": [
+      "the Xia or Hsia dynasty c. 2000 BC",
+      "Xia of the Sixteen Kingdoms (407-432)",
+      "surname Xia",
+      "summer"
+    ]
+  },
+  {
+    "word": "先",
+    "pinyin": "xiān",
+    "meanings": [
+      "early",
+      "prior",
+      "former",
+      "in advance",
+      "first"
+    ]
+  },
+  {
+    "word": "相同",
+    "pinyin": "xiāng tóng",
+    "meanings": [
+      "identical",
+      "same"
+    ]
+  },
+  {
+    "word": "相信",
+    "pinyin": "xiāng xìn",
+    "meanings": [
+      "to be convinced (that sth is true); to believe; to accept sth as true"
+    ]
+  },
+  {
+    "word": "香蕉",
+    "pinyin": "xiāng jiāo",
+    "meanings": [
+      "banana"
+    ]
+  },
+  {
+    "word": "像",
+    "pinyin": "xiàng",
+    "meanings": [
+      "to resemble",
+      "to be like",
+      "to look as if",
+      "such as",
+      "appearance",
+      "image",
+      "portrait",
+      "image under a mapping (math.)"
+    ]
+  },
+  {
+    "word": "小心",
+    "pinyin": "xiǎo xīn",
+    "meanings": [
+      "to be careful",
+      "to take care"
+    ]
+  },
+  {
+    "word": "校长",
+    "pinyin": "xiào zhǎng",
+    "meanings": [
+      "(college, university) president",
+      "headmaster"
+    ]
+  },
+  {
+    "word": "鞋",
+    "pinyin": "xié",
+    "meanings": [
+      "shoe",
+      "variant of 鞋"
+    ]
+  },
+  {
+    "word": "新闻",
+    "pinyin": "xīn wén",
+    "meanings": [
+      "news"
+    ]
+  },
+  {
+    "word": "新鲜",
+    "pinyin": "xīn xiān",
+    "meanings": [
+      "fresh (experience, food etc)",
+      "freshness",
+      "novel",
+      "uncommon"
+    ]
+  },
+  {
+    "word": "信",
+    "pinyin": "xìn",
+    "meanings": [
+      "letter",
+      "mail",
+      "to trust",
+      "to believe",
+      "to profess faith in",
+      "truthful",
+      "confidence",
+      "trust",
+      "at will",
+      "at random"
+    ]
+  },
+  {
+    "word": "行李箱",
+    "pinyin": "xíng li xiāng",
+    "meanings": [
+      "suitcase",
+      "baggage compartment",
+      "overhead bin",
+      "(car) trunk",
+      "boot"
+    ]
+  },
+  {
+    "word": "兴趣",
+    "pinyin": "xìng qù",
+    "meanings": [
+      "interest (desire to know about sth)",
+      "interest (thing in which one is interested); hobby"
+    ]
+  },
+  {
+    "word": "熊猫",
+    "pinyin": "xióng māo",
+    "meanings": [
+      "panda"
+    ]
+  },
+  {
+    "word": "需要",
+    "pinyin": "xū yào",
+    "meanings": [
+      "to need; to want; to demand; to require",
+      "needs"
+    ]
+  },
+  {
+    "word": "选择",
+    "pinyin": "xuǎn zé",
+    "meanings": [
+      "to select",
+      "to pick",
+      "choice",
+      "option",
+      "alternative"
+    ]
+  },
+  {
+    "word": "眼镜",
+    "pinyin": "yǎn jìng",
+    "meanings": [
+      "spectacles",
+      "eyeglasses"
+    ]
+  },
+  {
+    "word": "要求",
+    "pinyin": "yāo qiú",
+    "meanings": [
+      "to request",
+      "to require",
+      "requirement",
+      "to stake a claim",
+      "to ask",
+      "to demand"
+    ]
+  },
+  {
+    "word": "爷爷",
+    "pinyin": "yé ye",
+    "meanings": [
+      "(coll.) father's father",
+      "paternal grandfather"
+    ]
+  },
+  {
+    "word": "一般",
+    "pinyin": "yī bān",
+    "meanings": [
+      "same",
+      "ordinary",
+      "so-so",
+      "common",
+      "general",
+      "generally",
+      "in general"
+    ]
+  },
+  {
+    "word": "一边",
+    "pinyin": "yī biān",
+    "meanings": [
+      "one side",
+      "either side",
+      "on the one hand",
+      "on the other hand",
+      "doing while"
+    ]
+  },
+  {
+    "word": "一定",
+    "pinyin": "yī dìng",
+    "meanings": [
+      "surely",
+      "certainly",
+      "necessarily",
+      "fixed",
+      "a certain (extent etc)",
+      "given",
+      "particular",
+      "must"
+    ]
+  },
+  {
+    "word": "一共",
+    "pinyin": "yī gòng",
+    "meanings": [
+      "altogether"
+    ]
+  },
+  {
+    "word": "一会儿",
+    "pinyin": "yī huì r",
+    "meanings": [
+      "a moment",
+      "a while",
+      "in a moment",
+      "now...now...",
+      "also pr. [yī huǐ r]"
+    ]
+  },
+  {
+    "word": "一样",
+    "pinyin": "yī yàng",
+    "meanings": [
+      "same",
+      "like",
+      "equal to",
+      "the same as",
+      "just like"
+    ]
+  },
+  {
+    "word": "一直",
+    "pinyin": "yī zhí",
+    "meanings": [
+      "straight (in a straight line)",
+      "continuously; always; all the way through"
+    ]
+  },
+  {
+    "word": "以后",
+    "pinyin": "yǐ hòu",
+    "meanings": [
+      "after",
+      "later",
+      "afterwards",
+      "following",
+      "later on",
+      "in the future"
+    ]
+  },
+  {
+    "word": "以前",
+    "pinyin": "yǐ qián",
+    "meanings": [
+      "before",
+      "formerly",
+      "previous",
+      "ago"
+    ]
+  },
+  {
+    "word": "以为",
+    "pinyin": "yǐ wéi",
+    "meanings": [
+      "to think (i.e. to take it to be true that ...) (Usually there is an implication that the notion is mistaken – except when expressing one's own current opinion.)"
+    ]
+  },
+  {
+    "word": "音乐",
+    "pinyin": "yīn yuè",
+    "meanings": [
+      "music"
+    ]
+  },
+  {
+    "word": "银行",
+    "pinyin": "yín háng",
+    "meanings": [
+      "bank"
+    ]
+  },
+  {
+    "word": "应该",
+    "pinyin": "yīng gāi",
+    "meanings": [
+      "ought to",
+      "should",
+      "must"
+    ]
+  },
+  {
+    "word": "影响",
+    "pinyin": "yǐng xiǎng",
+    "meanings": [
+      "influence",
+      "effect",
+      "to influence",
+      "to affect (usually adversely)",
+      "to disturb"
+    ]
+  },
+  {
+    "word": "用",
+    "pinyin": "yòng",
+    "meanings": [
+      "to use",
+      "to employ",
+      "to have to",
+      "to eat or drink",
+      "expense or outlay",
+      "usefulness",
+      "hence",
+      "therefore"
+    ]
+  },
+  {
+    "word": "游戏",
+    "pinyin": "yóu xì",
+    "meanings": [
+      "game",
+      "to play"
+    ]
+  },
+  {
+    "word": "有名",
+    "pinyin": "yǒu míng",
+    "meanings": [
+      "famous",
+      "well-known"
+    ]
+  },
+  {
+    "word": "又",
+    "pinyin": "yòu",
+    "meanings": [
+      "(once) again",
+      "also",
+      "both... and...",
+      "and yet",
+      "(used for emphasis) anyway"
+    ]
+  },
+  {
+    "word": "遇到",
+    "pinyin": "yù dào",
+    "meanings": [
+      "to meet; to run into; to come across"
+    ]
+  },
+  {
+    "word": "愿意",
+    "pinyin": "yuàn yì",
+    "meanings": [
+      "to wish",
+      "to want",
+      "ready",
+      "willing (to do sth)"
+    ]
+  },
+  {
+    "word": "月亮",
+    "pinyin": "yuè liang",
+    "meanings": [
+      "the moon"
+    ]
+  },
+  {
+    "word": "越",
+    "pinyin": "Yuè",
+    "meanings": [
+      "generic word for peoples or states of south China or south Asia at different historical periods",
+      "abbr. for Vietnam 越南",
+      "to exceed",
+      "to climb over",
+      "to surpass",
+      "the more... the more"
+    ]
+  },
+  {
+    "word": "云",
+    "pinyin": "yún",
+    "meanings": [
+      "(classical) to say",
+      "surname Yun",
+      "abbr. for Yunnan Province 云南省",
+      "cloud"
+    ]
+  },
+  {
+    "word": "站",
+    "pinyin": "zhàn",
+    "meanings": [
+      "station",
+      "to stand",
+      "to halt",
+      "to stop",
+      "branch of a company or organization",
+      "website"
+    ]
+  },
+  {
+    "word": "照顾",
+    "pinyin": "zhào gu",
+    "meanings": [
+      "to take care of",
+      "to show consideration",
+      "to attend to",
+      "to look after"
+    ]
+  },
+  {
+    "word": "照片",
+    "pinyin": "zhào piàn",
+    "meanings": [
+      "photograph",
+      "picture"
+    ]
+  },
+  {
+    "word": "照相机",
+    "pinyin": "zhào xiàng jī",
+    "meanings": [
+      "camera"
+    ]
+  },
+  {
+    "word": "着急",
+    "pinyin": "zháo jí",
+    "meanings": [
+      "to worry; to feel anxious",
+      "to feel a sense of urgency; to be in a hurry",
+      "Taiwan pr. [zhāo jí]"
+    ]
+  },
+  {
+    "word": "只",
+    "pinyin": "zhǐ",
+    "meanings": [
+      "only",
+      "merely",
+      "just",
+      "but",
+      "variant of 只",
+      "grain that has begun to ripen",
+      "variant of 只",
+      "classifier for birds and certain animals, one of a pair, some utensils, vessels etc"
+    ]
+  },
+  {
+    "word": "中间",
+    "pinyin": "zhōng jiān",
+    "meanings": [
+      "the middle; the inside",
+      "in the middle; within; between; among",
+      "during; in the meantime"
+    ]
+  },
+  {
+    "word": "终于",
+    "pinyin": "zhōng yú",
+    "meanings": [
+      "at last",
+      "in the end",
+      "finally",
+      "eventually"
+    ]
+  },
+  {
+    "word": "种",
+    "pinyin": "zhǒng",
+    "meanings": [
+      "seed",
+      "species",
+      "kind",
+      "type",
+      "classifier for types, kinds, sorts",
+      "to plant",
+      "to grow",
+      "to cultivate"
+    ]
+  },
+  {
+    "word": "重要",
+    "pinyin": "zhòng yào",
+    "meanings": [
+      "important",
+      "significant",
+      "major"
+    ]
+  },
+  {
+    "word": "周末",
+    "pinyin": "zhōu mò",
+    "meanings": [
+      "weekend"
+    ]
+  },
+  {
+    "word": "主要",
+    "pinyin": "zhǔ yào",
+    "meanings": [
+      "main",
+      "principal",
+      "major",
+      "primary"
+    ]
+  },
+  {
+    "word": "注意",
+    "pinyin": "zhù yì",
+    "meanings": [
+      "to take note of; to pay attention to"
+    ]
+  },
+  {
+    "word": "祝",
+    "pinyin": "Zhù",
+    "meanings": [
+      "surname Zhu",
+      "to pray for",
+      "to wish (sb bon voyage, happy birthday etc)",
+      "person who invokes the spirits during sacrificial ceremonies"
+    ]
+  },
+  {
+    "word": "字典",
+    "pinyin": "zì diǎn",
+    "meanings": [
+      "Chinese character dictionary (containing entries for single characters, contrasted with a 词典, which has entries for words of one or more characters)",
+      "(coll.) dictionary"
+    ]
+  },
+  {
+    "word": "自己",
+    "pinyin": "zì jǐ",
+    "meanings": [
+      "oneself",
+      "one's own"
+    ]
+  },
+  {
+    "word": "总是",
+    "pinyin": "zǒng shì",
+    "meanings": [
+      "always"
+    ]
+  },
+  {
+    "word": "最近",
+    "pinyin": "zuì jìn",
+    "meanings": [
+      "recently",
+      "soon",
+      "nearest"
+    ]
+  },
+  {
+    "word": "作业",
+    "pinyin": "zuò yè",
+    "meanings": [
+      "school assignment",
+      "homework",
+      "work",
+      "task",
+      "operation",
+      "to operate"
+    ]
+  },
+  {
+    "word": "作用",
+    "pinyin": "zuò yòng",
+    "meanings": [
+      "to act on",
+      "to affect",
+      "action",
+      "function",
+      "activity",
+      "impact",
+      "result",
+      "effect",
+      "purpose",
+      "intent",
+      "(suffix) -ation, -tion etc, as in 用, inhibition"
+    ]
+  }
+]
