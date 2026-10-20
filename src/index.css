@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Noto Sans Lao', 'Noto Sans SC', system-ui, sans-serif;
+  --font-lao: 'Noto Sans Lao', system-ui, sans-serif;
+  --font-zh: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}

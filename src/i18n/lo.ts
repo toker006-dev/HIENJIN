@@ -1,0 +1,33 @@
+import type { PartOfSpeech } from '../types.ts'
+
+// Lao UI strings (Lao is the default interface language).
+export const t = {
+  wordOfSentence: 'ຄຳສັບຂອງປະໂຫຍກນີ້',
+  listen: 'ຟັງສຽງ',
+  pos: {
+    noun: 'ຄຳນາມ',
+    verb: 'ຄຳກິລິຍາ',
+    adjective: 'ຄຳຄຸນນາມ',
+    adverb: 'ຄຳກິລິຍາວິເສດ',
+    pronoun: 'ຄຳແທນນາມ',
+    numeral: 'ຄຳບອກຈຳນວນ',
+    'measure word': 'ຄຳລັກສະນະນາມ',
+    preposition: 'ຄຳບຸບພະບົດ',
+    conjunction: 'ຄຳສັນທານ',
+    particle: 'ຄຳຊ່ວຍ',
+    interjection: 'ຄຳອຸທານ',
+    phrase: 'ວະລີ',
+  } satisfies Record<PartOfSpeech, string>,
+  appTitle: 'ຮຽນພາສາຈີນ',
+  progress: (n: number, total: number) => `ປະໂຫຍກ ${n} / ${total}`,
+  instruction: 'ແປປະໂຫຍກນີ້ເປັນພາສາຈີນ',
+  hint: '1 ຊ່ອງ = 1 ຄຳ · Space = ຊ່ອງຕໍ່ໄປ · Enter = ກວດຄຳຕອບ',
+  check: 'ກວດຄຳຕອບ',
+  wrong: 'ຍັງບໍ່ຖືກ — ແກ້ໄຂຊ່ອງສີແດງ ແລ້ວກົດ Enter ອີກຄັ້ງ',
+  correct: 'ຖືກຕ້ອງ! ກົດ Enter ເພື່ອໄປປະໂຫຍກຕໍ່ໄປ',
+  next: 'ຕໍ່ໄປ',
+  blank: (n: number) => `ຊ່ອງທີ ${n}`,
+  doneTitle: 'ເກັ່ງຫຼາຍ!',
+  doneBody: (total: number) => `ທ່ານແປຄົບທັງ ${total} ປະໂຫຍກແລ້ວ`,
+  restart: 'ເລີ່ມໃໝ່',
+}
