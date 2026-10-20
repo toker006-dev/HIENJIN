@@ -13,6 +13,16 @@ const sentencesByLevel = new Map(
 )
 const levels = [...sentencesByLevel.keys()]
 
+/** A new random order of the level's sentences (Fisher-Yates shuffle). */
+function shuffled(level: number): Sentence[] {
+  const list = [...sentencesByLevel.get(level)!]
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[list[i], list[j]] = [list[j], list[i]]
+  }
+  return list
+}
+
 const LEVEL_KEY = 'hsk-level'
 
 function savedLevel(): number {
@@ -53,11 +63,19 @@ export default function App() {
   const [index, setIndex] = useState(0)
   const [sfx, toggleSfx] = useStoredToggle('sound-effects')
   const [voice, toggleVoice] = useStoredToggle('voice')
-  const sentences = sentencesByLevel.get(level)!
+  const [sentences, setSentences] = useState(() => shuffled(level))
+  // Bumped on every new round so the exercise always remounts, even if the same sentence comes first again.
+  const [round, setRound] = useState(0)
+
+  function startRound(nextLevel: number) {
+    setSentences(shuffled(nextLevel))
+    setIndex(0)
+    setRound((r) => r + 1)
+  }
 
   function chooseLevel(next: number) {
     setLevel(next)
-    setIndex(0)
+    startRound(next)
     try {
       localStorage.setItem(LEVEL_KEY, String(next))
     } catch {
@@ -136,7 +154,7 @@ export default function App() {
               <h2 className="font-lao text-3xl font-bold text-stone-900">{t.doneTitle}</h2>
               <p className="font-lao text-stone-600">{t.doneBody(sentences.length)}</p>
               <button
-                onClick={() => setIndex(0)}
+                onClick={() => startRound(level)}
                 autoFocus
                 className="font-lao mt-4 rounded-full bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700"
               >
@@ -144,7 +162,7 @@ export default function App() {
               </button>
             </div>
           ) : (
-            <Exercise key={`${level}-${sentences[index].id}`} sentence={sentences[index]} onNext={next} sfx={sfx} voice={voice} />
+            <Exercise key={`${round}-${sentences[index].id}`} sentence={sentences[index]} onNext={next} sfx={sfx} voice={voice} />
           )}
         </div>
       </main>
