@@ -2,6 +2,8 @@ import type { PartOfSpeech } from '../types.ts'
 
 // Lao UI strings (Lao is the default interface language).
 export const t = {
+  soundEffects: 'ສຽງປະກອບ (ພິມ / ຖືກ / ຜິດ)',
+  voice: 'ສຽງອ່ານປະໂຫຍກເມື່ອຕອບຖືກ',
   listenAnswer: 'ຟັງຄຳຕອບ',
   showAnswer: 'ເບິ່ງຄຳຕອບ',
   hideAnswer: 'ເຊື່ອງຄຳຕອບ',

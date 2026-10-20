@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { t } from '../i18n/lo.ts'
 import { isCorrect } from '../lib/answer.ts'
+import { playCorrect, playType, playWrong } from '../lib/sfx.ts'
 import { canSpeak, speak } from '../lib/speech.ts'
 import type { Sentence } from '../types.ts'
 import { WordCard } from './WordCard.tsx'
@@ -10,7 +11,13 @@ type Status = 'idle' | 'correct' | 'wrong'
 interface Props {
   sentence: Sentence
   onNext: () => void
+  /** Typing / correct / wrong sound effects on. */
+  sfx: boolean
+  /** Read the sentence aloud when it is solved. */
+  voice: boolean
 }
+
+const MODIFIER_KEYS = new Set(['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'])
 
 const blankStyles: Record<Status, string> = {
   idle: 'border-stone-300 text-stone-900 focus:border-teal-600',
@@ -22,7 +29,7 @@ const hintButton =
   'font-lao inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100 hover:text-stone-900 aria-pressed:bg-amber-50 aria-pressed:text-amber-700 aria-pressed:ring-amber-300'
 
 /** One sentence: the Lao prompt plus one input per Chinese word. Remount (via `key`) for each new sentence. */
-export function Exercise({ sentence, onNext }: Props) {
+export function Exercise({ sentence, onNext, sfx, voice }: Props) {
   const [answers, setAnswers] = useState(() => sentence.words.map(() => ''))
   const [statuses, setStatuses] = useState<Status[]>(() => sentence.words.map(() => 'idle'))
   const [solved, setSolved] = useState(false)
@@ -30,8 +37,11 @@ export function Exercise({ sentence, onNext }: Props) {
   const nextButton = useRef<HTMLButtonElement>(null)
   const [revealed, setRevealed] = useState(false)
   const lastFocused = useRef(0)
+  const lastKeyAt = useRef(0)
+  const speakTimer = useRef<number>(undefined)
 
   useEffect(() => inputs.current[0]?.focus(), [])
+  useEffect(() => () => clearTimeout(speakTimer.current), [])
   useEffect(() => {
     if (solved) nextButton.current?.focus()
   }, [solved])
@@ -42,8 +52,15 @@ export function Exercise({ sentence, onNext }: Props) {
     const result = sentence.words.map((word, i): Status => (isCorrect(answers[i], word) ? 'correct' : 'wrong'))
     setStatuses(result)
     const firstWrong = result.indexOf('wrong')
-    if (firstWrong === -1) setSolved(true)
-    else inputs.current[firstWrong]?.focus()
+    if (firstWrong === -1) {
+      setSolved(true)
+      if (sfx) playCorrect()
+      // Let the chime finish before the voice starts.
+      if (voice && canSpeak) speakTimer.current = window.setTimeout(() => speak(sentence.words.join('')), sfx ? 450 : 0)
+    } else {
+      if (sfx) playWrong()
+      inputs.current[firstWrong]?.focus()
+    }
   }
 
   function focusBlank(i: number) {
@@ -56,14 +73,23 @@ export function Exercise({ sentence, onNext }: Props) {
     focusBlank(lastFocused.current)
   }
 
-  function handleChange(i: number, value: string) {
+  function handleChange(i: number, value: string, at: number) {
+    // Some phone keyboards send no key events, so click here unless a key press just did.
+    if (sfx && at - lastKeyAt.current > 100) playType()
     setAnswers((prev) => prev.map((a, j) => (j === i ? value : a)))
     setStatuses((prev) => prev.map((s, j) => (j === i ? 'idle' : s)))
   }
 
   function handleKeyDown(e: KeyboardEvent<HTMLInputElement>, i: number) {
+    const composing = e.nativeEvent.isComposing || e.keyCode === 229
+    // Enter outside the IME plays the correct/wrong sound instead of a click.
+    if (sfx && !MODIFIER_KEYS.has(e.key) && (composing || e.key !== 'Enter')) {
+      lastKeyAt.current = e.timeStamp
+      playType()
+    }
+
     // While a Chinese IME is composing, Enter/Space/Backspace belong to the IME.
-    if (e.nativeEvent.isComposing || e.keyCode === 229) return
+    if (composing) return
 
     if (e.key === 'Enter') {
       e.preventDefault()
@@ -94,7 +120,7 @@ export function Exercise({ sentence, onNext }: Props) {
                 inputs.current[i] = el
               }}
               value={answers[i]}
-              onChange={(e) => handleChange(i, e.target.value)}
+              onChange={(e) => handleChange(i, e.target.value, e.timeStamp)}
               onKeyDown={(e) => handleKeyDown(e, i)}
               onFocus={() => (lastFocused.current = i)}
               readOnly={solved}

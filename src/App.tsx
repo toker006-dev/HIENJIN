@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Exercise } from './components/Exercise.tsx'
 import { t } from './i18n/lo.ts'
+import { playComplete } from './lib/sfx.ts'
 import type { Sentence } from './types.ts'
 
 // Every generated level file (hsk1.json ... hsk6.json), keyed by level number.
@@ -24,9 +25,34 @@ function savedLevel(): number {
   return levels[0]
 }
 
+/** A boolean setting remembered in localStorage (defaults to on). */
+function useStoredToggle(key: string): [boolean, () => void] {
+  const [on, setOn] = useState(() => {
+    try {
+      return localStorage.getItem(key) !== 'off'
+    } catch {
+      return true
+    }
+  })
+  function toggle() {
+    setOn(!on)
+    try {
+      localStorage.setItem(key, on ? 'off' : 'on')
+    } catch {
+      // not critical
+    }
+  }
+  return [on, toggle]
+}
+
+const toggleButton =
+  'rounded-full p-1.5 transition aria-pressed:bg-teal-100 aria-pressed:text-teal-800 text-stone-400 hover:text-stone-700'
+
 export default function App() {
   const [level, setLevel] = useState(savedLevel)
   const [index, setIndex] = useState(0)
+  const [sfx, toggleSfx] = useStoredToggle('sound-effects')
+  const [voice, toggleVoice] = useStoredToggle('voice')
   const sentences = sentencesByLevel.get(level)!
 
   function chooseLevel(next: number) {
@@ -37,6 +63,12 @@ export default function App() {
     } catch {
       // not critical
     }
+  }
+
+  function next() {
+    // Finishing the last sentence of the level gets a fanfare.
+    if (index + 1 === sentences.length && sfx) playComplete()
+    setIndex(index + 1)
   }
 
   const done = index >= sentences.length
@@ -67,7 +99,26 @@ export default function App() {
       </header>
 
       <div className="mx-auto w-full max-w-3xl px-4 pt-4">
-        <div className="mb-2 flex justify-end">
+        <div className="mb-2 flex items-center justify-between">
+          <div className="flex gap-1">
+            <button onClick={toggleSfx} aria-pressed={sfx} aria-label={t.soundEffects} title={t.soundEffects} className={toggleButton}>
+              {/* music note; crossed out when off */}
+              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+                {!sfx && <path d="m2 2 20 20" />}
+              </svg>
+            </button>
+            <button onClick={toggleVoice} aria-pressed={voice} aria-label={t.voice} title={t.voice} className={toggleButton}>
+              {/* speaking head; crossed out when off */}
+              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 21v-3a4 4 0 0 0 4-4V9A7 7 0 0 0 4 9c0 3 1 4 2 5v7" />
+                <path d="M20 6a6 6 0 0 1 2 4M18 9a3 3 0 0 1 1 2" />
+                {!voice && <path d="m2 2 20 20" />}
+              </svg>
+            </button>
+          </div>
           <span className="font-lao text-sm text-stone-500">
             {t.progress(Math.min(index + 1, sentences.length), sentences.length)}
           </span>
@@ -93,7 +144,7 @@ export default function App() {
               </button>
             </div>
           ) : (
-            <Exercise key={`${level}-${sentences[index].id}`} sentence={sentences[index]} onNext={() => setIndex((i) => i + 1)} />
+            <Exercise key={`${level}-${sentences[index].id}`} sentence={sentences[index]} onNext={next} sfx={sfx} voice={voice} />
           )}
         </div>
       </main>
