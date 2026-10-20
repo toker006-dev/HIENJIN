@@ -1,0 +1,86 @@
+[
+  {
+    "id": "hsk2-吧",
+    "level": 2,
+    "target": "吧",
+    "words": [
+      "我们",
+      "去",
+      "吃饭",
+      "吧"
+    ],
+    "lao": "ພວກເຮົາໄປກິນເຂົ້າກັນເທາະ",
+    "info": {
+      "pinyin": "ba",
+      "pos": "particle",
+      "meaningLao": "ເຖີດ"
+    }
+  },
+  {
+    "id": "hsk2-白",
+    "level": 2,
+    "target": "白",
+    "words": [
+      "我",
+      "喜欢",
+      "白",
+      "猫"
+    ],
+    "lao": "ຂ້ອຍມັກແມວສີຂາວ",
+    "info": {
+      "pinyin": "bái",
+      "pos": "adjective",
+      "meaningLao": "ສີຂາວ"
+    }
+  },
+  {
+    "id": "hsk2-百",
+    "level": 2,
+    "target": "百",
+    "words": [
+      "这",
+      "个",
+      "杯子",
+      "百",
+      "元"
+    ],
+    "lao": "ຈອກນີ້ລາຄາຮ້ອຍຢວນ",
+    "info": {
+      "pinyin": "bǎi",
+      "pos": "numeral",
+      "meaningLao": "ຮ້ອຍ"
+    }
+  },
+  {
+    "id": "hsk2-帮助",
+    "level": 2,
+    "target": "帮助",
+    "words": [
+      "我",
+      "帮助",
+      "你"
+    ],
+    "lao": "ຂ້ອຍຊ່ວຍເຈົ້າ",
+    "info": {
+      "pinyin": "bāngzhù",
+      "pos": "verb",
+      "meaningLao": "ຊ່ວຍເຫຼືອ"
+    }
+  },
+  {
+    "id": "hsk2-报纸",
+    "level": 2,
+    "target": "报纸",
+    "words": [
+      "我",
+      "看",
+      "报纸"
+    ],
+    "lao": "ຂ້ອຍອ່ານໜັງສືພິມ",
+    "info": {
+      "pinyin": "bàozhǐ",
+      "pos": "noun",
+      "meaningLao": "ຫນັງສືພິມ"
+    }
+  }
+]

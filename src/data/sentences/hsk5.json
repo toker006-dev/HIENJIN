@@ -1,0 +1,85 @@
+[
+  {
+    "id": "hsk5-唉",
+    "level": 5,
+    "target": "唉",
+    "words": [
+      "唉",
+      "是",
+      "我"
+    ],
+    "lao": "ໂອ້ ແມ່ນຂ້ອຍເອງ",
+    "info": {
+      "pinyin": "āi",
+      "pos": "interjection",
+      "meaningLao": "ແມ່ນແລ້ວ"
+    }
+  },
+  {
+    "id": "hsk5-爱护",
+    "level": 5,
+    "target": "爱护",
+    "words": [
+      "我们",
+      "要",
+      "爱护",
+      "环境"
+    ],
+    "lao": "ພວກເຮົາຕ້ອງຮັກສາສິ່ງແວດລ້ອມ",
+    "info": {
+      "pinyin": "àihù",
+      "pos": "verb",
+      "meaningLao": "ປົກປ້ອງຮັກສາ"
+    }
+  },
+  {
+    "id": "hsk5-爱惜",
+    "level": 5,
+    "target": "爱惜",
+    "words": [
+      "我们",
+      "要",
+      "爱惜",
+      "时间"
+    ],
+    "lao": "ພວກເຮົາຕ້ອງຮັກສາເວລາ",
+    "info": {
+      "pinyin": "àixī",
+      "pos": "verb",
+      "meaningLao": "ຫວງແຫນ"
+    }
+  },
+  {
+    "id": "hsk5-爱心",
+    "level": 5,
+    "target": "爱心",
+    "words": [
+      "他",
+      "有",
+      "爱心"
+    ],
+    "lao": "ລາວມີຄວາມເມດຕາ",
+    "info": {
+      "pinyin": "àixīn",
+      "pos": "noun",
+      "meaningLao": "ຄວາມເມດຕາ"
+    }
+  },
+  {
+    "id": "hsk5-安慰",
+    "level": 5,
+    "target": "安慰",
+    "words": [
+      "我",
+      "去",
+      "安慰",
+      "他"
+    ],
+    "lao": "ຂ້ອຍໄປປອບໃຈລາວ",
+    "info": {
+      "pinyin": "ānwèi",
+      "pos": "verb",
+      "meaningLao": "ປອບໂຍນ"
+    }
+  }
+]

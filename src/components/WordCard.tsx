@@ -1,15 +1,6 @@
 import { t } from '../i18n/lo.ts'
+import { canSpeak, speak } from '../lib/speech.ts'
 import type { Sentence } from '../types.ts'
-
-const canSpeak = typeof window !== 'undefined' && 'speechSynthesis' in window
-
-function speak(text: string) {
-  speechSynthesis.cancel()
-  const utterance = new SpeechSynthesisUtterance(text)
-  utterance.lang = 'zh-CN'
-  utterance.rate = 0.8
-  speechSynthesis.speak(utterance)
-}
 
 /** The HSK word a sentence was built around: hanzi, pinyin, part of speech and Lao meaning. */
 export function WordCard({ sentence }: { sentence: Sentence }) {

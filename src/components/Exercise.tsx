@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { t } from '../i18n/lo.ts'
 import { isCorrect } from '../lib/answer.ts'
+import { canSpeak, speak } from '../lib/speech.ts'
 import type { Sentence } from '../types.ts'
 import { WordCard } from './WordCard.tsx'
 
@@ -17,6 +18,9 @@ const blankStyles: Record<Status, string> = {
   correct: 'border-emerald-500 text-emerald-700',
 }
 
+const hintButton =
+  'font-lao inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100 hover:text-stone-900 aria-pressed:bg-amber-50 aria-pressed:text-amber-700 aria-pressed:ring-amber-300'
+
 /** One sentence: the Lao prompt plus one input per Chinese word. Remount (via `key`) for each new sentence. */
 export function Exercise({ sentence, onNext }: Props) {
   const [answers, setAnswers] = useState(() => sentence.words.map(() => ''))
@@ -24,6 +28,8 @@ export function Exercise({ sentence, onNext }: Props) {
   const [solved, setSolved] = useState(false)
   const inputs = useRef<(HTMLInputElement | null)[]>([])
   const nextButton = useRef<HTMLButtonElement>(null)
+  const [revealed, setRevealed] = useState(false)
+  const lastFocused = useRef(0)
 
   useEffect(() => inputs.current[0]?.focus(), [])
   useEffect(() => {
@@ -42,6 +48,12 @@ export function Exercise({ sentence, onNext }: Props) {
 
   function focusBlank(i: number) {
     inputs.current[i]?.focus()
+  }
+
+  /** Runs a hint action, then returns the cursor to the blank the learner was typing in. */
+  function withFocusBack(action: () => void) {
+    action()
+    focusBlank(lastFocused.current)
   }
 
   function handleChange(i: number, value: string) {
@@ -75,26 +87,59 @@ export function Exercise({ sentence, onNext }: Props) {
       </div>
 
       <div className="flex flex-wrap justify-center gap-3" lang="zh-CN">
-        {sentence.words.map((_, i) => (
-          <input
-            key={i}
-            ref={(el) => {
-              inputs.current[i] = el
-            }}
-            value={answers[i]}
-            onChange={(e) => handleChange(i, e.target.value)}
-            onKeyDown={(e) => handleKeyDown(e, i)}
-            readOnly={solved}
-            aria-label={t.blank(i + 1)}
-            aria-invalid={statuses[i] === 'wrong'}
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck={false}
-            style={{ width: `${Math.max(2, [...answers[i]].length) + 1}em` }}
-            className={`font-zh rounded-t-md border-b-4 bg-transparent px-2 pb-1 text-center text-3xl transition-colors outline-none ${blankStyles[statuses[i]]}`}
-          />
+        {sentence.words.map((word, i) => (
+          <div key={i} className="flex flex-col items-center">
+            <input
+              ref={(el) => {
+                inputs.current[i] = el
+              }}
+              value={answers[i]}
+              onChange={(e) => handleChange(i, e.target.value)}
+              onKeyDown={(e) => handleKeyDown(e, i)}
+              onFocus={() => (lastFocused.current = i)}
+              readOnly={solved}
+              aria-label={t.blank(i + 1)}
+              aria-invalid={statuses[i] === 'wrong'}
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck={false}
+              style={{ width: `${Math.max(2, [...answers[i]].length) + 1}em` }}
+              className={`font-zh rounded-t-md border-b-4 bg-transparent px-2 pb-1 text-center text-3xl transition-colors outline-none ${blankStyles[statuses[i]]}`}
+            />
+            {/* Fixed-height slot so revealing the answer doesn't shift the layout. */}
+            <span aria-hidden={!revealed} className="font-zh mt-1 h-6 text-lg text-amber-600">
+              {revealed && !solved ? word : ''}
+            </span>
+          </div>
         ))}
       </div>
+
+      {!solved && (
+        <div className="-mt-3 flex gap-2">
+          {canSpeak && (
+            <button onClick={() => withFocusBack(() => speak(sentence.words.join(''), 0.7))} className={hintButton}>
+              <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M11 5 6 9H2v6h4l5 4V5Z" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14" />
+              </svg>
+              {t.listenAnswer}
+            </button>
+          )}
+          <button onClick={() => withFocusBack(() => setRevealed((r) => !r))} aria-pressed={revealed} className={hintButton}>
+            <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              {revealed ? (
+                <path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A9.8 9.8 0 0 1 12 5c6 0 10 7 10 7a17 17 0 0 1-3.2 3.9M6.6 6.6A17 17 0 0 0 2 12s4 7 10 7a9.7 9.7 0 0 0 5.4-1.6" />
+              ) : (
+                <>
+                  <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </>
+              )}
+            </svg>
+            {revealed ? t.hideAnswer : t.showAnswer}
+          </button>
+        </div>
+      )}
 
       <div className="flex min-h-24 flex-col items-center gap-3">
         <p aria-live="polite" className={`font-lao text-base ${solved ? 'text-emerald-700' : 'text-red-600'}`}>

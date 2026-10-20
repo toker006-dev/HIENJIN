@@ -21,6 +21,7 @@ for (let level = 1; level <= 6; level++) {
   const words: HskWord[] = entries.map((e) => ({
     word: e.simplified,
     pinyin: e.forms[0]?.transcriptions.pinyin ?? '',
+    readings: [...new Set(e.forms.map((f) => f.transcriptions.pinyin))],
     meanings: e.forms.flatMap((f) => f.meanings),
   }))
 

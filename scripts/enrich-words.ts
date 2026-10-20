@@ -13,37 +13,48 @@ export async function enrichSentences(sentences: Sentence[], vocab: HskWord[]): 
   const byWord = new Map(vocab.map((w) => [w.word, w]))
   const items = missing.map((s) => {
     const hsk = byWord.get(s.target)
-    return { word: s.target, pinyin: hsk?.pinyin, english: hsk?.meanings.slice(0, 3), sentence: s.words.join('') }
+    return { word: s.target, readings: hsk?.readings, english: hsk?.meanings.slice(0, 3), sentence: s.words.join('') }
   })
 
-  const prompt = `For each item, give the part of speech of "word" AS USED IN "sentence", and a short, natural
-Lao meaning (Lao script, 1-5 words) that a Lao beginner understands for that usage.
+  const prompt = `For each item:
+- "pinyin": copy the ONE entry of "readings" that is the pronunciation of "word" AS USED IN "sentence"
+  (e.g. 吧 at the end of a suggestion is "ba", not "bā"; 白 meaning white is "bái", not the surname "Bái")
+- "pos": the part of speech of "word" as used in "sentence"
+- "meaningLao": a short, natural Lao meaning (Lao script only, never Thai; 1-5 words) for that usage
 Return one result per item, in the same order.
 
 ${JSON.stringify(items, null, 2)}`
 
-  const results = await callGemini<{ word: string; pos: PartOfSpeech; meaningLao: string }[]>(prompt, {
+  const results = await callGemini<{ word: string; pinyin: string; pos: PartOfSpeech; meaningLao: string }[]>(prompt, {
     type: 'ARRAY',
     items: {
       type: 'OBJECT',
       properties: {
         word: { type: 'STRING' },
+        pinyin: { type: 'STRING' },
         pos: { type: 'STRING', enum: [...PARTS_OF_SPEECH] },
         meaningLao: { type: 'STRING' },
       },
-      required: ['word', 'pos', 'meaningLao'],
-      propertyOrdering: ['word', 'pos', 'meaningLao'],
+      required: ['word', 'pinyin', 'pos', 'meaningLao'],
+      propertyOrdering: ['word', 'pinyin', 'pos', 'meaningLao'],
     },
   })
 
   let filled = 0
   for (const s of missing) {
     const r = results.find((x) => x.word === s.target)
-    if (!r || !PARTS_OF_SPEECH.includes(r.pos) || !/[຀-໿]/.test(r.meaningLao)) continue
+    if (!r || !PARTS_OF_SPEECH.includes(r.pos) || !isLaoText(r.meaningLao)) continue
+    // Only trust a pinyin the dictionary actually lists, so tones can't be invented.
+    const readings = byWord.get(s.target)?.readings ?? []
+    const reading = readings.find((x) => x === r.pinyin.trim()) ?? readings[0] ?? ''
     // The HSK list spaces syllables ("bà ba"); pinyin is written joined ("bàba").
-    const pinyin = (byWord.get(s.target)?.pinyin ?? '').replace(/\s+/g, '')
-    s.info = { pinyin, pos: r.pos, meaningLao: r.meaningLao.trim() }
+    s.info = { pinyin: reading.replace(/\s+/g, ''), pos: r.pos, meaningLao: r.meaningLao.trim() }
     filled++
   }
   return filled
+}
+
+/** Lao script and no Thai letters - Gemini sometimes slips Thai (which looks similar) into Lao text. */
+export function isLaoText(text: string): boolean {
+  return /[຀-໿]/.test(text) && !/[฀-๿]/.test(text)
 }

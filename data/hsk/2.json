@@ -2,6 +2,11 @@
   {
     "word": "吧",
     "pinyin": "bā",
+    "readings": [
+      "bā",
+      "ba",
+      "biā"
+    ],
     "meanings": [
       "bar (loanword) (serving drinks, or providing Internet access etc)",
       "to puff (on a pipe etc)",
@@ -17,6 +22,10 @@
   {
     "word": "白",
     "pinyin": "Bái",
+    "readings": [
+      "Bái",
+      "bái"
+    ],
     "meanings": [
       "surname Bai",
       "white",
@@ -45,6 +54,10 @@
   {
     "word": "百",
     "pinyin": "Bǎi",
+    "readings": [
+      "Bǎi",
+      "bǎi"
+    ],
     "meanings": [
       "surname Bai",
       "hundred",
@@ -55,6 +68,9 @@
   {
     "word": "帮助",
     "pinyin": "bāng zhù",
+    "readings": [
+      "bāng zhù"
+    ],
     "meanings": [
       "assistance; aid",
       "to help; to assist"
@@ -63,6 +79,9 @@
   {
     "word": "报纸",
     "pinyin": "bào zhǐ",
+    "readings": [
+      "bào zhǐ"
+    ],
     "meanings": [
       "newspaper",
       "newsprint"
@@ -71,6 +90,11 @@
   {
     "word": "比",
     "pinyin": "Bǐ",
+    "readings": [
+      "Bǐ",
+      "bī",
+      "bǐ"
+    ],
     "meanings": [
       "Belgium",
       "Belgian",
@@ -86,6 +110,10 @@
   {
     "word": "便宜",
     "pinyin": "biàn yí",
+    "readings": [
+      "biàn yí",
+      "pián yi"
+    ],
     "meanings": [
       "convenient",
       "cheap",
@@ -97,6 +125,11 @@
   {
     "word": "别",
     "pinyin": "Bié",
+    "readings": [
+      "Bié",
+      "bié",
+      "biè"
+    ],
     "meanings": [
       "surname Bie",
       "to leave; to part (from)",
@@ -112,6 +145,9 @@
   {
     "word": "唱歌",
     "pinyin": "chàng gē",
+    "readings": [
+      "chàng gē"
+    ],
     "meanings": [
       "to sing a song"
     ]
@@ -119,6 +155,9 @@
   {
     "word": "出",
     "pinyin": "chū",
+    "readings": [
+      "chū"
+    ],
     "meanings": [
       "to go out",
       "to come out",
@@ -136,6 +175,9 @@
   {
     "word": "穿",
     "pinyin": "chuān",
+    "readings": [
+      "chuān"
+    ],
     "meanings": [
       "to wear",
       "to put on",
@@ -151,6 +193,9 @@
   {
     "word": "船",
     "pinyin": "chuán",
+    "readings": [
+      "chuán"
+    ],
     "meanings": [
       "variant of 船",
       "boat",
@@ -161,6 +206,9 @@
   {
     "word": "次",
     "pinyin": "cì",
+    "readings": [
+      "cì"
+    ],
     "meanings": [
       "next in sequence",
       "second",
@@ -180,6 +228,10 @@
   {
     "word": "从",
     "pinyin": "cóng",
+    "readings": [
+      "cóng",
+      "Cóng"
+    ],
     "meanings": [
       "variant of 从",
       "surname Cong",
@@ -200,6 +252,10 @@
   {
     "word": "错",
     "pinyin": "Cuò",
+    "readings": [
+      "Cuò",
+      "cuò"
+    ],
     "meanings": [
       "surname Cuo",
       "mistake",
@@ -220,6 +276,9 @@
   {
     "word": "打篮球",
     "pinyin": "dǎ lán qiú",
+    "readings": [
+      "dǎ lán qiú"
+    ],
     "meanings": [
       "to play basketball"
     ]
@@ -227,6 +286,9 @@
   {
     "word": "大家",
     "pinyin": "dà jiā",
+    "readings": [
+      "dà jiā"
+    ],
     "meanings": [
       "everyone",
       "influential family",
@@ -236,6 +298,9 @@
   {
     "word": "但是",
     "pinyin": "dàn shì",
+    "readings": [
+      "dàn shì"
+    ],
     "meanings": [
       "but; however"
     ]
@@ -243,6 +308,9 @@
   {
     "word": "到",
     "pinyin": "dào",
+    "readings": [
+      "dào"
+    ],
     "meanings": [
       "to reach; to arrive",
       "to leave for; to go to",
@@ -254,6 +322,11 @@
   {
     "word": "得",
     "pinyin": "dé",
+    "readings": [
+      "dé",
+      "de",
+      "děi"
+    ],
     "meanings": [
       "to obtain",
       "to get",
@@ -277,6 +350,9 @@
   {
     "word": "弟弟",
     "pinyin": "dì di",
+    "readings": [
+      "dì di"
+    ],
     "meanings": [
       "younger brother"
     ]
@@ -284,6 +360,9 @@
   {
     "word": "第一",
     "pinyin": "dì yī",
+    "readings": [
+      "dì yī"
+    ],
     "meanings": [
       "first",
       "number one",
@@ -293,6 +372,9 @@
   {
     "word": "懂",
     "pinyin": "dǒng",
+    "readings": [
+      "dǒng"
+    ],
     "meanings": [
       "to understand",
       "to comprehend"
@@ -301,6 +383,9 @@
   {
     "word": "房间",
     "pinyin": "fáng jiān",
+    "readings": [
+      "fáng jiān"
+    ],
     "meanings": [
       "room"
     ]
@@ -308,6 +393,9 @@
   {
     "word": "非常",
     "pinyin": "fēi cháng",
+    "readings": [
+      "fēi cháng"
+    ],
     "meanings": [
       "very; really",
       "unusual; extraordinary"
@@ -316,6 +404,9 @@
   {
     "word": "服务员",
     "pinyin": "fú wù yuán",
+    "readings": [
+      "fú wù yuán"
+    ],
     "meanings": [
       "waiter",
       "waitress",
@@ -326,6 +417,10 @@
   {
     "word": "高",
     "pinyin": "Gāo",
+    "readings": [
+      "Gāo",
+      "gāo"
+    ],
     "meanings": [
       "surname Gao",
       "high",
@@ -338,6 +433,10 @@
   {
     "word": "告诉",
     "pinyin": "gào sù",
+    "readings": [
+      "gào sù",
+      "gào su"
+    ],
     "meanings": [
       "to press charges; to file a complaint",
       "to tell; to inform; to let know"
@@ -346,6 +445,9 @@
   {
     "word": "哥哥",
     "pinyin": "gē ge",
+    "readings": [
+      "gē ge"
+    ],
     "meanings": [
       "older brother"
     ]
@@ -353,6 +455,10 @@
   {
     "word": "给",
     "pinyin": "gěi",
+    "readings": [
+      "gěi",
+      "jǐ"
+    ],
     "meanings": [
       "to",
       "for",
@@ -370,6 +476,9 @@
   {
     "word": "公共汽车",
     "pinyin": "gōng gòng qì chē",
+    "readings": [
+      "gōng gòng qì chē"
+    ],
     "meanings": [
       "bus"
     ]
@@ -377,6 +486,9 @@
   {
     "word": "公斤",
     "pinyin": "gōng jīn",
+    "readings": [
+      "gōng jīn"
+    ],
     "meanings": [
       "kilogram (kg)"
     ]
@@ -384,6 +496,9 @@
   {
     "word": "公司",
     "pinyin": "gōng sī",
+    "readings": [
+      "gōng sī"
+    ],
     "meanings": [
       "company; firm; corporation"
     ]
@@ -391,6 +506,9 @@
   {
     "word": "贵",
     "pinyin": "guì",
+    "readings": [
+      "guì"
+    ],
     "meanings": [
       "expensive",
       "noble",
@@ -401,6 +519,11 @@
   {
     "word": "还",
     "pinyin": "Huán",
+    "readings": [
+      "Huán",
+      "hái",
+      "huán"
+    ],
     "meanings": [
       "surname Huan",
       "still",
@@ -422,6 +545,9 @@
   {
     "word": "孩子",
     "pinyin": "hái zi",
+    "readings": [
+      "hái zi"
+    ],
     "meanings": [
       "child"
     ]
@@ -429,6 +555,10 @@
   {
     "word": "好吃",
     "pinyin": "hǎo chī",
+    "readings": [
+      "hǎo chī",
+      "hào chī"
+    ],
     "meanings": [
       "tasty",
       "delicious",
@@ -439,6 +569,10 @@
   {
     "word": "号",
     "pinyin": "háo",
+    "readings": [
+      "háo",
+      "hào"
+    ],
     "meanings": [
       "roar",
       "cry",
@@ -459,6 +593,10 @@
   {
     "word": "黑",
     "pinyin": "Hēi",
+    "readings": [
+      "Hēi",
+      "hēi"
+    ],
     "meanings": [
       "abbr. for Heilongjiang province 黑龙江",
       "black",
@@ -475,6 +613,10 @@
   {
     "word": "红",
     "pinyin": "Hóng",
+    "readings": [
+      "Hóng",
+      "hóng"
+    ],
     "meanings": [
       "surname Hong",
       "red",
@@ -486,6 +628,9 @@
   {
     "word": "欢迎",
     "pinyin": "huān yíng",
+    "readings": [
+      "huān yíng"
+    ],
     "meanings": [
       "to welcome",
       "welcome"
@@ -494,6 +639,9 @@
   {
     "word": "回答",
     "pinyin": "huí dá",
+    "readings": [
+      "huí dá"
+    ],
     "meanings": [
       "to reply; to answer",
       "reply; answer"
@@ -502,6 +650,9 @@
   {
     "word": "机场",
     "pinyin": "jī chǎng",
+    "readings": [
+      "jī chǎng"
+    ],
     "meanings": [
       "airport; airfield",
       "(slang) service provider for Shadowsocks or similar software for circumventing Internet censorship"
@@ -510,6 +661,9 @@
   {
     "word": "鸡蛋",
     "pinyin": "jī dàn",
+    "readings": [
+      "jī dàn"
+    ],
     "meanings": [
       "(chicken) egg",
       "hen's egg"
@@ -518,6 +672,9 @@
   {
     "word": "件",
     "pinyin": "jiàn",
+    "readings": [
+      "jiàn"
+    ],
     "meanings": [
       "item",
       "component",
@@ -527,6 +684,9 @@
   {
     "word": "教室",
     "pinyin": "jiào shì",
+    "readings": [
+      "jiào shì"
+    ],
     "meanings": [
       "classroom"
     ]
@@ -534,6 +694,9 @@
   {
     "word": "介绍",
     "pinyin": "jiè shào",
+    "readings": [
+      "jiè shào"
+    ],
     "meanings": [
       "to introduce (sb to sb)",
       "to give a presentation",
@@ -544,6 +707,9 @@
   {
     "word": "姐姐",
     "pinyin": "jiě jie",
+    "readings": [
+      "jiě jie"
+    ],
     "meanings": [
       "older sister"
     ]
@@ -551,6 +717,9 @@
   {
     "word": "近",
     "pinyin": "jìn",
+    "readings": [
+      "jìn"
+    ],
     "meanings": [
       "near",
       "close to",
@@ -560,6 +729,9 @@
   {
     "word": "进",
     "pinyin": "jìn",
+    "readings": [
+      "jìn"
+    ],
     "meanings": [
       "to go forward",
       "to advance",
@@ -576,6 +748,9 @@
   {
     "word": "就",
     "pinyin": "jiù",
+    "readings": [
+      "jiù"
+    ],
     "meanings": [
       "(after a suppositional clause) in that case; then",
       "(after a clause of action) as soon as; immediately after",
@@ -594,6 +769,9 @@
   {
     "word": "觉得",
     "pinyin": "jué de",
+    "readings": [
+      "jué de"
+    ],
     "meanings": [
       "to think that ...; to feel that ...",
       "to feel (uncomfortable etc)"
@@ -602,6 +780,9 @@
   {
     "word": "咖啡",
     "pinyin": "kā fēi",
+    "readings": [
+      "kā fēi"
+    ],
     "meanings": [
       "coffee (loanword)"
     ]
@@ -609,6 +790,9 @@
   {
     "word": "开始",
     "pinyin": "kāi shǐ",
+    "readings": [
+      "kāi shǐ"
+    ],
     "meanings": [
       "to begin",
       "beginning",
@@ -619,6 +803,9 @@
   {
     "word": "考试",
     "pinyin": "kǎo shì",
+    "readings": [
+      "kǎo shì"
+    ],
     "meanings": [
       "to take an exam",
       "exam"
@@ -627,6 +814,9 @@
   {
     "word": "可能",
     "pinyin": "kě néng",
+    "readings": [
+      "kě néng"
+    ],
     "meanings": [
       "might (happen)",
       "possible",
@@ -640,6 +830,9 @@
   {
     "word": "可以",
     "pinyin": "kě yǐ",
+    "readings": [
+      "kě yǐ"
+    ],
     "meanings": [
       "can",
       "may",
@@ -652,6 +845,9 @@
   {
     "word": "课",
     "pinyin": "kè",
+    "readings": [
+      "kè"
+    ],
     "meanings": [
       "subject",
       "course",
@@ -665,6 +861,9 @@
   {
     "word": "快",
     "pinyin": "kuài",
+    "readings": [
+      "kuài"
+    ],
     "meanings": [
       "rapid",
       "quick",
@@ -685,6 +884,9 @@
   {
     "word": "快乐",
     "pinyin": "kuài lè",
+    "readings": [
+      "kuài lè"
+    ],
     "meanings": [
       "happy; joyful"
     ]
@@ -692,6 +894,12 @@
   {
     "word": "累",
     "pinyin": "lěi",
+    "readings": [
+      "lěi",
+      "lèi",
+      "Léi",
+      "léi"
+    ],
     "meanings": [
       "to accumulate",
       "to involve or implicate (Taiwan pr. [lèi])",
@@ -711,6 +919,11 @@
   {
     "word": "离",
     "pinyin": "chī",
+    "readings": [
+      "chī",
+      "Lí",
+      "lí"
+    ],
     "meanings": [
       "mythical beast (archaic)",
       "surname Li",
@@ -727,6 +940,9 @@
   {
     "word": "两",
     "pinyin": "liǎng",
+    "readings": [
+      "liǎng"
+    ],
     "meanings": [
       "two",
       "both",
@@ -738,6 +954,10 @@
   {
     "word": "路",
     "pinyin": "Lù",
+    "readings": [
+      "Lù",
+      "lù"
+    ],
     "meanings": [
       "surname Lu",
       "road",
@@ -750,6 +970,9 @@
   {
     "word": "旅游",
     "pinyin": "lǚ yóu",
+    "readings": [
+      "lǚ yóu"
+    ],
     "meanings": [
       "trip",
       "journey",
@@ -762,6 +985,9 @@
   {
     "word": "卖",
     "pinyin": "mài",
+    "readings": [
+      "mài"
+    ],
     "meanings": [
       "to sell",
       "to betray",
@@ -772,6 +998,9 @@
   {
     "word": "慢",
     "pinyin": "màn",
+    "readings": [
+      "màn"
+    ],
     "meanings": [
       "slow"
     ]
@@ -779,6 +1008,9 @@
   {
     "word": "忙",
     "pinyin": "máng",
+    "readings": [
+      "máng"
+    ],
     "meanings": [
       "busy",
       "hurriedly",
@@ -789,6 +1021,9 @@
   {
     "word": "每",
     "pinyin": "měi",
+    "readings": [
+      "měi"
+    ],
     "meanings": [
       "each",
       "every"
@@ -797,6 +1032,9 @@
   {
     "word": "妹妹",
     "pinyin": "mèi mei",
+    "readings": [
+      "mèi mei"
+    ],
     "meanings": [
       "younger sister",
       "young woman"
@@ -805,6 +1043,10 @@
   {
     "word": "门",
     "pinyin": "Mén",
+    "readings": [
+      "Mén",
+      "mén"
+    ],
     "meanings": [
       "surname Men",
       "gate",
@@ -831,6 +1073,9 @@
   {
     "word": "男人",
     "pinyin": "nán rén",
+    "readings": [
+      "nán rén"
+    ],
     "meanings": [
       "a man",
       "a male",
@@ -840,6 +1085,9 @@
   {
     "word": "您",
     "pinyin": "nín",
+    "readings": [
+      "nín"
+    ],
     "meanings": [
       "you (courteous, as opposed to informal 你)"
     ]
@@ -847,6 +1095,9 @@
   {
     "word": "牛奶",
     "pinyin": "niú nǎi",
+    "readings": [
+      "niú nǎi"
+    ],
     "meanings": [
       "cow's milk"
     ]
@@ -854,6 +1105,10 @@
   {
     "word": "女人",
     "pinyin": "nǚ rén",
+    "readings": [
+      "nǚ rén",
+      "nǚ ren"
+    ],
     "meanings": [
       "woman",
       "wife"
@@ -862,6 +1117,9 @@
   {
     "word": "旁边",
     "pinyin": "páng biān",
+    "readings": [
+      "páng biān"
+    ],
     "meanings": [
       "side; adjacent place"
     ]
@@ -869,6 +1127,9 @@
   {
     "word": "跑步",
     "pinyin": "pǎo bù",
+    "readings": [
+      "pǎo bù"
+    ],
     "meanings": [
       "to run",
       "to jog",
@@ -878,6 +1139,9 @@
   {
     "word": "票",
     "pinyin": "piào",
+    "readings": [
+      "piào"
+    ],
     "meanings": [
       "ticket",
       "ballot",
@@ -890,6 +1154,10 @@
   {
     "word": "妻子",
     "pinyin": "qī zǐ",
+    "readings": [
+      "qī zǐ",
+      "qī zi"
+    ],
     "meanings": [
       "wife and children",
       "wife"
@@ -898,6 +1166,9 @@
   {
     "word": "起床",
     "pinyin": "qǐ chuáng",
+    "readings": [
+      "qǐ chuáng"
+    ],
     "meanings": [
       "to get out of bed",
       "to get up"
@@ -906,6 +1177,9 @@
   {
     "word": "千",
     "pinyin": "qiān",
+    "readings": [
+      "qiān"
+    ],
     "meanings": [
       "thousand",
       "see 秋千"
@@ -914,6 +1188,9 @@
   {
     "word": "晴",
     "pinyin": "qíng",
+    "readings": [
+      "qíng"
+    ],
     "meanings": [
       "clear",
       "fine (weather)"
@@ -922,6 +1199,9 @@
   {
     "word": "去年",
     "pinyin": "qù nián",
+    "readings": [
+      "qù nián"
+    ],
     "meanings": [
       "last year"
     ]
@@ -929,6 +1209,9 @@
   {
     "word": "让",
     "pinyin": "ràng",
+    "readings": [
+      "ràng"
+    ],
     "meanings": [
       "to yield",
       "to permit",
@@ -941,6 +1224,9 @@
   {
     "word": "上班",
     "pinyin": "shàng bān",
+    "readings": [
+      "shàng bān"
+    ],
     "meanings": [
       "to go to work",
       "to be on duty",
@@ -951,6 +1237,9 @@
   {
     "word": "身体",
     "pinyin": "shēn tǐ",
+    "readings": [
+      "shēn tǐ"
+    ],
     "meanings": [
       "the body",
       "one's health",
@@ -960,6 +1249,9 @@
   {
     "word": "生病",
     "pinyin": "shēng bìng",
+    "readings": [
+      "shēng bìng"
+    ],
     "meanings": [
       "to fall ill"
     ]
@@ -967,6 +1259,9 @@
   {
     "word": "生日",
     "pinyin": "shēng rì",
+    "readings": [
+      "shēng rì"
+    ],
     "meanings": [
       "birthday"
     ]
@@ -974,6 +1269,9 @@
   {
     "word": "时间",
     "pinyin": "shí jiān",
+    "readings": [
+      "shí jiān"
+    ],
     "meanings": [
       "time",
       "period"
@@ -982,6 +1280,9 @@
   {
     "word": "事情",
     "pinyin": "shì qing",
+    "readings": [
+      "shì qing"
+    ],
     "meanings": [
       "affair; matter; thing; business"
     ]
@@ -989,6 +1290,9 @@
   {
     "word": "手表",
     "pinyin": "shǒu biǎo",
+    "readings": [
+      "shǒu biǎo"
+    ],
     "meanings": [
       "wristwatch"
     ]
@@ -996,6 +1300,9 @@
   {
     "word": "手机",
     "pinyin": "shǒu jī",
+    "readings": [
+      "shǒu jī"
+    ],
     "meanings": [
       "cell phone",
       "mobile phone"
@@ -1004,6 +1311,9 @@
   {
     "word": "送",
     "pinyin": "sòng",
+    "readings": [
+      "sòng"
+    ],
     "meanings": [
       "to send; to deliver; to transmit",
       "to give (as a present)",
@@ -1014,6 +1324,9 @@
   {
     "word": "所以",
     "pinyin": "suǒ yǐ",
+    "readings": [
+      "suǒ yǐ"
+    ],
     "meanings": [
       "therefore",
       "as a result",
@@ -1024,6 +1337,9 @@
   {
     "word": "它",
     "pinyin": "tā",
+    "readings": [
+      "tā"
+    ],
     "meanings": [
       "it"
     ]
@@ -1031,6 +1347,9 @@
   {
     "word": "踢",
     "pinyin": "tī",
+    "readings": [
+      "tī"
+    ],
     "meanings": [
       "to kick",
       "to play (e.g. soccer)",
@@ -1040,6 +1359,10 @@
   {
     "word": "题",
     "pinyin": "Tí",
+    "readings": [
+      "Tí",
+      "tí"
+    ],
     "meanings": [
       "surname Ti",
       "topic",
@@ -1053,6 +1376,9 @@
   {
     "word": "跳舞",
     "pinyin": "tiào wǔ",
+    "readings": [
+      "tiào wǔ"
+    ],
     "meanings": [
       "to dance"
     ]
@@ -1060,6 +1386,9 @@
   {
     "word": "外",
     "pinyin": "wài",
+    "readings": [
+      "wài"
+    ],
     "meanings": [
       "outside",
       "in addition",
@@ -1070,6 +1399,9 @@
   {
     "word": "完",
     "pinyin": "wán",
+    "readings": [
+      "wán"
+    ],
     "meanings": [
       "to finish",
       "to be over",
@@ -1081,6 +1413,9 @@
   {
     "word": "玩",
     "pinyin": "wán",
+    "readings": [
+      "wán"
+    ],
     "meanings": [
       "to play",
       "to have fun",
@@ -1096,6 +1431,9 @@
   {
     "word": "晚上",
     "pinyin": "wǎn shang",
+    "readings": [
+      "wǎn shang"
+    ],
     "meanings": [
       "evening",
       "night",
@@ -1105,6 +1443,10 @@
   {
     "word": "为",
     "pinyin": "wéi",
+    "readings": [
+      "wéi",
+      "wèi"
+    ],
     "meanings": [
       "as (in the capacity of)",
       "to take sth as",
@@ -1125,6 +1467,9 @@
   {
     "word": "问",
     "pinyin": "wèn",
+    "readings": [
+      "wèn"
+    ],
     "meanings": [
       "to ask; to inquire"
     ]
@@ -1132,6 +1477,9 @@
   {
     "word": "问题",
     "pinyin": "wèn tí",
+    "readings": [
+      "wèn tí"
+    ],
     "meanings": [
       "question",
       "problem",
@@ -1142,6 +1490,9 @@
   {
     "word": "希望",
     "pinyin": "xī wàng",
+    "readings": [
+      "xī wàng"
+    ],
     "meanings": [
       "to hope",
       "a hope; a wish"
@@ -1150,6 +1501,9 @@
   {
     "word": "洗",
     "pinyin": "xǐ",
+    "readings": [
+      "xǐ"
+    ],
     "meanings": [
       "to wash; to bathe",
       "to develop (photographs)",
@@ -1160,6 +1514,9 @@
   {
     "word": "西瓜",
     "pinyin": "xī guā",
+    "readings": [
+      "xī guā"
+    ],
     "meanings": [
       "watermelon"
     ]
@@ -1167,6 +1524,10 @@
   {
     "word": "向",
     "pinyin": "Xiàng",
+    "readings": [
+      "Xiàng",
+      "xiàng"
+    ],
     "meanings": [
       "surname Xiang",
       "towards",
@@ -1198,6 +1559,9 @@
   {
     "word": "小时",
     "pinyin": "xiǎo shí",
+    "readings": [
+      "xiǎo shí"
+    ],
     "meanings": [
       "hour"
     ]
@@ -1205,6 +1569,9 @@
   {
     "word": "笑",
     "pinyin": "xiào",
+    "readings": [
+      "xiào"
+    ],
     "meanings": [
       "old variant of 笑",
       "to laugh; to smile",
@@ -1214,6 +1581,10 @@
   {
     "word": "新",
     "pinyin": "Xīn",
+    "readings": [
+      "Xīn",
+      "xīn"
+    ],
     "meanings": [
       "abbr. for Xinjiang 疆 or Singapore 坡",
       "surname Xin",
@@ -1225,6 +1596,9 @@
   {
     "word": "姓",
     "pinyin": "xìng",
+    "readings": [
+      "xìng"
+    ],
     "meanings": [
       "family name",
       "surname",
@@ -1234,6 +1608,9 @@
   {
     "word": "休息",
     "pinyin": "xiū xi",
+    "readings": [
+      "xiū xi"
+    ],
     "meanings": [
       "rest",
       "to rest"
@@ -1242,6 +1619,10 @@
   {
     "word": "雪",
     "pinyin": "Xuě",
+    "readings": [
+      "Xuě",
+      "xuě"
+    ],
     "meanings": [
       "surname Xue",
       "snow",
@@ -1251,6 +1632,9 @@
   {
     "word": "颜色",
     "pinyin": "yán sè",
+    "readings": [
+      "yán sè"
+    ],
     "meanings": [
       "color",
       "countenance",
@@ -1263,6 +1647,9 @@
   {
     "word": "眼睛",
     "pinyin": "yǎn jing",
+    "readings": [
+      "yǎn jing"
+    ],
     "meanings": [
       "eye"
     ]
@@ -1270,6 +1657,9 @@
   {
     "word": "羊肉",
     "pinyin": "yáng ròu",
+    "readings": [
+      "yáng ròu"
+    ],
     "meanings": [
       "mutton",
       "goat meat"
@@ -1278,6 +1668,9 @@
   {
     "word": "药",
     "pinyin": "yào",
+    "readings": [
+      "yào"
+    ],
     "meanings": [
       "leaf of the iris",
       "variant of 药",
@@ -1290,6 +1683,10 @@
   {
     "word": "要",
     "pinyin": "yāo",
+    "readings": [
+      "yāo",
+      "yào"
+    ],
     "meanings": [
       "(bound form) to demand; to coerce",
       "to want; to need; to ask for",
@@ -1302,6 +1699,10 @@
   {
     "word": "也",
     "pinyin": "Yě",
+    "readings": [
+      "Yě",
+      "yě"
+    ],
     "meanings": [
       "surname Ye",
       "(adverb) also; both ... and ... (before predicates only)",
@@ -1311,6 +1712,9 @@
   {
     "word": "一起",
     "pinyin": "yī qǐ",
+    "readings": [
+      "yī qǐ"
+    ],
     "meanings": [
       "in the same place",
       "together",
@@ -1321,6 +1725,9 @@
   {
     "word": "已经",
     "pinyin": "yǐ jīng",
+    "readings": [
+      "yǐ jīng"
+    ],
     "meanings": [
       "already"
     ]
@@ -1328,6 +1735,9 @@
   {
     "word": "意思",
     "pinyin": "yì si",
+    "readings": [
+      "yì si"
+    ],
     "meanings": [
       "idea",
       "opinion",
@@ -1344,6 +1754,9 @@
   {
     "word": "因为",
     "pinyin": "yīn wèi",
+    "readings": [
+      "yīn wèi"
+    ],
     "meanings": [
       "because",
       "owing to",
@@ -1353,6 +1766,10 @@
   {
     "word": "阴",
     "pinyin": "Yīn",
+    "readings": [
+      "Yīn",
+      "yīn"
+    ],
     "meanings": [
       "surname Yin",
       "overcast (weather)",
@@ -1371,6 +1788,9 @@
   {
     "word": "游泳",
     "pinyin": "yóu yǒng",
+    "readings": [
+      "yóu yǒng"
+    ],
     "meanings": [
       "swimming",
       "to swim"
@@ -1379,6 +1799,9 @@
   {
     "word": "右边",
     "pinyin": "yòu bian",
+    "readings": [
+      "yòu bian"
+    ],
     "meanings": [
       "right side",
       "right, to the right"
@@ -1387,6 +1810,10 @@
   {
     "word": "鱼",
     "pinyin": "Yú",
+    "readings": [
+      "Yú",
+      "yú"
+    ],
     "meanings": [
       "surname Yu",
       "fish"
@@ -1395,6 +1822,10 @@
   {
     "word": "元",
     "pinyin": "Yuán",
+    "readings": [
+      "Yuán",
+      "yuán"
+    ],
     "meanings": [
       "surname Yuan",
       "the Yuan or Mongol dynasty (1279-1368)",
@@ -1415,6 +1846,10 @@
   {
     "word": "远",
     "pinyin": "yuǎn",
+    "readings": [
+      "yuǎn",
+      "yuàn"
+    ],
     "meanings": [
       "far",
       "distant",
@@ -1427,6 +1862,9 @@
   {
     "word": "运动",
     "pinyin": "yùn dòng",
+    "readings": [
+      "yùn dòng"
+    ],
     "meanings": [
       "to move",
       "to exercise",
@@ -1440,6 +1878,9 @@
   {
     "word": "再",
     "pinyin": "zài",
+    "readings": [
+      "zài"
+    ],
     "meanings": [
       "again; once more; re-",
       "second; another",
@@ -1450,6 +1891,9 @@
   {
     "word": "早上",
     "pinyin": "zǎo shang",
+    "readings": [
+      "zǎo shang"
+    ],
     "meanings": [
       "early morning"
     ]
@@ -1457,6 +1901,10 @@
   {
     "word": "张",
     "pinyin": "Zhāng",
+    "readings": [
+      "Zhāng",
+      "zhāng"
+    ],
     "meanings": [
       "surname Zhang",
       "to open up",
@@ -1469,6 +1917,10 @@
   {
     "word": "长",
     "pinyin": "cháng",
+    "readings": [
+      "cháng",
+      "zhǎng"
+    ],
     "meanings": [
       "length",
       "long",
@@ -1487,6 +1939,9 @@
   {
     "word": "丈夫",
     "pinyin": "zhàng fu",
+    "readings": [
+      "zhàng fu"
+    ],
     "meanings": [
       "husband"
     ]
@@ -1494,6 +1949,9 @@
   {
     "word": "找",
     "pinyin": "zhǎo",
+    "readings": [
+      "zhǎo"
+    ],
     "meanings": [
       "to try to find",
       "to look for",
@@ -1507,6 +1965,12 @@
   {
     "word": "着",
     "pinyin": "zhāo",
+    "readings": [
+      "zhāo",
+      "zháo",
+      "zhe",
+      "zhuó"
+    ],
     "meanings": [
       "(chess) move",
       "trick",
@@ -1531,6 +1995,9 @@
   {
     "word": "真",
     "pinyin": "zhēn",
+    "readings": [
+      "zhēn"
+    ],
     "meanings": [
       "really",
       "truly",
@@ -1543,6 +2010,9 @@
   {
     "word": "正在",
     "pinyin": "zhèng zài",
+    "readings": [
+      "zhèng zài"
+    ],
     "meanings": [
       "just at (that time)",
       "right in (that place)",
@@ -1552,6 +2022,9 @@
   {
     "word": "知道",
     "pinyin": "zhī dào",
+    "readings": [
+      "zhī dào"
+    ],
     "meanings": [
       "to know; to become aware of",
       "also pr. [zhī dao]"
@@ -1560,6 +2033,9 @@
   {
     "word": "准备",
     "pinyin": "zhǔn bèi",
+    "readings": [
+      "zhǔn bèi"
+    ],
     "meanings": [
       "preparation",
       "to prepare",
@@ -1571,6 +2047,9 @@
   {
     "word": "自行车",
     "pinyin": "zì xíng chē",
+    "readings": [
+      "zì xíng chē"
+    ],
     "meanings": [
       "bicycle; bike"
     ]
@@ -1578,6 +2057,9 @@
   {
     "word": "走",
     "pinyin": "zǒu",
+    "readings": [
+      "zǒu"
+    ],
     "meanings": [
       "to walk",
       "to go",
@@ -1596,6 +2078,9 @@
   {
     "word": "最",
     "pinyin": "zuì",
+    "readings": [
+      "zuì"
+    ],
     "meanings": [
       "variant of 最",
       "old variant of 最",
@@ -1607,6 +2092,9 @@
   {
     "word": "左边",
     "pinyin": "zuǒ bian",
+    "readings": [
+      "zuǒ bian"
+    ],
     "meanings": [
       "left",
       "the left side",

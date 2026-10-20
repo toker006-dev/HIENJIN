@@ -1,0 +1,89 @@
+[
+  {
+    "id": "hsk4-爱情",
+    "level": 4,
+    "target": "爱情",
+    "words": [
+      "我",
+      "需要",
+      "真正",
+      "的",
+      "爱情"
+    ],
+    "lao": "ຂ້ອຍຕ້ອງການຄວາມຮັກແທ້",
+    "info": {
+      "pinyin": "àiqíng",
+      "pos": "noun",
+      "meaningLao": "ຄວາມຮັກ"
+    }
+  },
+  {
+    "id": "hsk4-安排",
+    "level": 4,
+    "target": "安排",
+    "words": [
+      "经理",
+      "已经",
+      "安排",
+      "了",
+      "工作"
+    ],
+    "lao": "ຜູ້ຈັດການໄດ້ຈັດແຈງວຽກແລ້ວ",
+    "info": {
+      "pinyin": "ānpái",
+      "pos": "verb",
+      "meaningLao": "ຈັດແຈງ"
+    }
+  },
+  {
+    "id": "hsk4-安全",
+    "level": 4,
+    "target": "安全",
+    "words": [
+      "这里",
+      "很",
+      "安全"
+    ],
+    "lao": "ບ່ອນນີ້ປອດໄພຫຼາຍ",
+    "info": {
+      "pinyin": "ānquán",
+      "pos": "adjective",
+      "meaningLao": "ປອດໄພ"
+    }
+  },
+  {
+    "id": "hsk4-按时",
+    "level": 4,
+    "target": "按时",
+    "words": [
+      "大家",
+      "必须",
+      "按时",
+      "完成",
+      "工作"
+    ],
+    "lao": "ທຸກໆຄົນຕ້ອງເຮັດວຽກໃຫ້ສຳເລັດຕາມເວລາ",
+    "info": {
+      "pinyin": "ànshí",
+      "pos": "adverb",
+      "meaningLao": "ຕາມເວລາ"
+    }
+  },
+  {
+    "id": "hsk4-按照",
+    "level": 4,
+    "target": "按照",
+    "words": [
+      "我们",
+      "按照",
+      "规定",
+      "做"
+    ],
+    "lao": "ພວກ​ເຮົາ​ເຮັດ​ຕາມ​ລະບຽບ",
+    "info": {
+      "pinyin": "ànzhào",
+      "pos": "preposition",
+      "meaningLao": "ຕາມ"
+    }
+  }
+]

@@ -3,6 +3,8 @@ import { readFile } from 'node:fs/promises'
 export interface HskWord {
   word: string
   pinyin: string
+  /** Every reading the dictionary lists, e.g. 吧 -> ["bā", "ba"]; `pinyin` is just the first. */
+  readings: string[]
   meanings: string[]
 }
 

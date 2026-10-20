@@ -1,0 +1,89 @@
+[
+  {
+    "id": "hsk3-阿姨",
+    "level": 3,
+    "target": "阿姨",
+    "words": [
+      "阿姨",
+      "在",
+      "家"
+    ],
+    "lao": "ປ້າຢຸ່ນເຮືອນ",
+    "info": {
+      "pinyin": "āyí",
+      "pos": "noun",
+      "meaningLao": "ແມ່ປ້າ"
+    }
+  },
+  {
+    "id": "hsk3-啊",
+    "level": 3,
+    "target": "啊",
+    "words": [
+      "啊",
+      "这",
+      "个",
+      "书",
+      "真",
+      "贵"
+    ],
+    "lao": "ອ້າວ ປຶ້ມເຫຼົ່ານີ້ແພງແທ້ໆ",
+    "info": {
+      "pinyin": "a",
+      "pos": "interjection",
+      "meaningLao": "ໂອ້"
+    }
+  },
+  {
+    "id": "hsk3-矮",
+    "level": 3,
+    "target": "矮",
+    "words": [
+      "这",
+      "个",
+      "桌子",
+      "很",
+      "矮"
+    ],
+    "lao": "ໂຕະນີ້ຕັ່ງຕ່ຳຫຼາຍ",
+    "info": {
+      "pinyin": "ǎi",
+      "pos": "adjective",
+      "meaningLao": "ຕ່ຳ"
+    }
+  },
+  {
+    "id": "hsk3-爱好",
+    "level": 3,
+    "target": "爱好",
+    "words": [
+      "我",
+      "的",
+      "爱好",
+      "是",
+      "看书"
+    ],
+    "lao": "ວຽກອດິເລກຂອງຂ້ອຍແມ່ນການອ່ານປຶ້ມ",
+    "info": {
+      "pinyin": "àihào",
+      "pos": "noun",
+      "meaningLao": "ວຽກອດິເລກ"
+    }
+  },
+  {
+    "id": "hsk3-安静",
+    "level": 3,
+    "target": "安静",
+    "words": [
+      "这里",
+      "很",
+      "安静"
+    ],
+    "lao": "ບ່ອນນີ້ງຽບຫຼາຍ",
+    "info": {
+      "pinyin": "ānjìng",
+      "pos": "adjective",
+      "meaningLao": "ງຽບສະຫງົບ"
+    }
+  }
+]

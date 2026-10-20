@@ -10,7 +10,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { parseArgs } from 'node:util'
 import type { Sentence } from '../src/types.ts'
-import { enrichSentences } from './enrich-words.ts'
+import { enrichSentences, isLaoText } from './enrich-words.ts'
 import { callGemini, sleep } from './gemini.ts'
 import { loadLevel, loadVocabUpTo, type HskWord } from './hsk.ts'
 
@@ -132,7 +132,7 @@ function validate(target: string, words: string[], lao: string): string | null {
   if (!words.includes(target)) return `the target word ${target} must be one separate element`
   const outside = words.filter((w) => !vocabWords.has(w) && ![...w].every((c) => vocabChars.has(c)))
   if (outside.length) return `these words are not HSK ${level} vocabulary: ${outside.join(', ')}`
-  if (!/[຀-໿]/.test(lao)) return 'the "lao" field must be written in Lao script'
+  if (!isLaoText(lao)) return 'the "lao" field must be written in Lao script only (no Thai letters)'
   return null
 }
 
