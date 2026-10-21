@@ -345,5 +345,91 @@
       "pos": "noun",
       "meaningLao": "ສິ່ງຂອງ"
     }
+  },
+  {
+    "id": "hsk1-都",
+    "level": 1,
+    "target": "都",
+    "words": [
+      "我们",
+      "都",
+      "是",
+      "老师"
+    ],
+    "lao": "ພວກເຮົາທັງໝົດແມ່ນຄູ",
+    "info": {
+      "pinyin": "dōu",
+      "pos": "adverb",
+      "meaningLao": "ທັງໝົດ"
+    }
+  },
+  {
+    "id": "hsk1-读",
+    "level": 1,
+    "target": "读",
+    "words": [
+      "我",
+      "喜欢",
+      "读",
+      "书"
+    ],
+    "lao": "ຂ້ອຍມັກອ່ານປື້ມ",
+    "info": {
+      "pinyin": "dú",
+      "pos": "verb",
+      "meaningLao": "ອ່ານ"
+    }
+  },
+  {
+    "id": "hsk1-对不起",
+    "level": 1,
+    "target": "对不起",
+    "words": [
+      "对不起",
+      "我",
+      "没",
+      "看见"
+    ],
+    "lao": "ຂໍໂທດ, ຂ້ອຍບໍ່ເຫັນ",
+    "info": {
+      "pinyin": "duìbuqǐ",
+      "pos": "interjection",
+      "meaningLao": "ຂໍໂທດ"
+    }
+  },
+  {
+    "id": "hsk1-多",
+    "level": 1,
+    "target": "多",
+    "words": [
+      "今天",
+      "人",
+      "很",
+      "多"
+    ],
+    "lao": "ມື້ນີ້ຄົນຫຼາຍ",
+    "info": {
+      "pinyin": "duō",
+      "pos": "adjective",
+      "meaningLao": "ຫຼາຍ"
+    }
+  },
+  {
+    "id": "hsk1-多少",
+    "level": 1,
+    "target": "多少",
+    "words": [
+      "这",
+      "个",
+      "苹果",
+      "多少",
+      "钱"
+    ],
+    "lao": "ໝາກແອບເປິ້ນນີ້ເທົ່າໃດ",
+    "info": {
+      "pinyin": "duōshao",
+      "pos": "pronoun",
+      "meaningLao": "ເທົ່າໃດ"
+    }
   }
 ]

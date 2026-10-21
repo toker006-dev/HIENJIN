@@ -2,14 +2,20 @@ import { PARTS_OF_SPEECH, type PartOfSpeech, type Sentence } from '../src/types.
 import { callGemini } from './gemini.ts'
 import type { HskWord } from './hsk.ts'
 
+const BATCH = 25
+
 /**
- * Fills `info` (pinyin, part of speech, Lao meaning) for every sentence that lacks it, using one Gemini
- * request for all of them. Pinyin comes from the HSK list; part of speech is judged from the sentence.
+ * Fills `info` (pinyin, part of speech, Lao meaning) for every sentence that lacks it, one Gemini
+ * request per 25 sentences. Pinyin comes from the HSK list; part of speech is judged from the sentence.
  */
 export async function enrichSentences(sentences: Sentence[], vocab: HskWord[]): Promise<number> {
   const missing = sentences.filter((s) => !s.info)
-  if (!missing.length) return 0
+  let filled = 0
+  for (let i = 0; i < missing.length; i += BATCH) filled += await enrichBatch(missing.slice(i, i + BATCH), vocab)
+  return filled
+}
 
+async function enrichBatch(missing: Sentence[], vocab: HskWord[]): Promise<number> {
   const byWord = new Map(vocab.map((w) => [w.word, w]))
   const items = missing.map((s) => {
     const hsk = byWord.get(s.target)

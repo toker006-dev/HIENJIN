@@ -82,5 +82,360 @@
       "pos": "noun",
       "meaningLao": "ຫນັງສືພິມ"
     }
+  },
+  {
+    "id": "hsk2-比",
+    "level": 2,
+    "target": "比",
+    "words": [
+      "哥哥",
+      "比",
+      "我",
+      "高"
+    ],
+    "lao": "ອ້າຍສູງກວ່າຂ້ອຍ",
+    "info": {
+      "pinyin": "bǐ",
+      "pos": "preposition",
+      "meaningLao": "ກວ່າ"
+    }
+  },
+  {
+    "id": "hsk2-便宜",
+    "level": 2,
+    "target": "便宜",
+    "words": [
+      "这",
+      "件",
+      "衣服",
+      "很",
+      "便宜"
+    ],
+    "lao": "ເສື້ອຜ້າໂຕນີ້ຖືກຫຼາຍ",
+    "info": {
+      "pinyin": "piányi",
+      "pos": "adjective",
+      "meaningLao": "ຖືກ"
+    }
+  },
+  {
+    "id": "hsk2-别",
+    "level": 2,
+    "target": "别",
+    "words": [
+      "你",
+      "别",
+      "说话"
+    ],
+    "lao": "ເຈົ້າຢ່າເວົ້າ",
+    "info": {
+      "pinyin": "bié",
+      "pos": "adverb",
+      "meaningLao": "ຢ່າ"
+    }
+  },
+  {
+    "id": "hsk2-唱歌",
+    "level": 2,
+    "target": "唱歌",
+    "words": [
+      "妹妹",
+      "喜欢",
+      "唱歌"
+    ],
+    "lao": "ນ້ອງສາວມັກຮ້ອງເພງ",
+    "info": {
+      "pinyin": "chànggē",
+      "pos": "verb",
+      "meaningLao": "ຮ້ອງເພງ"
+    }
+  },
+  {
+    "id": "hsk2-出",
+    "level": 2,
+    "target": "出",
+    "words": [
+      "他",
+      "出",
+      "去",
+      "了"
+    ],
+    "lao": "ລາວອອກໄປແລ້ວ",
+    "info": {
+      "pinyin": "chū",
+      "pos": "verb",
+      "meaningLao": "ອອກ"
+    }
+  },
+  {
+    "id": "hsk2-穿",
+    "level": 2,
+    "target": "穿",
+    "words": [
+      "她",
+      "穿",
+      "红",
+      "衣服"
+    ],
+    "lao": "ນາງນຸ່ງເສື້ອສີແດງ",
+    "info": {
+      "pinyin": "chuān",
+      "pos": "verb",
+      "meaningLao": "ນຸ່ງ"
+    }
+  },
+  {
+    "id": "hsk2-船",
+    "level": 2,
+    "target": "船",
+    "words": [
+      "我们",
+      "坐",
+      "船",
+      "去"
+    ],
+    "lao": "ພວກເຮົາຂີ່ເຮືອໄປ",
+    "info": {
+      "pinyin": "chuán",
+      "pos": "noun",
+      "meaningLao": "ເຮືອ"
+    }
+  },
+  {
+    "id": "hsk2-次",
+    "level": 2,
+    "target": "次",
+    "words": [
+      "这",
+      "是",
+      "我",
+      "第一",
+      "次",
+      "去",
+      "北京"
+    ],
+    "lao": "ນີ້ແມ່ນຄັ້ງທຳອິດທີ່ຂ້ອຍໄປປັກກິ່ງ",
+    "info": {
+      "pinyin": "cì",
+      "pos": "measure word",
+      "meaningLao": "ເທື່ອ"
+    }
+  },
+  {
+    "id": "hsk2-从",
+    "level": 2,
+    "target": "从",
+    "words": [
+      "她",
+      "从",
+      "早上",
+      "工作",
+      "到",
+      "晚上"
+    ],
+    "lao": "ນາງເຮັດວຽກແຕ່ເຊົ້າຮອດແລງ",
+    "info": {
+      "pinyin": "cóng",
+      "pos": "preposition",
+      "meaningLao": "ຈາກ"
+    }
+  },
+  {
+    "id": "hsk2-错",
+    "level": 2,
+    "target": "错",
+    "words": [
+      "这",
+      "个",
+      "题",
+      "我",
+      "做",
+      "错",
+      "了"
+    ],
+    "lao": "ຂໍ້ນີ້ຂ້ອຍເຮັດຜິດແລ້ວ",
+    "info": {
+      "pinyin": "cuò",
+      "pos": "adjective",
+      "meaningLao": "ຜິດ"
+    }
+  },
+  {
+    "id": "hsk2-打篮球",
+    "level": 2,
+    "target": "打篮球",
+    "words": [
+      "他",
+      "喜欢",
+      "打篮球"
+    ],
+    "lao": "ເຂົາມັກຫຼິ້ນບານບ້ວງ",
+    "info": {
+      "pinyin": "dǎlánqiú",
+      "pos": "phrase",
+      "meaningLao": "ຫຼິ້ນບານບ້ວງ"
+    }
+  },
+  {
+    "id": "hsk2-大家",
+    "level": 2,
+    "target": "大家",
+    "words": [
+      "大家",
+      "都",
+      "很",
+      "高兴"
+    ],
+    "lao": "ທຸກຄົນມີຄວາມສຸກຫຼາຍ",
+    "info": {
+      "pinyin": "dàjiā",
+      "pos": "pronoun",
+      "meaningLao": "ທຸກຄົນ"
+    }
+  },
+  {
+    "id": "hsk2-但是",
+    "level": 2,
+    "target": "但是",
+    "words": [
+      "我",
+      "想",
+      "去",
+      "但是",
+      "太",
+      "忙",
+      "了"
+    ],
+    "lao": "ຂ້ອຍຢາກໄປແຕ່ຍຸ້ງຫຼາຍ",
+    "info": {
+      "pinyin": "dànshì",
+      "pos": "conjunction",
+      "meaningLao": "ແຕ່"
+    }
+  },
+  {
+    "id": "hsk2-到",
+    "level": 2,
+    "target": "到",
+    "words": [
+      "我",
+      "九",
+      "点",
+      "到",
+      "学校"
+    ],
+    "lao": "ຂ້ອຍຮອດໂຮງຮຽນເວລາເກົ້າໂມງ",
+    "info": {
+      "pinyin": "dào",
+      "pos": "verb",
+      "meaningLao": "ຮອດ"
+    }
+  },
+  {
+    "id": "hsk2-得",
+    "level": 2,
+    "target": "得",
+    "words": [
+      "他",
+      "跑",
+      "得",
+      "很",
+      "快"
+    ],
+    "lao": "ເຂົາແລ່ນໄວຫຼາຍ",
+    "info": {
+      "pinyin": "de",
+      "pos": "particle",
+      "meaningLao": "ໄດ້"
+    }
+  },
+  {
+    "id": "hsk2-弟弟",
+    "level": 2,
+    "target": "弟弟",
+    "words": [
+      "我",
+      "弟弟",
+      "正在",
+      "睡觉"
+    ],
+    "lao": "ນ້ອງຊາຍຂອງຂ້ອຍກໍາລັງນອນ",
+    "info": {
+      "pinyin": "dìdi",
+      "pos": "noun",
+      "meaningLao": "ນ້ອງຊາຍ"
+    }
+  },
+  {
+    "id": "hsk2-第一",
+    "level": 2,
+    "target": "第一",
+    "words": [
+      "我",
+      "是",
+      "第一",
+      "个",
+      "来",
+      "的"
+    ],
+    "lao": "ຂ້ອຍເປັນຄົນທຳອິດທີ່ມາ",
+    "info": {
+      "pinyin": "dìyī",
+      "pos": "numeral",
+      "meaningLao": "ທີໜຶ່ງ"
+    }
+  },
+  {
+    "id": "hsk2-懂",
+    "level": 2,
+    "target": "懂",
+    "words": [
+      "你",
+      "听",
+      "懂",
+      "了",
+      "吗"
+    ],
+    "lao": "ເຈົ້າຟັງເຂົ້າໃຈແລ້ວບໍ",
+    "info": {
+      "pinyin": "dǒng",
+      "pos": "verb",
+      "meaningLao": "ເຂົ້າໃຈ"
+    }
+  },
+  {
+    "id": "hsk2-房间",
+    "level": 2,
+    "target": "房间",
+    "words": [
+      "这",
+      "个",
+      "房间",
+      "很",
+      "大"
+    ],
+    "lao": "ຫ້ອງນີ້ໃຫຍ່ຫຼາຍ",
+    "info": {
+      "pinyin": "fángjiān",
+      "pos": "noun",
+      "meaningLao": "ຫ້ອງ"
+    }
+  },
+  {
+    "id": "hsk2-非常",
+    "level": 2,
+    "target": "非常",
+    "words": [
+      "今天",
+      "天气",
+      "非常",
+      "热"
+    ],
+    "lao": "ມື້ນີ້ອາກາດຮ້ອນຫຼາຍ",
+    "info": {
+      "pinyin": "fēicháng",
+      "pos": "adverb",
+      "meaningLao": "ຫຼາຍ"
+    }
   }
 ]
