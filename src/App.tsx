@@ -1,173 +1,20 @@
-import { useState } from 'react'
-import { Exercise } from './components/Exercise.tsx'
-import { t } from './i18n/lo.ts'
-import { playComplete } from './lib/sfx.ts'
-import type { Sentence } from './types.ts'
-
-// Every generated level file (hsk1.json ... hsk6.json), keyed by level number.
-const files = import.meta.glob<Sentence[]>('./data/sentences/hsk*.json', { eager: true, import: 'default' })
-const sentencesByLevel = new Map(
-  Object.entries(files)
-    .map(([path, sentences]) => [Number(/hsk(\d+)\.json$/.exec(path)![1]), sentences] as const)
-    .sort(([a], [b]) => a - b),
-)
-const levels = [...sentencesByLevel.keys()]
-
-/** A new random order of the level's sentences (Fisher-Yates shuffle). */
-function shuffled(level: number): Sentence[] {
-  const list = [...sentencesByLevel.get(level)!]
-  for (let i = list.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[list[i], list[j]] = [list[j], list[i]]
-  }
-  return list
-}
-
-const LEVEL_KEY = 'hsk-level'
-
-function savedLevel(): number {
-  try {
-    const level = Number(localStorage.getItem(LEVEL_KEY))
-    if (sentencesByLevel.has(level)) return level
-  } catch {
-    // storage unavailable - fall through to the default
-  }
-  return levels[0]
-}
-
-/** A boolean setting remembered in localStorage (defaults to on). */
-function useStoredToggle(key: string): [boolean, () => void] {
-  const [on, setOn] = useState(() => {
-    try {
-      return localStorage.getItem(key) !== 'off'
-    } catch {
-      return true
-    }
-  })
-  function toggle() {
-    setOn(!on)
-    try {
-      localStorage.setItem(key, on ? 'off' : 'on')
-    } catch {
-      // not critical
-    }
-  }
-  return [on, toggle]
-}
-
-const toggleButton =
-  'rounded-full p-1.5 transition aria-pressed:bg-teal-100 aria-pressed:text-teal-800 text-stone-400 hover:text-stone-700'
+import { Navigate, Route, Routes } from 'react-router'
+import { Layout } from './components/Layout.tsx'
+import { CourseDetailPage } from './pages/CourseDetailPage.tsx'
+import { CoursesPage } from './pages/CoursesPage.tsx'
+import { HomePage } from './pages/HomePage.tsx'
+import { LessonRoute } from './pages/LessonPage.tsx'
 
 export default function App() {
-  const [level, setLevel] = useState(savedLevel)
-  const [index, setIndex] = useState(0)
-  const [sfx, toggleSfx] = useStoredToggle('sound-effects')
-  const [voice, toggleVoice] = useStoredToggle('voice')
-  const [sentences, setSentences] = useState(() => shuffled(level))
-  // Bumped on every new round so the exercise always remounts, even if the same sentence comes first again.
-  const [round, setRound] = useState(0)
-
-  function startRound(nextLevel: number) {
-    setSentences(shuffled(nextLevel))
-    setIndex(0)
-    setRound((r) => r + 1)
-  }
-
-  function chooseLevel(next: number) {
-    setLevel(next)
-    startRound(next)
-    try {
-      localStorage.setItem(LEVEL_KEY, String(next))
-    } catch {
-      // not critical
-    }
-  }
-
-  function next() {
-    // Finishing the last sentence of the level gets a fanfare.
-    if (index + 1 === sentences.length && sfx) playComplete()
-    setIndex(index + 1)
-  }
-
-  const done = index >= sentences.length
-  const progress = Math.min(index, sentences.length) / sentences.length
-
   return (
-    <div className="flex min-h-svh flex-col bg-stone-50">
-      <header className="mx-auto flex w-full max-w-3xl items-center justify-between px-4 pt-4">
-        <h1 className="font-lao text-lg font-bold text-stone-900">
-          <span className="font-zh mr-2 text-teal-700">汉语</span>
-          {t.appTitle}
-        </h1>
-        <nav aria-label={t.chooseLevel} className="flex gap-1 rounded-full bg-stone-200/70 p-1">
-          {levels.map((l) => (
-            <button
-              key={l}
-              onClick={() => chooseLevel(l)}
-              aria-pressed={l === level}
-              className={`rounded-full px-2.5 py-1 text-xs font-semibold transition sm:px-3 sm:text-sm ${
-                l === level ? 'bg-teal-700 text-white shadow-sm' : 'text-stone-600 hover:bg-white hover:text-stone-900'
-              }`}
-            >
-              <span className="hidden sm:inline">HSK </span>
-              {l}
-            </button>
-          ))}
-        </nav>
-      </header>
-
-      <div className="mx-auto w-full max-w-3xl px-4 pt-4">
-        <div className="mb-2 flex items-center justify-between">
-          <div className="flex gap-1">
-            <button onClick={toggleSfx} aria-pressed={sfx} aria-label={t.soundEffects} title={t.soundEffects} className={toggleButton}>
-              {/* music note; crossed out when off */}
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18V5l12-2v13" />
-                <circle cx="6" cy="18" r="3" />
-                <circle cx="18" cy="16" r="3" />
-                {!sfx && <path d="m2 2 20 20" />}
-              </svg>
-            </button>
-            <button onClick={toggleVoice} aria-pressed={voice} aria-label={t.voice} title={t.voice} className={toggleButton}>
-              {/* speaking head; crossed out when off */}
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 21v-3a4 4 0 0 0 4-4V9A7 7 0 0 0 4 9c0 3 1 4 2 5v7" />
-                <path d="M20 6a6 6 0 0 1 2 4M18 9a3 3 0 0 1 1 2" />
-                {!voice && <path d="m2 2 20 20" />}
-              </svg>
-            </button>
-          </div>
-          <span className="font-lao text-sm text-stone-500">
-            {t.progress(Math.min(index + 1, sentences.length), sentences.length)}
-          </span>
-        </div>
-        <div className="h-2 overflow-hidden rounded-full bg-stone-200">
-          <div className="h-full rounded-full bg-teal-600 transition-all duration-500" style={{ width: `${progress * 100}%` }} />
-        </div>
-      </div>
-
-      <main className="mx-auto flex w-full max-w-3xl flex-1 items-center px-4 py-4">
-        <div className="w-full rounded-3xl bg-white px-6 py-8 shadow-sm ring-1 ring-stone-200 sm:px-12">
-          {done ? (
-            <div className="flex flex-col items-center gap-4 text-center">
-              <p className="text-5xl">🎉</p>
-              <h2 className="font-lao text-3xl font-bold text-stone-900">{t.doneTitle}</h2>
-              <p className="font-lao text-stone-600">{t.doneBody(sentences.length)}</p>
-              <button
-                onClick={() => startRound(level)}
-                autoFocus
-                className="font-lao mt-4 rounded-full bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700"
-              >
-                {t.restart}
-              </button>
-            </div>
-          ) : (
-            <Exercise key={`${round}-${sentences[index].id}`} sentence={sentences[index]} onNext={next} sfx={sfx} voice={voice} />
-          )}
-        </div>
-      </main>
-
-      <footer className="font-lao pb-3 text-center text-xs text-stone-400">{t.hint}</footer>
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="courses" element={<CoursesPage />} />
+        <Route path="courses/:courseId" element={<CourseDetailPage />} />
+        <Route path="courses/:courseId/:lesson" element={<LessonRoute />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   )
 }

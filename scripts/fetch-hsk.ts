@@ -13,6 +13,9 @@ interface SourceEntry {
 
 await mkdir(HSK_DIR, { recursive: true })
 
+// Just the words of each level in list order - the website uses this to split courses into lessons.
+const wordOrder: Record<number, string[]> = {}
+
 for (let level = 1; level <= 6; level++) {
   const res = await fetch(`${SOURCE}/${level}.json`)
   if (!res.ok) throw new Error(`HSK${level}: HTTP ${res.status}`)
@@ -26,5 +29,8 @@ for (let level = 1; level <= 6; level++) {
   }))
 
   await writeFile(new URL(`${level}.json`, HSK_DIR), JSON.stringify(words, null, 2) + '\n')
+  wordOrder[level] = words.map((w) => w.word)
   console.log(`HSK${level}: ${words.length} words`)
 }
+
+await writeFile(new URL('../src/data/hsk-words.json', import.meta.url), JSON.stringify(wordOrder) + '\n')
