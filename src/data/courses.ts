@@ -1,3 +1,4 @@
+import { use } from 'react'
 import hskCover from '../assets/hsk-vocabulary.webp'
 import { t } from '../i18n/lo.ts'
 import type { CourseProgress } from '../lib/progress.ts'
@@ -7,7 +8,8 @@ import hskWords from './hsk-words.json'
 /** Words per lesson: lesson 1 = words 1-25 of the level, lesson 2 = 26-50, ... */
 export const LESSON_SIZE = 25
 
-export interface Lesson {
+/** A lesson as known up front, without its sentences (those load on demand, see `useLoadedCourse`). */
+export interface LessonInfo {
   /** e.g. "hsk1/2" - also the key its progress is stored under. */
   id: string
   courseId: string
@@ -16,6 +18,9 @@ export interface Lesson {
   first: number
   last: number
   words: string[]
+}
+
+export interface Lesson extends LessonInfo {
   /** Generated sentences for this lesson's words; empty means "coming soon". */
   sentences: Sentence[]
 }
@@ -30,6 +35,13 @@ export interface Course {
   description: string
   tags: string[]
   wordCount: number
+  lessons: LessonInfo[]
+  /** Fetches the course's sentences (a separate file per course, so the app doesn't load them all up front). */
+  loadSentences: () => Promise<Sentence[]>
+}
+
+/** A course whose sentences have been loaded. */
+export interface LoadedCourse extends Omit<Course, 'lessons'> {
   lessons: Lesson[]
 }
 
@@ -40,9 +52,8 @@ export interface Category {
   courses: Course[]
 }
 
-// Every generated level file (hsk1.json ... hsk6.json); levels without a file still appear, all "coming soon".
-const files = import.meta.glob<Sentence[]>('./sentences/hsk*.json', { eager: true, import: 'default' })
-const sentencesByLevel = new Map(Object.entries(files).map(([path, list]) => [Number(/hsk(\d+)\.json$/.exec(path)![1]), list]))
+// One lazily loaded file per level (hsk1.json ... hsk6.json); a level without a file is all "coming soon".
+const sentenceFiles = import.meta.glob<Sentence[]>('./sentences/hsk*.json', { import: 'default' })
 const wordsByLevel = hskWords as Record<string, string[]>
 
 const BADGES = ['一', '二', '三', '四', '五', '六']
@@ -50,23 +61,15 @@ const BADGES = ['一', '二', '三', '四', '五', '六']
 function hskCourse(level: number): Course {
   const id = `hsk${level}`
   const words = wordsByLevel[level] ?? []
-  const byTarget = new Map((sentencesByLevel.get(level) ?? []).map((s) => [s.target, s]))
 
-  const lessons: Lesson[] = []
+  const lessons: LessonInfo[] = []
   for (let start = 0; start < words.length; start += LESSON_SIZE) {
-    const lessonWords = words.slice(start, start + LESSON_SIZE)
     const number = lessons.length + 1
-    lessons.push({
-      id: `${id}/${number}`,
-      courseId: id,
-      number,
-      first: start + 1,
-      last: start + lessonWords.length,
-      words: lessonWords,
-      sentences: lessonWords.flatMap((w) => byTarget.get(w) ?? []),
-    })
+    const lessonWords = words.slice(start, start + LESSON_SIZE)
+    lessons.push({ id: `${id}/${number}`, courseId: id, number, first: start + 1, last: start + lessonWords.length, words: lessonWords })
   }
 
+  const file = sentenceFiles[`./sentences/hsk${level}.json`]
   return {
     id,
     title: `HSK ${level}`,
@@ -76,6 +79,7 @@ function hskCourse(level: number): Course {
     tags: [t.tagVocabulary, `HSK ${level}`, level <= 2 ? t.tagBeginner : level <= 4 ? t.tagIntermediate : t.tagAdvanced],
     wordCount: words.length,
     lessons,
+    loadSentences: file ?? (() => Promise.resolve([])),
   }
 }
 
@@ -91,6 +95,25 @@ export const categories: Category[] = [
 
 export const coursesById = new Map(categories.flatMap((c) => c.courses.map((course) => [course.id, { course, category: c }])))
 
+const loaded = new Map<string, Promise<LoadedCourse>>()
+
+function loadCourse(course: Course): Promise<LoadedCourse> {
+  let promise = loaded.get(course.id)
+  if (!promise) {
+    promise = course.loadSentences().then((sentences) => {
+      const byTarget = new Map(sentences.map((s) => [s.target, s]))
+      return { ...course, lessons: course.lessons.map((l) => ({ ...l, sentences: l.words.flatMap((w) => byTarget.get(w) ?? []) })) }
+    })
+    loaded.set(course.id, promise)
+  }
+  return promise
+}
+
+/** The course with its sentences; suspends (shows the nearest <Suspense> fallback) while they load the first time. */
+export function useLoadedCourse(course: Course): LoadedCourse {
+  return use(loadCourse(course))
+}
+
 export function isPlayable(lesson: Lesson): boolean {
   return lesson.sentences.length > 0
 }
@@ -99,7 +122,7 @@ export function isPlayable(lesson: Lesson): boolean {
  * The lesson to continue with: the most recently studied one, or the next playable lesson after it
  * once it has been finished. Without any history, the first playable lesson.
  */
-export function currentLesson(course: Course, progress: Record<string, CourseProgress>): Lesson | undefined {
+export function currentLesson(course: LoadedCourse, progress: Record<string, CourseProgress>): Lesson | undefined {
   const studied = course.lessons.filter((l) => progress[l.id]).sort((a, b) => progress[b.id].lastStudied - progress[a.id].lastStudied)
   const latest = studied[0]
   if (!latest) return course.lessons.find(isPlayable)

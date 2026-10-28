@@ -1,21 +1,24 @@
 import { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
-import { coursesById, currentLesson, isPlayable, type Lesson } from '../data/courses.ts'
+import { coursesById, currentLesson, isPlayable, useLoadedCourse, type Category, type Course, type Lesson } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
 import { useProgress, type CourseProgress } from '../lib/progress.ts'
 
 /** Lessons shown before "show all", like a collapsed syllabus. */
 const COLLAPSED_LESSONS = 10
 
-/** Course overview: what the course is, then its lessons to pick from. */
 export function CourseDetailPage() {
   const { courseId = '' } = useParams()
-  const progress = useProgress()
-  const [expanded, setExpanded] = useState(false)
   const entry = coursesById.get(courseId)
   if (!entry) return <Navigate to="/courses" replace />
+  return <CourseDetail course={entry.course} category={entry.category} />
+}
 
-  const { course, category } = entry
+/** Course overview: what the course is, then its lessons to pick from. */
+function CourseDetail({ course: info, category }: { course: Course; category: Category }) {
+  const course = useLoadedCourse(info)
+  const progress = useProgress()
+  const [expanded, setExpanded] = useState(false)
   const next = currentLesson(course, progress)
   const lessons = expanded ? course.lessons : course.lessons.slice(0, COLLAPSED_LESSONS)
   const hidden = course.lessons.length - COLLAPSED_LESSONS

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { Exercise } from '../components/Exercise.tsx'
-import { coursesById, isPlayable, type Course, type Lesson } from '../data/courses.ts'
+import { coursesById, isPlayable, useLoadedCourse, type Course, type Lesson, type LoadedCourse } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
 import { markStudied, recordSolved } from '../lib/progress.ts'
 import { useSoundEffects, useVoice } from '../lib/settings.ts'
@@ -21,15 +21,20 @@ function shuffled(list: Sentence[]): Sentence[] {
 export function LessonRoute() {
   const { courseId = '', lesson: lessonNumber = '' } = useParams()
   const course = coursesById.get(courseId)?.course
-  const lesson = course?.lessons.find((l) => String(l.number) === lessonNumber)
   if (!course) return <Navigate to="/courses" replace />
+  return <LessonLoader course={course} lessonNumber={lessonNumber} />
+}
+
+function LessonLoader({ course: info, lessonNumber }: { course: Course; lessonNumber: string }) {
+  const course = useLoadedCourse(info)
+  const lesson = course.lessons.find((l) => String(l.number) === lessonNumber)
   if (!lesson || !isPlayable(lesson)) return <Navigate to={`/courses/${course.id}`} replace />
   // `key` gives each lesson its own fresh state when moving between them.
   return <LessonPage key={lesson.id} course={course} lesson={lesson} />
 }
 
 /** Plays through every sentence of a lesson once, in random order. Opening a lesson always starts a new round. */
-function LessonPage({ course, lesson }: { course: Course; lesson: Lesson }) {
+function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }) {
   const [sfx] = useSoundEffects()
   const [voice] = useVoice()
   const [sentences, setSentences] = useState(() => shuffled(lesson.sentences))

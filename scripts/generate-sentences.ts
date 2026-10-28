@@ -48,6 +48,9 @@ const targets: HskWord[] = args.words
 
 const sentences = await loadExisting()
 
+// A run cut short by the quota never reaches the word-info step at the end, so catch up on those first.
+if (await enrichSentences(sentences, vocab)) await save()
+
 const todo = targets.filter((t) => args.force || !sentences.some((s) => s.target === t.word))
 console.log(`HSK${level}: ${targets.length - todo.length} of ${targets.length} words already have a sentence, ${todo.length} to generate`)
 
@@ -166,6 +169,8 @@ function validate(target: string, words: string[], lao: string): string | null {
   const outside = words.filter((w) => !vocabWords.has(w) && ![...w].every((c) => vocabChars.has(c)))
   if (outside.length) return `these words are not HSK ${level} vocabulary: ${outside.join(', ')}`
   if (!isLaoText(lao)) return 'the "lao" field must be written in Lao script only (no Thai letters)'
+  // A slip the lite model makes a lot: "we" written twice.
+  if (lao.includes('ພວກພວກ')) return 'the "lao" field repeats ພວກ (write ພວກເຮົາ / ພວກເຂົາ once)'
   return null
 }
 

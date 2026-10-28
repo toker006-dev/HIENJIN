@@ -1,23 +1,24 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { CourseCard } from '../components/CourseCard.tsx'
-import { categories, currentLesson } from '../data/courses.ts'
+import { categories, currentLesson, useLoadedCourse, type Course } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
-import { removeCourseProgress, useProgress } from '../lib/progress.ts'
+import { hideFromRecent, useHiddenFromRecent, useProgress, type CourseProgress } from '../lib/progress.ts'
 import { timeAgo } from '../lib/time.ts'
 
 export function HomePage() {
   const progress = useProgress()
+  const hidden = useHiddenFromRecent()
   const [now] = useState(() => Date.now())
 
-  // Every course with at least one studied lesson, most recently studied first.
+  // Every course studied since it was last hidden (if ever), most recently studied first.
   const recent = categories
     .flatMap((category) => category.courses.map((course) => ({ category, course })))
     .map((entry) => ({
       ...entry,
       lastStudied: Math.max(0, ...entry.course.lessons.map((l) => progress[l.id]?.lastStudied ?? 0)),
     }))
-    .filter((entry) => entry.lastStudied > 0)
+    .filter((entry) => entry.lastStudied > (hidden[entry.course.id] ?? 0))
     .sort((a, b) => b.lastStudied - a.lastStudied)
 
   return (
@@ -34,22 +35,27 @@ export function HomePage() {
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {recent.map(({ category, course, lastStudied }) => {
-            const lesson = currentLesson(course, progress)
-            if (!lesson) return null
-            return (
-              <CourseCard
-                key={course.id}
-                course={course}
-                lesson={lesson}
-                progress={progress[lesson.id]}
-                subtitle={`${category.title} · ${timeAgo(lastStudied, now)}`}
-                onRemove={() => removeCourseProgress(course.id)}
-              />
-            )
-          })}
+          {recent.map(({ category, course, lastStudied }) => (
+            <RecentCourse key={course.id} course={course} progress={progress} subtitle={`${category.title} · ${timeAgo(lastStudied, now)}`} />
+          ))}
         </div>
       )}
     </div>
+  )
+}
+
+/** Card for one recent course; loads that course's sentences to know which lesson to continue with. */
+function RecentCourse({ course: info, progress, subtitle }: { course: Course; progress: Record<string, CourseProgress>; subtitle: string }) {
+  const course = useLoadedCourse(info)
+  const lesson = currentLesson(course, progress)
+  if (!lesson) return null
+  return (
+    <CourseCard
+      course={course}
+      lesson={lesson}
+      progress={progress[lesson.id]}
+      subtitle={subtitle}
+      onRemove={() => hideFromRecent(course.id)}
+    />
   )
 }

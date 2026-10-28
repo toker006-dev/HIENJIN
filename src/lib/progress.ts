@@ -56,9 +56,23 @@ export function recordSolved(lessonId: string, solved: number, total: number) {
   })
 }
 
-/** Forgets every lesson of a course (removes it from "recent"). */
-export function removeCourseProgress(courseId: string) {
-  update((all) => {
-    for (const key of Object.keys(all)) if (key.startsWith(`${courseId}/`)) delete all[key]
-  })
+// Courses hidden from Home's "recent" list, with when they were hidden. Progress is kept; studying the
+// course again after that moment brings it back.
+const HIDDEN_KEY = 'recent-hidden'
+
+export function useHiddenFromRecent(): Record<string, number> {
+  const raw = useStored(HIDDEN_KEY)
+  return useMemo(() => {
+    try {
+      return raw ? (JSON.parse(raw) as Record<string, number>) : {}
+    } catch {
+      return {}
+    }
+  }, [raw])
+}
+
+export function hideFromRecent(courseId: string) {
+  const hidden = readStoredJSON<Record<string, number>>(HIDDEN_KEY, {})
+  hidden[courseId] = Date.now()
+  writeStored(HIDDEN_KEY, JSON.stringify(hidden))
 }

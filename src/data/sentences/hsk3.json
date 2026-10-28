@@ -439,5 +439,4749 @@
       "pos": "preposition",
       "meaningLao": "ຖືກ"
     }
+  },
+  {
+    "id": "hsk3-冰箱",
+    "level": 3,
+    "target": "冰箱",
+    "words": [
+      "冰箱",
+      "里",
+      "有",
+      "苹果"
+    ],
+    "lao": "ໃນຕູ້ເຢັນມີໝາກໂປມ",
+    "info": {
+      "pinyin": "bīngxiāng",
+      "pos": "noun",
+      "meaningLao": "ຕູ້ເຢັນ"
+    }
+  },
+  {
+    "id": "hsk3-才",
+    "level": 3,
+    "target": "才",
+    "words": [
+      "他",
+      "十点",
+      "才",
+      "来"
+    ],
+    "lao": "ລາວມາສິບໂມງພຸ້ນ",
+    "info": {
+      "pinyin": "cái",
+      "pos": "adverb",
+      "meaningLao": "ເພິ່ງວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-菜单",
+    "level": 3,
+    "target": "菜单",
+    "words": [
+      "请",
+      "看",
+      "菜单"
+    ],
+    "lao": "ກະລຸນາເບິ່ງເມນູ",
+    "info": {
+      "pinyin": "càidān",
+      "pos": "noun",
+      "meaningLao": "ເມນູອາຫານ"
+    }
+  },
+  {
+    "id": "hsk3-参加",
+    "level": 3,
+    "target": "参加",
+    "words": [
+      "我们",
+      "去",
+      "参加",
+      "比赛"
+    ],
+    "lao": "ພວກເຮົາໄປເຂົ້າຮ່ວມການແຂ່ງຂັນ",
+    "info": {
+      "pinyin": "cānjiā",
+      "pos": "verb",
+      "meaningLao": "ເຂົ້າຮ່ວມ"
+    }
+  },
+  {
+    "id": "hsk3-草",
+    "level": 3,
+    "target": "草",
+    "words": [
+      "地上",
+      "有",
+      "草"
+    ],
+    "lao": "ເທິງພື້ນມີຫຍ້າ",
+    "info": {
+      "pinyin": "cǎo",
+      "pos": "noun",
+      "meaningLao": "ຫຍ້າ"
+    }
+  },
+  {
+    "id": "hsk3-层",
+    "level": 3,
+    "target": "层",
+    "words": [
+      "我",
+      "住",
+      "在",
+      "二",
+      "层"
+    ],
+    "lao": "ຂ້ອຍຢູ່ຊັ້ນສອງ",
+    "info": {
+      "pinyin": "céng",
+      "pos": "measure word",
+      "meaningLao": "ຊັ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-差",
+    "level": 3,
+    "target": "差",
+    "words": [
+      "天气",
+      "很",
+      "差"
+    ],
+    "lao": "ອາກາດບໍ່ດີເລີຍ",
+    "info": {
+      "pinyin": "chà",
+      "pos": "adjective",
+      "meaningLao": "ບໍ່ດີ"
+    }
+  },
+  {
+    "id": "hsk3-超市",
+    "level": 3,
+    "target": "超市",
+    "words": [
+      "我们",
+      "去",
+      "超市"
+    ],
+    "lao": "ພວກເຮົາໄປຊຸບປາເປີມາເກັດ",
+    "info": {
+      "pinyin": "chāoshì",
+      "pos": "noun",
+      "meaningLao": "ຮ້ານຊັບພະສິນຄ້າ"
+    }
+  },
+  {
+    "id": "hsk3-衬衫",
+    "level": 3,
+    "target": "衬衫",
+    "words": [
+      "我",
+      "买",
+      "衬衫"
+    ],
+    "lao": "ຂ້ອຍຊື້ເສື້ອເຊີດ",
+    "info": {
+      "pinyin": "chènshān",
+      "pos": "noun",
+      "meaningLao": "ເສື້ອເຊີດ"
+    }
+  },
+  {
+    "id": "hsk3-成绩",
+    "level": 3,
+    "target": "成绩",
+    "words": [
+      "他",
+      "成绩",
+      "很好"
+    ],
+    "lao": "ຜົນການຮຽນຂອງລາວດີຫຼາຍ",
+    "info": {
+      "pinyin": "chéngjì",
+      "pos": "noun",
+      "meaningLao": "ຜົນການຮຽນ"
+    }
+  },
+  {
+    "id": "hsk3-城市",
+    "level": 3,
+    "target": "城市",
+    "words": [
+      "这个",
+      "城市",
+      "很",
+      "大"
+    ],
+    "lao": "ເມືອງນີ້ໃຫຍ່ຫຼາຍ",
+    "info": {
+      "pinyin": "chéngshì",
+      "pos": "noun",
+      "meaningLao": "ເມືອງ"
+    }
+  },
+  {
+    "id": "hsk3-迟到",
+    "level": 3,
+    "target": "迟到",
+    "words": [
+      "他",
+      "今天",
+      "迟到",
+      "了"
+    ],
+    "lao": "ມື້ນີ້ລາວມາຊ້າ",
+    "info": {
+      "pinyin": "chídào",
+      "pos": "verb",
+      "meaningLao": "ມາຊ້າ"
+    }
+  },
+  {
+    "id": "hsk3-出现",
+    "level": 3,
+    "target": "出现",
+    "words": [
+      "外面",
+      "出现",
+      "了",
+      "一个",
+      "人"
+    ],
+    "lao": "ຂ້າງນອກມີຄົນປະກົດຂຶ້ນມາຄົນໜຶ່ງ",
+    "info": {
+      "pinyin": "chūxiàn",
+      "pos": "verb",
+      "meaningLao": "ປາກົດຂຶ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-除了",
+    "level": 3,
+    "target": "除了",
+    "words": [
+      "除了",
+      "你",
+      "谁",
+      "去"
+    ],
+    "lao": "ນອກຈາກເຈົ້າແລ້ວມີໃຜໄປແດ່",
+    "info": {
+      "pinyin": "chúle",
+      "pos": "preposition",
+      "meaningLao": "ນອກຈາກ"
+    }
+  },
+  {
+    "id": "hsk3-厨房",
+    "level": 3,
+    "target": "厨房",
+    "words": [
+      "妈妈",
+      "在",
+      "厨房",
+      "做饭"
+    ],
+    "lao": "ແມ່ຢູ່,ໃນຫ້ອງຄົວເຮັດອາຫານ",
+    "info": {
+      "pinyin": "chúfáng",
+      "pos": "noun",
+      "meaningLao": "ຫ້ອງຄົວ"
+    }
+  },
+  {
+    "id": "hsk3-春",
+    "level": 3,
+    "target": "春",
+    "words": [
+      "春",
+      "天",
+      "来",
+      "了"
+    ],
+    "lao": "ລະດູບານໃໝ່ມາແລ້ວ",
+    "info": {
+      "pinyin": "chūn",
+      "pos": "noun",
+      "meaningLao": "ລະດູບານໃໝ່"
+    }
+  },
+  {
+    "id": "hsk3-词语",
+    "level": 3,
+    "target": "词语",
+    "words": [
+      "这个",
+      "词语",
+      "很",
+      "难"
+    ],
+    "lao": "ຄຳສັບນີ້ຍາກຫຼາຍ",
+    "info": {
+      "pinyin": "cíyǔ",
+      "pos": "noun",
+      "meaningLao": "ຄຳສັບ"
+    }
+  },
+  {
+    "id": "hsk3-聪明",
+    "level": 3,
+    "target": "聪明",
+    "words": [
+      "这个",
+      "孩子",
+      "很",
+      "聪明"
+    ],
+    "lao": "ເດັກນ້ອຍຄົນນີ້ສະຫຼາດຫຼາຍ",
+    "info": {
+      "pinyin": "cōngming",
+      "pos": "adjective",
+      "meaningLao": "ສະຫຼາດ"
+    }
+  },
+  {
+    "id": "hsk3-打扫",
+    "level": 3,
+    "target": "打扫",
+    "words": [
+      "我们",
+      "打扫",
+      "房间"
+    ],
+    "lao": "ພວກເຮົາທຳຄວາມສະອາດຫ້ອງ",
+    "info": {
+      "pinyin": "dǎsǎo",
+      "pos": "verb",
+      "meaningLao": "ກວາດລ້າງຄວາມສະອາດ"
+    }
+  },
+  {
+    "id": "hsk3-打算",
+    "level": 3,
+    "target": "打算",
+    "words": [
+      "你",
+      "打算",
+      "去",
+      "哪儿"
+    ],
+    "lao": "ເຈົ້າວາງແຜນຈະໄປໃສ",
+    "info": {
+      "pinyin": "dǎsuàn",
+      "pos": "verb",
+      "meaningLao": "ວາງແຜນ"
+    }
+  },
+  {
+    "id": "hsk3-带",
+    "level": 3,
+    "target": "带",
+    "words": [
+      "你",
+      "带",
+      "伞",
+      "了",
+      "吗"
+    ],
+    "lao": "ເຈົ້າຖືຄັນຮົ່ມມາບໍ່",
+    "info": {
+      "pinyin": "dài",
+      "pos": "verb",
+      "meaningLao": "ພາ, ຖືເອົາ"
+    }
+  },
+  {
+    "id": "hsk3-担心",
+    "level": 3,
+    "target": "担心",
+    "words": [
+      "妈妈",
+      "别",
+      "担心",
+      "我"
+    ],
+    "lao": "ແມ່ຢ່າເປັນຫ່ວງຂ້ອຍ",
+    "info": {
+      "pinyin": "dānxīn",
+      "pos": "verb",
+      "meaningLao": "ເປັນຫ່ວງ"
+    }
+  },
+  {
+    "id": "hsk3-蛋糕",
+    "level": 3,
+    "target": "蛋糕",
+    "words": [
+      "桌子",
+      "上",
+      "有",
+      "蛋糕"
+    ],
+    "lao": "ເທິງໂຕະມີເຄັກ",
+    "info": {
+      "pinyin": "dàngāo",
+      "pos": "noun",
+      "meaningLao": "ເຄັກ"
+    }
+  },
+  {
+    "id": "hsk3-当然",
+    "level": 3,
+    "target": "当然",
+    "words": [
+      "我",
+      "当然",
+      "知道"
+    ],
+    "lao": "ຂ້ອຍຮູ້ແນ່ນອນ",
+    "info": {
+      "pinyin": "dāngrán",
+      "pos": "adverb",
+      "meaningLao": "ແນ່ນອນ"
+    }
+  },
+  {
+    "id": "hsk3-地",
+    "level": 3,
+    "target": "地",
+    "words": [
+      "他",
+      "高兴",
+      "地",
+      "说"
+    ],
+    "lao": "ລາວເວົ້າຢ່າງດີໃຈ",
+    "info": {
+      "pinyin": "de",
+      "pos": "particle",
+      "meaningLao": "ຄຳເຊື່ອມ"
+    }
+  },
+  {
+    "id": "hsk3-地方",
+    "level": 3,
+    "target": "地方",
+    "words": [
+      "这",
+      "个",
+      "地方",
+      "很",
+      "漂亮"
+    ],
+    "lao": "ບ່ອນນີ້ງາມຫຼາຍ",
+    "info": {
+      "pinyin": "dìfang",
+      "pos": "noun",
+      "meaningLao": "ບ່ອນ, ບ່ອນຕັ້ງ"
+    }
+  },
+  {
+    "id": "hsk3-地铁",
+    "level": 3,
+    "target": "地铁",
+    "words": [
+      "我",
+      "坐",
+      "地铁",
+      "去",
+      "上班"
+    ],
+    "lao": "ຂ້ອຍຂີ່ລົດໄຟໃຕ້ດິນໄປເຮັດວຽກ",
+    "info": {
+      "pinyin": "dìtiě",
+      "pos": "noun",
+      "meaningLao": "ລົດໄຟໃຕ້ດິນ"
+    }
+  },
+  {
+    "id": "hsk3-地图",
+    "level": 3,
+    "target": "地图",
+    "words": [
+      "请",
+      "给",
+      "我",
+      "一",
+      "张",
+      "地图"
+    ],
+    "lao": "ກະລຸນາເອົາແຜນທີ່ໃຫ້ຂ້ອຍໃບໜຶ່ງ",
+    "info": {
+      "pinyin": "dìtú",
+      "pos": "noun",
+      "meaningLao": "ແຜນທີ່"
+    }
+  },
+  {
+    "id": "hsk3-灯",
+    "level": 3,
+    "target": "灯",
+    "words": [
+      "房间",
+      "里",
+      "的",
+      "灯",
+      "坏",
+      "了"
+    ],
+    "lao": "ໄຟຢູ່ໃນຫ້ອງເພແລ້ວ",
+    "info": {
+      "pinyin": "dēng",
+      "pos": "noun",
+      "meaningLao": "ໂຄມໄຟ, ຫຼອດໄຟ"
+    }
+  },
+  {
+    "id": "hsk3-低",
+    "level": 3,
+    "target": "低",
+    "words": [
+      "他",
+      "的",
+      "汉语",
+      "水平",
+      "很",
+      "低"
+    ],
+    "lao": "ລະດັບພາສາຈີນຂອງລາວຕ່ຳຫຼາຍ",
+    "info": {
+      "pinyin": "dī",
+      "pos": "adjective",
+      "meaningLao": "ຕໍ່າ"
+    }
+  },
+  {
+    "id": "hsk3-电梯",
+    "level": 3,
+    "target": "电梯",
+    "words": [
+      "我们",
+      "坐",
+      "电梯",
+      "上",
+      "去",
+      "吧"
+    ],
+    "lao": "ພວກເຮົາຂີ່ລິບຂຶ້ນໄປເທາະ",
+    "info": {
+      "pinyin": "diàntī",
+      "pos": "noun",
+      "meaningLao": "ລິບ, ເຂົ້າລິບ"
+    }
+  },
+  {
+    "id": "hsk3-电子",
+    "level": 3,
+    "target": "电子",
+    "words": [
+      "我",
+      "喜欢",
+      "看",
+      "电子",
+      "书"
+    ],
+    "lao": "ຂ້ອຍມັກອ່ານປຶ້ມເອເລັກໂຕຣນິກ",
+    "info": {
+      "pinyin": "diànzǐ",
+      "pos": "adjective",
+      "meaningLao": "ອີເລັກໂທຣນິກ"
+    }
+  },
+  {
+    "id": "hsk3-东",
+    "level": 3,
+    "target": "东",
+    "words": [
+      "你",
+      "一直",
+      "向",
+      "东",
+      "走"
+    ],
+    "lao": "ເຈົ້າຍ່າງຊື່ໄປທາງທິດຕາເວັນອອກ",
+    "info": {
+      "pinyin": "dōng",
+      "pos": "noun",
+      "meaningLao": "ທິດຕາເວັນອອກ"
+    }
+  },
+  {
+    "id": "hsk3-冬",
+    "level": 3,
+    "target": "冬",
+    "words": [
+      "一",
+      "年",
+      "有",
+      "春",
+      "夏",
+      "秋",
+      "冬",
+      "四",
+      "个",
+      "季节"
+    ],
+    "lao": "ປີໜຶ່ງມີສີ່ລະດູ ຄື ລະດູບານໃໝ່ ລະດູຮ້ອນ ລະດູໃບໄມ້ຫຼົ່ນ ແລະ ລະດູໜາວ",
+    "info": {
+      "pinyin": "dōng",
+      "pos": "noun",
+      "meaningLao": "ລະດູໜາວ"
+    }
+  },
+  {
+    "id": "hsk3-动物",
+    "level": 3,
+    "target": "动物",
+    "words": [
+      "熊猫",
+      "是",
+      "很",
+      "可爱",
+      "的",
+      "动物"
+    ],
+    "lao": "ໝີແພນດ້າແມ່ນສັດທີ່ໜ້າຮັກຫຼາຍ",
+    "info": {
+      "pinyin": "dòngwù",
+      "pos": "noun",
+      "meaningLao": "ສັດ"
+    }
+  },
+  {
+    "id": "hsk3-短",
+    "level": 3,
+    "target": "短",
+    "words": [
+      "这",
+      "条",
+      "裤子",
+      "太",
+      "短",
+      "了"
+    ],
+    "lao": "ໂສ້ງໂຕນີ້ສັ້ນເກີນໄປ",
+    "info": {
+      "pinyin": "duǎn",
+      "pos": "adjective",
+      "meaningLao": "ສັ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-段",
+    "level": 3,
+    "target": "段",
+    "words": [
+      "这",
+      "段",
+      "时间",
+      "我",
+      "很",
+      "忙"
+    ],
+    "lao": "ຊ່ວງເວລານີ້ຂ້ອຍຍຸ້ງຫຼາຍ",
+    "info": {
+      "pinyin": "duàn",
+      "pos": "measure word",
+      "meaningLao": "ຊ່ວງ, ຕອນ"
+    }
+  },
+  {
+    "id": "hsk3-锻炼",
+    "level": 3,
+    "target": "锻炼",
+    "words": [
+      "我",
+      "每天",
+      "都",
+      "锻炼",
+      "身体"
+    ],
+    "lao": "ຂ້ອຍອອກກຳລັງກາຍທຸກມື້",
+    "info": {
+      "pinyin": "duànliàn",
+      "pos": "verb",
+      "meaningLao": "ອອກກຳລັງກາຍ"
+    }
+  },
+  {
+    "id": "hsk3-多么",
+    "level": 3,
+    "target": "多么",
+    "words": [
+      "这里",
+      "多么",
+      "漂亮",
+      "啊"
+    ],
+    "lao": "ບ່ອນນີ້ງາມຫຼາຍແທ້ໆ",
+    "info": {
+      "pinyin": "duōme",
+      "pos": "adverb",
+      "meaningLao": "ປານໃດ, ແທ້ໆ"
+    }
+  },
+  {
+    "id": "hsk3-饿",
+    "level": 3,
+    "target": "饿",
+    "words": [
+      "我",
+      "现在",
+      "很",
+      "饿"
+    ],
+    "lao": "ຕອນນີ້ຂ້ອຍຫິວຫຼາຍ",
+    "info": {
+      "pinyin": "è",
+      "pos": "adjective",
+      "meaningLao": "ຫິວ"
+    }
+  },
+  {
+    "id": "hsk3-而且",
+    "level": 3,
+    "target": "而且",
+    "words": [
+      "他",
+      "很",
+      "聪明",
+      "而且",
+      "很",
+      "努力"
+    ],
+    "lao": "ລາວສະຫຼາດຫຼາຍ ແລະ ຍັງຂະຫຍັນຫຼາຍອີກ",
+    "info": {
+      "pinyin": "érqiě",
+      "pos": "conjunction",
+      "meaningLao": "ແລະ, ຕື່ມອີກ"
+    }
+  },
+  {
+    "id": "hsk3-耳朵",
+    "level": 3,
+    "target": "耳朵",
+    "words": [
+      "他",
+      "的",
+      "耳朵",
+      "很",
+      "红"
+    ],
+    "lao": "ຫູຂອງລາວແດງຫຼາຍ",
+    "info": {
+      "pinyin": "ěrduo",
+      "pos": "noun",
+      "meaningLao": "ຫູ"
+    }
+  },
+  {
+    "id": "hsk3-发烧",
+    "level": 3,
+    "target": "发烧",
+    "words": [
+      "他",
+      "今天",
+      "发烧",
+      "了"
+    ],
+    "lao": "ມື້ນີ້ລາວເປັນໄຂ້ແລ້ວ",
+    "info": {
+      "pinyin": "fāshāo",
+      "pos": "verb",
+      "meaningLao": "ເປັນໄຂ້"
+    }
+  },
+  {
+    "id": "hsk3-发现",
+    "level": 3,
+    "target": "发现",
+    "words": [
+      "我",
+      "发现",
+      "了",
+      "一",
+      "本",
+      "好",
+      "书"
+    ],
+    "lao": "ຂ້ອຍພົບປຶ້ມດີໆເລັ້ມໜຶ່ງ",
+    "info": {
+      "pinyin": "fāxiàn",
+      "pos": "verb",
+      "meaningLao": "ຄົ້ນພົບ, ເຫັນ"
+    }
+  },
+  {
+    "id": "hsk3-方便",
+    "level": 3,
+    "target": "方便",
+    "words": [
+      "坐",
+      "地铁",
+      "很",
+      "方便"
+    ],
+    "lao": "ຂີ່ລົດໄຟໃຕ້ດິນສະດວກຫຼາຍ",
+    "info": {
+      "pinyin": "fāngbiàn",
+      "pos": "adjective",
+      "meaningLao": "ສະດວກ"
+    }
+  },
+  {
+    "id": "hsk3-放",
+    "level": 3,
+    "target": "放",
+    "words": [
+      "把",
+      "书",
+      "放",
+      "在",
+      "桌子",
+      "上"
+    ],
+    "lao": "ເອົາປື້ມວາງໄວ້ເທິງໂຕະ",
+    "info": {
+      "pinyin": "fàng",
+      "pos": "verb",
+      "meaningLao": "ວາງ, ປະໄວ້"
+    }
+  },
+  {
+    "id": "hsk3-放心",
+    "level": 3,
+    "target": "放心",
+    "words": [
+      "你",
+      "放心",
+      "我",
+      "会",
+      "照顾",
+      "好",
+      "你"
+    ],
+    "lao": "ເຈົ້າສະບາຍໃຈໄດ້, ຂ້ອຍຈະເບິ່ງແຍງເຈົ້າໃຫ້ດີ",
+    "info": {
+      "pinyin": "fàngxīn",
+      "pos": "verb",
+      "meaningLao": "ວາງໃຈ, ໝັ້ນໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-分",
+    "level": 3,
+    "target": "分",
+    "words": [
+      "现在",
+      "是",
+      "五",
+      "点",
+      "十",
+      "分"
+    ],
+    "lao": "ຕອນນີ້ແມ່ນຫ້າໂມງສິບນາທີ",
+    "info": {
+      "pinyin": "fēn",
+      "pos": "noun",
+      "meaningLao": "ນາທີ"
+    }
+  },
+  {
+    "id": "hsk3-附近",
+    "level": 3,
+    "target": "附近",
+    "words": [
+      "我",
+      "家",
+      "附近",
+      "有",
+      "一个",
+      "公园"
+    ],
+    "lao": "ຢູ່ໃກ້ໆເຮືອນຂ້ອຍມີສວນສາທາລະນະແຫ່ງໜຶ່ງ",
+    "info": {
+      "pinyin": "fùjìn",
+      "pos": "noun",
+      "meaningLao": "ໃກ້ຄຽງ,ບໍລິເວນ"
+    }
+  },
+  {
+    "id": "hsk3-复习",
+    "level": 3,
+    "target": "复习",
+    "words": [
+      "我",
+      "要",
+      "在",
+      "家",
+      "里",
+      "复习",
+      "汉语"
+    ],
+    "lao": "ຂ້ອຍຈະທວນຄືນພາສາຈີນຢູ່ເຮືອນ",
+    "info": {
+      "pinyin": "fùxí",
+      "pos": "verb",
+      "meaningLao": "ທວນຄືນບົດຮຽນ"
+    }
+  },
+  {
+    "id": "hsk3-敢",
+    "level": 3,
+    "target": "敢",
+    "words": [
+      "我",
+      "不",
+      "敢",
+      "游泳"
+    ],
+    "lao": "ຂ້ອຍບໍ່ກ້າລອຍນ້ຳ",
+    "info": {
+      "pinyin": "gǎn",
+      "pos": "verb",
+      "meaningLao": "ກ້າ"
+    }
+  },
+  {
+    "id": "hsk3-感冒",
+    "level": 3,
+    "target": "感冒",
+    "words": [
+      "我",
+      "感冒",
+      "了",
+      "不",
+      "能",
+      "去",
+      "学校"
+    ],
+    "lao": "ຂ້ອຍເປັນຫວັດແລ້ວ, ບໍ່ສາມາດໄປໂຮງຮຽນໄດ້",
+    "info": {
+      "pinyin": "gǎnmào",
+      "pos": "verb",
+      "meaningLao": "ເປັນຫວັດ"
+    }
+  },
+  {
+    "id": "hsk3-干净",
+    "level": 3,
+    "target": "干净",
+    "words": [
+      "这个",
+      "房间",
+      "很",
+      "干净"
+    ],
+    "lao": "ຫ້ອງນີ້ສະອາດຫຼາຍ",
+    "info": {
+      "pinyin": "gānjìng",
+      "pos": "adjective",
+      "meaningLao": "ສະອາດ"
+    }
+  },
+  {
+    "id": "hsk3-刚才",
+    "level": 3,
+    "target": "刚才",
+    "words": [
+      "他",
+      "刚才",
+      "去",
+      "洗手间",
+      "了"
+    ],
+    "lao": "ລາວໄປຫ້ອງນ້ຳຫວ່າງກີ້ນີ້",
+    "info": {
+      "pinyin": "gāngcái",
+      "pos": "adverb",
+      "meaningLao": "ວັງວີ້ນີ້"
+    }
+  },
+  {
+    "id": "hsk3-根据",
+    "level": 3,
+    "target": "根据",
+    "words": [
+      "根据",
+      "他",
+      "的",
+      "回答",
+      "这个",
+      "是",
+      "对",
+      "的"
+    ],
+    "lao": "ອີງຕາມຄຳຕອບຂອງລາວ, ອັນນີ້ແມ່ນຖືກຕ້ອງ",
+    "info": {
+      "pinyin": "gēnjù",
+      "pos": "preposition",
+      "meaningLao": "ອີງຕາມ"
+    }
+  },
+  {
+    "id": "hsk3-跟",
+    "level": 3,
+    "target": "跟",
+    "words": [
+      "我",
+      "想",
+      "跟",
+      "你",
+      "一起",
+      "去",
+      "旅游"
+    ],
+    "lao": "ຂ້ອຍຢາກໄປທ່ອງທ່ຽວກັບເຈົ້າ",
+    "info": {
+      "pinyin": "gēn",
+      "pos": "preposition",
+      "meaningLao": "ກັບ"
+    }
+  },
+  {
+    "id": "hsk3-更",
+    "level": 3,
+    "target": "更",
+    "words": [
+      "今天",
+      "比",
+      "昨天",
+      "更",
+      "冷"
+    ],
+    "lao": "ມື້ນີ້ໜາວກວ່າເມື້ອວານ",
+    "info": {
+      "pinyin": "gèng",
+      "pos": "adverb",
+      "meaningLao": "ຍິ່ງ...ກວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-公园",
+    "level": 3,
+    "target": "公园",
+    "words": [
+      "我们",
+      "去",
+      "公园",
+      "跑步",
+      "吧"
+    ],
+    "lao": "ພວກເຮົາໄປແລ່ນຢູ່ສວນສາທາລະນະເຖາະ",
+    "info": {
+      "pinyin": "gōngyuán",
+      "pos": "noun",
+      "meaningLao": "ສວນສາທາລະນະ"
+    }
+  },
+  {
+    "id": "hsk3-故事",
+    "level": 3,
+    "target": "故事",
+    "words": [
+      "奶奶",
+      "给",
+      "我",
+      "讲",
+      "了",
+      "一",
+      "个",
+      "故事"
+    ],
+    "lao": "ແມ່ເຖົ້າເລົ່ານິທານໃຫ້ຂ້ອຍຟັງເລື່ອງໜຶ່ງ",
+    "info": {
+      "pinyin": "gùshi",
+      "pos": "noun",
+      "meaningLao": "ເລື່ອງລາວ"
+    }
+  },
+  {
+    "id": "hsk3-关",
+    "level": 3,
+    "target": "关",
+    "words": [
+      "请",
+      "关",
+      "一下",
+      "空调"
+    ],
+    "lao": "ກະລຸນາປິດເຄື່ອງປັບອາກາດແດ່",
+    "info": {
+      "pinyin": "guān",
+      "pos": "verb",
+      "meaningLao": "ປິດ"
+    }
+  },
+  {
+    "id": "hsk3-关系",
+    "level": 3,
+    "target": "关系",
+    "words": [
+      "他们",
+      "的",
+      "关系",
+      "很",
+      "好"
+    ],
+    "lao": "ຄວາມສໍາພັນຂອງພວກເຂົາເຈົ້າດີຫຼາຍ",
+    "info": {
+      "pinyin": "guānxi",
+      "pos": "noun",
+      "meaningLao": "ຄວາມສໍາພັນ"
+    }
+  },
+  {
+    "id": "hsk3-关心",
+    "level": 3,
+    "target": "关心",
+    "words": [
+      "妈妈",
+      "很",
+      "关心",
+      "我",
+      "的",
+      "身体"
+    ],
+    "lao": "ແມ່ເອົາໃຈໃສ່ສຸຂະພາບຂອງຂ້ອຍຫຼາຍ",
+    "info": {
+      "pinyin": "guānxīn",
+      "pos": "verb",
+      "meaningLao": "ເປັນຫ່ວງເປັນໄຍ"
+    }
+  },
+  {
+    "id": "hsk3-关于",
+    "level": 3,
+    "target": "关于",
+    "words": [
+      "我",
+      "看",
+      "了",
+      "一",
+      "本",
+      "关于",
+      "中国",
+      "历史",
+      "的",
+      "书"
+    ],
+    "lao": "ຂ້ອຍໄດ້ອ່ານປຶ້ມຫົວໜຶ່ງກ່ຽວກັບປະຫວັດສາດຈີນ",
+    "info": {
+      "pinyin": "guānyú",
+      "pos": "preposition",
+      "meaningLao": "ກ່ຽວກັບ"
+    }
+  },
+  {
+    "id": "hsk3-国家",
+    "level": 3,
+    "target": "国家",
+    "words": [
+      "中国",
+      "是",
+      "一",
+      "个",
+      "很",
+      "大",
+      "的",
+      "国家"
+    ],
+    "lao": "ປະເທດຈີນແມ່ນປະເທດທີ່ໃຫຍ່ຫຼາຍ",
+    "info": {
+      "pinyin": "guójiā",
+      "pos": "noun",
+      "meaningLao": "ປະເທດຊາດ"
+    }
+  },
+  {
+    "id": "hsk3-刮",
+    "level": 3,
+    "target": "刮",
+    "words": [
+      "爸爸",
+      "正在",
+      "刮",
+      "脸"
+    ],
+    "lao": "ພໍ່ກຳລັງໂກນໜ້າ",
+    "info": {
+      "pinyin": "guā",
+      "pos": "verb",
+      "meaningLao": "ໂກນ"
+    }
+  },
+  {
+    "id": "hsk3-果汁",
+    "level": 3,
+    "target": "果汁",
+    "words": [
+      "我",
+      "喜欢",
+      "喝",
+      "果汁"
+    ],
+    "lao": "ຂ້ອຍມັກດື່ມນ້ຳໝາກໄມ້",
+    "info": {
+      "pinyin": "guǒzhī",
+      "pos": "noun",
+      "meaningLao": "ນ້ຳໝາກໄມ້"
+    }
+  },
+  {
+    "id": "hsk3-过去",
+    "level": 3,
+    "target": "过去",
+    "words": [
+      "过去",
+      "我",
+      "住",
+      "在",
+      "北京"
+    ],
+    "lao": "ເມື່ອກ່ອນຂ້ອຍອາໄສຢູ່ປັກກິ່ງ",
+    "info": {
+      "pinyin": "guòqù",
+      "pos": "noun",
+      "meaningLao": "ອະດີດ"
+    }
+  },
+  {
+    "id": "hsk3-还是",
+    "level": 3,
+    "target": "还是",
+    "words": [
+      "你",
+      "要",
+      "喝",
+      "茶",
+      "还是",
+      "喝",
+      "咖啡"
+    ],
+    "lao": "ເຈົ້າຢາກດື່ມຊາຫຼືດື່ມກາເຟ",
+    "info": {
+      "pinyin": "háishi",
+      "pos": "conjunction",
+      "meaningLao": "ຫຼືວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-害怕",
+    "level": 3,
+    "target": "害怕",
+    "words": [
+      "妹妹",
+      "很",
+      "害怕",
+      "狗"
+    ],
+    "lao": "ນ້ອງສາວຢ້ານໝາຫຼາຍ",
+    "info": {
+      "pinyin": "hàipà",
+      "pos": "verb",
+      "meaningLao": "ຢ້ານ"
+    }
+  },
+  {
+    "id": "hsk3-河",
+    "level": 3,
+    "target": "河",
+    "words": [
+      "这",
+      "条",
+      "河",
+      "很",
+      "大"
+    ],
+    "lao": "ແມ່ນ້ຳສາຍນີ້ໃຫຍ່ຫຼາຍ",
+    "info": {
+      "pinyin": "hé",
+      "pos": "noun",
+      "meaningLao": "ແມ່ນ້ຳ"
+    }
+  },
+  {
+    "id": "hsk3-黑板",
+    "level": 3,
+    "target": "黑板",
+    "words": [
+      "请",
+      "看",
+      "黑板"
+    ],
+    "lao": "ກະລຸນາເບິ່ງກະດານດຳ",
+    "info": {
+      "pinyin": "hēibǎn",
+      "pos": "noun",
+      "meaningLao": "ກະດານດຳ"
+    }
+  },
+  {
+    "id": "hsk3-护照",
+    "level": 3,
+    "target": "护照",
+    "words": [
+      "这",
+      "是",
+      "我",
+      "的",
+      "护照"
+    ],
+    "lao": "ນີ້ແມ່ນໜັງສືຜ່ານແດນຂອງຂ້ອຍ",
+    "info": {
+      "pinyin": "hùzhào",
+      "pos": "noun",
+      "meaningLao": "ໜັງສືຜ່ານແດນ"
+    }
+  },
+  {
+    "id": "hsk3-花",
+    "level": 3,
+    "target": "花",
+    "words": [
+      "我",
+      "买",
+      "了",
+      "一些",
+      "花"
+    ],
+    "lao": "ຂ້ອຍໄດ້ຊື້ດອກໄມ້ບາງສ່ວນ",
+    "info": {
+      "pinyin": "huā",
+      "pos": "noun",
+      "meaningLao": "ດອກໄມ້"
+    }
+  },
+  {
+    "id": "hsk3-花园",
+    "level": 3,
+    "target": "花园",
+    "words": [
+      "我",
+      "家",
+      "有",
+      "一",
+      "个",
+      "花园"
+    ],
+    "lao": "ເຮືອນຂອງຂ້ອຍມີສວນດອກໄມ້ໜຶ່ງສວນ",
+    "info": {
+      "pinyin": "huāyuán",
+      "pos": "noun",
+      "meaningLao": "ສວນດອກໄມ້"
+    }
+  },
+  {
+    "id": "hsk3-画",
+    "level": 3,
+    "target": "画",
+    "words": [
+      "他",
+      "画",
+      "得",
+      "很",
+      "好"
+    ],
+    "lao": "ລາວແຕ້ມໄດ້ດີຫຼາຍ",
+    "info": {
+      "pinyin": "huà",
+      "pos": "verb",
+      "meaningLao": "ວາດຮູບ"
+    }
+  },
+  {
+    "id": "hsk3-坏",
+    "level": 3,
+    "target": "坏",
+    "words": [
+      "电脑",
+      "坏",
+      "了"
+    ],
+    "lao": "ຄອມພິວເຕີເປເພະແລ້ວ",
+    "info": {
+      "pinyin": "huài",
+      "pos": "adjective",
+      "meaningLao": "ເປເພ, ເສຍ"
+    }
+  },
+  {
+    "id": "hsk3-环境",
+    "level": 3,
+    "target": "环境",
+    "words": [
+      "这里",
+      "的",
+      "环境",
+      "很",
+      "好"
+    ],
+    "lao": "ສິ່ງແວດລ້ອມຢູ່ບ່ອນນີ້ດີຫຼາຍ",
+    "info": {
+      "pinyin": "huánjìng",
+      "pos": "noun",
+      "meaningLao": "ສະພາບແວດລ້ອມ"
+    }
+  },
+  {
+    "id": "hsk3-换",
+    "level": 3,
+    "target": "换",
+    "words": [
+      "我",
+      "想",
+      "换",
+      "衣服"
+    ],
+    "lao": "ຂ້ອຍຢາກປ່ຽນເສື້ອຜ້າ",
+    "info": {
+      "pinyin": "huàn",
+      "pos": "verb",
+      "meaningLao": "ປ່ຽນ"
+    }
+  },
+  {
+    "id": "hsk3-黄",
+    "level": 3,
+    "target": "黄",
+    "words": [
+      "苹果",
+      "是",
+      "黄",
+      "的"
+    ],
+    "lao": "ໝາກແອັບເປີ້ນເປັນສີເຫຼືອງ",
+    "info": {
+      "pinyin": "huáng",
+      "pos": "adjective",
+      "meaningLao": "ສີເຫຼືອງ"
+    }
+  },
+  {
+    "id": "hsk3-会议",
+    "level": 3,
+    "target": "会议",
+    "words": [
+      "我们",
+      "有",
+      "会议"
+    ],
+    "lao": "ພວກເຂົາມີກອງປະຊຸມ",
+    "info": {
+      "pinyin": "huìyì",
+      "pos": "noun",
+      "meaningLao": "ການປະຊຸມ"
+    }
+  },
+  {
+    "id": "hsk3-或者",
+    "level": 3,
+    "target": "或者",
+    "words": [
+      "你",
+      "喝",
+      "茶",
+      "或者",
+      "咖啡"
+    ],
+    "lao": "ເຈົ້າດື່ມຊາຫຼືກາເຟ",
+    "info": {
+      "pinyin": "huòzhě",
+      "pos": "conjunction",
+      "meaningLao": "ຫຼືວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-机会",
+    "level": 3,
+    "target": "机会",
+    "words": [
+      "这",
+      "是",
+      "一个",
+      "好",
+      "机会"
+    ],
+    "lao": "ນີ້ແມ່ນໂອກາດທີ່ດີອັນໜຶ່ງ",
+    "info": {
+      "pinyin": "jīhuì",
+      "pos": "noun",
+      "meaningLao": "ໂອກາດ"
+    }
+  },
+  {
+    "id": "hsk3-极",
+    "level": 3,
+    "target": "极",
+    "words": [
+      "天气",
+      "好",
+      "极",
+      "了"
+    ],
+    "lao": "ອາກາດດີສຸດໆ",
+    "info": {
+      "pinyin": "jí",
+      "pos": "adverb",
+      "meaningLao": "ທີ່ສຸດ"
+    }
+  },
+  {
+    "id": "hsk3-几乎",
+    "level": 3,
+    "target": "几乎",
+    "words": [
+      "我",
+      "几乎",
+      "都",
+      "知道"
+    ],
+    "lao": "ຂ້ອຍຮູ້ເກືອບທັງໝົດແລ້ວ",
+    "info": {
+      "pinyin": "jīhū",
+      "pos": "adverb",
+      "meaningLao": "ເກືອບວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-记得",
+    "level": 3,
+    "target": "记得",
+    "words": [
+      "我",
+      "不",
+      "记得",
+      "了"
+    ],
+    "lao": "ຂ້ອຍຈື່ບໍ່ໄດ້ແລ້ວ",
+    "info": {
+      "pinyin": "jìde",
+      "pos": "verb",
+      "meaningLao": "ຈື່ໄດ້"
+    }
+  },
+  {
+    "id": "hsk3-季节",
+    "level": 3,
+    "target": "季节",
+    "words": [
+      "这",
+      "个",
+      "季节",
+      "很",
+      "冷"
+    ],
+    "lao": "ລະດູການນີ້ໜາວຫຼາຍ",
+    "info": {
+      "pinyin": "jìjié",
+      "pos": "noun",
+      "meaningLao": "ລະດູການ"
+    }
+  },
+  {
+    "id": "hsk3-检查",
+    "level": 3,
+    "target": "检查",
+    "words": [
+      "医生",
+      "在",
+      "检查",
+      "身体"
+    ],
+    "lao": "ທ່ານໝໍກຳລັງກວດສຸຂະພາບ",
+    "info": {
+      "pinyin": "jiǎnchá",
+      "pos": "verb",
+      "meaningLao": "ກວດກາ"
+    }
+  },
+  {
+    "id": "hsk3-简单",
+    "level": 3,
+    "target": "简单",
+    "words": [
+      "这",
+      "个",
+      "题",
+      "很",
+      "简单"
+    ],
+    "lao": "ຂໍ້ນີ້ງ່າຍຫລາຍ",
+    "info": {
+      "pinyin": "jiǎndān",
+      "pos": "adjective",
+      "meaningLao": "ງ່າຍ, ບໍ່ສັບສົນ"
+    }
+  },
+  {
+    "id": "hsk3-见面",
+    "level": 3,
+    "target": "见面",
+    "words": [
+      "我",
+      "和",
+      "朋友",
+      "见面",
+      "了"
+    ],
+    "lao": "ຂ້ອຍໄດ້ພົບກັບເພື່ອນແລ້ວ",
+    "info": {
+      "pinyin": "jiànmiàn",
+      "pos": "verb",
+      "meaningLao": "ພົບພໍ້ກັນ"
+    }
+  },
+  {
+    "id": "hsk3-健康",
+    "level": 3,
+    "target": "健康",
+    "words": [
+      "祝",
+      "你",
+      "身体",
+      "健康"
+    ],
+    "lao": "ຂໍໃຫ້ເຈົ້າສຸຂະພາບແຂງແຮງ",
+    "info": {
+      "pinyin": "jiànkāng",
+      "pos": "adjective",
+      "meaningLao": "ແຂງແຮງ, ສຸຂະພາບດີ"
+    }
+  },
+  {
+    "id": "hsk3-讲",
+    "level": 3,
+    "target": "讲",
+    "words": [
+      "老师",
+      "讲",
+      "汉语"
+    ],
+    "lao": "ຄູສອນພາສາຈີນ",
+    "info": {
+      "pinyin": "jiǎng",
+      "pos": "verb",
+      "meaningLao": "ເວົ້າ, ອະທິບາຍ"
+    }
+  },
+  {
+    "id": "hsk3-角",
+    "level": 3,
+    "target": "角",
+    "words": [
+      "书",
+      "在",
+      "桌子",
+      "角"
+    ],
+    "lao": "ປຶ້ມຢູ່ມຸມໂຕະ",
+    "info": {
+      "pinyin": "jiǎo",
+      "pos": "noun",
+      "meaningLao": "ມຸມ"
+    }
+  },
+  {
+    "id": "hsk3-教",
+    "level": 3,
+    "target": "教",
+    "words": [
+      "他",
+      "教",
+      "我",
+      "汉语"
+    ],
+    "lao": "ລາວສອນພາສາຈີນໃຫ້ຂ້ອຍ",
+    "info": {
+      "pinyin": "jiāo",
+      "pos": "verb",
+      "meaningLao": "ສອນ"
+    }
+  },
+  {
+    "id": "hsk3-接",
+    "level": 3,
+    "target": "接",
+    "words": [
+      "我",
+      "去",
+      "接",
+      "朋友"
+    ],
+    "lao": "ຂ້ອຍໄປຮັບເພື່ອນ",
+    "info": {
+      "pinyin": "jiē",
+      "pos": "verb",
+      "meaningLao": "ຮັບ, ໄປຮັບ"
+    }
+  },
+  {
+    "id": "hsk3-脚",
+    "level": 3,
+    "target": "脚",
+    "words": [
+      "我",
+      "的",
+      "脚",
+      "很",
+      "大"
+    ],
+    "lao": "ຕີນຂ້ອຍໃຫຍ່ຫລາຍ",
+    "info": {
+      "pinyin": "jiǎo",
+      "pos": "noun",
+      "meaningLao": "ຕີນ"
+    }
+  },
+  {
+    "id": "hsk3-街道",
+    "level": 3,
+    "target": "街道",
+    "words": [
+      "这",
+      "个",
+      "街道",
+      "很",
+      "干净"
+    ],
+    "lao": "ຖະໜົນເສັ້ນນີ້ສະອາດຫຼາຍ",
+    "info": {
+      "pinyin": "jiēdào",
+      "pos": "noun",
+      "meaningLao": "ຖະໜົນ, ທາງ"
+    }
+  },
+  {
+    "id": "hsk3-节目",
+    "level": 3,
+    "target": "节目",
+    "words": [
+      "我",
+      "喜欢",
+      "看",
+      "电视",
+      "节目"
+    ],
+    "lao": "ຂ້ອຍມັກເບິ່ງລາຍການໂທລະພາບ",
+    "info": {
+      "pinyin": "jiémù",
+      "pos": "noun",
+      "meaningLao": "ລາຍການ"
+    }
+  },
+  {
+    "id": "hsk3-节日",
+    "level": 3,
+    "target": "节日",
+    "words": [
+      "这",
+      "是",
+      "一个",
+      "大",
+      "节日"
+    ],
+    "lao": "ນີ້ແມ່ນວັນບຸນໃຫຍ່",
+    "info": {
+      "pinyin": "jiérì",
+      "pos": "noun",
+      "meaningLao": "ວັນບຸນ, ງານບຸນ"
+    }
+  },
+  {
+    "id": "hsk3-结婚",
+    "level": 3,
+    "target": "结婚",
+    "words": [
+      "他",
+      "们",
+      "明年",
+      "结婚"
+    ],
+    "lao": "ພວກເຂົາຈະແຕ່ງງານປີໜ້າ",
+    "info": {
+      "pinyin": "jiéhūn",
+      "pos": "verb",
+      "meaningLao": "ແຕ່ງງານ"
+    }
+  },
+  {
+    "id": "hsk3-结束",
+    "level": 3,
+    "target": "结束",
+    "words": [
+      "课",
+      "已经",
+      "结束",
+      "了"
+    ],
+    "lao": "ບົດຮຽນໝົດແລ້ວ",
+    "info": {
+      "pinyin": "jiéshù",
+      "pos": "verb",
+      "meaningLao": "ສິ້ນສຸດ"
+    }
+  },
+  {
+    "id": "hsk3-解决",
+    "level": 3,
+    "target": "解决",
+    "words": [
+      "我",
+      "们",
+      "要",
+      "解决",
+      "问题"
+    ],
+    "lao": "ພວກເຮົາຕ້ອງແກ້ໄຂບັນຫາ",
+    "info": {
+      "pinyin": "jiějué",
+      "pos": "verb",
+      "meaningLao": "ແກ້ໄຂ"
+    }
+  },
+  {
+    "id": "hsk3-借",
+    "level": 3,
+    "target": "借",
+    "words": [
+      "我",
+      "向",
+      "你",
+      "借",
+      "钱"
+    ],
+    "lao": "ຂ້ອຍຢືມເງິນເຈົ້າ",
+    "info": {
+      "pinyin": "jiè",
+      "pos": "verb",
+      "meaningLao": "ຢືມ"
+    }
+  },
+  {
+    "id": "hsk3-经常",
+    "level": 3,
+    "target": "经常",
+    "words": [
+      "我",
+      "经常",
+      "去",
+      "图书馆",
+      "看书"
+    ],
+    "lao": "ຂ້ອຍໄປຫ້ອງສະໝຸດອ່ານຫນັງສືເລື້ອຍໆ",
+    "info": {
+      "pinyin": "jīngcháng",
+      "pos": "adverb",
+      "meaningLao": "ເປັນປະຈຳ"
+    }
+  },
+  {
+    "id": "hsk3-经过",
+    "level": 3,
+    "target": "经过",
+    "words": [
+      "我",
+      "经过",
+      "那个",
+      "商店"
+    ],
+    "lao": "ຂ້ອຍຍ່າງຜ່ານຮ້ານຄ້າຮ້ານນັ້ນ",
+    "info": {
+      "pinyin": "jīngguò",
+      "pos": "verb",
+      "meaningLao": "ຜ່ານ"
+    }
+  },
+  {
+    "id": "hsk3-经理",
+    "level": 3,
+    "target": "经理",
+    "words": [
+      "他",
+      "是",
+      "公司",
+      "的",
+      "经理"
+    ],
+    "lao": "ລາວເປັນຜູ້ຈັດການຂອງບໍລິສັດ",
+    "info": {
+      "pinyin": "jīnglǐ",
+      "pos": "noun",
+      "meaningLao": "ຜູ້ຈັດການ"
+    }
+  },
+  {
+    "id": "hsk3-旧",
+    "level": 3,
+    "target": "旧",
+    "words": [
+      "这",
+      "件",
+      "衣服",
+      "很",
+      "旧"
+    ],
+    "lao": "ເສື້ອຜືນນີ້ເກົ່າຫຼາຍ",
+    "info": {
+      "pinyin": "jiù",
+      "pos": "adjective",
+      "meaningLao": "ເກົ່າ"
+    }
+  },
+  {
+    "id": "hsk3-举行",
+    "level": 3,
+    "target": "举行",
+    "words": [
+      "我们",
+      "在",
+      "学校",
+      "举行",
+      "比赛"
+    ],
+    "lao": "ພວກເຮົາຈັດການແຂ່ງຂັນຢູ່ໂຮງຮຽນ",
+    "info": {
+      "pinyin": "jǔxíng",
+      "pos": "verb",
+      "meaningLao": "ຈັດຂຶ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-句子",
+    "level": 3,
+    "target": "句子",
+    "words": [
+      "这",
+      "个",
+      "句子",
+      "很",
+      "简单"
+    ],
+    "lao": "ປະໂຫຍກນີ້ງ່າຍຫຼາຍ",
+    "info": {
+      "pinyin": "jùzi",
+      "pos": "noun",
+      "meaningLao": "ປະໂຫຍກ"
+    }
+  },
+  {
+    "id": "hsk3-决定",
+    "level": 3,
+    "target": "决定",
+    "words": [
+      "我",
+      "决定",
+      "去",
+      "北京",
+      "旅游"
+    ],
+    "lao": "ຂ້ອຍຕັດສິນໃຈໄປທ່ອງ່ຽວທີ່ປັກກິ່ງ",
+    "info": {
+      "pinyin": "juédìng",
+      "pos": "verb",
+      "meaningLao": "ຕັດສິນໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-可爱",
+    "level": 3,
+    "target": "可爱",
+    "words": [
+      "这",
+      "个",
+      "孩子",
+      "很",
+      "可爱"
+    ],
+    "lao": "ເດັກນ້ອຍຄົນນີ້ໜ້າຮັກຫຼາຍ",
+    "info": {
+      "pinyin": "kěài",
+      "pos": "adjective",
+      "meaningLao": "ໜ້າຮັກ"
+    }
+  },
+  {
+    "id": "hsk3-渴",
+    "level": 3,
+    "target": "渴",
+    "words": [
+      "我",
+      "现在",
+      "很",
+      "渴"
+    ],
+    "lao": "ຕອນນີ້ຂ້ອຍຫິວນ້ຳຫຼາຍ",
+    "info": {
+      "pinyin": "kě",
+      "pos": "adjective",
+      "meaningLao": "ຫິວນ້ຳ"
+    }
+  },
+  {
+    "id": "hsk3-刻",
+    "level": 3,
+    "target": "刻",
+    "words": [
+      "现在",
+      "是",
+      "十",
+      "点",
+      "一",
+      "刻"
+    ],
+    "lao": "ຕອນນີ້ແມ່ນໂມງສິບກວ່າຈຸດ",
+    "info": {
+      "pinyin": "kè",
+      "pos": "measure word",
+      "meaningLao": "15ນາທີ"
+    }
+  },
+  {
+    "id": "hsk3-客人",
+    "level": 3,
+    "target": "客人",
+    "words": [
+      "家里",
+      "有",
+      "客人"
+    ],
+    "lao": "ຢູ່ເຮືອນມີແຂກ",
+    "info": {
+      "pinyin": "kèrén",
+      "pos": "noun",
+      "meaningLao": "ແຂກ"
+    }
+  },
+  {
+    "id": "hsk3-空调",
+    "level": 3,
+    "target": "空调",
+    "words": [
+      "请",
+      "开",
+      "空调"
+    ],
+    "lao": "ກະລຸນາເປີດແອ",
+    "info": {
+      "pinyin": "kōngtiáo",
+      "pos": "noun",
+      "meaningLao": "ເຄື່ອງປັບອາກາດ"
+    }
+  },
+  {
+    "id": "hsk3-久",
+    "level": 3,
+    "target": "久",
+    "words": [
+      "你",
+      "来",
+      "这里",
+      "多",
+      "久",
+      "了"
+    ],
+    "lao": "ເຈົ້າມາບ່ອນນີ້ດົນປານໃດແລ້ວ",
+    "info": {
+      "pinyin": "jiǔ",
+      "pos": "adjective",
+      "meaningLao": "ດົນ"
+    }
+  },
+  {
+    "id": "hsk3-口",
+    "level": 3,
+    "target": "口",
+    "words": [
+      "我",
+      "有",
+      "三",
+      "口",
+      "人"
+    ],
+    "lao": "ຂ້ອຍມີຄົນສາມຄົນ",
+    "info": {
+      "pinyin": "kǒu",
+      "pos": "measure word",
+      "meaningLao": "ຄົນ"
+    }
+  },
+  {
+    "id": "hsk3-哭",
+    "level": 3,
+    "target": "哭",
+    "words": [
+      "他",
+      "在",
+      "哭"
+    ],
+    "lao": "ລາວກຳລັງໄຫ້",
+    "info": {
+      "pinyin": "kū",
+      "pos": "verb",
+      "meaningLao": "ໄຫ້"
+    }
+  },
+  {
+    "id": "hsk3-裤子",
+    "level": 3,
+    "target": "裤子",
+    "words": [
+      "我",
+      "买",
+      "裤子"
+    ],
+    "lao": "ຂ້ອຍຊື້ກາງເກງ",
+    "info": {
+      "pinyin": "kùzi",
+      "pos": "noun",
+      "meaningLao": "ໂສ້ງ"
+    }
+  },
+  {
+    "id": "hsk3-筷子",
+    "level": 3,
+    "target": "筷子",
+    "words": [
+      "桌子",
+      "有",
+      "筷子"
+    ],
+    "lao": "ເທິງໂຕະມີຕະກິບ",
+    "info": {
+      "pinyin": "kuàizi",
+      "pos": "noun",
+      "meaningLao": "ຈ້ອງ"
+    }
+  },
+  {
+    "id": "hsk3-蓝",
+    "level": 3,
+    "target": "蓝",
+    "words": [
+      "衣服",
+      "是",
+      "蓝",
+      "的"
+    ],
+    "lao": "ເສື້ອແມ່ນສີຟ້າ",
+    "info": {
+      "pinyin": "lán",
+      "pos": "adjective",
+      "meaningLao": "ສີຟ້າ"
+    }
+  },
+  {
+    "id": "hsk3-老",
+    "level": 3,
+    "target": "老",
+    "words": [
+      "他",
+      "不",
+      "老"
+    ],
+    "lao": "ລາວບໍ່ເຖົ້າ",
+    "info": {
+      "pinyin": "lǎo",
+      "pos": "adjective",
+      "meaningLao": "ເຖົ້າ"
+    }
+  },
+  {
+    "id": "hsk3-了解",
+    "level": 3,
+    "target": "了解",
+    "words": [
+      "我",
+      "了解",
+      "他"
+    ],
+    "lao": "ຂ້ອຍເຂົ້າໃຈລາວ",
+    "info": {
+      "pinyin": "liǎojiě",
+      "pos": "verb",
+      "meaningLao": "ເຂົ້າໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-离开",
+    "level": 3,
+    "target": "离开",
+    "words": [
+      "他",
+      "离开",
+      "了"
+    ],
+    "lao": "ລາວອອກໄປແລ້ວ",
+    "info": {
+      "pinyin": "líkāi",
+      "pos": "verb",
+      "meaningLao": "ຈາກໄປ"
+    }
+  },
+  {
+    "id": "hsk3-礼物",
+    "level": 3,
+    "target": "礼物",
+    "words": [
+      "我",
+      "要",
+      "礼物"
+    ],
+    "lao": "ຂ້ອຍຕ້ອງການຂອງຂວັນ",
+    "info": {
+      "pinyin": "lǐwù",
+      "pos": "noun",
+      "meaningLao": "ຂອງຂວັນ"
+    }
+  },
+  {
+    "id": "hsk3-历史",
+    "level": 3,
+    "target": "历史",
+    "words": [
+      "我",
+      "看",
+      "历史"
+    ],
+    "lao": "ຂ້ອຍອ່ານປະຫວັດສາດ",
+    "info": {
+      "pinyin": "lìshǐ",
+      "pos": "noun",
+      "meaningLao": "ປະຫວັດສາດ"
+    }
+  },
+  {
+    "id": "hsk3-脸",
+    "level": 3,
+    "target": "脸",
+    "words": [
+      "他",
+      "的",
+      "脸",
+      "很",
+      "红"
+    ],
+    "lao": "ໜ້າຂອງລາວສີແດງ",
+    "info": {
+      "pinyin": "liǎn",
+      "pos": "noun",
+      "meaningLao": "ໜ້າ"
+    }
+  },
+  {
+    "id": "hsk3-练习",
+    "level": 3,
+    "target": "练习",
+    "words": [
+      "我",
+      "在",
+      "练习",
+      "汉语"
+    ],
+    "lao": "ຂ້ອຍກຳລັງຝຶກຫັດພາສາຈີນ",
+    "info": {
+      "pinyin": "liànxí",
+      "pos": "verb",
+      "meaningLao": "ຝຶກຫັດ"
+    }
+  },
+  {
+    "id": "hsk3-辆",
+    "level": 3,
+    "target": "辆",
+    "words": [
+      "我",
+      "买",
+      "了",
+      "一",
+      "辆",
+      "车"
+    ],
+    "lao": "ຂ້ອຍຊື້ລົດຄັນໜຶ່ງ",
+    "info": {
+      "pinyin": "liàng",
+      "pos": "measure word",
+      "meaningLao": "ຄັນ"
+    }
+  },
+  {
+    "id": "hsk3-邻居",
+    "level": 3,
+    "target": "邻居",
+    "words": [
+      "我",
+      "的",
+      "邻居",
+      "很",
+      "好"
+    ],
+    "lao": "ເພື່ອນບ້ານຂອງຂ້ອຍດີຫຼາຍ",
+    "info": {
+      "pinyin": "línjū",
+      "pos": "noun",
+      "meaningLao": "ເພື່ອນບ້ານ"
+    }
+  },
+  {
+    "id": "hsk3-楼",
+    "level": 3,
+    "target": "楼",
+    "words": [
+      "他",
+      "在",
+      "楼",
+      "上"
+    ],
+    "lao": "ລາວຢູ່ເທິງຕຶກ",
+    "info": {
+      "pinyin": "lóu",
+      "pos": "noun",
+      "meaningLao": "ຕຶກ"
+    }
+  },
+  {
+    "id": "hsk3-绿",
+    "level": 3,
+    "target": "绿",
+    "words": [
+      "草",
+      "是",
+      "绿",
+      "的"
+    ],
+    "lao": "ຫຍ້າເປັນສີຂຽວ",
+    "info": {
+      "pinyin": "lǜ",
+      "pos": "adjective",
+      "meaningLao": "ສີຂຽວ"
+    }
+  },
+  {
+    "id": "hsk3-马上",
+    "level": 3,
+    "target": "马上",
+    "words": [
+      "我",
+      "马上",
+      "去"
+    ],
+    "lao": "ຂ້ອຍຈະໄປດຽວນີ້",
+    "info": {
+      "pinyin": "mǎshàng",
+      "pos": "adverb",
+      "meaningLao": "ທັນທີ"
+    }
+  },
+  {
+    "id": "hsk3-满意",
+    "level": 3,
+    "target": "满意",
+    "words": [
+      "他",
+      "很",
+      "满意"
+    ],
+    "lao": "ລາວພໍໃຈຫຼາຍ",
+    "info": {
+      "pinyin": "mǎnyì",
+      "pos": "adjective",
+      "meaningLao": "ພໍໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-马",
+    "level": 3,
+    "target": "马",
+    "words": [
+      "我",
+      "看见",
+      "一",
+      "只",
+      "马"
+    ],
+    "lao": "ຂ້ອຍເຫັນມ້າໂຕໜຶ່ງ",
+    "info": {
+      "pinyin": "mǎ",
+      "pos": "noun",
+      "meaningLao": "ມ້າ"
+    }
+  },
+  {
+    "id": "hsk3-帽子",
+    "level": 3,
+    "target": "帽子",
+    "words": [
+      "我",
+      "买",
+      "了",
+      "帽子"
+    ],
+    "lao": "ຂ້ອຍໄດ້ຊື້ໝວກແລ້ວ",
+    "info": {
+      "pinyin": "màozi",
+      "pos": "noun",
+      "meaningLao": "ໝວກ"
+    }
+  },
+  {
+    "id": "hsk3-米",
+    "level": 3,
+    "target": "米",
+    "words": [
+      "妈妈",
+      "买",
+      "了",
+      "米"
+    ],
+    "lao": "ແມ່ຊື້ເຂົ້າສານແລ້ວ",
+    "info": {
+      "pinyin": "mǐ",
+      "pos": "noun",
+      "meaningLao": "ເຂົ້າສານ"
+    }
+  },
+  {
+    "id": "hsk3-面包",
+    "level": 3,
+    "target": "面包",
+    "words": [
+      "我",
+      "要",
+      "买",
+      "面包"
+    ],
+    "lao": "ຂ້ອຍຢາກຊື້ເຂົ້າຈີ່",
+    "info": {
+      "pinyin": "miànbāo",
+      "pos": "noun",
+      "meaningLao": "ເຂົ້າຈີ່"
+    }
+  },
+  {
+    "id": "hsk3-面条",
+    "level": 3,
+    "target": "面条",
+    "words": [
+      "我",
+      "吃",
+      "面条"
+    ],
+    "lao": "ຂ້ອຍກິນເຂົ້າປຸ້ນ",
+    "info": {
+      "pinyin": "miàntiáo",
+      "pos": "noun",
+      "meaningLao": "ເຝີ"
+    }
+  },
+  {
+    "id": "hsk3-明白",
+    "level": 3,
+    "target": "明白",
+    "words": [
+      "我",
+      "明白",
+      "了"
+    ],
+    "lao": "ຂ້ອຍເຂົ້າໃຈແລ້ວ",
+    "info": {
+      "pinyin": "míngbai",
+      "pos": "verb",
+      "meaningLao": "ເຂົ້າໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-拿",
+    "level": 3,
+    "target": "拿",
+    "words": [
+      "请",
+      "把",
+      "书",
+      "拿",
+      "来"
+    ],
+    "lao": "ກະລຸນາເອົາປຶ້ມມາແດ່",
+    "info": {
+      "pinyin": "ná",
+      "pos": "verb",
+      "meaningLao": "ຖື"
+    }
+  },
+  {
+    "id": "hsk3-奶奶",
+    "level": 3,
+    "target": "奶奶",
+    "words": [
+      "奶奶",
+      "在",
+      "家"
+    ],
+    "lao": "ແມ່ຕູ້ຢູ່ເຮືອນ",
+    "info": {
+      "pinyin": "nǎinai",
+      "pos": "noun",
+      "meaningLao": "ແມ່ຕູ້"
+    }
+  },
+  {
+    "id": "hsk3-南",
+    "level": 3,
+    "target": "南",
+    "words": [
+      "学校",
+      "在",
+      "南",
+      "面"
+    ],
+    "lao": "ໂຮງຮຽນຢູ່ທາງທິດໃຕ້",
+    "info": {
+      "pinyin": "nán",
+      "pos": "noun",
+      "meaningLao": "ທິດໃຕ້"
+    }
+  },
+  {
+    "id": "hsk3-难",
+    "level": 3,
+    "target": "难",
+    "words": [
+      "这个",
+      "题",
+      "很",
+      "难"
+    ],
+    "lao": "ບົດເລກນີ້ຍາກຫຼາຍ",
+    "info": {
+      "pinyin": "nán",
+      "pos": "adjective",
+      "meaningLao": "ຍາກ"
+    }
+  },
+  {
+    "id": "hsk3-难过",
+    "level": 3,
+    "target": "难过",
+    "words": [
+      "他",
+      "很",
+      "难过"
+    ],
+    "lao": "ລາວເສຍໃຈຫຼາຍ",
+    "info": {
+      "pinyin": "nánguò",
+      "pos": "adjective",
+      "meaningLao": "ເສຍໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-年级",
+    "level": 3,
+    "target": "年级",
+    "words": [
+      "我",
+      "是",
+      "二",
+      "年级",
+      "学生"
+    ],
+    "lao": "ຂ້ອຍເປັນນັກຮຽນຊັ້ນປີທີສອງ",
+    "info": {
+      "pinyin": "niánjí",
+      "pos": "noun",
+      "meaningLao": "ຊັ້ນຮຽນ"
+    }
+  },
+  {
+    "id": "hsk3-年轻",
+    "level": 3,
+    "target": "年轻",
+    "words": [
+      "我",
+      "的",
+      "妈妈",
+      "很",
+      "年轻"
+    ],
+    "lao": "ແມ່ຂອງຂ້ອຍຍັງໜຸ່ມ",
+    "info": {
+      "pinyin": "niánqīng",
+      "pos": "adjective",
+      "meaningLao": "ໜຸ່ມສາວ"
+    }
+  },
+  {
+    "id": "hsk3-鸟",
+    "level": 3,
+    "target": "鸟",
+    "words": [
+      "树",
+      "上",
+      "有",
+      "一",
+      "只",
+      "鸟"
+    ],
+    "lao": "ເທິງຕົ້ນໄມ້ມີນົກໂຕໜຶ່ງ",
+    "info": {
+      "pinyin": "niǎo",
+      "pos": "noun",
+      "meaningLao": "ນົກ"
+    }
+  },
+  {
+    "id": "hsk3-努力",
+    "level": 3,
+    "target": "努力",
+    "words": [
+      "学生",
+      "们",
+      "学习",
+      "很",
+      "努力"
+    ],
+    "lao": "ພວກນັກຮຽນຕັ້ງໃຈຮຽນຫຼາຍ",
+    "info": {
+      "pinyin": "nǔlì",
+      "pos": "adjective",
+      "meaningLao": "ພະຍາຍາມ"
+    }
+  },
+  {
+    "id": "hsk3-爬山",
+    "level": 3,
+    "target": "爬山",
+    "words": [
+      "我们",
+      "明天",
+      "去",
+      "爬山"
+    ],
+    "lao": "ມື້ອື່ນພວກເຮົາ ໄປປີນພູ",
+    "info": {
+      "pinyin": "páshān",
+      "pos": "verb",
+      "meaningLao": "ປີ້ນພູ"
+    }
+  },
+  {
+    "id": "hsk3-盘子",
+    "level": 3,
+    "target": "盘子",
+    "words": [
+      "桌子",
+      "上",
+      "有",
+      "一个",
+      "盘子"
+    ],
+    "lao": "ເທິງໂຕະມີຈານໜຶ່ງໜ່ວຍ",
+    "info": {
+      "pinyin": "pánzi",
+      "pos": "noun",
+      "meaningLao": "ຈານ"
+    }
+  },
+  {
+    "id": "hsk3-胖",
+    "level": 3,
+    "target": "胖",
+    "words": [
+      "他",
+      "的",
+      "儿子",
+      "很",
+      "胖"
+    ],
+    "lao": "ລູກຊາຍຂອງລາວຕຸ້ຍ",
+    "info": {
+      "pinyin": "pàng",
+      "pos": "adjective",
+      "meaningLao": "ອ້ວນ"
+    }
+  },
+  {
+    "id": "hsk3-啤酒",
+    "level": 3,
+    "target": "啤酒",
+    "words": [
+      "我",
+      "不",
+      "喝",
+      "啤酒"
+    ],
+    "lao": "ຂ້ອຍບໍ່ກິນເບຍ",
+    "info": {
+      "pinyin": "píjiǔ",
+      "pos": "noun",
+      "meaningLao": "ເບຍ"
+    }
+  },
+  {
+    "id": "hsk3-普通话",
+    "level": 3,
+    "target": "普通话",
+    "words": [
+      "他",
+      "会",
+      "说",
+      "普通话"
+    ],
+    "lao": "ລາວເວົ້າພາສາຈີນກາງໄດ້",
+    "info": {
+      "pinyin": "pǔtōnghuà",
+      "pos": "noun",
+      "meaningLao": "ພາສາຈີນກາງ"
+    }
+  },
+  {
+    "id": "hsk3-其实",
+    "level": 3,
+    "target": "其实",
+    "words": [
+      "其实",
+      "我",
+      "不",
+      "知道"
+    ],
+    "lao": "ຄວາມຈິງແລ້ວຂ້ອຍບໍ່ຮູ້",
+    "info": {
+      "pinyin": "qíshí",
+      "pos": "adverb",
+      "meaningLao": "ທີ່ຈິງແລ້ວ"
+    }
+  },
+  {
+    "id": "hsk3-葡萄",
+    "level": 3,
+    "target": "葡萄",
+    "words": [
+      "冰箱",
+      "里",
+      "有",
+      "葡萄"
+    ],
+    "lao": "ໃນຕູ້ເຢັນມີໝາກອຸ່ນ",
+    "info": {
+      "pinyin": "pútao",
+      "pos": "noun",
+      "meaningLao": "ໝາກອະງຸ່ນ"
+    }
+  },
+  {
+    "id": "hsk3-其他",
+    "level": 3,
+    "target": "其他",
+    "words": [
+      "我",
+      "看",
+      "其他",
+      "书"
+    ],
+    "lao": "ຂ້ອຍອ່ານປຶ້ມຫົວອື່ນ",
+    "info": {
+      "pinyin": "qítā",
+      "pos": "pronoun",
+      "meaningLao": "ອື່ນໆ"
+    }
+  },
+  {
+    "id": "hsk3-奇怪",
+    "level": 3,
+    "target": "奇怪",
+    "words": [
+      "这",
+      "个",
+      "人",
+      "很",
+      "奇怪"
+    ],
+    "lao": "ຄົນນີ້ແປກຫຼາຍ",
+    "info": {
+      "pinyin": "qíguài",
+      "pos": "adjective",
+      "meaningLao": "ແປກ"
+    }
+  },
+  {
+    "id": "hsk3-骑",
+    "level": 3,
+    "target": "骑",
+    "words": [
+      "他",
+      "骑",
+      "自行车"
+    ],
+    "lao": "ລາວຂີ່ລົດຖີບ",
+    "info": {
+      "pinyin": "qí",
+      "pos": "verb",
+      "meaningLao": "ຂີ່"
+    }
+  },
+  {
+    "id": "hsk3-铅笔",
+    "level": 3,
+    "target": "铅笔",
+    "words": [
+      "我",
+      "买",
+      "铅笔"
+    ],
+    "lao": "ຂ້ອຍຊື້ສໍດຳ",
+    "info": {
+      "pinyin": "qiānbǐ",
+      "pos": "noun",
+      "meaningLao": "ບິກສໍ"
+    }
+  },
+  {
+    "id": "hsk3-清楚",
+    "level": 3,
+    "target": "清楚",
+    "words": [
+      "我",
+      "听",
+      "不",
+      "清楚"
+    ],
+    "lao": "ຂ້ອຍຟັງບໍ່ຊັດເຈນ",
+    "info": {
+      "pinyin": "qīngchu",
+      "pos": "adjective",
+      "meaningLao": "ຊັດເຈນ"
+    }
+  },
+  {
+    "id": "hsk3-秋",
+    "level": 3,
+    "target": "秋",
+    "words": [
+      "今年",
+      "秋",
+      "天",
+      "很",
+      "冷"
+    ],
+    "lao": "ລະດູໃບໄມ້ຫຼົ່ນປີນີ້ໜາວຫຼາຍ",
+    "info": {
+      "pinyin": "qiū",
+      "pos": "noun",
+      "meaningLao": "ລະດູໃບໄມ້ຫຼົ່ນ"
+    }
+  },
+  {
+    "id": "hsk3-裙子",
+    "level": 3,
+    "target": "裙子",
+    "words": [
+      "她",
+      "穿",
+      "红",
+      "裙子"
+    ],
+    "lao": "ລາວໃສ່ເສື້ອສິ້ນສີແດງ",
+    "info": {
+      "pinyin": "qúnzi",
+      "pos": "noun",
+      "meaningLao": "ເສື້ອສິ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-然后",
+    "level": 3,
+    "target": "然后",
+    "words": [
+      "我",
+      "回家",
+      "然后",
+      "睡觉"
+    ],
+    "lao": "ຂ້ອຍກັບບ້ານແລ້ວຈຶ່ງນອນ",
+    "info": {
+      "pinyin": "ránhòu",
+      "pos": "conjunction",
+      "meaningLao": "ແລ້ວຈຶ່ງ"
+    }
+  },
+  {
+    "id": "hsk3-热情",
+    "level": 3,
+    "target": "热情",
+    "words": [
+      "这",
+      "个",
+      "老师",
+      "很",
+      "热情"
+    ],
+    "lao": "ຄູສອນຄົນນີ້ກະຕືລືລົ້ນຫຼາຍ",
+    "info": {
+      "pinyin": "rèqíng",
+      "pos": "adjective",
+      "meaningLao": "ກະຕືລືລົ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-认为",
+    "level": 3,
+    "target": "认为",
+    "words": [
+      "我",
+      "认为",
+      "这",
+      "个",
+      "好"
+    ],
+    "lao": "ຂ້ອຍຄິດວ່າອັນນີ້ດີ",
+    "info": {
+      "pinyin": "rènwéi",
+      "pos": "verb",
+      "meaningLao": "ຄິດວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-认真",
+    "level": 3,
+    "target": "认真",
+    "words": [
+      "他",
+      "学习",
+      "很",
+      "认真"
+    ],
+    "lao": "ລາວຮຽນຢ່າງຕັ້ງໃຈຫຼາຍ",
+    "info": {
+      "pinyin": "rènzhēn",
+      "pos": "adjective",
+      "meaningLao": "ຕັ້ງໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-容易",
+    "level": 3,
+    "target": "容易",
+    "words": [
+      "这个",
+      "题",
+      "很",
+      "容易"
+    ],
+    "lao": "ບົດເລກນີ້ງ່າຍຫຼາຍ",
+    "info": {
+      "pinyin": "róngyì",
+      "pos": "adjective",
+      "meaningLao": "ງ່າຍ"
+    }
+  },
+  {
+    "id": "hsk3-如果",
+    "level": 3,
+    "target": "如果",
+    "words": [
+      "如果",
+      "下雨",
+      "我",
+      "不",
+      "去",
+      "学校"
+    ],
+    "lao": "ຖ້າຝົນຕົກຂ້ອຍບໍ່ໄປໂຮງຮຽນ",
+    "info": {
+      "pinyin": "rúguǒ",
+      "pos": "conjunction",
+      "meaningLao": "ຖ້າຫາກ"
+    }
+  },
+  {
+    "id": "hsk3-伞",
+    "level": 3,
+    "target": "伞",
+    "words": [
+      "我",
+      "买",
+      "了",
+      "伞"
+    ],
+    "lao": "ຂ້ອຍຊື້ຄັນຮົ່ມແລ້ວ",
+    "info": {
+      "pinyin": "sǎn",
+      "pos": "noun",
+      "meaningLao": "ຄັນຮົ່ມ"
+    }
+  },
+  {
+    "id": "hsk3-上网",
+    "level": 3,
+    "target": "上网",
+    "words": [
+      "他",
+      "在",
+      "房间",
+      "里",
+      "上网"
+    ],
+    "lao": "ລາວກຳລັງຫຼິ້ນອິນເຕີເນັດຢູ່ໃນຫ້ອງ",
+    "info": {
+      "pinyin": "shàngwǎng",
+      "pos": "verb",
+      "meaningLao": "ຫຼິ້ນເນັດ"
+    }
+  },
+  {
+    "id": "hsk3-生气",
+    "level": 3,
+    "target": "生气",
+    "words": [
+      "他",
+      "别",
+      "生气"
+    ],
+    "lao": "ລາວຢ່າຄຽດເດີ",
+    "info": {
+      "pinyin": "shēngqì",
+      "pos": "verb",
+      "meaningLao": "ຄຽດ"
+    }
+  },
+  {
+    "id": "hsk3-声音",
+    "level": 3,
+    "target": "声音",
+    "words": [
+      "我",
+      "听见",
+      "了",
+      "声音"
+    ],
+    "lao": "ຂ້ອຍໄດ້ຍິນສຽງແລ້ວ",
+    "info": {
+      "pinyin": "shēngyīn",
+      "pos": "noun",
+      "meaningLao": "ສຽງ"
+    }
+  },
+  {
+    "id": "hsk3-使",
+    "level": 3,
+    "target": "使",
+    "words": [
+      "这",
+      "个",
+      "使",
+      "我",
+      "高兴"
+    ],
+    "lao": "ສິ່ງນີ້ເຮັດໃຫ້ຂ້ອຍດີໃຈ",
+    "info": {
+      "pinyin": "shǐ",
+      "pos": "verb",
+      "meaningLao": "ເຮັດໃຫ້"
+    }
+  },
+  {
+    "id": "hsk3-世界",
+    "level": 3,
+    "target": "世界",
+    "words": [
+      "世界",
+      "很",
+      "大"
+    ],
+    "lao": "ໂລກນີ້ໃຫຍ່ຫຼາຍ",
+    "info": {
+      "pinyin": "shìjiè",
+      "pos": "noun",
+      "meaningLao": "ໂລກ"
+    }
+  },
+  {
+    "id": "hsk3-瘦",
+    "level": 3,
+    "target": "瘦",
+    "words": [
+      "他",
+      "现在",
+      "很",
+      "瘦"
+    ],
+    "lao": "ຕອນນີ້ລາວຜອມຫຼາຍ",
+    "info": {
+      "pinyin": "shòu",
+      "pos": "adjective",
+      "meaningLao": "ຜອມ"
+    }
+  },
+  {
+    "id": "hsk3-叔叔",
+    "level": 3,
+    "target": "叔叔",
+    "words": [
+      "我",
+      "叔叔",
+      "在",
+      "家里"
+    ],
+    "lao": "ລຸງຂອງຂ້ອຍຢູ່ເຮືອນ",
+    "info": {
+      "pinyin": "shūshu",
+      "pos": "noun",
+      "meaningLao": "ລຸງ"
+    }
+  },
+  {
+    "id": "hsk3-舒服",
+    "level": 3,
+    "target": "舒服",
+    "words": [
+      "这个",
+      "椅子",
+      "很",
+      "舒服"
+    ],
+    "lao": "ຕັ່ງໂຕນີ້ສະບາຍຫຼາຍ",
+    "info": {
+      "pinyin": "shūfu",
+      "pos": "adjective",
+      "meaningLao": "ສະບາຍ"
+    }
+  },
+  {
+    "id": "hsk3-数学",
+    "level": 3,
+    "target": "数学",
+    "words": [
+      "我",
+      "喜欢",
+      "数学",
+      "课"
+    ],
+    "lao": "ຂ້ອຍມັກວິຊາຄະນິດສາດ",
+    "info": {
+      "pinyin": "shùxué",
+      "pos": "noun",
+      "meaningLao": "ວິຊາຄະນິດສາດ"
+    }
+  },
+  {
+    "id": "hsk3-双",
+    "level": 3,
+    "target": "双",
+    "words": [
+      "我",
+      "买",
+      "了",
+      "一",
+      "双",
+      "鞋"
+    ],
+    "lao": "ຂ້ອຍຊື້ເກີບໜຶ່ງຄູ່",
+    "info": {
+      "pinyin": "shuāng",
+      "pos": "measure word",
+      "meaningLao": "ຄູ່"
+    }
+  },
+  {
+    "id": "hsk3-水平",
+    "level": 3,
+    "target": "水平",
+    "words": [
+      "他",
+      "的",
+      "汉语",
+      "水平",
+      "很",
+      "高"
+    ],
+    "lao": "ລະດັບພາສາຈີນຂອງລາວສູງຫຼາຍ",
+    "info": {
+      "pinyin": "shuǐpíng",
+      "pos": "noun",
+      "meaningLao": "ລະດັບ"
+    }
+  },
+  {
+    "id": "hsk3-司机",
+    "level": 3,
+    "target": "司机",
+    "words": [
+      "那个",
+      "人",
+      "是",
+      "司机"
+    ],
+    "lao": "ຄົນນັ້ນແມ່ນຄົນຂັບລົດ",
+    "info": {
+      "pinyin": "sījī",
+      "pos": "noun",
+      "meaningLao": "ຄົນຂັບລົດ"
+    }
+  },
+  {
+    "id": "hsk3-虽然",
+    "level": 3,
+    "target": "虽然",
+    "words": [
+      "虽然",
+      "很",
+      "累",
+      "可是",
+      "我",
+      "想",
+      "去"
+    ],
+    "lao": "ເຖິງແມ່ນວ່າເມື່ອຍແຕ່ຂ້ອຍຢາກໄປ",
+    "info": {
+      "pinyin": "suīrán",
+      "pos": "conjunction",
+      "meaningLao": "ເຖິງແມ່ນວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-太阳",
+    "level": 3,
+    "target": "太阳",
+    "words": [
+      "今天",
+      "有",
+      "太阳"
+    ],
+    "lao": "ມື້ນີ້ມີແດດອອກ",
+    "info": {
+      "pinyin": "tàiyang",
+      "pos": "noun",
+      "meaningLao": "ຕາເວັນ"
+    }
+  },
+  {
+    "id": "hsk3-刷",
+    "level": 3,
+    "target": "刷",
+    "words": [
+      "我",
+      "在",
+      "刷",
+      "鞋"
+    ],
+    "lao": "ຂ້ອຍກຳລັງຂັດເກີ",
+    "info": {
+      "pinyin": "shuā",
+      "pos": "verb",
+      "meaningLao": "ແປງ"
+    }
+  },
+  {
+    "id": "hsk3-糖",
+    "level": 3,
+    "target": "糖",
+    "words": [
+      "我",
+      "喜欢",
+      "吃",
+      "糖"
+    ],
+    "lao": "ຂ້ອຍມັກກິນນ້ຳຕານ",
+    "info": {
+      "pinyin": "táng",
+      "pos": "noun",
+      "meaningLao": "ນ້ຳຕານ"
+    }
+  },
+  {
+    "id": "hsk3-特别",
+    "level": 3,
+    "target": "特别",
+    "words": [
+      "今天",
+      "天气",
+      "特别",
+      "好"
+    ],
+    "lao": "ມື້ນີ້ອາກາດດີເປັນພິເສດ",
+    "info": {
+      "pinyin": "tèbié",
+      "pos": "adverb",
+      "meaningLao": "ເປັນພິເສດ"
+    }
+  },
+  {
+    "id": "hsk3-疼",
+    "level": 3,
+    "target": "疼",
+    "words": [
+      "我",
+      "头",
+      "疼"
+    ],
+    "lao": "ຂ້ອຍເຈັບຫົວ",
+    "info": {
+      "pinyin": "téng",
+      "pos": "adjective",
+      "meaningLao": "ເຈັບ"
+    }
+  },
+  {
+    "id": "hsk3-提高",
+    "level": 3,
+    "target": "提高",
+    "words": [
+      "我",
+      "想",
+      "提高",
+      "汉语",
+      "水平"
+    ],
+    "lao": "ຂ້ອຍຢາກຍົກລະດັບພາສາຈີນ",
+    "info": {
+      "pinyin": "tígāo",
+      "pos": "verb",
+      "meaningLao": "ຍົກລະດັບ"
+    }
+  },
+  {
+    "id": "hsk3-体育",
+    "level": 3,
+    "target": "体育",
+    "words": [
+      "我",
+      "喜欢",
+      "体育",
+      "课"
+    ],
+    "lao": "ຂ້ອຍມັກວິຊາພະລະສຶກສາ",
+    "info": {
+      "pinyin": "tǐyù",
+      "pos": "noun",
+      "meaningLao": "ກິລາ"
+    }
+  },
+  {
+    "id": "hsk3-甜",
+    "level": 3,
+    "target": "甜",
+    "words": [
+      "这个",
+      "苹果",
+      "很",
+      "甜"
+    ],
+    "lao": "ໝາກແອບປີ້ນີ້ຫວານຫຼາຍ",
+    "info": {
+      "pinyin": "tián",
+      "pos": "adjective",
+      "meaningLao": "ຫວານ"
+    }
+  },
+  {
+    "id": "hsk3-条",
+    "level": 3,
+    "target": "条",
+    "words": [
+      "我",
+      "买",
+      "了",
+      "一",
+      "条",
+      "裤子"
+    ],
+    "lao": "ຂ້ອຍຊື້ກາງເກງໜຶ່ງຕອນ",
+    "info": {
+      "pinyin": "tiáo",
+      "pos": "measure word",
+      "meaningLao": "ເສັ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-同事",
+    "level": 3,
+    "target": "同事",
+    "words": [
+      "他",
+      "是",
+      "我",
+      "的",
+      "同事"
+    ],
+    "lao": "ລາວແມ່ນເພື່ອນຮ່ວມງານຂອງຂ້ອຍ",
+    "info": {
+      "pinyin": "tóngshì",
+      "pos": "noun",
+      "meaningLao": "ເພື່ອນຮ່ວມງານ"
+    }
+  },
+  {
+    "id": "hsk3-同意",
+    "level": 3,
+    "target": "同意",
+    "words": [
+      "爸爸",
+      "同意",
+      "我",
+      "去",
+      "旅游"
+    ],
+    "lao": "ພໍ່ເຫັນດີໃຫ້ຂ້ອຍໄປທ່ອງທ່ຽວ",
+    "info": {
+      "pinyin": "tóngyì",
+      "pos": "verb",
+      "meaningLao": "ເຫັນດີ"
+    }
+  },
+  {
+    "id": "hsk3-头发",
+    "level": 3,
+    "target": "头发",
+    "words": [
+      "她",
+      "的",
+      "头发",
+      "很",
+      "长"
+    ],
+    "lao": "ຜົມຂອງລາວຍາວຫຼາຍ",
+    "info": {
+      "pinyin": "tóufa",
+      "pos": "noun",
+      "meaningLao": "ຜົມ"
+    }
+  },
+  {
+    "id": "hsk3-突然",
+    "level": 3,
+    "target": "突然",
+    "words": [
+      "天气",
+      "突然",
+      "下雨",
+      "了"
+    ],
+    "lao": "ອາກາດຝົນຕົກກະທັນຫັນແລ້ວ",
+    "info": {
+      "pinyin": "tūrán",
+      "pos": "adverb",
+      "meaningLao": "ກະທັນຫັນ"
+    }
+  },
+  {
+    "id": "hsk3-图书馆",
+    "level": 3,
+    "target": "图书馆",
+    "words": [
+      "我",
+      "在",
+      "图书馆",
+      "看",
+      "书"
+    ],
+    "lao": "ຂ້ອຍອ່ານຫນັງສືຢູ່ຫໍສະຫມຸດ",
+    "info": {
+      "pinyin": "túshūguǎn",
+      "pos": "noun",
+      "meaningLao": "ຫ້ອງສະໝຸດ"
+    }
+  },
+  {
+    "id": "hsk3-腿",
+    "level": 3,
+    "target": "腿",
+    "words": [
+      "他",
+      "的",
+      "腿",
+      "很",
+      "长"
+    ],
+    "lao": "ຂາຂອງລາວຍາວຫລາຍ",
+    "info": {
+      "pinyin": "tuǐ",
+      "pos": "noun",
+      "meaningLao": "ຂາ"
+    }
+  },
+  {
+    "id": "hsk3-完成",
+    "level": 3,
+    "target": "完成",
+    "words": [
+      "我",
+      "已经",
+      "完成",
+      "工作",
+      "了"
+    ],
+    "lao": "ຂ້ອຍເຮັດວຽກສໍາເລັດແລ້ວ",
+    "info": {
+      "pinyin": "wánchéng",
+      "pos": "verb",
+      "meaningLao": "ເຮັດສໍາເລັດ"
+    }
+  },
+  {
+    "id": "hsk3-碗",
+    "level": 3,
+    "target": "碗",
+    "words": [
+      "桌子",
+      "上",
+      "有",
+      "一",
+      "个",
+      "碗"
+    ],
+    "lao": "ມີຈານຫນຶ່ງຫນ່ວຍຢູ່ເທິງໂຕະ",
+    "info": {
+      "pinyin": "wǎn",
+      "pos": "noun",
+      "meaningLao": "ຖ້ວຍ"
+    }
+  },
+  {
+    "id": "hsk3-万",
+    "level": 3,
+    "target": "万",
+    "words": [
+      "这",
+      "个",
+      "车",
+      "要",
+      "一",
+      "万",
+      "元"
+    ],
+    "lao": "ລົດຄັນນີ້ລາຄາຫນຶ່ງສື່ນຢວນ",
+    "info": {
+      "pinyin": "wàn",
+      "pos": "numeral",
+      "meaningLao": "ໝື່ນ"
+    }
+  },
+  {
+    "id": "hsk3-忘记",
+    "level": 3,
+    "target": "忘记",
+    "words": [
+      "我",
+      "忘记",
+      "了",
+      "名字"
+    ],
+    "lao": "ຂ້ອຍລືມຊື່ແລ້ວ",
+    "info": {
+      "pinyin": "wàngjì",
+      "pos": "verb",
+      "meaningLao": "ລືມ"
+    }
+  },
+  {
+    "id": "hsk3-为了",
+    "level": 3,
+    "target": "为了",
+    "words": [
+      "为了",
+      "学习",
+      "我",
+      "去",
+      "学校"
+    ],
+    "lao": "ເພື່ອການຮຽນຂ້ອຍໄປໂຮງຮຽນ",
+    "info": {
+      "pinyin": "wèile",
+      "pos": "preposition",
+      "meaningLao": "ເພື່ອ"
+    }
+  },
+  {
+    "id": "hsk3-为什么",
+    "level": 3,
+    "target": "为什么",
+    "words": [
+      "你",
+      "为什么",
+      "不",
+      "吃",
+      "饭"
+    ],
+    "lao": "ເປັນຫຍັງເຈົ້າຈຶ່ງບໍ່ກິນເຂົ້າ",
+    "info": {
+      "pinyin": "wèishénme",
+      "pos": "pronoun",
+      "meaningLao": "ຍ້ອນຫຍັງ"
+    }
+  },
+  {
+    "id": "hsk3-位",
+    "level": 3,
+    "target": "位",
+    "words": [
+      "这",
+      "个",
+      "位",
+      "是",
+      "谁",
+      "的"
+    ],
+    "lao": "ບ່ອນນີ້ແມ່ນຂອງໃຜ",
+    "info": {
+      "pinyin": "wèi",
+      "pos": "noun",
+      "meaningLao": "ບ່ອນນັ່ງ"
+    }
+  },
+  {
+    "id": "hsk3-文化",
+    "level": 3,
+    "target": "文化",
+    "words": [
+      "我",
+      "学习",
+      "中国",
+      "文化"
+    ],
+    "lao": "ຂ້ອຍຮຽນວັດທະນະທຳຈີນ",
+    "info": {
+      "pinyin": "wénhuà",
+      "pos": "noun",
+      "meaningLao": "ວັດທະນະທຳ"
+    }
+  },
+  {
+    "id": "hsk3-习惯",
+    "level": 3,
+    "target": "习惯",
+    "words": [
+      "我",
+      "习惯",
+      "早起"
+    ],
+    "lao": "ຂ້ອຍເຄີຍຊິນຕື່ນນອນເຊົ້າ",
+    "info": {
+      "pinyin": "xíguàn",
+      "pos": "verb",
+      "meaningLao": "ເຄີຍຊິນ"
+    }
+  },
+  {
+    "id": "hsk3-洗手间",
+    "level": 3,
+    "target": "洗手间",
+    "words": [
+      "洗手间",
+      "在",
+      "那里"
+    ],
+    "lao": "ຫ້ອງນ້ຳຢູ່ນັ້ນ",
+    "info": {
+      "pinyin": "xǐshǒujiān",
+      "pos": "noun",
+      "meaningLao": "ຫ້ອງນຳ້"
+    }
+  },
+  {
+    "id": "hsk3-洗澡",
+    "level": 3,
+    "target": "洗澡",
+    "words": [
+      "他",
+      "在",
+      "洗澡"
+    ],
+    "lao": "ລາວກຳລັງອາບນ້ຳ",
+    "info": {
+      "pinyin": "xǐzǎo",
+      "pos": "verb",
+      "meaningLao": "ອາບນຳ້"
+    }
+  },
+  {
+    "id": "hsk3-西",
+    "level": 3,
+    "target": "西",
+    "words": [
+      "学校",
+      "在",
+      "东",
+      "西",
+      "边"
+    ],
+    "lao": "ໂຮງຮຽນຢູ່ທາງທິດຕາເວັນອອກແລະຕາເວັນຕົກ",
+    "info": {
+      "pinyin": "xī",
+      "pos": "noun",
+      "meaningLao": "ທິດຕາເວັນຕົກ"
+    }
+  },
+  {
+    "id": "hsk3-夏",
+    "level": 3,
+    "target": "夏",
+    "words": [
+      "夏",
+      "天",
+      "很",
+      "热"
+    ],
+    "lao": "ລະດູຮ້ອນແດດຮ້ອນຫຼາຍ",
+    "info": {
+      "pinyin": "xià",
+      "pos": "noun",
+      "meaningLao": "ລະດູຮ້ອນ"
+    }
+  },
+  {
+    "id": "hsk3-先",
+    "level": 3,
+    "target": "先",
+    "words": [
+      "你",
+      "先",
+      "吃"
+    ],
+    "lao": "ເຈົ້າກິນກ່ອນ",
+    "info": {
+      "pinyin": "xiān",
+      "pos": "adverb",
+      "meaningLao": "ກ່ອນ"
+    }
+  },
+  {
+    "id": "hsk3-相同",
+    "level": 3,
+    "target": "相同",
+    "words": [
+      "我们",
+      "的",
+      "书",
+      "相同"
+    ],
+    "lao": "ປຶ້ມຂອງພວກເຮົາຄືກັນ",
+    "info": {
+      "pinyin": "xiāngtóng",
+      "pos": "adjective",
+      "meaningLao": "ຄືກັນ"
+    }
+  },
+  {
+    "id": "hsk3-相信",
+    "level": 3,
+    "target": "相信",
+    "words": [
+      "我",
+      "相信",
+      "你"
+    ],
+    "lao": "ຂ້ອຍເຊື່ອເຈົ້າ",
+    "info": {
+      "pinyin": "xiāngxìn",
+      "pos": "verb",
+      "meaningLao": "ເຊື່ອໝັ້ນ"
+    }
+  },
+  {
+    "id": "hsk3-香蕉",
+    "level": 3,
+    "target": "香蕉",
+    "words": [
+      "我",
+      "买",
+      "香蕉"
+    ],
+    "lao": "ຂ້ອຍຊື້ໝາກກ້ວຍ",
+    "info": {
+      "pinyin": "xiāngjiāo",
+      "pos": "noun",
+      "meaningLao": "ໝາກກ້ວຍ"
+    }
+  },
+  {
+    "id": "hsk3-像",
+    "level": 3,
+    "target": "像",
+    "words": [
+      "他",
+      "像",
+      "爸爸"
+    ],
+    "lao": "ລາວຄືພໍ່",
+    "info": {
+      "pinyin": "xiàng",
+      "pos": "verb",
+      "meaningLao": "ຄືກັນ"
+    }
+  },
+  {
+    "id": "hsk3-鞋",
+    "level": 3,
+    "target": "鞋",
+    "words": [
+      "我",
+      "买",
+      "鞋"
+    ],
+    "lao": "ຂ້ອຍຊື້ເກີບ",
+    "info": {
+      "pinyin": "xié",
+      "pos": "noun",
+      "meaningLao": "ເກີບ"
+    }
+  },
+  {
+    "id": "hsk3-新闻",
+    "level": 3,
+    "target": "新闻",
+    "words": [
+      "我",
+      "看",
+      "新闻"
+    ],
+    "lao": "ຂ້ອຍເບິ່ງຂ່າວ",
+    "info": {
+      "pinyin": "xīnwén",
+      "pos": "noun",
+      "meaningLao": "ຂ່າວ"
+    }
+  },
+  {
+    "id": "hsk3-新鲜",
+    "level": 3,
+    "target": "新鲜",
+    "words": [
+      "苹果",
+      "很",
+      "新鲜"
+    ],
+    "lao": "ໝາກໂປ່ງສົດຫຼາຍ",
+    "info": {
+      "pinyin": "xīnxiān",
+      "pos": "adjective",
+      "meaningLao": "ສົດ"
+    }
+  },
+  {
+    "id": "hsk3-信",
+    "level": 3,
+    "target": "信",
+    "words": [
+      "我",
+      "写",
+      "信"
+    ],
+    "lao": "ຂ້ອຍຂຽນຈົດໝາຍ",
+    "info": {
+      "pinyin": "xìn",
+      "pos": "noun",
+      "meaningLao": "ຈົດໝາຍ"
+    }
+  },
+  {
+    "id": "hsk3-行李箱",
+    "level": 3,
+    "target": "行李箱",
+    "words": [
+      "我",
+      "有",
+      "行李箱"
+    ],
+    "lao": "ຂ້ອຍມີກະເປົ໋າເດີນທາງ",
+    "info": {
+      "pinyin": "xínglixiāng",
+      "pos": "noun",
+      "meaningLao": "ກະເປົ໋າເດີນທາງ"
+    }
+  },
+  {
+    "id": "hsk3-兴趣",
+    "level": 3,
+    "target": "兴趣",
+    "words": [
+      "我",
+      "有",
+      "兴趣"
+    ],
+    "lao": "ຂ້ອຍມີຄວາມສົນໃຈ",
+    "info": {
+      "pinyin": "xìngqù",
+      "pos": "noun",
+      "meaningLao": "ຄວາມສົນໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-熊猫",
+    "level": 3,
+    "target": "熊猫",
+    "words": [
+      "我",
+      "看",
+      "熊猫"
+    ],
+    "lao": "ຂ້ອຍເບິ່ງໝາປ່າ",
+    "info": {
+      "pinyin": "xióngmāo",
+      "pos": "noun",
+      "meaningLao": "ໝີແພນດ້າ"
+    }
+  },
+  {
+    "id": "hsk3-小心",
+    "level": 3,
+    "target": "小心",
+    "words": [
+      "请",
+      "小心",
+      "车"
+    ],
+    "lao": "ກະລຸນາລະວັງລົດ",
+    "info": {
+      "pinyin": "xiǎoxīn",
+      "pos": "verb",
+      "meaningLao": "ລະວັງ"
+    }
+  },
+  {
+    "id": "hsk3-校长",
+    "level": 3,
+    "target": "校长",
+    "words": [
+      "校长",
+      "在",
+      "学校"
+    ],
+    "lao": "ທ່ານຜໍ້າອໍານວຍການຢູ່ໂຮງຮຽນ",
+    "info": {
+      "pinyin": "xiàozhǎng",
+      "pos": "noun",
+      "meaningLao": "ອາຈານໃຫຍ່, ປະທານໂຮງຮຽນ"
+    }
+  },
+  {
+    "id": "hsk3-需要",
+    "level": 3,
+    "target": "需要",
+    "words": [
+      "我",
+      "需要",
+      "买",
+      "书"
+    ],
+    "lao": "ຂ້ອຍຕ້ອງການຊື້ປຶ້ມ",
+    "info": {
+      "pinyin": "xūyào",
+      "pos": "verb",
+      "meaningLao": "ຕ້ອງການ"
+    }
+  },
+  {
+    "id": "hsk3-选择",
+    "level": 3,
+    "target": "选择",
+    "words": [
+      "你",
+      "选择",
+      "哪个",
+      "苹果"
+    ],
+    "lao": "ເຈົ້າເລືອກຫມາກໂປມອັນໃດ",
+    "info": {
+      "pinyin": "xuǎnzé",
+      "pos": "verb",
+      "meaningLao": "ເລືອກ"
+    }
+  },
+  {
+    "id": "hsk3-眼镜",
+    "level": 3,
+    "target": "眼镜",
+    "words": [
+      "他",
+      "有",
+      "眼镜"
+    ],
+    "lao": "ລາວມີແວ່ນຕາ",
+    "info": {
+      "pinyin": "yǎnjìng",
+      "pos": "noun",
+      "meaningLao": "ແວ່ນຕາ"
+    }
+  },
+  {
+    "id": "hsk3-要求",
+    "level": 3,
+    "target": "要求",
+    "words": [
+      "老师",
+      "的",
+      "要求",
+      "很高"
+    ],
+    "lao": "ຄວາມຕ້ອງການຂອງຄູສອນແມ່ນສູງຫຼາຍ",
+    "info": {
+      "pinyin": "yāoqiú",
+      "pos": "noun",
+      "meaningLao": "ຄວາມຕ້ອງການ"
+    }
+  },
+  {
+    "id": "hsk3-爷爷",
+    "level": 3,
+    "target": "爷爷",
+    "words": [
+      "我",
+      "爷爷",
+      "在家"
+    ],
+    "lao": "ພໍ່ຕູ້ຂອງຂ້ອຍຢູ່ເຮືອນ",
+    "info": {
+      "pinyin": "yéye",
+      "pos": "noun",
+      "meaningLao": "ປູ່"
+    }
+  },
+  {
+    "id": "hsk3-一般",
+    "level": 3,
+    "target": "一般",
+    "words": [
+      "这个",
+      "菜",
+      "一般"
+    ],
+    "lao": "ອາຫານຈານນີ້ທຳມະດາ",
+    "info": {
+      "pinyin": "yībān",
+      "pos": "adjective",
+      "meaningLao": "ທຳມະດາ"
+    }
+  },
+  {
+    "id": "hsk3-一边",
+    "level": 3,
+    "target": "一边",
+    "words": [
+      "他",
+      "一边",
+      "吃",
+      "饭",
+      "一边",
+      "看",
+      "电视"
+    ],
+    "lao": "ລາວກິນເຂົ້າ, ພ້ອມທັງເບິ່ງໂທລະພາບ",
+    "info": {
+      "pinyin": "yībiān",
+      "pos": "adverb",
+      "meaningLao": "ພ້ອມກັນ"
+    }
+  },
+  {
+    "id": "hsk3-一定",
+    "level": 3,
+    "target": "一定",
+    "words": [
+      "我",
+      "一定",
+      "去",
+      "学校"
+    ],
+    "lao": "ຂ້ອຍໄປໂຮງຮຽນແນ່ນອນ",
+    "info": {
+      "pinyin": "yīdìng",
+      "pos": "adverb",
+      "meaningLao": "ແນ່ນອນ"
+    }
+  },
+  {
+    "id": "hsk3-一共",
+    "level": 3,
+    "target": "一共",
+    "words": [
+      "这里",
+      "一共",
+      "有",
+      "十",
+      "个",
+      "人"
+    ],
+    "lao": "ບ່ອນນີ້ມີຄົນທັງໝົດສິບຄົນ",
+    "info": {
+      "pinyin": "yīgòng",
+      "pos": "adverb",
+      "meaningLao": "ລວມທັງໝົດ"
+    }
+  },
+  {
+    "id": "hsk3-一会儿",
+    "level": 3,
+    "target": "一会儿",
+    "words": [
+      "我",
+      "一会儿",
+      "来"
+    ],
+    "lao": "ຂ້ອຍຈະມາໃນຊ່ວງໜຶ່ງ",
+    "info": {
+      "pinyin": "yīhuìr",
+      "pos": "noun",
+      "meaningLao": "Aຜ່ານຄາວໜຶ່ງ, ບຶດໜຶ່ງ"
+    }
+  },
+  {
+    "id": "hsk3-一直",
+    "level": 3,
+    "target": "一直",
+    "words": [
+      "你",
+      "一直",
+      "走"
+    ],
+    "lao": "ເຈົ້າຍ່າງຊື່ໆໄປເລື້ອຍໆ",
+    "info": {
+      "pinyin": "yīzhí",
+      "pos": "adverb",
+      "meaningLao": "ຕະຫຼອດ"
+    }
+  },
+  {
+    "id": "hsk3-以后",
+    "level": 3,
+    "target": "以后",
+    "words": [
+      "我",
+      "以后",
+      "去",
+      "学校"
+    ],
+    "lao": "ຫຼັງຈາກນີ້ຂ້ອຍໄປໂຮງຮຽນ",
+    "info": {
+      "pinyin": "yǐhòu",
+      "pos": "noun",
+      "meaningLao": "ຫຼັງຈາກ"
+    }
+  },
+  {
+    "id": "hsk3-以为",
+    "level": 3,
+    "target": "以为",
+    "words": [
+      "我",
+      "以为",
+      "他",
+      "在",
+      "家"
+    ],
+    "lao": "ຂ້ອຍຄິດວ່າລາວຢູ່ເຮືອນ",
+    "info": {
+      "pinyin": "yǐwéi",
+      "pos": "verb",
+      "meaningLao": "ຄິດວ່າ"
+    }
+  },
+  {
+    "id": "hsk3-音乐",
+    "level": 3,
+    "target": "音乐",
+    "words": [
+      "我",
+      "喜欢",
+      "音乐"
+    ],
+    "lao": "ຂ້ອຍມັກດົນຕີ",
+    "info": {
+      "pinyin": "yīnyuè",
+      "pos": "noun",
+      "meaningLao": "ດົນຕີ"
+    }
+  },
+  {
+    "id": "hsk3-银行",
+    "level": 3,
+    "target": "银行",
+    "words": [
+      "学校",
+      "旁边",
+      "有",
+      "银行"
+    ],
+    "lao": "ຂ້າງໂຮງຮຽນມີທະນາຄານ",
+    "info": {
+      "pinyin": "yínháng",
+      "pos": "noun",
+      "meaningLao": "ທະນາຄານ"
+    }
+  },
+  {
+    "id": "hsk3-应该",
+    "level": 3,
+    "target": "应该",
+    "words": [
+      "你",
+      "应该",
+      "去",
+      "医院"
+    ],
+    "lao": "ເຈົ້າຄວນໄປໂຮງໝໍ",
+    "info": {
+      "pinyin": "yīnggāi",
+      "pos": "verb",
+      "meaningLao": "ຄວນ"
+    }
+  },
+  {
+    "id": "hsk3-影响",
+    "level": 3,
+    "target": "影响",
+    "words": [
+      "天气",
+      "影响",
+      "我"
+    ],
+    "lao": "ອາກາດມີຜົນກະທົບຕໍ່ຂ້ອຍ",
+    "info": {
+      "pinyin": "yǐngxiǎng",
+      "pos": "verb",
+      "meaningLao": "ຜົນກະທົບ"
+    }
+  },
+  {
+    "id": "hsk3-用",
+    "level": 3,
+    "target": "用",
+    "words": [
+      "你",
+      "用",
+      "电脑",
+      "吗"
+    ],
+    "lao": "ເຈົ້າໃຊ້ຄອມພິວເຕີ ບໍ່",
+    "info": {
+      "pinyin": "yòng",
+      "pos": "verb",
+      "meaningLao": "ໃຊ້"
+    }
+  },
+  {
+    "id": "hsk3-一样",
+    "level": 3,
+    "target": "一样",
+    "words": [
+      "这",
+      "个",
+      "和",
+      "那",
+      "个",
+      "一样"
+    ],
+    "lao": "ອັນນີ້ຄືກັນກັບອັນນັ້ນ",
+    "info": {
+      "pinyin": "yīyàng",
+      "pos": "adjective",
+      "meaningLao": "ຄືກັນ"
+    }
+  },
+  {
+    "id": "hsk3-以前",
+    "level": 3,
+    "target": "以前",
+    "words": [
+      "我",
+      "以前",
+      "住",
+      "北京"
+    ],
+    "lao": "ກ່ອນຫນ້ານີ້ຂ້ອຍຢູ່ປັກກິ່ງ",
+    "info": {
+      "pinyin": "yǐqián",
+      "pos": "noun",
+      "meaningLao": "ກ່ອນ"
+    }
+  },
+  {
+    "id": "hsk3-游戏",
+    "level": 3,
+    "target": "游戏",
+    "words": [
+      "我",
+      "喜欢",
+      "游戏"
+    ],
+    "lao": "ຂ້ອຍມັກເກມ",
+    "info": {
+      "pinyin": "yóuxì",
+      "pos": "noun",
+      "meaningLao": "ເກມ"
+    }
+  },
+  {
+    "id": "hsk3-有名",
+    "level": 3,
+    "target": "有名",
+    "words": [
+      "这个",
+      "地方",
+      "很",
+      "有名"
+    ],
+    "lao": "ບ່ອນນີ້ມີຊື່ສຽງຫຼາຍ",
+    "info": {
+      "pinyin": "yǒumíng",
+      "pos": "adjective",
+      "meaningLao": "ມີຊື່ສຽງ"
+    }
+  },
+  {
+    "id": "hsk3-又",
+    "level": 3,
+    "target": "又",
+    "words": [
+      "他",
+      "又",
+      "来",
+      "了"
+    ],
+    "lao": "ລາວມາອີກແລ້ວ",
+    "info": {
+      "pinyin": "yòu",
+      "pos": "adverb",
+      "meaningLao": "ອີກ"
+    }
+  },
+  {
+    "id": "hsk3-遇到",
+    "level": 3,
+    "target": "遇到",
+    "words": [
+      "我",
+      "在",
+      "这里",
+      "遇到",
+      "你"
+    ],
+    "lao": "ຂ້ອຍພົບເຈົ້າຢູ່ບ່ອນນີ້",
+    "info": {
+      "pinyin": "yùdào",
+      "pos": "verb",
+      "meaningLao": "ພົບ"
+    }
+  },
+  {
+    "id": "hsk3-愿意",
+    "level": 3,
+    "target": "愿意",
+    "words": [
+      "我",
+      "愿意",
+      "去"
+    ],
+    "lao": "ຂ້ອຍເຕັມໃຈໄປ",
+    "info": {
+      "pinyin": "yuànyì",
+      "pos": "verb",
+      "meaningLao": "ສະໝັກໃຈ"
+    }
+  },
+  {
+    "id": "hsk3-月亮",
+    "level": 3,
+    "target": "月亮",
+    "words": [
+      "今天",
+      "月亮",
+      "很",
+      "好看"
+    ],
+    "lao": "ມື້ນີ້ດວງຈັນງາມຫຼາຍ",
+    "info": {
+      "pinyin": "yuèliang",
+      "pos": "noun",
+      "meaningLao": "ດວງຈັນ"
+    }
+  },
+  {
+    "id": "hsk3-越",
+    "level": 3,
+    "target": "越",
+    "words": [
+      "天气",
+      "越",
+      "越",
+      "冷"
+    ],
+    "lao": "ອາກາດນັບມື້ນັບໜາວ",
+    "info": {
+      "pinyin": "yuè",
+      "pos": "adverb",
+      "meaningLao": "ຍິ່ງ...ຍິ່ງ..."
+    }
+  },
+  {
+    "id": "hsk3-云",
+    "level": 3,
+    "target": "云",
+    "words": [
+      "天上",
+      "有",
+      "云"
+    ],
+    "lao": "ເທິງທ້ອງຟ້າມີເມກ",
+    "info": {
+      "pinyin": "yún",
+      "pos": "noun",
+      "meaningLao": "ເມກ"
+    }
+  },
+  {
+    "id": "hsk3-站",
+    "level": 3,
+    "target": "站",
+    "words": [
+      "他",
+      "在",
+      "前面",
+      "站"
+    ],
+    "lao": "ລາວຢືນຢູ່ທາງໜ້າ",
+    "info": {
+      "pinyin": "zhàn",
+      "pos": "verb",
+      "meaningLao": "ຢືນ"
+    }
+  },
+  {
+    "id": "hsk3-照顾",
+    "level": 3,
+    "target": "照顾",
+    "words": [
+      "你",
+      "要",
+      "照顾",
+      "自己"
+    ],
+    "lao": "ເຈົ້າຕ້ອງເບິ່ງແຍງຕົນເອງ",
+    "info": {
+      "pinyin": "zhàogu",
+      "pos": "verb",
+      "meaningLao": "ເບິ່ງແຍງ"
+    }
+  },
+  {
+    "id": "hsk3-照片",
+    "level": 3,
+    "target": "照片",
+    "words": [
+      "我",
+      "看",
+      "照片"
+    ],
+    "lao": "ຂ້ອຍເບິ່ງຮູບຖ່າຍ",
+    "info": {
+      "pinyin": "zhàopiàn",
+      "pos": "noun",
+      "meaningLao": "ຮູບຖ່າຍ"
+    }
+  },
+  {
+    "id": "hsk3-照相机",
+    "level": 3,
+    "target": "照相机",
+    "words": [
+      "我",
+      "买",
+      "照相机"
+    ],
+    "lao": "ຂ້ອຍຊື້ກ້ອງຖ່າຍຮູບ",
+    "info": {
+      "pinyin": "zhàoxiàngjī",
+      "pos": "noun",
+      "meaningLao": "ກ້ອງຖ່າຍຮູບ"
+    }
+  },
+  {
+    "id": "hsk3-着急",
+    "level": 3,
+    "target": "着急",
+    "words": [
+      "你",
+      "别",
+      "着急"
+    ],
+    "lao": "ເຈົ້າຢ່າຟ້າວຮ້ອນຮົນ",
+    "info": {
+      "pinyin": "zháojí",
+      "pos": "adjective",
+      "meaningLao": "ຮ້ອນຮົນ"
+    }
+  },
+  {
+    "id": "hsk3-只",
+    "level": 3,
+    "target": "只",
+    "words": [
+      "我",
+      "只",
+      "有",
+      "一",
+      "个"
+    ],
+    "lao": "ຂ້ອຍມີແຕ່ອັນດຽວ",
+    "info": {
+      "pinyin": "zhǐ",
+      "pos": "adverb",
+      "meaningLao": "ພຽງແຕ່"
+    }
+  },
+  {
+    "id": "hsk3-中间",
+    "level": 3,
+    "target": "中间",
+    "words": [
+      "书",
+      "在",
+      "中间"
+    ],
+    "lao": "ປຶ້ມຢູ່ກາງ",
+    "info": {
+      "pinyin": "zhōngjiān",
+      "pos": "noun",
+      "meaningLao": "ກາງ"
+    }
+  },
+  {
+    "id": "hsk3-种",
+    "level": 3,
+    "target": "种",
+    "words": [
+      "这",
+      "个",
+      "种",
+      "很好"
+    ],
+    "lao": "ຊະນິດນີ້ດີຫຼາຍ",
+    "info": {
+      "pinyin": "zhǒng",
+      "pos": "noun",
+      "meaningLao": "ປະເພດ"
+    }
+  },
+  {
+    "id": "hsk3-重要",
+    "level": 3,
+    "target": "重要",
+    "words": [
+      "这",
+      "个",
+      "很",
+      "重要"
+    ],
+    "lao": "ອັນນີ້ສຳຄັນຫຼາຍ",
+    "info": {
+      "pinyin": "zhòngyào",
+      "pos": "adjective",
+      "meaningLao": "ສຳຄັນ"
+    }
+  },
+  {
+    "id": "hsk3-周末",
+    "level": 3,
+    "target": "周末",
+    "words": [
+      "周末",
+      "我",
+      "去",
+      "买",
+      "东西"
+    ],
+    "lao": "ມື້ທ້າຍອາທິດຂ້ອຍໄປຊື້ເຄື່ອງ",
+    "info": {
+      "pinyin": "zhōumò",
+      "pos": "noun",
+      "meaningLao": "ທ້າຍອາທິດ"
+    }
+  },
+  {
+    "id": "hsk3-主要",
+    "level": 3,
+    "target": "主要",
+    "words": [
+      "这",
+      "个",
+      "是",
+      "主要",
+      "的"
+    ],
+    "lao": "ອັນນີ້ແມ່ນຕົ້ນຕໍ",
+    "info": {
+      "pinyin": "zhǔyào",
+      "pos": "adjective",
+      "meaningLao": "ຕົ້ນຕໍ"
+    }
+  },
+  {
+    "id": "hsk3-终于",
+    "level": 3,
+    "target": "终于",
+    "words": [
+      "我",
+      "终于",
+      "到",
+      "了"
+    ],
+    "lao": "ຂ້ອຍຮອດແລ້ວ",
+    "info": {
+      "pinyin": "zhōngyú",
+      "pos": "adverb",
+      "meaningLao": "ໃນທີ່ສຸດ"
+    }
+  },
+  {
+    "id": "hsk3-字典",
+    "level": 3,
+    "target": "字典",
+    "words": [
+      "我",
+      "有",
+      "字典"
+    ],
+    "lao": "ຂ້ອຍມີພົດຈານານຸກົມ",
+    "info": {
+      "pinyin": "zìdiǎn",
+      "pos": "noun",
+      "meaningLao": "ວັດຖານານຸກົມ"
+    }
+  },
+  {
+    "id": "hsk3-自己",
+    "level": 3,
+    "target": "自己",
+    "words": [
+      "你",
+      "照顾",
+      "自己"
+    ],
+    "lao": "ເຈົ້າເບິ່ງແຍງຕົວເອງເດີ",
+    "info": {
+      "pinyin": "zìjǐ",
+      "pos": "pronoun",
+      "meaningLao": "ຕົນເອງ"
+    }
+  },
+  {
+    "id": "hsk3-总是",
+    "level": 3,
+    "target": "总是",
+    "words": [
+      "他",
+      "总是",
+      "学习"
+    ],
+    "lao": "ລາວຮຽນໜັງສືຕະຫຼອດ",
+    "info": {
+      "pinyin": "zǒngshì",
+      "pos": "adverb",
+      "meaningLao": "ສະເໝີ"
+    }
+  },
+  {
+    "id": "hsk3-最近",
+    "level": 3,
+    "target": "最近",
+    "words": [
+      "你",
+      "最近",
+      "好",
+      "吗"
+    ],
+    "lao": "ຊ່ວງນີ້ເຈົ້າສະບາຍດີບໍ",
+    "info": {
+      "pinyin": "zuìjìn",
+      "pos": "adverb",
+      "meaningLao": "ມໍ່ໆນີ້"
+    }
+  },
+  {
+    "id": "hsk3-作业",
+    "level": 3,
+    "target": "作业",
+    "words": [
+      "我",
+      "做",
+      "作业"
+    ],
+    "lao": "ຂ້ອຍເຮັດວຽກບ້ານ",
+    "info": {
+      "pinyin": "zuòyè",
+      "pos": "noun",
+      "meaningLao": "ວຽກບ້ານ"
+    }
+  },
+  {
+    "id": "hsk3-作用",
+    "level": 3,
+    "target": "作用",
+    "words": [
+      "这个",
+      "有",
+      "作用"
+    ],
+    "lao": "ອັນນີ້ມີຜົນປະໂຫຍດ",
+    "info": {
+      "pinyin": "zuòyòng",
+      "pos": "noun",
+      "meaningLao": "ບົດບາດ"
+    }
+  },
+  {
+    "id": "hsk3-注意",
+    "level": 3,
+    "target": "注意",
+    "words": [
+      "请",
+      "注意",
+      "身体"
+    ],
+    "lao": "ກະລຸນາເອົາໃຈໃສ່ສຸຂະພາບ",
+    "info": {
+      "pinyin": "zhùyì",
+      "pos": "verb",
+      "meaningLao": "ເອົາໃຈໃສ່"
+    }
+  },
+  {
+    "id": "hsk3-祝",
+    "level": 3,
+    "target": "祝",
+    "words": [
+      "我",
+      "祝",
+      "你",
+      "生日",
+      "快乐"
+    ],
+    "lao": "ຂ້ອຍອວຍພອນໃຫ້ເຈົ້າວັນເກີດມີຄວາມສຸກ",
+    "info": {
+      "pinyin": "zhù",
+      "pos": "verb",
+      "meaningLao": "ອວຍພອນ"
+    }
+  },
+  {
+    "id": "hsk3-树",
+    "level": 3,
+    "target": "树",
+    "words": [
+      "这",
+      "个",
+      "地方",
+      "有",
+      "很",
+      "多",
+      "树"
+    ],
+    "lao": "ບ່ອນນີ້ມີຕົ້ນໄມ້ຫຼາຍ",
+    "info": {
+      "pinyin": "shù",
+      "pos": "noun",
+      "meaningLao": "ຕົ້ນໄມ້"
+    }
   }
 ]

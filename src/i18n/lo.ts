@@ -20,6 +20,7 @@ export const t = {
   remove: 'ລຶບອອກຈາກລາຍການ',
   backToCourses: 'ກັບໄປໜ້າຄອສ',
   back: 'ກັບຄືນ',
+  loading: 'ກຳລັງໂຫຼດ...',
   // Course detail page
   hskLevelDesc: [
     'ຄຳສັບພື້ນຖານທີ່ສຸດສຳລັບຜູ້ເລີ່ມຕົ້ນ: ການທັກທາຍ, ຕົວເລກ, ຄອບຄົວ ແລະ ຊີວິດປະຈຳວັນ.',
@@ -73,7 +74,7 @@ export const t = {
     interjection: 'ຄຳອຸທານ',
     phrase: 'ວະລີ',
   } satisfies Record<PartOfSpeech, string>,
-  appTitle: 'ຮຽນພາສາຈີນ',
+  appTitle: 'HIENJIN',
   progress: (n: number, total: number) => `ປະໂຫຍກ ${n} / ${total}`,
   instruction: 'ແປປະໂຫຍກນີ້ເປັນພາສາຈີນ',
   hint: '1 ຊ່ອງ = 1 ຄຳ · Space = ຊ່ອງຕໍ່ໄປ · Enter = ກວດຄຳຕອບ',

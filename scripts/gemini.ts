@@ -1,14 +1,20 @@
-const API_KEY = process.env.GEMINI_API_KEY
-// Comma-separated, best first. When one model's daily free quota runs out, the next one takes over.
-const MODELS = (process.env.GEMINI_MODEL ?? 'gemini-3.6-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-3.8-flash,gemini-3.5-flash-lite')
-  .split(',')
-  .map((m) => m.trim())
-  .filter(Boolean)
+const list = (value: string) =>
+  value
+    .split(',')
+    .map((v) => v.trim())
+    .filter(Boolean)
+
+// Comma-separated in .env. Models are best first; each model is tried with every key before falling back
+// to the next model, so a second key doubles the quota of the good models. When a (model, key) pair's
+// daily free quota runs out, the next pair takes over.
+const API_KEYS = list(process.env.GEMINI_API_KEY ?? '')
+const MODELS = list(process.env.GEMINI_MODEL ?? 'gemini-3.6-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-3.8-flash,gemini-3.5-flash-lite')
+const ROUTES = MODELS.flatMap((model) => API_KEYS.map((key, i) => ({ model, key, label: `${model} (key ${i + 1})` })))
 const MAX_WAIT_MS = 5 * 60 * 1000
 
 let current = 0
 
-if (!API_KEY) {
+if (!API_KEYS.length) {
   console.error('GEMINI_API_KEY is missing - copy .env.example to .env and fill it in.')
   process.exit(1)
 }
@@ -21,38 +27,53 @@ export async function callGemini<T>(prompt: string, responseSchema: object): Pro
   }
 
   for (let retry = 0; ; retry++) {
-    const model = MODELS[current]
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': API_KEY! },
-      body: JSON.stringify(body),
-    })
+    const { model, key, label } = ROUTES[current]
+    let res: Response
+    try {
+      res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(120_000),
+      })
+    } catch (error) {
+      // Network hiccup (e.g. ECONNRESET) - wait and try again instead of crashing the run.
+      if (retry >= 5) {
+        if (current + 1 >= ROUTES.length) throw error
+        console.warn(`  ${label} keeps failing, switching to ${ROUTES[++current].label}`)
+        retry = -1
+        continue
+      }
+      console.warn(`  ${label} network error, retrying in ${5 * (retry + 1)}s`)
+      await sleep(5000 * (retry + 1))
+      continue
+    }
 
     if ((res.status === 429 || res.status >= 500) && retry < 5) {
       const errorBody = await res.text()
       const wait = retryDelayMs(errorBody) ?? 2 ** retry * 5000
       if (wait > MAX_WAIT_MS) {
-        // Daily free-tier quota is used up - waiting hours is pointless, so move on to the next model.
-        console.warn(`  quota for ${model} is exhausted (resets in ${Math.round(wait / 3600000)}h)`)
-        if (++current >= MODELS.length) {
-          console.error('\nAll models are out of quota. Progress is saved - re-run later to continue.')
+        // Daily free-tier quota is used up - waiting hours is pointless, so move on to the next model/key.
+        console.warn(`  quota for ${label} is exhausted (resets in ${Math.round(wait / 3600000)}h)`)
+        if (++current >= ROUTES.length) {
+          console.error('\nAll models and keys are out of quota. Progress is saved - re-run later to continue.')
           process.exit(1)
         }
-        console.warn(`  switching to ${MODELS[current]}`)
+        console.warn(`  switching to ${ROUTES[current].label}`)
         retry = -1
         continue
       }
-      console.warn(`  ${model} HTTP ${res.status}, retrying in ${Math.round(wait / 1000)}s`)
+      console.warn(`  ${label} HTTP ${res.status}, retrying in ${Math.round(wait / 1000)}s`)
       await sleep(wait)
       continue
     }
-    if ((res.status === 429 || res.status >= 500) && current + 1 < MODELS.length) {
+    if ((res.status === 429 || res.status >= 500) && current + 1 < ROUTES.length) {
       // Still overloaded after all retries - another model is usually free.
-      console.warn(`  ${model} still unavailable, switching to ${MODELS[++current]}`)
+      console.warn(`  ${label} still unavailable, switching to ${ROUTES[++current].label}`)
       retry = -1
       continue
     }
-    if (!res.ok) throw new Error(`Gemini ${model} HTTP ${res.status}: ${await res.text()}`)
+    if (!res.ok) throw new Error(`Gemini ${label} HTTP ${res.status}: ${await res.text()}`)
 
     const data = (await res.json()) as {
       candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] } }[]

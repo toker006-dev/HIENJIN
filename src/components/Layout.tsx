@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router'
 import { coursesById } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
@@ -55,10 +55,7 @@ export function Layout() {
         }`}
       >
         <div className="flex h-14 items-center px-5">
-          <span className="font-lao text-lg font-bold text-stone-900">
-            <span className="font-zh mr-2 text-teal-700">汉语</span>
-            {t.appTitle}
-          </span>
+          <span className="text-xl font-extrabold tracking-wide text-teal-700">{t.appTitle}</span>
         </div>
         <nav className="flex flex-col gap-1 px-3 py-2">
           {navItems.map((item) => (
@@ -117,7 +114,16 @@ export function Layout() {
         </header>
 
         <main className="flex-1 overflow-y-auto">
-          <Outlet />
+          {/* Shown while a course's sentences load for the first time (see useLoadedCourse). */}
+          <Suspense
+            fallback={
+              <div role="status" aria-label={t.loading} className="flex h-full min-h-40 items-center justify-center">
+                <span className="size-8 animate-spin rounded-full border-4 border-teal-200 border-t-teal-700" />
+              </div>
+            }
+          >
+            <Outlet />
+          </Suspense>
         </main>
       </div>
     </div>

@@ -1,4 +1,4 @@
-# ຮຽນພາສາຈີນ · Hanyu Learning Web
+# HIENJIN
 
 Translate Lao sentences into Chinese, one word per blank (`你 吃饭 了 吗` = 4 blanks).
 
