@@ -14,12 +14,22 @@ const navItems = [
     icon: <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1Z" />,
   },
   {
-    to: '/courses',
-    label: t.navCourses,
+    to: '/vocabulary',
+    label: t.navVocabulary,
     icon: (
       <>
         <path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6.5a2.5 2.5 0 0 0 0 5H19" />
         <path d="M9 7h6" />
+      </>
+    ),
+  },
+  {
+    to: '/courses',
+    label: t.navCourses,
+    icon: (
+      <>
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
       </>
     ),
   },
@@ -28,6 +38,12 @@ const navItems = [
 /** Header title, plus where the ← back arrow leads (course pages only). */
 function pageInfo(pathname: string): { title: string; back?: string } {
   if (pathname === '/') return { title: t.navHome }
+  if (pathname === '/vocabulary/review') return { title: t.quickReview, back: '/' }
+  const [, level, cards] = /^\/vocabulary\/(\d+)(\/cards)?/.exec(pathname) ?? []
+  if (level) {
+    const title = `${t.navVocabulary} · HSK ${level}`
+    return cards ? { title: `${title} · ${t.flashcards}`, back: `/vocabulary/${level}` } : { title }
+  }
   const [, courseId, lesson] = /^\/courses\/([^/]+)(?:\/([^/]+))?/.exec(pathname) ?? []
   if (!courseId) return { title: t.allCourses }
   const course = coursesById.get(courseId)?.course.title ?? t.navCourses

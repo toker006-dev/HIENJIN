@@ -9,6 +9,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "hsk:fetch": "node scripts/fetch-hsk.ts",
+    "hsk:english": "node scripts/build-english.ts",
     "generate": "node --env-file=.env scripts/generate-sentences.ts"
   },
   "dependencies": {
