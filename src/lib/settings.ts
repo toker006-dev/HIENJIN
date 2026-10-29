@@ -9,10 +9,3 @@ export function useSetting(key: string): [boolean, () => void] {
 export const useSoundEffects = () => useSetting('sound-effects')
 export const useVoice = () => useSetting('voice')
 
-export type PracticeMode = 'translate' | 'listen'
-
-/** Practice: translate the Lao sentence, or type the Chinese you hear. */
-export function usePracticeMode(): [PracticeMode, (mode: PracticeMode) => void] {
-  const mode = useStored('practice-mode') === 'listen' ? 'listen' : 'translate'
-  return [mode, (next) => writeStored('practice-mode', next)]
-}

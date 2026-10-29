@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router'
 import { Layout } from './components/Layout.tsx'
+import { ArrangeRoute, ArrangeSetPage } from './pages/ArrangePage.tsx'
 import { CourseDetailPage } from './pages/CourseDetailPage.tsx'
 import { CoursesPage } from './pages/CoursesPage.tsx'
 import { HomePage } from './pages/HomePage.tsx'
@@ -14,6 +15,8 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="courses" element={<CoursesPage />} />
+        <Route path="courses/arrange/:setId" element={<ArrangeSetPage />} />
+        <Route path="courses/arrange/:setId/:difficulty" element={<ArrangeRoute />} />
         <Route path="courses/:courseId" element={<CourseDetailPage />} />
         <Route path="courses/:courseId/:lesson" element={<LessonRoute />} />
         <Route path="vocabulary" element={<Navigate to="/vocabulary/1" replace />} />

@@ -15,8 +15,6 @@ interface Props {
   sfx: boolean
   /** Read the sentence aloud when it is solved. */
   voice: boolean
-  /** Listening mode: the learner hears the sentence instead of reading the Lao, which appears once solved. */
-  listen?: boolean
 }
 
 const MODIFIER_KEYS = new Set(['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'])
@@ -31,7 +29,7 @@ const hintButton =
   'font-lao inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100 hover:text-stone-900 aria-pressed:bg-amber-50 aria-pressed:text-amber-700 aria-pressed:ring-amber-300'
 
 /** One sentence: the Lao prompt plus one input per Chinese word. Remount (via `key`) for each new sentence. */
-export function Exercise({ sentence, onNext, sfx, voice, listen = false }: Props) {
+export function Exercise({ sentence, onNext, sfx, voice }: Props) {
   const [answers, setAnswers] = useState(() => sentence.words.map(() => ''))
   const [statuses, setStatuses] = useState<Status[]>(() => sentence.words.map(() => 'idle'))
   const [solved, setSolved] = useState(false)
@@ -43,11 +41,6 @@ export function Exercise({ sentence, onNext, sfx, voice, listen = false }: Props
   const speakTimer = useRef<number>(undefined)
 
   useEffect(() => inputs.current[0]?.focus(), [])
-  useEffect(() => {
-    if (!listen || !canSpeak) return
-    const timer = window.setTimeout(() => speak(sentence.words.join(''), 0.8), 300)
-    return () => clearTimeout(timer)
-  }, [listen, sentence])
   useEffect(() => () => clearTimeout(speakTimer.current), [])
   useEffect(() => {
     if (solved) nextButton.current?.focus()
@@ -63,7 +56,7 @@ export function Exercise({ sentence, onNext, sfx, voice, listen = false }: Props
       setSolved(true)
       if (sfx) playCorrect()
       // Let the chime finish before the voice starts.
-      if (voice && canSpeak && !listen) speakTimer.current = window.setTimeout(() => speak(sentence.words.join('')), sfx ? 450 : 0)
+      if (voice && canSpeak) speakTimer.current = window.setTimeout(() => speak(sentence.words.join('')), sfx ? 450 : 0)
     } else {
       if (sfx) playWrong()
       inputs.current[firstWrong]?.focus()
@@ -112,40 +105,12 @@ export function Exercise({ sentence, onNext, sfx, voice, listen = false }: Props
 
   return (
     <div className="flex flex-col items-center gap-6 text-center">
-      {listen ? (
-        <div className="flex flex-col items-center space-y-3">
-          <p className="font-lao text-sm font-medium tracking-wide text-stone-500">{t.listenInstruction}</p>
-          <div className="flex gap-3">
-            <button
-              onClick={() => withFocusBack(() => speak(sentence.words.join(''), 0.8))}
-              aria-label={t.listen}
-              title={t.listen}
-              className="grid size-20 place-items-center rounded-full bg-teal-700 text-white shadow-md transition hover:bg-teal-800"
-            >
-              <svg viewBox="0 0 24 24" className="size-9" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M11 5 6 9H2v6h4l5 4V5Z" />
-                <path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14" />
-              </svg>
-            </button>
-            <button
-              onClick={() => withFocusBack(() => speak(sentence.words.join(''), 0.5))}
-              className="font-lao self-center rounded-full px-4 py-2 text-sm font-medium text-teal-800 ring-1 ring-teal-300 transition hover:bg-teal-50"
-            >
-              🐢 {t.listenSlow}
-            </button>
-          </div>
-          <p lang="lo" className={`font-lao min-h-10 text-2xl font-semibold text-stone-900 ${solved ? '' : 'invisible'}`}>
-            {sentence.lao}
-          </p>
-        </div>
-      ) : (
-        <div className="space-y-3">
-          <p className="text-sm font-medium tracking-wide text-stone-500">{t.instruction}</p>
-          <p lang="lo" className="font-lao text-3xl leading-relaxed font-semibold text-stone-900 sm:text-4xl">
-            {sentence.lao}
-          </p>
-        </div>
-      )}
+      <div className="space-y-3">
+        <p className="text-sm font-medium tracking-wide text-stone-500">{t.instruction}</p>
+        <p lang="lo" className="font-lao text-3xl leading-relaxed font-semibold text-stone-900 sm:text-4xl">
+          {sentence.lao}
+        </p>
+      </div>
 
       <div className="flex flex-wrap justify-center gap-3" lang="zh-CN">
         {sentence.words.map((word, i) => (
@@ -177,7 +142,7 @@ export function Exercise({ sentence, onNext, sfx, voice, listen = false }: Props
 
       {!solved && (
         <div className="-mt-3 flex gap-2">
-          {canSpeak && !listen && (
+          {canSpeak && (
             <button onClick={() => withFocusBack(() => speak(sentence.words.join(''), 0.7))} className={hintButton}>
               <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M11 5 6 9H2v6h4l5 4V5Z" />
