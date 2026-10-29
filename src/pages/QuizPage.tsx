@@ -11,6 +11,14 @@ import { canSpeak, speak } from '../lib/speech.ts'
 const LEVEL_QUIZ_SIZE = 20
 
 type QuestionType = 'meaning' | 'hanzi' | 'audio'
+/** `mixed` picks a random type per question. */
+type QuizMode = 'mixed' | QuestionType
+
+const MODES: QuizMode[] = ['mixed', 'meaning', 'hanzi', 'audio']
+
+function parseMode(value: string | null): QuizMode {
+  return MODES.includes(value as QuizMode) && (value !== 'audio' || canSpeak) ? (value as QuizMode) : 'mixed'
+}
 
 interface Question {
   type: QuestionType
@@ -27,9 +35,9 @@ function shuffle<T>(list: T[]): T[] {
   return copy
 }
 
-/** Each word gets a random question type and three wrong answers from the same level. */
-function makeQuiz(words: VocabWord[], pool: VocabWord[]): Question[] {
-  const types: QuestionType[] = canSpeak ? ['meaning', 'hanzi', 'audio'] : ['meaning', 'hanzi']
+/** Each word gets the chosen (or, when mixed, a random) question type and three wrong answers from the same level. */
+function makeQuiz(words: VocabWord[], pool: VocabWord[], mode: QuizMode): Question[] {
+  const types: QuestionType[] = mode !== 'mixed' ? [mode] : canSpeak ? ['meaning', 'hanzi', 'audio'] : ['meaning', 'hanzi']
   return shuffle(words).map((word) => {
     // Distractors must differ in both hanzi and Lao meaning, so there is only one right answer.
     const wrong = shuffle(pool.filter((w) => w.word !== word.word && w.lao && w.lao !== word.lao)).slice(0, 3)
@@ -42,17 +50,18 @@ export function QuizRoute() {
   const [params] = useSearchParams()
   if (!LEVELS.includes(level)) return <Navigate to="/vocabulary/1" replace />
   const lesson = Number(params.get('lesson')) || undefined
-  return <QuizLoader key={params.toString()} level={level} lesson={lesson} />
+  return <QuizLoader key={params.toString()} level={level} lesson={lesson} mode={parseMode(params.get('type'))} />
 }
 
-function QuizLoader({ level, lesson }: { level: number; lesson?: number }) {
+function QuizLoader({ level, lesson, mode }: { level: number; lesson?: number; mode: QuizMode }) {
+  const [params, setParams] = useSearchParams()
   const words = useVocabulary(level).filter((w) => w.lao)
   const [round, setRound] = useState(0)
   const [questions, setQuestions] = useState(() => build())
 
   function build() {
     const chosen = lesson ? words.filter((w) => w.lesson === lesson) : shuffle(words).slice(0, LEVEL_QUIZ_SIZE)
-    return makeQuiz(chosen, words)
+    return makeQuiz(chosen, words, mode)
   }
 
   function restart() {
@@ -62,7 +71,33 @@ function QuizLoader({ level, lesson }: { level: number; lesson?: number }) {
 
   const label = `HSK ${level}${lesson ? ` · ${t.lessonTitle(lesson)}` : ''}`
   const listLink = `/vocabulary/${level}${lesson && lesson > 1 ? `?lesson=${lesson}` : ''}`
-  return <Quiz key={round} label={label} questions={questions} listLink={listLink} onRestart={restart} />
+  function chooseMode(next: QuizMode) {
+    const nextParams = new URLSearchParams(params)
+    if (next === 'mixed') nextParams.delete('type')
+    else nextParams.set('type', next)
+    // A new `type` changes QuizRoute's key, so the quiz starts over with the new question type.
+    setParams(nextParams, { replace: true })
+  }
+
+  return (
+    <div className="flex min-h-full flex-col">
+      <div className="mx-auto w-full max-w-xl px-4 pt-4">
+        <div role="group" aria-label={t.quizType} className="flex rounded-xl bg-stone-200/70 p-1">
+          {MODES.filter((m) => m !== 'audio' || canSpeak).map((m) => (
+            <button
+              key={m}
+              onClick={() => chooseMode(m)}
+              aria-pressed={mode === m}
+              className="font-lao flex-1 rounded-lg px-2 py-1.5 text-xs font-medium whitespace-nowrap text-stone-600 transition aria-pressed:bg-surface aria-pressed:font-semibold aria-pressed:text-teal-800 aria-pressed:shadow-sm sm:text-sm"
+            >
+              {t.quizModes[m]}
+            </button>
+          ))}
+        </div>
+      </div>
+      <Quiz key={round} label={label} questions={questions} listLink={listLink} onRestart={restart} />
+    </div>
+  )
 }
 
 /** Multiple choice, one question at a time. Practice only: answers don't change the SRS state. */
@@ -112,7 +147,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
   if (done) {
     const score = questions.length - wrong.length
     return (
-      <div className="mx-auto flex min-h-full max-w-xl flex-col items-center justify-center gap-4 px-4 py-8 text-center">
+      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-4 px-4 py-8 text-center">
         <p className="text-5xl">{score === questions.length ? '🏆' : '🎉'}</p>
         <h2 className="font-lao text-3xl font-bold text-stone-900">{t.quizScore(score, questions.length)}</h2>
         {wrong.length > 0 && (
@@ -169,7 +204,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
     )
 
   return (
-    <div className="mx-auto flex min-h-full w-full max-w-xl flex-col px-4">
+    <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-4">
       <div className="pt-4">
         <div className="mb-2 flex justify-between">
           <span className="font-lao text-sm font-medium text-stone-600">{label}</span>

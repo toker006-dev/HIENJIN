@@ -126,6 +126,13 @@ export const t = {
   appTitle: "HIENJIN",
   progress: (n: number, total: number) => `ປະໂຫຍກ ${n} / ${total}`,
   quiz: "ແບບທົດສອບ",
+  quizType: "ປະເພດຄຳຖາມ",
+  quizModes: {
+    mixed: "🔀 ລວມ",
+    meaning: "ຈີນ → ລາວ",
+    hanzi: "ລາວ → ຈີນ",
+    audio: "🔊 ຟັງ",
+  },
   quizPrompt: {
     meaning: "ຄຳນີ້ໝາຍຄວາມວ່າແນວໃດ?",
     hanzi: "ຄຳໃດມີຄວາມໝາຍນີ້?",
