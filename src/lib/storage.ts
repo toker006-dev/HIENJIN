@@ -15,7 +15,7 @@ function subscribe(listener: () => void) {
   }
 }
 
-function read(key: string): string | null {
+export function readStored(key: string): string | null {
   try {
     return localStorage.getItem(key)
   } catch {
@@ -35,12 +35,12 @@ export function writeStored(key: string, value: string | null) {
 
 /** The raw string stored under `key` (null if missing); re-renders when it changes. */
 export function useStored(key: string): string | null {
-  return useSyncExternalStore(subscribe, () => read(key))
+  return useSyncExternalStore(subscribe, () => readStored(key))
 }
 
 export function readStoredJSON<T>(key: string, fallback: T): T {
   try {
-    const raw = read(key)
+    const raw = readStored(key)
     return raw ? (JSON.parse(raw) as T) : fallback
   } catch {
     return fallback

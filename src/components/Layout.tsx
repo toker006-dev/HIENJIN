@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router'
 import { coursesById } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
 import { useSoundEffects, useVoice } from '../lib/settings.ts'
+import { useDarkMode } from '../lib/theme.ts'
 
 const toggleButton =
   'rounded-full p-1.5 transition aria-pressed:bg-teal-100 aria-pressed:text-teal-800 text-stone-400 hover:text-stone-700'
@@ -36,13 +37,16 @@ const navItems = [
 ]
 
 /** Header title, plus where the ← back arrow leads (course pages only). */
-function pageInfo(pathname: string): { title: string; back?: string } {
+function pageInfo(pathname: string, search: string): { title: string; back?: string } {
   if (pathname === '/') return { title: t.navHome }
   if (pathname === '/vocabulary/review') return { title: t.quickReview, back: '/' }
-  const [, level, cards] = /^\/vocabulary\/(\d+)(\/cards)?/.exec(pathname) ?? []
+  const [, level, cards] = /^\/vocabulary\/(\d+)(?:\/(cards|quiz))?/.exec(pathname) ?? []
   if (level) {
     const title = `${t.navVocabulary} · HSK ${level}`
-    return cards ? { title: `${title} · ${t.flashcards}`, back: `/vocabulary/${level}` } : { title }
+    // Back from flashcards / quiz returns to the same lesson page of the word list.
+    const lesson = Number(new URLSearchParams(search).get('lesson'))
+    const back = `/vocabulary/${level}${lesson > 1 ? `?lesson=${lesson}` : ''}`
+    return cards ? { title: `${title} · ${cards === 'quiz' ? t.quiz : t.flashcards}`, back } : { title }
   }
   const [, courseId, lesson] = /^\/courses\/([^/]+)(?:\/([^/]+))?/.exec(pathname) ?? []
   if (!courseId) return { title: t.allCourses }
@@ -54,9 +58,11 @@ function pageInfo(pathname: string): { title: string; back?: string } {
 /** Side menu + header around every page. On small screens the menu slides in from a hamburger button. */
 export function Layout() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const page = pageInfo(useLocation().pathname)
+  const location = useLocation()
+  const page = pageInfo(location.pathname, location.search)
   const [sfx, toggleSfx] = useSoundEffects()
   const [voice, toggleVoice] = useVoice()
+  const [dark, toggleDark] = useDarkMode()
 
   return (
     <div className="flex h-svh bg-stone-50">
@@ -66,7 +72,7 @@ export function Layout() {
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-60 flex-col border-r border-stone-200 bg-white transition-transform md:static md:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-40 flex w-60 flex-col border-r border-stone-200 bg-surface transition-transform md:static md:translate-x-0 ${
           menuOpen ? 'translate-x-0 shadow-xl' : '-translate-x-full'
         }`}
       >
@@ -96,7 +102,7 @@ export function Layout() {
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex h-14 shrink-0 items-center gap-3 border-b border-stone-200 bg-white/70 px-4 backdrop-blur">
+        <header className="flex h-14 shrink-0 items-center gap-3 border-b border-stone-200 bg-surface/70 px-4 backdrop-blur">
           <button onClick={() => setMenuOpen(true)} aria-label={t.openMenu} className="-ml-1 rounded-lg p-1.5 text-stone-600 hover:bg-stone-100 md:hidden">
             <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <path d="M4 6h16M4 12h16M4 18h16" />
@@ -125,6 +131,18 @@ export function Layout() {
               <path d="M14 21v-3a4 4 0 0 0 4-4V9A7 7 0 0 0 4 9c0 3 1 4 2 5v7" />
               <path d="M20 6a6 6 0 0 1 2 4M18 9a3 3 0 0 1 1 2" />
               {!voice && <path d="m2 2 20 20" />}
+            </svg>
+          </button>
+          <button onClick={toggleDark} aria-label={t.darkMode} title={t.darkMode} className={toggleButton}>
+            <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              {dark ? (
+                <>
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                </>
+              ) : (
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+              )}
             </svg>
           </button>
         </header>

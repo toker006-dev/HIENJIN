@@ -4,4 +4,62 @@
   --font-sans: 'Noto Sans Lao', 'Noto Sans SC', system-ui, sans-serif;
   --font-lao: 'Noto Sans Lao', system-ui, sans-serif;
   --font-zh: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  /* Card / panel background (white in light mode). */
+  --color-surface: #fff;
+}
+
+/*
+ * Dark mode (class "dark" on <html>, set in index.html and by the header toggle).
+ * Instead of dark: variants on every element, the palette itself flips: neutrals invert, pale tints become
+ * deep tints, deep accents become bright. "white" is only used for text on coloured buttons (cards use
+ * `surface`), so it becomes near-black to stay readable on the now-bright buttons.
+ */
+.dark {
+  color-scheme: dark;
+  --color-surface: #1c1917;
+  --color-white: #0c0a09;
+
+  --color-stone-50: #0f0d0c;
+  --color-stone-100: #292524;
+  --color-stone-200: #3a3532;
+  --color-stone-300: #57534e;
+  --color-stone-400: #78716c;
+  --color-stone-500: #a8a29e;
+  --color-stone-600: #c4bfbb;
+  --color-stone-700: #d6d3d1;
+  --color-stone-800: #e7e5e4;
+  --color-stone-900: #f5f5f4;
+  --color-stone-950: #fafaf9;
+
+  --color-teal-50: #0f2a28;
+  --color-teal-100: #12403c;
+  --color-teal-200: #155e57;
+  --color-teal-300: #0f766e;
+  --color-teal-600: #2dd4bf;
+  --color-teal-700: #5eead4;
+  --color-teal-800: #99f6e4;
+  --color-teal-900: #ccfbf1;
+
+  --color-emerald-50: #0c2a20;
+  --color-emerald-100: #0f3d2e;
+  --color-emerald-200: #166544;
+  --color-emerald-300: #047857;
+  --color-emerald-600: #34d399;
+  --color-emerald-700: #6ee7b7;
+  --color-emerald-800: #a7f3d0;
+
+  --color-amber-50: #2a1f0a;
+  --color-amber-100: #3d2c0c;
+  --color-amber-200: #5c410f;
+  --color-amber-300: #92400e;
+  --color-amber-600: #fbbf24;
+  --color-amber-700: #fcd34d;
+  --color-amber-800: #fde68a;
+  --color-amber-900: #fef3c7;
+
+  --color-red-50: #2d1212;
+  --color-red-200: #5c1d1d;
+  --color-red-500: #f87171;
+  --color-red-600: #f87171;
+  --color-red-700: #fca5a5;
 }

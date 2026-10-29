@@ -32,7 +32,7 @@ export function WordCard({ sentence }: { sentence: Sentence }) {
         </div>
       </div>
       <div className="mt-2 flex items-center justify-center gap-3 border-t border-teal-200 pt-2">
-        <span className="font-lao rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold text-teal-800 ring-1 ring-teal-200">
+        <span className="font-lao rounded-full bg-surface px-2.5 py-0.5 text-xs font-semibold text-teal-800 ring-1 ring-teal-200">
           {t.pos[info.pos]}
         </span>
         <p lang="lo" className="font-lao text-lg font-semibold text-stone-800">

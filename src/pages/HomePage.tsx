@@ -6,11 +6,11 @@ import { categories, coursesById, currentLesson, useLoadedCourse, type Course } 
 import { LEVELS, useVocabulary } from '../data/vocabulary.ts'
 import { t } from '../i18n/lo.ts'
 import { dayKey, useVocabHistory, type VocabHistory } from '../lib/activity.ts'
-import { useKnownWords } from '../lib/known.ts'
+import { DAILY_REVIEW_SIZE, useKnownWords } from '../lib/known.ts'
 import { hideFromRecent, useHiddenFromRecent, useProgress, type CourseProgress } from '../lib/progress.ts'
 import { timeAgo } from '../lib/time.ts'
 
-const card = 'rounded-2xl bg-white p-4 shadow-sm ring-1 ring-stone-200 sm:p-5'
+const card = 'rounded-2xl bg-surface p-4 shadow-sm ring-1 ring-stone-200 sm:p-5'
 
 /** Words of one HSK level / lesson, straight from the word lists (no sentences needed). */
 function levelWords(level: number, lesson?: number): string[] {
@@ -54,7 +54,7 @@ export function HomePage() {
         </section>
       )}
 
-      <QuickReview history={history} />
+      <QuickReview />
 
       <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
         <HskOverview />
@@ -87,10 +87,10 @@ function Welcome() {
       <h2 className="font-lao mt-3 text-2xl font-bold">{t.welcomeTitle}</h2>
       <p className="font-lao mx-auto mt-2 max-w-md text-teal-100">{t.welcomeBody}</p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
-        <Link to="/vocabulary/1" className="font-lao rounded-full bg-white px-6 py-2.5 font-semibold text-teal-800 transition hover:bg-teal-50">
+        <Link to="/vocabulary/1" className="font-lao rounded-full bg-surface px-6 py-2.5 font-semibold text-teal-800 transition hover:bg-teal-50">
           📖 {t.startVocabulary}
         </Link>
-        <Link to="/courses/hsk1/1" className="font-lao rounded-full px-6 py-2.5 font-semibold text-white ring-1 ring-white/60 transition hover:bg-white/10">
+        <Link to="/courses/hsk1/1" className="font-lao rounded-full px-6 py-2.5 font-semibold text-white ring-1 ring-white/60 transition hover:bg-surface/10">
           ✏️ {t.startPractice}
         </Link>
       </div>
@@ -200,22 +200,17 @@ function ContinuePractice({ course: info, progress, subtitle }: { course: Course
   )
 }
 
-/** Still-learning words from every vocabulary lesson the learner has opened. */
-function QuickReview({ history }: { history: VocabHistory }) {
+/** Today's review: 30 random known words (fewer if fewer are known), the same set all day. */
+function QuickReview() {
   const known = useKnownWords()
-  const count = history.opened
-    .flatMap((key) => {
-      const [level, lesson] = key.split('/').map(Number)
-      return levelWords(level, lesson)
-    })
-    .filter((w) => !known.has(w)).length
-  if (count === 0) return null
+  if (known.size === 0) return null
+  const count = Math.min(known.size, DAILY_REVIEW_SIZE)
 
   return (
     <section className="flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-amber-50 p-4 ring-1 ring-amber-200 sm:p-5">
       <div>
-        <p className="font-lao font-bold text-amber-900">⚡ {t.quickReview}</p>
-        <p className="font-lao text-sm text-amber-800">{t.quickReviewBody(count)}</p>
+        <p className="font-lao font-bold text-amber-900">📅 {t.reviewToday}</p>
+        <p className="font-lao text-sm text-amber-800">{t.reviewTodayBody(count)}</p>
       </div>
       <Link to="/vocabulary/review" className="font-lao rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-white transition hover:bg-amber-600">
         {t.reviewNow}

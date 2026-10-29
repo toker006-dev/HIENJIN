@@ -4,7 +4,7 @@ import { Exercise } from '../components/Exercise.tsx'
 import { coursesById, isPlayable, useLoadedCourse, type Course, type Lesson, type LoadedCourse } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
 import { markStudied, recordSolved } from '../lib/progress.ts'
-import { useSoundEffects, useVoice } from '../lib/settings.ts'
+import { usePracticeMode, useSoundEffects, useVoice } from '../lib/settings.ts'
 import { playComplete } from '../lib/sfx.ts'
 import type { Sentence } from '../types.ts'
 
@@ -37,6 +37,7 @@ function LessonLoader({ course: info, lessonNumber }: { course: Course; lessonNu
 function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }) {
   const [sfx] = useSoundEffects()
   const [voice] = useVoice()
+  const [mode, setMode] = usePracticeMode()
   const [sentences, setSentences] = useState(() => shuffled(lesson.sentences))
   const [index, setIndex] = useState(0)
   // Bumped on every new round so the exercise always remounts, even if the same sentence comes first again.
@@ -66,7 +67,21 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
     <div className="mx-auto flex min-h-full w-full max-w-3xl flex-col px-4">
       <div className="pt-4">
         <div className="mb-2 flex justify-between">
-          <span className="font-lao text-sm font-medium text-stone-600">{t.lessonTitle(lesson.number)}</span>
+          <div className="flex items-center gap-3">
+            <span className="font-lao text-sm font-medium text-stone-600">{t.lessonTitle(lesson.number)}</span>
+            <div className="flex rounded-full bg-stone-200/70 p-0.5">
+              {(['translate', 'listen'] as const).map((m) => (
+                <button
+                  key={m}
+                  onClick={() => setMode(m)}
+                  aria-pressed={mode === m}
+                  className="font-lao rounded-full px-3 py-0.5 text-xs font-medium text-stone-600 transition aria-pressed:bg-surface aria-pressed:text-teal-800 aria-pressed:shadow-sm"
+                >
+                  {m === 'translate' ? `📝 ${t.modeTranslate}` : `🎧 ${t.modeListen}`}
+                </button>
+              ))}
+            </div>
+          </div>
           <span className="font-lao text-sm text-stone-500">
             {t.progress(Math.min(index + 1, sentences.length), sentences.length)}
           </span>
@@ -77,7 +92,7 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
       </div>
 
       <div className="flex flex-1 items-center py-4">
-        <div className="w-full rounded-3xl bg-white px-6 py-8 shadow-sm ring-1 ring-stone-200 sm:px-12">
+        <div className="w-full rounded-3xl bg-surface px-6 py-8 shadow-sm ring-1 ring-stone-200 sm:px-12">
           {done ? (
             <div className="flex flex-col items-center gap-4 text-center">
               <p className="text-5xl">🎉</p>
@@ -109,7 +124,14 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
               </div>
             </div>
           ) : (
-            <Exercise key={`${round}-${sentences[index].id}`} sentence={sentences[index]} onNext={next} sfx={sfx} voice={voice} />
+            <Exercise
+              key={`${round}-${mode}-${sentences[index].id}`}
+              sentence={sentences[index]}
+              onNext={next}
+              sfx={sfx}
+              voice={voice}
+              listen={mode === 'listen'}
+            />
           )}
         </div>
       </div>

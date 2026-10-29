@@ -5,7 +5,7 @@ import { LESSON_SIZE } from '../data/courses.ts'
 import { LEVELS, matchesSearch, parseFilter, useAllVocabulary, useVocabulary, type VocabWord, type WordFilter } from '../data/vocabulary.ts'
 import { t } from '../i18n/lo.ts'
 import { recordVocabLesson } from '../lib/activity.ts'
-import { setKnown, useKnownWords } from '../lib/known.ts'
+import { setKnown, setManyKnown, useKnownWords } from '../lib/known.ts'
 
 /** Search results beyond this are cut off (the learner should refine the search). */
 const MAX_RESULTS = 200
@@ -68,7 +68,7 @@ function VocabularyPage({ level }: { level: number }) {
             to={`/vocabulary/${n}`}
             className={({ isActive }) =>
               `shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold transition ${
-                isActive ? 'bg-teal-700 text-white' : 'bg-white text-stone-600 ring-1 ring-stone-200 hover:bg-stone-100'
+                isActive ? 'bg-teal-700 text-white' : 'bg-surface text-stone-600 ring-1 ring-stone-200 hover:bg-stone-100'
               }`
             }
           >
@@ -77,7 +77,7 @@ function VocabularyPage({ level }: { level: number }) {
         ))}
       </nav>
 
-      <div className="mt-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-stone-200">
+      <div className="mt-4 rounded-2xl bg-surface p-4 shadow-sm ring-1 ring-stone-200">
         <div className="flex items-center justify-between gap-3">
           <span className="font-lao text-sm font-medium text-stone-700">{t.knownCount(knownCount, words.length)}</span>
           <span className="text-sm text-stone-400 tabular-nums">{Math.round((knownCount / words.length) * 100)}%</span>
@@ -94,14 +94,14 @@ function VocabularyPage({ level }: { level: number }) {
             className="font-lao min-w-0 flex-1 rounded-xl border border-stone-300 px-3 py-2 outline-none focus:border-teal-600 focus:ring-2 focus:ring-teal-100"
           />
           <div className="flex shrink-0 rounded-xl bg-stone-100 p-1">
-            {(['all', 'learning', 'known'] as const).map((f) => (
+            {(['all', 'known'] as const).map((f) => (
               <button
                 key={f}
                 onClick={() => setParam('filter', f === 'all' ? null : f)}
                 aria-pressed={filter === f}
-                className="font-lao flex-1 rounded-lg px-3 py-1.5 text-sm whitespace-nowrap text-stone-600 transition aria-pressed:bg-white aria-pressed:font-semibold aria-pressed:text-teal-800 aria-pressed:shadow-sm"
+                className="font-lao flex-1 rounded-lg px-3 py-1.5 text-sm whitespace-nowrap text-stone-600 transition aria-pressed:bg-surface aria-pressed:font-semibold aria-pressed:text-teal-800 aria-pressed:shadow-sm"
               >
-                {f === 'all' ? t.filterAll : f === 'learning' ? t.filterLearning : t.filterKnown}
+                {f === 'all' ? t.filterAll : t.filterKnown}
               </button>
             ))}
           </div>
@@ -115,28 +115,37 @@ function VocabularyPage({ level }: { level: number }) {
       ) : (
         <section className="mt-6">
           <Pager lesson={lesson} count={lessonCount} done={doneLessons} onChange={goToLesson} />
-          <div className="mb-2 flex items-center justify-between gap-3 px-1">
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-3 px-1">
             <h3 className="font-lao font-semibold text-stone-800">
               {t.lessonTitle(lesson)}
               <span className="ml-2 text-sm font-normal text-stone-500">
                 {t.wordRange((lesson - 1) * LESSON_SIZE + 1, Math.min(lesson * LESSON_SIZE, words.length))}
               </span>
             </h3>
-            <Link
-              to={`/vocabulary/${level}/cards?lesson=${lesson}${filter === 'all' ? '' : `&filter=${filter}`}`}
-              className="font-lao inline-flex shrink-0 items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-sm font-medium text-teal-800 ring-1 ring-teal-200 transition hover:bg-teal-100"
-            >
-              <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
-                <rect x="3" y="6" width="14" height="14" rx="2" />
-                <path d="M7 6V4h12a2 2 0 0 1 2 2v12h-4" />
-              </svg>
-              {t.flashcards}
-            </Link>
+            <div className="flex flex-wrap gap-2">
+              <LessonToggle words={words.filter((w) => w.lesson === lesson).map((w) => w.word)} known={known} />
+              <Link
+                to={`/vocabulary/${level}/cards?lesson=${lesson}${filter === 'all' ? '' : `&filter=${filter}`}`}
+                className="font-lao inline-flex shrink-0 items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-sm font-medium text-teal-800 ring-1 ring-teal-200 transition hover:bg-teal-100"
+              >
+                <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
+                  <rect x="3" y="6" width="14" height="14" rx="2" />
+                  <path d="M7 6V4h12a2 2 0 0 1 2 2v12h-4" />
+                </svg>
+                {t.flashcards}
+              </Link>
+              <Link
+                to={`/vocabulary/${level}/quiz?lesson=${lesson}`}
+                className="font-lao inline-flex shrink-0 items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-sm font-medium text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100"
+              >
+                ❓ {t.quiz}
+              </Link>
+            </div>
           </div>
           {lessonWords.length === 0 ? (
-            <p className="font-lao rounded-2xl bg-white py-16 text-center text-stone-500 ring-1 ring-stone-200">{t.noWords}</p>
+            <p className="font-lao rounded-2xl bg-surface py-16 text-center text-stone-500 ring-1 ring-stone-200">{t.noWords}</p>
           ) : (
-            <ul className="divide-y divide-stone-100 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-stone-200">
+            <ul className="divide-y divide-stone-100 overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200">
               {lessonWords.map((w) => (
                 <WordRow key={w.word} word={w} known={known.has(w.word)} open={open === w.word} onToggle={toggle} />
               ))}
@@ -188,7 +197,7 @@ function SearchResults({ query, filter, known, open, onToggle }: {
       {[...levels].map(([level, levelWords]) => (
         <section key={level} className="mt-3">
           <h3 className="mb-2 px-1 font-semibold text-stone-800">HSK {level}</h3>
-          <ul className="divide-y divide-stone-100 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-stone-200">
+          <ul className="divide-y divide-stone-100 overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200">
             {levelWords.map((w) => (
               <WordRow
                 key={w.word}
@@ -221,7 +230,7 @@ function Pager({ lesson, count, done, onChange }: { lesson: number; count: numbe
               ? 'bg-teal-700 text-white'
               : done.has(n)
                 ? 'bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 hover:bg-emerald-100'
-                : 'bg-white text-stone-600 ring-1 ring-stone-200 hover:bg-stone-100'
+                : 'bg-surface text-stone-600 ring-1 ring-stone-200 hover:bg-stone-100'
           }`}
         >
           {n}
@@ -264,14 +273,14 @@ const WordRow = memo(function WordRow({ word: w, known, open, onToggle }: { word
         <div className="space-y-3 px-4 pb-4 pl-12 sm:pl-14">
           <div className="flex flex-wrap items-center gap-2">
             {w.pos && (
-              <span className="font-lao rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold text-teal-800 ring-1 ring-teal-200">
+              <span className="font-lao rounded-full bg-surface px-2.5 py-0.5 text-xs font-semibold text-teal-800 ring-1 ring-teal-200">
                 {t.pos[w.pos]}
               </span>
             )}
             <span className="text-sm text-stone-600">{w.english}</span>
           </div>
           {w.sentence && (
-            <div className="rounded-xl bg-white p-3 ring-1 ring-stone-200">
+            <div className="rounded-xl bg-surface p-3 ring-1 ring-stone-200">
               <p className="font-lao mb-1 text-xs font-medium text-stone-400">{t.exampleSentence}</p>
               <div className="flex items-center gap-2">
                 <p lang="zh-CN" className="font-zh flex-1 text-lg text-stone-900">
@@ -293,6 +302,23 @@ const WordRow = memo(function WordRow({ word: w, known, open, onToggle }: { word
     </li>
   )
 })
+
+/** Marks every word of the lesson known, or (when all already are) unmarks them all. */
+function LessonToggle({ words, known }: { words: string[]; known: Set<string> }) {
+  const allKnown = words.every((w) => known.has(w))
+  return (
+    <button
+      onClick={() => setManyKnown(words, !allKnown)}
+      aria-pressed={allKnown}
+      className="font-lao inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100 aria-pressed:bg-emerald-50 aria-pressed:text-emerald-700 aria-pressed:ring-emerald-300"
+    >
+      <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m5 12 5 5 9-10" />
+      </svg>
+      {allKnown ? t.unmarkLesson : t.markLesson}
+    </button>
+  )
+}
 
 /** Round check button: filled green once the word is memorised. */
 export function KnownToggle({ word, known }: { word: string; known: boolean }) {

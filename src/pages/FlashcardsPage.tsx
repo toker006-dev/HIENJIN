@@ -3,8 +3,8 @@ import { Link, Navigate, useParams, useSearchParams } from 'react-router'
 import { SpeakButton } from '../components/SpeakButton.tsx'
 import { LEVELS, parseFilter, useAllVocabulary, useVocabulary, type VocabWord, type WordFilter } from '../data/vocabulary.ts'
 import { t } from '../i18n/lo.ts'
-import { recordVocabLesson, useVocabHistory } from '../lib/activity.ts'
-import { setKnown, useKnownWords } from '../lib/known.ts'
+import { dayKey, recordVocabLesson } from '../lib/activity.ts'
+import { dailyReview, setKnown, useKnownWords } from '../lib/known.ts'
 
 export function FlashcardsRoute() {
   const level = Number(useParams().level)
@@ -38,17 +38,13 @@ function FlashcardsLoader({ level, lesson, filter }: { level: number; lesson?: n
   )
 }
 
-/** Most still-learning words per quick-review session. */
-const REVIEW_SIZE = 30
-
-/** Quick review from Home: still-learning words from every vocabulary lesson the learner has opened. */
+/** Today's review from Home: 30 random known words from HSK 1-6, the same set all day. */
 export function ReviewRoute() {
   const all = useAllVocabulary()
   const known = useKnownWords()
-  const { opened } = useVocabHistory()
   const [deck] = useState(() => {
-    const lessons = new Set(opened)
-    return all.filter((w) => lessons.has(`${w.level}/${w.lesson}`) && !known.has(w.word)).slice(0, REVIEW_SIZE)
+    const byWord = new Map(all.map((w) => [w.word, w]))
+    return dailyReview(known, dayKey()).flatMap((word) => byWord.get(word) ?? [])
   })
   if (deck.length === 0) return <Navigate to="/" replace />
   return <Flashcards label={t.quickReview} deck={deck} listLink="/vocabulary" showLevel />
@@ -75,8 +71,8 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
     setFlipped(false)
   }
 
-  function mark(isKnown: boolean) {
-    setKnown(card.word, isKnown)
+  function markKnown() {
+    setKnown(card.word, true)
     go(index + 1)
   }
 
@@ -88,8 +84,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
         setFlipped((f) => !f)
       } else if (e.key === 'ArrowRight') go(index + 1)
       else if (e.key === 'ArrowLeft') go(index - 1)
-      else if (e.key === '1') mark(true)
-      else if (e.key === '2') mark(false)
+      else if (e.key === '1') markKnown()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -147,7 +142,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
           aria-label={t.flip}
           onClick={() => setFlipped(!flipped)}
           className={`relative flex min-h-80 cursor-pointer flex-col items-center justify-center rounded-3xl px-6 py-8 text-center shadow-sm ring-1 transition select-none ${
-            isKnown ? 'bg-emerald-50/50 ring-emerald-200' : 'bg-white ring-stone-200'
+            isKnown ? 'bg-emerald-50/50 ring-emerald-200' : 'bg-surface ring-stone-200'
           }`}
         >
           {isKnown && <span className="font-lao absolute top-3 right-4 text-xs font-medium text-emerald-600">✓ {t.gotIt}</span>}
@@ -206,13 +201,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
             </svg>
           </button>
           <button
-            onClick={() => mark(false)}
-            className="font-lao flex-1 rounded-full bg-amber-100 py-3 font-semibold text-amber-900 transition hover:bg-amber-200"
-          >
-            {t.stillLearning}
-          </button>
-          <button
-            onClick={() => mark(true)}
+            onClick={() => markKnown()}
             className="font-lao flex-1 rounded-full bg-emerald-600 py-3 font-semibold text-white transition hover:bg-emerald-700"
           >
             ✓ {t.gotIt}

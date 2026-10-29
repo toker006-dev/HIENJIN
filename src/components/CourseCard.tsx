@@ -19,7 +19,7 @@ export function CourseCard({ course, lesson, progress, subtitle, onRemove }: Pro
   const solved = Math.min(progress?.solved ?? 0, total)
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-stone-200 transition hover:shadow-md hover:ring-teal-300">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200 transition hover:shadow-md hover:ring-teal-300">
       <div className="relative aspect-[16/9] overflow-hidden">
         <img src={course.cover} alt="" loading="lazy" className="size-full object-cover transition duration-300 group-hover:scale-105" />
         <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">
@@ -30,7 +30,7 @@ export function CourseCard({ course, lesson, progress, subtitle, onRemove }: Pro
             onClick={onRemove}
             aria-label={`${t.remove}: ${course.title}`}
             title={t.remove}
-            className="absolute top-2 right-2 rounded-lg bg-white/90 p-1.5 text-stone-500 shadow-sm transition hover:bg-red-50 hover:text-red-600"
+            className="absolute top-2 right-2 rounded-lg bg-surface/90 p-1.5 text-stone-500 shadow-sm transition hover:bg-red-50 hover:text-red-600"
           >
             <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6" />
