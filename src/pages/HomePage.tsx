@@ -299,7 +299,8 @@ function WordOfDay() {
 
 /** Card for a recently played word-order round; goes straight into a new round. */
 function RecentArrange({ id, subtitle }: { id: string; subtitle: string }) {
-  const [setId, difficulty] = id.split('/')
+  const [setId, difficulty, activity] = id.split('/')
+  const listen = activity === 'listen'
   const set = arrangeSetsById.get(setId)
   if (!set || !isDifficulty(difficulty)) return null
   const level = t.difficultyLevels(...levelsOf(difficulty))
@@ -307,10 +308,10 @@ function RecentArrange({ id, subtitle }: { id: string; subtitle: string }) {
     <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200 transition hover:shadow-md hover:ring-teal-300">
       <div className="relative aspect-[16/9] overflow-hidden">
         <img src={set.cover} alt="" loading="lazy" className="size-full object-cover transition duration-300 group-hover:scale-105" />
-        <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">🧩 {level}</span>
+        <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">{listen ? '🎧' : '🧩'} {level}</span>
         <button
           onClick={() => hideFromRecent(`arrange/${id}`)}
-          aria-label={`${t.remove}: ${t.arrangeTitle} ${level}`}
+          aria-label={`${t.remove}: ${listen ? t.listenTitle : t.arrangeTitle} ${level}`}
           title={t.remove}
           className="absolute top-2 right-2 rounded-lg bg-surface/90 p-1.5 text-stone-500 shadow-sm transition hover:bg-red-50 hover:text-red-600"
         >
@@ -320,9 +321,9 @@ function RecentArrange({ id, subtitle }: { id: string; subtitle: string }) {
         </button>
       </div>
       <div className="flex flex-1 flex-col p-4">
-        <p className="font-lao font-bold text-stone-900">{t.arrangeTitle}</p>
+        <p className="font-lao font-bold text-stone-900">{listen ? t.listenTitle : t.arrangeTitle}</p>
         <p className="font-lao text-sm text-stone-500">{subtitle}</p>
-        <Link to={`/courses/arrange/${setId}/${difficulty}`} className={`${primaryButton} mt-3 self-start`}>
+        <Link to={`/courses/${listen ? 'listen' : 'arrange'}/${setId}/${difficulty}`} className={`${primaryButton} mt-3 self-start`}>
           ▶ {t.playAgain}
         </Link>
       </div>

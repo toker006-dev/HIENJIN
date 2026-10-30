@@ -6,6 +6,7 @@ import { CoursesPage } from './pages/CoursesPage.tsx'
 import { HomePage } from './pages/HomePage.tsx'
 import { FlashcardsRoute, ReviewRoute } from './pages/FlashcardsPage.tsx'
 import { LessonRoute } from './pages/LessonPage.tsx'
+import { ListenRoute, ListenSetPage } from './pages/ListenPage.tsx'
 import { QuizRoute } from './pages/QuizPage.tsx'
 import { VocabularyRoute } from './pages/VocabularyPage.tsx'
 
@@ -17,6 +18,8 @@ export default function App() {
         <Route path="courses" element={<CoursesPage />} />
         <Route path="courses/arrange/:setId" element={<ArrangeSetPage />} />
         <Route path="courses/arrange/:setId/:difficulty" element={<ArrangeRoute />} />
+        <Route path="courses/listen/:setId" element={<ListenSetPage />} />
+        <Route path="courses/listen/:setId/:difficulty" element={<ListenRoute />} />
         <Route path="courses/:courseId" element={<CourseDetailPage />} />
         <Route path="courses/:courseId/:lesson" element={<LessonRoute />} />
         <Route path="vocabulary" element={<Navigate to="/vocabulary/1" replace />} />

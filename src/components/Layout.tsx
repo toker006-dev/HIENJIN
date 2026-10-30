@@ -49,11 +49,11 @@ function pageInfo(pathname: string, search: string): { title: string; back?: str
     const back = `/vocabulary/${level}${lesson > 1 ? `?lesson=${lesson}` : ''}`
     return cards ? { title: `${title} · ${cards === 'quiz' ? t.quiz : t.flashcards}`, back } : { title }
   }
-  const [, setId, difficulty] = /^\/courses\/arrange\/([^/]+)(?:\/(easy|medium|hard))?/.exec(pathname) ?? []
+  const [, activity, setId, difficulty] = /^\/courses\/(arrange|listen)\/([^/]+)(?:\/(easy|medium|hard))?/.exec(pathname) ?? []
   if (setId) {
-    const title = `${t.arrangeTitle} ${arrangeSetsById.get(setId)?.title ?? ''}`
+    const title = `${activity === 'listen' ? t.listenTitle : t.arrangeTitle} ${arrangeSetsById.get(setId)?.title ?? ''}`
     return difficulty
-      ? { title: `${title} · ${t.difficultyLevels(...levelsOf(difficulty as Difficulty))}`, back: `/courses/arrange/${setId}` }
+      ? { title: `${title} · ${t.difficultyLevels(...levelsOf(difficulty as Difficulty))}`, back: `/courses/${activity}/${setId}` }
       : { title, back: '/courses' }
   }
   const [, courseId, lesson] = /^\/courses\/([^/]+)(?:\/([^/]+))?/.exec(pathname) ?? []

@@ -9,7 +9,7 @@ export function CourseTile({ course, progress }: { course: Course; progress: Rec
   const started = course.lessons.some((l) => progress[l.id])
 
   return (
-    <Link to={`/courses/${course.id}`} className="group block w-60 shrink-0 snap-start sm:w-64">
+    <Link to={`/courses/${course.id}`} className="group block w-60 shrink-0 snap-start sm:w-auto">
       <div className="relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-stone-200 transition group-hover:shadow-lg group-hover:ring-teal-400">
         <img
           src={course.cover}
