@@ -2,12 +2,13 @@ import { Suspense, useState, type ReactNode } from 'react'
 import { Link } from 'react-router'
 import { CourseCard } from '../components/CourseCard.tsx'
 import { SpeakButton } from '../components/SpeakButton.tsx'
+import { arrangeSetsById, isDifficulty, levelsOf } from '../data/arrange.ts'
 import { categories, coursesById, currentLesson, useLoadedCourse, type Course } from '../data/courses.ts'
 import { LEVELS, useVocabulary } from '../data/vocabulary.ts'
 import { t } from '../i18n/lo.ts'
 import { dayKey, useVocabHistory, type VocabHistory } from '../lib/activity.ts'
 import { DAILY_REVIEW_SIZE, useKnownWords } from '../lib/known.ts'
-import { hideFromRecent, useHiddenFromRecent, useProgress, type CourseProgress } from '../lib/progress.ts'
+import { hideFromRecent, useArrangeRecent, useHiddenFromRecent, useProgress, type CourseProgress } from '../lib/progress.ts'
 import { timeAgo } from '../lib/time.ts'
 
 const card = 'rounded-2xl bg-surface p-4 shadow-sm ring-1 ring-stone-200 sm:p-5'
@@ -34,7 +35,17 @@ export function HomePage() {
     .filter((entry) => entry.lastStudied > (hidden[entry.course.id] ?? 0))
     .sort((a, b) => b.lastStudied - a.lastStudied)
 
-  const isNew = !history.last && recent.length === 0
+  const arrangeRecent = useArrangeRecent()
+  // Word-order rounds share the list with courses, hidden the same way (id "arrange/hsk/easy").
+  const recentArrange = Object.entries(arrangeRecent)
+    .map(([key, lastStudied]) => ({ key, lastStudied }))
+    .filter(({ key, lastStudied }) => lastStudied > (hidden[`arrange/${key}`] ?? 0))
+  const recentAll = [
+    ...recent.map((entry) => ({ ...entry, key: entry.course.id })),
+    ...recentArrange.map((entry) => ({ ...entry, category: undefined, course: undefined })),
+  ].sort((a, b) => b.lastStudied - a.lastStudied)
+
+  const isNew = !history.last && recentAll.length === 0
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-8">
@@ -63,13 +74,17 @@ export function HomePage() {
         </Suspense>
       </div>
 
-      {recent.length > 0 && (
+      {recentAll.length > 0 && (
         <section>
           <h2 className="font-lao mb-3 text-xl font-bold text-stone-900">{t.recentTitle}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {recent.map(({ category, course, lastStudied }) => (
-              <RecentCourse key={course.id} course={course} progress={progress} subtitle={`${category.title} · ${timeAgo(lastStudied, now)}`} />
-            ))}
+            {recentAll.map(({ key, category, course, lastStudied }) =>
+              course ? (
+                <RecentCourse key={key} course={course} progress={progress} subtitle={`${category.title} · ${timeAgo(lastStudied, now)}`} />
+              ) : (
+                <RecentArrange key={key} id={key} subtitle={timeAgo(lastStudied, now)} />
+              ),
+            )}
           </div>
         </section>
       )}
@@ -279,6 +294,39 @@ function WordOfDay() {
       )}
       <span className="mt-2 text-xs text-stone-400">HSK {level}</span>
     </section>
+  )
+}
+
+/** Card for a recently played word-order round; goes straight into a new round. */
+function RecentArrange({ id, subtitle }: { id: string; subtitle: string }) {
+  const [setId, difficulty] = id.split('/')
+  const set = arrangeSetsById.get(setId)
+  if (!set || !isDifficulty(difficulty)) return null
+  const level = t.difficultyLevels(...levelsOf(difficulty))
+  return (
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200 transition hover:shadow-md hover:ring-teal-300">
+      <div className="relative aspect-[16/9] overflow-hidden">
+        <img src={set.cover} alt="" loading="lazy" className="size-full object-cover transition duration-300 group-hover:scale-105" />
+        <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">🧩 {level}</span>
+        <button
+          onClick={() => hideFromRecent(`arrange/${id}`)}
+          aria-label={`${t.remove}: ${t.arrangeTitle} ${level}`}
+          title={t.remove}
+          className="absolute top-2 right-2 rounded-lg bg-surface/90 p-1.5 text-stone-500 shadow-sm transition hover:bg-red-50 hover:text-red-600"
+        >
+          <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6" />
+          </svg>
+        </button>
+      </div>
+      <div className="flex flex-1 flex-col p-4">
+        <p className="font-lao font-bold text-stone-900">{t.arrangeTitle}</p>
+        <p className="font-lao text-sm text-stone-500">{subtitle}</p>
+        <Link to={`/courses/arrange/${setId}/${difficulty}`} className={`${primaryButton} mt-3 self-start`}>
+          ▶ {t.playAgain}
+        </Link>
+      </div>
+    </div>
   )
 }
 

@@ -56,6 +56,26 @@ export function recordSolved(lessonId: string, solved: number, total: number) {
   })
 }
 
+// When each word-order round was last played, keyed "setId/difficulty" (e.g. "hsk/easy").
+const ARRANGE_KEY = 'arrange-recent'
+
+export function useArrangeRecent(): Record<string, number> {
+  const raw = useStored(ARRANGE_KEY)
+  return useMemo(() => {
+    try {
+      return raw ? (JSON.parse(raw) as Record<string, number>) : {}
+    } catch {
+      return {}
+    }
+  }, [raw])
+}
+
+export function markArrangePlayed(key: string) {
+  const all = readStoredJSON<Record<string, number>>(ARRANGE_KEY, {})
+  all[key] = Date.now()
+  writeStored(ARRANGE_KEY, JSON.stringify(all))
+}
+
 // Courses hidden from Home's "recent" list, with when they were hidden. Progress is kept; studying the
 // course again after that moment brings it back.
 const HIDDEN_KEY = 'recent-hidden'

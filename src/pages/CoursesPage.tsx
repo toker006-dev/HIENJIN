@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { CourseTile } from '../components/CourseTile.tsx'
-import { ARRANGE_SETS, DIFFICULTIES, type ArrangeSet } from '../data/arrange.ts'
+import { ARRANGE_SETS, type ArrangeSet } from '../data/arrange.ts'
 import { categories } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
 import { useProgress } from '../lib/progress.ts'
@@ -59,7 +59,7 @@ function ArrangeTile({ set }: { set: ArrangeSet }) {
         {t.arrangeTitle} {set.title}
       </h3>
       <p className="font-lao mt-0.5 text-sm text-stone-500">
-        {t.difficultyCount(DIFFICULTIES.length)} · HSK 1–6
+        HSK 1–6
       </p>
     </Link>
   )

@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { SpeakButton } from '../components/SpeakButton.tsx'
-import { arrangeSetsById, DIFFICULTIES, isDifficulty, ROUND_SIZE, useArrangePool, type Difficulty } from '../data/arrange.ts'
+import { arrangeSetsById, DIFFICULTIES, isDifficulty, levelsOf, ROUND_SIZE, useArrangePool, type Difficulty } from '../data/arrange.ts'
 import { t } from '../i18n/lo.ts'
+import { markArrangePlayed } from '../lib/progress.ts'
 import { useSoundEffects, useVoice } from '../lib/settings.ts'
 import { playComplete, playCorrect, playType, playWrong } from '../lib/sfx.ts'
 import { canSpeak, speak } from '../lib/speech.ts'
@@ -34,12 +35,6 @@ function shuffledTiles(words: string[]): Tile[] {
   return shuffle(tiles)
 }
 
-const difficultyStyles = {
-  easy: { icon: '🟢', ring: 'hover:ring-emerald-300', badge: 'bg-emerald-50 text-emerald-700' },
-  medium: { icon: '🟡', ring: 'hover:ring-amber-300', badge: 'bg-amber-50 text-amber-700' },
-  hard: { icon: '🔴', ring: 'hover:ring-red-300', badge: 'bg-red-50 text-red-700' },
-}
-
 /** A word-order set (one card on the practice page): what it is, then pick a difficulty to start. */
 export function ArrangeSetPage() {
   const set = arrangeSetsById.get(useParams().setId ?? '')
@@ -65,22 +60,15 @@ export function ArrangeSetPage() {
       <section>
         <h3 className="font-lao mb-3 text-lg font-bold text-stone-900">{t.chooseDifficulty}</h3>
         <div className="grid gap-4 sm:grid-cols-3">
-          {DIFFICULTIES.map(({ id, levels }) => {
-            const style = difficultyStyles[id]
-            return (
+          {DIFFICULTIES.map(({ id, levels }) => (
               <Link
                 key={id}
                 to={`/courses/arrange/${set.id}/${id}`}
-                className={`flex items-center gap-4 rounded-2xl bg-surface p-5 shadow-sm ring-1 ring-stone-200 transition hover:shadow-md ${style.ring}`}
+                className="rounded-2xl bg-surface p-5 text-center text-lg font-bold text-stone-900 shadow-sm ring-1 ring-stone-200 transition hover:shadow-md hover:ring-teal-300"
               >
-                <span className="text-3xl">{style.icon}</span>
-                <div>
-                  <p className="font-lao text-lg font-bold text-stone-900">{t.difficulty[id]}</p>
-                  <span className={`rounded-md px-2 py-0.5 text-xs font-medium ${style.badge}`}>{t.difficultyLevels(...levels)}</span>
-                </div>
+                {t.difficultyLevels(...levels)}
               </Link>
-            )
-          })}
+          ))}
         </div>
       </section>
     </div>
@@ -91,11 +79,11 @@ export function ArrangeRoute() {
   const { setId, difficulty } = useParams()
   if (!arrangeSetsById.has(setId ?? '')) return <Navigate to="/courses" replace />
   if (!isDifficulty(difficulty)) return <Navigate to={`/courses/arrange/${setId}`} replace />
-  return <ArrangeGame key={difficulty} difficulty={difficulty} />
+  return <ArrangeGame key={difficulty} setId={setId!} difficulty={difficulty} />
 }
 
 /** One round: ROUND_SIZE random sentences of the difficulty, each solved by tapping its words into order. */
-function ArrangeGame({ difficulty }: { difficulty: Difficulty }) {
+function ArrangeGame({ setId, difficulty }: { setId: string; difficulty: Difficulty }) {
   const pool = useArrangePool(difficulty)
   const [sfx] = useSoundEffects()
   const [voice] = useVoice()
@@ -104,6 +92,8 @@ function ArrangeGame({ difficulty }: { difficulty: Difficulty }) {
   // Sentences answered wrong at least once in this round.
   const [missed, setMissed] = useState<Sentence[]>([])
   const done = index >= round.length
+
+  useEffect(() => markArrangePlayed(`${setId}/${difficulty}`), [setId, difficulty])
 
   function next() {
     if (index + 1 === round.length && sfx) playComplete()
@@ -159,7 +149,7 @@ function ArrangeGame({ difficulty }: { difficulty: Difficulty }) {
       <div className="pt-4">
         <div className="mb-2 flex justify-between">
           <span className="font-lao text-sm font-medium text-stone-600">
-            {t.arrangeTitle} · {t.difficulty[difficulty]}
+            {t.arrangeTitle} · {t.difficultyLevels(...levelsOf(difficulty))}
           </span>
           <span className="font-lao text-sm text-stone-500">{t.progress(index + 1, round.length)}</span>
         </div>

@@ -1,7 +1,7 @@
 import { Suspense, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router'
 import { coursesById } from '../data/courses.ts'
-import { arrangeSetsById, type Difficulty } from '../data/arrange.ts'
+import { arrangeSetsById, levelsOf, type Difficulty } from '../data/arrange.ts'
 import { t } from '../i18n/lo.ts'
 import { useSoundEffects, useVoice } from '../lib/settings.ts'
 import { useDarkMode } from '../lib/theme.ts'
@@ -53,7 +53,7 @@ function pageInfo(pathname: string, search: string): { title: string; back?: str
   if (setId) {
     const title = `${t.arrangeTitle} ${arrangeSetsById.get(setId)?.title ?? ''}`
     return difficulty
-      ? { title: `${title} · ${t.difficulty[difficulty as Difficulty]}`, back: `/courses/arrange/${setId}` }
+      ? { title: `${title} · ${t.difficultyLevels(...levelsOf(difficulty as Difficulty))}`, back: `/courses/arrange/${setId}` }
       : { title, back: '/courses' }
   }
   const [, courseId, lesson] = /^\/courses\/([^/]+)(?:\/([^/]+))?/.exec(pathname) ?? []

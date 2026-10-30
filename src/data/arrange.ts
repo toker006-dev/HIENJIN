@@ -5,7 +5,7 @@ import type { Sentence } from '../types.ts'
 import { coursesById } from './courses.ts'
 
 // Word-order game. Each set is one card on the practice page; the HSK set pools the practice courses'
-// sentences by difficulty instead of by lesson. Sets from other sources go in ARRANGE_SETS later.
+// sentences into HSK level groups instead of by lesson. Sets from other sources go in ARRANGE_SETS later.
 
 export interface ArrangeSet {
   id: string
@@ -29,6 +29,10 @@ export const DIFFICULTIES: { id: Difficulty; levels: [number, number] }[] = [
 /** Sentences per round. */
 export const ROUND_SIZE = 25
 
+export function levelsOf(difficulty: Difficulty): [number, number] {
+  return DIFFICULTIES.find((d) => d.id === difficulty)!.levels
+}
+
 export function isDifficulty(value: string | undefined): value is Difficulty {
   return DIFFICULTIES.some((d) => d.id === value)
 }
@@ -38,7 +42,7 @@ const loaded = new Map<Difficulty, Promise<Sentence[]>>()
 function loadPool(difficulty: Difficulty): Promise<Sentence[]> {
   let promise = loaded.get(difficulty)
   if (!promise) {
-    const [from, to] = DIFFICULTIES.find((d) => d.id === difficulty)!.levels
+    const [from, to] = levelsOf(difficulty)
     const courses = [from, to].map((level) => coursesById.get(`hsk${level}`)!.course)
     // A one-word "sentence" has nothing to arrange.
     promise = Promise.all(courses.map((c) => c.loadSentences())).then((lists) => lists.flat().filter((s) => s.words.length >= 2))
