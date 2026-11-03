@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
+import { ResultIcon } from '../components/ResultIcon.tsx'
 import { Exercise } from '../components/Exercise.tsx'
 import { coursesById, isPlayable, useLoadedCourse, type Course, type Lesson, type LoadedCourse } from '../data/courses.ts'
 import { t } from '../i18n/lo.ts'
@@ -80,7 +81,7 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
         <div className="w-full rounded-3xl bg-surface px-6 py-8 shadow-sm ring-1 ring-stone-200 sm:px-12">
           {done ? (
             <div className="flex flex-col items-center gap-4 text-center">
-              <p className="text-5xl">🎉</p>
+              <ResultIcon />
               <h2 className="font-lao text-3xl font-bold text-stone-900">{t.doneTitle}</h2>
               <p className="font-lao text-stone-600">{t.doneBody(sentences.length)}</p>
               <div className="mt-4 flex flex-wrap justify-center gap-3">

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { Puzzle } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router'
+import { ResultIcon } from '../components/ResultIcon.tsx'
 import { SpeakButton } from '../components/SpeakButton.tsx'
 import { arrangeSetsById, DIFFICULTIES, isDifficulty, levelsOf, ROUND_SIZE, useArrangePool, type Difficulty } from '../data/arrange.ts'
 import { t } from '../i18n/lo.ts'
@@ -46,7 +48,7 @@ export function ArrangeSetPage() {
         <div className="relative aspect-[16/10] shrink-0 overflow-hidden rounded-xl sm:w-72">
           <img src={set.cover} alt="" className="size-full object-cover" />
           <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">
-            🧩 {set.title}
+            <Puzzle aria-hidden className="inline size-4 align-[-0.15em]" /> {set.title}
           </span>
         </div>
         <div className="flex min-w-0 flex-1 flex-col">
@@ -110,7 +112,7 @@ function ArrangeGame({ setId, difficulty }: { setId: string; difficulty: Difficu
     const score = round.length - missed.length
     return (
       <div className="mx-auto flex min-h-full max-w-xl flex-col items-center justify-center gap-4 px-4 py-8 text-center">
-        <p className="text-5xl">{score === round.length ? '🏆' : '🎉'}</p>
+        <ResultIcon perfect={score === round.length} />
         <h2 className="font-lao text-2xl font-bold text-stone-900">{t.arrangeScore(score, round.length)}</h2>
         {missed.length > 0 && (
           <div className="w-full rounded-2xl bg-surface p-4 text-left ring-1 ring-stone-200">

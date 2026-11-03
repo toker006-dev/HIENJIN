@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
+import { Headphones, Turtle } from 'lucide-react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
+import { ResultIcon } from '../components/ResultIcon.tsx'
 import { SpeakButton } from '../components/SpeakButton.tsx'
 import { arrangeSetsById, DIFFICULTIES, isDifficulty, levelsOf, ROUND_SIZE, useArrangePool, type Difficulty } from '../data/arrange.ts'
 import { t } from '../i18n/lo.ts'
@@ -32,7 +34,7 @@ export function ListenSetPage() {
       <section className="flex flex-col gap-5 rounded-2xl bg-surface p-4 shadow-sm ring-1 ring-stone-200 sm:flex-row sm:p-5">
         <div className="relative aspect-[16/10] shrink-0 overflow-hidden rounded-xl sm:w-72">
           <img src={set.cover} alt="" className="size-full object-cover" />
-          <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">🎧 {set.title}</span>
+          <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm"><Headphones aria-hidden className="inline size-4 align-[-0.15em]" /> {set.title}</span>
         </div>
         <div className="min-w-0 flex-1">
           <h2 className="font-lao text-2xl font-bold text-stone-900">
@@ -112,7 +114,7 @@ function ListenGame({ setId, difficulty, type }: { setId: string; difficulty: Di
     const score = round.length - missed.length
     return (
       <div className="mx-auto flex min-h-full max-w-xl flex-col items-center justify-center gap-4 px-4 py-8 text-center">
-        <p className="text-5xl">{score === round.length ? '🏆' : '🎉'}</p>
+        <ResultIcon perfect={score === round.length} />
         <h2 className="font-lao text-2xl font-bold text-stone-900">{t.arrangeScore(score, round.length)}</h2>
         {missed.length > 0 && (
           <ul className="w-full divide-y divide-stone-100 rounded-2xl bg-surface p-4 text-left ring-1 ring-stone-200">
@@ -210,7 +212,7 @@ function ListenQuestion({ sentence, pool, type, sfx, onMistake, onNext }: Questi
           </svg>
         </button>
         <button onClick={() => speak(text, 0.5)} className="font-lao rounded-full px-4 py-2 text-sm font-medium text-teal-800 ring-1 ring-teal-300 transition hover:bg-teal-50">
-          🐢 {t.listenSlow}
+          <Turtle aria-hidden className="inline size-4 align-[-0.15em]" /> {t.listenSlow}
         </button>
       </div>
 

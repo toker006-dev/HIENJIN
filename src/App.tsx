@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from 'react-router'
 import { Layout } from './components/Layout.tsx'
 import { ArrangeRoute, ArrangeSetPage } from './pages/ArrangePage.tsx'
 import { CourseDetailPage } from './pages/CourseDetailPage.tsx'
-import { CoursesPage } from './pages/CoursesPage.tsx'
+import { CoursesPage, TranslatePage } from './pages/CoursesPage.tsx'
 import { HomePage } from './pages/HomePage.tsx'
 import { FlashcardsRoute, ReviewRoute } from './pages/FlashcardsPage.tsx'
 import { LessonRoute } from './pages/LessonPage.tsx'
@@ -16,6 +16,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="courses" element={<CoursesPage />} />
+        <Route path="courses/translate" element={<TranslatePage />} />
         <Route path="courses/arrange/:setId" element={<ArrangeSetPage />} />
         <Route path="courses/arrange/:setId/:difficulty" element={<ArrangeRoute />} />
         <Route path="courses/listen/:setId" element={<ListenSetPage />} />

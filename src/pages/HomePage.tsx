@@ -1,4 +1,5 @@
 import { Suspense, useState, type ReactNode } from 'react'
+import { BookOpen, CalendarDays, Headphones, Layers, Pencil, Play, Puzzle, Sparkles, Target } from 'lucide-react'
 import { Link } from 'react-router'
 import { CourseCard } from '../components/CourseCard.tsx'
 import { SpeakButton } from '../components/SpeakButton.tsx'
@@ -103,10 +104,10 @@ function Welcome() {
       <p className="font-lao mx-auto mt-2 max-w-md text-teal-100">{t.welcomeBody}</p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <Link to="/vocabulary/1" className="font-lao rounded-full bg-surface px-6 py-2.5 font-semibold text-teal-800 transition hover:bg-teal-50">
-          📖 {t.startVocabulary}
+          <BookOpen aria-hidden className="inline size-4 align-[-0.15em]" /> {t.startVocabulary}
         </Link>
         <Link to="/courses/hsk1/1" className="font-lao rounded-full px-6 py-2.5 font-semibold text-white ring-1 ring-white/60 transition hover:bg-surface/10">
-          ✏️ {t.startPractice}
+          <Pencil aria-hidden className="inline size-4 align-[-0.15em]" /> {t.startPractice}
         </Link>
       </div>
     </section>
@@ -128,7 +129,7 @@ function ProgressSummary({ progress }: { progress: Record<string, CourseProgress
   return (
     <section className={`${card} grid gap-4 sm:grid-cols-3 sm:divide-x sm:divide-stone-100`}>
       <div className="flex items-center gap-3">
-        <span className="text-3xl">📖</span>
+        <BookOpen aria-hidden className="size-8 shrink-0 text-teal-700" />
         <div>
           <p className="font-lao text-sm text-stone-500">{t.totalKnown}</p>
           <p className="text-xl font-bold text-stone-900 tabular-nums">
@@ -137,7 +138,7 @@ function ProgressSummary({ progress }: { progress: Record<string, CourseProgress
         </div>
       </div>
       <div className="flex items-center gap-3 sm:pl-4">
-        <span className="text-3xl">✏️</span>
+        <Pencil aria-hidden className="size-8 shrink-0 text-teal-700" />
         <div>
           <p className="font-lao text-sm text-stone-500">{t.lessonsCompleted}</p>
           <p className="text-xl font-bold text-stone-900 tabular-nums">{lessonsDone}</p>
@@ -145,7 +146,7 @@ function ProgressSummary({ progress }: { progress: Record<string, CourseProgress
       </div>
       {next && (
         <Link to={`/vocabulary/${nextLevel}?lesson=${next.number}`} className="group flex items-center gap-3 rounded-xl sm:pl-4">
-          <span className="text-3xl">🎯</span>
+          <Target aria-hidden className="size-8 shrink-0 text-teal-700" />
           <div>
             <p className="font-lao text-sm text-stone-500">{t.nextUp}</p>
             <p className="font-lao text-lg font-bold text-teal-700 group-hover:underline">
@@ -158,7 +159,7 @@ function ProgressSummary({ progress }: { progress: Record<string, CourseProgress
   )
 }
 
-function ContinueCard({ icon, kind, title, detail, children }: { icon: string; kind: string; title: string; detail: string; children: ReactNode }) {
+function ContinueCard({ icon, kind, title, detail, children }: { icon: ReactNode; kind: string; title: string; detail: string; children: ReactNode }) {
   return (
     <div className={`${card} flex flex-col`}>
       <p className="font-lao text-sm font-medium text-teal-700">
@@ -180,13 +181,13 @@ function ContinueVocabulary({ last, now }: { last: NonNullable<VocabHistory['las
   const knownCount = words.filter((w) => known.has(w)).length
   return (
     <ContinueCard
-      icon="📖"
+      icon={<BookOpen aria-hidden className="inline size-4 align-[-0.15em]" />}
       kind={t.continueVocabulary}
       title={`HSK ${last.level} · ${t.lessonTitle(last.lesson)}`}
       detail={`${t.knownInLesson(knownCount, words.length)} · ${timeAgo(last.time, now)}`}
     >
       <Link to={`/vocabulary/${last.level}/cards?lesson=${last.lesson}`} className={primaryButton}>
-        🃏 {t.flashcards}
+        <Layers aria-hidden className="inline size-4 align-[-0.15em]" /> {t.flashcards}
       </Link>
       <Link to={`/vocabulary/${last.level}?lesson=${last.lesson}`} className={secondaryButton}>
         {t.wordList}
@@ -203,13 +204,13 @@ function ContinuePractice({ course: info, progress, subtitle }: { course: Course
   const solved = Math.min(progress[lesson.id]?.solved ?? 0, total)
   return (
     <ContinueCard
-      icon="✏️"
+      icon={<Pencil aria-hidden className="inline size-4 align-[-0.15em]" />}
       kind={t.continuePractice}
       title={`${course.title} · ${t.lessonTitle(lesson.number)}`}
       detail={`${t.progress(solved, total)} · ${subtitle}`}
     >
       <Link to={`/courses/${lesson.id}`} className={primaryButton}>
-        ▶ {t.continueAction}
+        <Play aria-hidden className="inline size-4 align-[-0.15em]" /> {t.continueAction}
       </Link>
     </ContinueCard>
   )
@@ -224,7 +225,7 @@ function QuickReview() {
   return (
     <section className="flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-amber-50 p-4 ring-1 ring-amber-200 sm:p-5">
       <div>
-        <p className="font-lao font-bold text-amber-900">📅 {t.reviewToday}</p>
+        <p className="font-lao font-bold text-amber-900"><CalendarDays aria-hidden className="inline size-4 align-[-0.15em]" /> {t.reviewToday}</p>
         <p className="font-lao text-sm text-amber-800">{t.reviewTodayBody(count)}</p>
       </div>
       <Link to="/vocabulary/review" className="font-lao rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-white transition hover:bg-amber-600">
@@ -272,7 +273,7 @@ function WordOfDay() {
 
   return (
     <section className={`${card} flex flex-col items-center text-center`}>
-      <p className="font-lao self-start text-lg font-bold text-stone-900">✨ {t.wordOfDay}</p>
+      <p className="font-lao self-start text-lg font-bold text-stone-900"><Sparkles aria-hidden className="inline size-5 align-[-0.15em]" /> {t.wordOfDay}</p>
       <span lang="zh-CN" className="font-zh mt-2 text-6xl text-stone-900">
         {w.word}
       </span>
@@ -308,7 +309,7 @@ function RecentArrange({ id, subtitle }: { id: string; subtitle: string }) {
     <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200 transition hover:shadow-md hover:ring-teal-300">
       <div className="relative aspect-[16/9] overflow-hidden">
         <img src={set.cover} alt="" loading="lazy" className="size-full object-cover transition duration-300 group-hover:scale-105" />
-        <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">{listen ? '🎧' : '🧩'} {level}</span>
+        <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">{listen ? <Headphones aria-hidden className="inline size-4 align-[-0.15em]" /> : <Puzzle aria-hidden className="inline size-4 align-[-0.15em]" />} {level}</span>
         <button
           onClick={() => hideFromRecent(`arrange/${id}`)}
           aria-label={`${t.remove}: ${listen ? t.listenTitle : t.arrangeTitle} ${level}`}
@@ -324,7 +325,7 @@ function RecentArrange({ id, subtitle }: { id: string; subtitle: string }) {
         <p className="font-lao font-bold text-stone-900">{listen ? t.listenTitle : t.arrangeTitle}</p>
         <p className="font-lao text-sm text-stone-500">{subtitle}</p>
         <Link to={`/courses/${listen ? 'listen' : 'arrange'}/${setId}/${difficulty}`} className={`${primaryButton} mt-3 self-start`}>
-          ▶ {t.playAgain}
+          <Play aria-hidden className="inline size-4 align-[-0.15em]" /> {t.playAgain}
         </Link>
       </div>
     </div>

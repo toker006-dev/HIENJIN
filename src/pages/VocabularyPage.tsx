@@ -1,4 +1,5 @@
 import { memo, Suspense, useCallback, useDeferredValue, useEffect, useMemo, useState } from 'react'
+import { CircleHelp } from 'lucide-react'
 import { Link, Navigate, NavLink, useParams, useSearchParams } from 'react-router'
 import { SpeakButton } from '../components/SpeakButton.tsx'
 import { LESSON_SIZE } from '../data/courses.ts'
@@ -138,7 +139,7 @@ function VocabularyPage({ level }: { level: number }) {
                 to={`/vocabulary/${level}/quiz?lesson=${lesson}`}
                 className="font-lao inline-flex shrink-0 items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-sm font-medium text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100"
               >
-                ❓ {t.quiz}
+                <CircleHelp aria-hidden className="inline size-4 align-[-0.15em]" /> {t.quiz}
               </Link>
             </div>
           </div>

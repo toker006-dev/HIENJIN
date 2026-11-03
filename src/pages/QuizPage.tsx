@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
+import { ResultIcon } from '../components/ResultIcon.tsx'
 import { SpeakButton } from '../components/SpeakButton.tsx'
 import { LEVELS, useVocabulary, type VocabWord } from '../data/vocabulary.ts'
 import { t } from '../i18n/lo.ts'
@@ -148,7 +149,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
     const score = questions.length - wrong.length
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center gap-4 px-4 py-8 text-center">
-        <p className="text-5xl">{score === questions.length ? '🏆' : '🎉'}</p>
+        <ResultIcon perfect={score === questions.length} />
         <h2 className="font-lao text-3xl font-bold text-stone-900">{t.quizScore(score, questions.length)}</h2>
         {wrong.length > 0 && (
           <div className="w-full rounded-2xl bg-surface p-4 text-left ring-1 ring-stone-200">

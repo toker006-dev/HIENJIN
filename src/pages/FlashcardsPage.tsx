@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
+import { ResultIcon } from '../components/ResultIcon.tsx'
 import { SpeakButton } from '../components/SpeakButton.tsx'
 import { LEVELS, parseFilter, useAllVocabulary, useVocabulary, type VocabWord, type WordFilter } from '../data/vocabulary.ts'
 import { t } from '../i18n/lo.ts'
@@ -94,7 +95,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
     const knownInDeck = deck.filter((w) => known.has(w.word)).length
     return (
       <div className="mx-auto flex min-h-full max-w-xl flex-col items-center justify-center gap-4 px-4 py-8 text-center">
-        <p className="text-5xl">🎉</p>
+        <ResultIcon />
         <h2 className="font-lao text-3xl font-bold text-stone-900">{t.cardsDoneTitle}</h2>
         <p className="font-lao text-stone-600">{t.cardsDoneBody(knownInDeck, deck.length)}</p>
         <div className="mt-4 flex flex-wrap justify-center gap-3">

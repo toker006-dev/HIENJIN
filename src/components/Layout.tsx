@@ -1,4 +1,5 @@
 import { Suspense, useState } from 'react'
+import { BookOpen, House, Pencil } from 'lucide-react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router'
 import { coursesById } from '../data/courses.ts'
 import { arrangeSetsById, levelsOf, type Difficulty } from '../data/arrange.ts'
@@ -13,27 +14,17 @@ const navItems = [
   {
     to: '/',
     label: t.navHome,
-    icon: <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1Z" />,
+    icon: House,
   },
   {
     to: '/vocabulary',
     label: t.navVocabulary,
-    icon: (
-      <>
-        <path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6.5a2.5 2.5 0 0 0 0 5H19" />
-        <path d="M9 7h6" />
-      </>
-    ),
+    icon: BookOpen,
   },
   {
     to: '/courses',
     label: t.navCourses,
-    icon: (
-      <>
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
-      </>
-    ),
+    icon: Pencil,
   },
 ]
 
@@ -56,11 +47,12 @@ function pageInfo(pathname: string, search: string): { title: string; back?: str
       ? { title: `${title} · ${t.difficultyLevels(...levelsOf(difficulty as Difficulty))}`, back: `/courses/${activity}/${setId}` }
       : { title, back: '/courses' }
   }
+  if (pathname === '/courses/translate') return { title: t.hskVocabulary, back: '/courses' }
   const [, courseId, lesson] = /^\/courses\/([^/]+)(?:\/([^/]+))?/.exec(pathname) ?? []
   if (!courseId) return { title: t.allCourses }
   const course = coursesById.get(courseId)?.course.title ?? t.navCourses
   if (lesson) return { title: `${course} · ${t.lessonTitle(Number(lesson))}`, back: `/courses/${courseId}` }
-  return { title: course, back: '/courses' }
+  return { title: course, back: '/courses/translate' }
 }
 
 /** Side menu + header around every page. On small screens the menu slides in from a hamburger button. */
@@ -100,9 +92,7 @@ export function Layout() {
                 }`
               }
             >
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                {item.icon}
-              </svg>
+              <item.icon aria-hidden className="size-5" />
               {item.label}
             </NavLink>
           ))}
