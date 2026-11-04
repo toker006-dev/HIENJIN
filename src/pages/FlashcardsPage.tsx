@@ -1,4 +1,4 @@
-import { ProgressTrail } from '../components/ProgressTrail.tsx'
+import { ProgressBar } from '../components/ProgressBar.tsx'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
 import { ResultIcon } from '../components/ResultIcon.tsx'
@@ -104,7 +104,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
             <Link
               to={reviewLink}
               autoFocus
-              className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800"
+              className="font-lao rounded-md bg-primary px-8 py-3 font-semibold text-on-primary transition hover:bg-primary-hover"
             >
               {t.reviewLearning}
             </Link>
@@ -123,8 +123,8 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
   const isKnown = known.has(card.word)
 
   return (
-    <div className="mx-auto flex min-h-full w-full max-w-xl flex-col px-4">
-      <div className="pt-4">
+    <div className="mx-auto flex h-full w-full max-w-xl flex-col px-4">
+      <div className="pt-3">
         <div className="mb-2 flex justify-between">
           <span className="font-lao text-sm font-medium text-stone-600">
             {label}
@@ -132,27 +132,27 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
           </span>
           <span className="font-lao text-sm text-stone-500">{t.cardProgress(index + 1, deck.length)}</span>
         </div>
-        <ProgressTrail ratio={(index / deck.length)} />
+        <ProgressBar ratio={(index / deck.length)} />
       </div>
 
-      <div className="flex flex-1 flex-col justify-center gap-5 py-6">
+      <div className="flex min-h-0 flex-1 flex-col justify-center gap-3 py-3">
         <div
-          key={`${index}-${flipped}`}
+          key={index}
           role="button"
           tabIndex={0}
           aria-label={t.flip}
           onClick={() => setFlipped(!flipped)}
-          className={`animate-flip relative flex min-h-80 cursor-pointer flex-col items-center justify-center rounded-3xl px-6 py-8 text-center shadow-sm ring-1 transition select-none ${
+          className={`animate-flip relative flex max-h-full min-h-0 flex-1 cursor-pointer flex-col items-center justify-center overflow-y-auto rounded-3xl px-5 py-5 sm:max-h-[32rem] text-center shadow-sm ring-1 transition select-none ${
             isKnown ? 'bg-emerald-50/50 ring-emerald-200' : 'bg-surface ring-stone-200'
           }`}
         >
           {isKnown && <span className="font-lao absolute top-3 right-4 text-xs font-medium text-emerald-600">✓ {t.gotIt}</span>}
-          <span lang="zh-CN" className="font-zh text-7xl leading-tight text-stone-900 sm:text-8xl">
+          <span lang="zh-CN" className={`font-zh leading-tight text-stone-900 transition-all ${flipped ? 'text-6xl' : 'text-7xl sm:text-8xl'}`}>
             {card.word}
           </span>
 
           {flipped ? (
-            <div className="mt-4 flex w-full flex-col items-center gap-2">
+            <div className="mt-2 flex w-full flex-col items-center gap-1.5">
               <div className="flex items-center gap-1">
                 <span className="text-2xl font-medium text-teal-800">{card.pinyin}</span>
                 <SpeakButton text={card.word} />
@@ -167,7 +167,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
               </p>
               <p className="text-stone-500">{card.english}</p>
               {card.sentence && (
-                <div className="mt-2 w-full border-t border-stone-200 pt-3">
+                <div className="mt-1 w-full border-t border-stone-200 pt-2">
                   <div className="flex items-center justify-center gap-1">
                     <p lang="zh-CN" className="font-zh text-lg text-stone-900">
                       {card.sentence.words.map((part, i) => (
@@ -195,7 +195,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
             disabled={index === 0}
             aria-label={t.previous}
             title={t.previous}
-            className="rounded-full p-3 text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100 disabled:opacity-30"
+            className="grid size-12 shrink-0 place-items-center rounded-full text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100 disabled:opacity-30"
           >
             <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m15 18-6-6 6-6" />
@@ -203,7 +203,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
           </button>
           <button
             onClick={() => markKnown()}
-            className="font-lao flex-1 rounded-full bg-emerald-600 py-3 font-semibold text-white transition hover:bg-emerald-700"
+            className="font-lao min-h-12 flex-1 rounded-full bg-emerald-600 font-semibold text-white transition hover:bg-emerald-700"
           >
             ✓ {t.gotIt}
           </button>
@@ -211,7 +211,7 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
             onClick={() => go(index + 1)}
             aria-label={t.next}
             title={t.next}
-            className="rounded-full p-3 text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100"
+            className="grid size-12 shrink-0 place-items-center rounded-full text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100"
           >
             <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="m9 18 6-6-6-6" />

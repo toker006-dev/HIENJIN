@@ -69,7 +69,7 @@ function VocabularyPage({ level }: { level: number }) {
             to={`/vocabulary/${n}`}
             className={({ isActive }) =>
               `shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold transition ${
-                isActive ? 'bg-teal-700 text-white' : 'bg-surface text-stone-600 ring-1 ring-stone-200 hover:bg-stone-100'
+                isActive ? 'bg-primary text-on-primary' : 'bg-surface text-stone-600 ring-1 ring-stone-200 hover:bg-stone-100'
               }`
             }
           >
@@ -78,7 +78,7 @@ function VocabularyPage({ level }: { level: number }) {
         ))}
       </nav>
 
-      <div className="mt-4 rounded-3xl border-2 border-stone-900 bg-surface p-4 shadow-[0_5px_0_0_var(--color-stone-900)]">
+      <div className="mt-4 rounded-3xl border border-stone-200 bg-surface p-4 shadow-sm">
         <div className="flex items-center justify-between gap-3">
           <span className="font-lao text-sm font-medium text-stone-700">{t.knownCount(knownCount, words.length)}</span>
           <span className="text-sm text-stone-400 tabular-nums">{Math.round((knownCount / words.length) * 100)}%</span>
@@ -146,7 +146,7 @@ function VocabularyPage({ level }: { level: number }) {
           {lessonWords.length === 0 ? (
             <p className="font-lao rounded-2xl bg-surface py-16 text-center text-stone-500 ring-1 ring-stone-200">{t.noWords}</p>
           ) : (
-            <ul className="divide-y divide-stone-100 overflow-hidden rounded-3xl border-2 border-stone-900 bg-surface shadow-[0_5px_0_0_var(--color-stone-900)]">
+            <ul className="divide-y divide-stone-100 overflow-hidden rounded-3xl border border-stone-200 bg-surface shadow-sm">
               {lessonWords.map((w) => (
                 <WordRow key={w.word} word={w} known={known.has(w.word)} open={open === w.word} onToggle={toggle} />
               ))}
@@ -163,7 +163,7 @@ function VocabularyPage({ level }: { level: number }) {
             <button
               onClick={() => goToLesson(lesson + 1)}
               disabled={lesson === lessonCount}
-              className="font-lao rounded-full bg-teal-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-800 disabled:invisible"
+              className="font-lao rounded-full bg-primary px-4 py-2 text-sm font-semibold text-on-primary transition hover:bg-primary-hover disabled:invisible"
             >
               {t.lessonTitle(lesson + 1)} →
             </button>
@@ -198,7 +198,7 @@ function SearchResults({ query, filter, known, open, onToggle }: {
       {[...levels].map(([level, levelWords]) => (
         <section key={level} className="mt-3">
           <h3 className="mb-2 px-1 font-semibold text-stone-800">HSK {level}</h3>
-          <ul className="divide-y divide-stone-100 overflow-hidden rounded-3xl border-2 border-stone-900 bg-surface shadow-[0_5px_0_0_var(--color-stone-900)]">
+          <ul className="divide-y divide-stone-100 overflow-hidden rounded-3xl border border-stone-200 bg-surface shadow-sm">
             {levelWords.map((w) => (
               <WordRow
                 key={w.word}
@@ -228,7 +228,7 @@ function Pager({ lesson, count, done, onChange }: { lesson: number; count: numbe
           title={t.lessonTitle(n)}
           className={`size-9 rounded-lg text-sm font-medium tabular-nums transition ${
             n === lesson
-              ? 'bg-teal-700 text-white'
+              ? 'bg-primary text-on-primary'
               : done.has(n)
                 ? 'bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200 hover:bg-emerald-100'
                 : 'bg-surface text-stone-600 ring-1 ring-stone-200 hover:bg-stone-100'

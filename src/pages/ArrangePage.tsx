@@ -1,4 +1,4 @@
-import { ProgressTrail } from '../components/ProgressTrail.tsx'
+import { ProgressBar } from '../components/ProgressBar.tsx'
 import { useEffect, useRef, useState } from 'react'
 import { Puzzle } from 'lucide-react'
 import { Link, Navigate, useParams } from 'react-router'
@@ -45,7 +45,7 @@ export function ArrangeSetPage() {
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-8">
-      <section className="flex flex-col gap-5 rounded-3xl border-2 border-stone-900 bg-surface p-4 shadow-[0_5px_0_0_var(--color-stone-900)] sm:flex-row sm:p-5">
+      <section className="flex flex-col gap-5 rounded-3xl border border-stone-200 bg-surface p-4 shadow-sm sm:flex-row sm:p-5">
         <div className="relative aspect-[16/10] shrink-0 overflow-hidden rounded-xl sm:w-72">
           <img src={set.cover} alt="" className="size-full object-cover" />
           <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">
@@ -67,7 +67,7 @@ export function ArrangeSetPage() {
               <Link
                 key={id}
                 to={`/courses/arrange/${set.id}/${id}`}
-                className="rounded-3xl border-2 border-stone-900 bg-surface p-5 text-center text-lg font-bold text-stone-900 shadow-[0_5px_0_0_var(--color-stone-900)] transition hover:shadow-md hover:ring-teal-300"
+                className="rounded-3xl border border-stone-200 bg-surface p-5 text-center text-lg font-bold text-stone-900 shadow-sm transition hover:shadow-md hover:ring-teal-300"
               >
                 {t.difficultyLevels(...levels)}
               </Link>
@@ -136,7 +136,7 @@ function ArrangeGame({ setId, difficulty }: { setId: string; difficulty: Difficu
           </div>
         )}
         <div className="mt-2 flex flex-wrap justify-center gap-3">
-          <button onClick={playAgain} autoFocus className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800">
+          <button onClick={playAgain} autoFocus className="font-lao rounded-md bg-primary px-8 py-3 font-semibold text-on-primary transition hover:bg-primary-hover">
             {t.playAgain}
           </button>
           <Link to="/courses/arrange/hsk" className="font-lao rounded-md px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100">
@@ -156,11 +156,11 @@ function ArrangeGame({ setId, difficulty }: { setId: string; difficulty: Difficu
           </span>
           <span className="font-lao text-sm text-stone-500">{t.progress(index + 1, round.length)}</span>
         </div>
-        <ProgressTrail ratio={(index / round.length)} />
+        <ProgressBar ratio={(index / round.length)} />
       </div>
 
       <div className="flex flex-1 items-center py-4">
-        <div className="w-full rounded-3xl border-2 border-stone-900 bg-surface px-6 py-8 shadow-[0_5px_0_0_var(--color-stone-900)] sm:px-12">
+        <div className="w-full rounded-3xl border border-stone-200 bg-surface px-6 py-8 shadow-sm sm:px-12">
           <ArrangeExercise
             key={`${round[index].id}-${index}`}
             sentence={round[index]}
@@ -254,7 +254,7 @@ function ArrangeExercise({ sentence, sfx, voice, onMistake, onNext }: {
     <div className="flex flex-col items-center gap-6 text-center">
       <div className="space-y-3">
         <p className="font-lao text-sm font-medium tracking-wide text-stone-500">{t.arrangeInstruction}</p>
-        <p lang="lo" className="font-lao-display text-2xl leading-relaxed font-bold text-stone-900 sm:text-3xl">
+        <p lang="lo" className="font-lao text-2xl leading-relaxed font-bold text-stone-900 sm:text-3xl">
           {sentence.lao}
         </p>
       </div>

@@ -4,8 +4,6 @@ import { isCorrect } from '../lib/answer.ts'
 import { playCorrect, playType, playWrong } from '../lib/sfx.ts'
 import { canSpeak, speak } from '../lib/speech.ts'
 import type { Sentence } from '../types.ts'
-import { Seal } from './Seal.tsx'
-import { Mascot } from './Mascot.tsx'
 import { WordCard } from './WordCard.tsx'
 
 type Status = 'idle' | 'correct' | 'wrong'
@@ -22,13 +20,13 @@ interface Props {
 const MODIFIER_KEYS = new Set(['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'])
 
 const blankStyles: Record<Status, string> = {
-  idle: 'text-stone-900',
+  idle: 'border-stone-300 text-stone-900',
   wrong: 'animate-shake border-red-500 bg-red-50 text-red-700',
   correct: 'animate-pop border-emerald-500 bg-emerald-50 text-emerald-700',
 }
 
 const hintButton =
-  'font-lao inline-flex items-center gap-1.5 rounded-md px-3.5 py-1.5 text-sm font-medium text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100 hover:text-stone-900 aria-pressed:bg-amber-50 aria-pressed:text-amber-700 aria-pressed:ring-amber-300'
+  'font-lao inline-flex min-h-11 items-center gap-2 rounded-full px-4 font-medium text-stone-600 ring-1 ring-stone-300 transition hover:bg-stone-100 hover:text-stone-900 aria-pressed:bg-amber-50 aria-pressed:text-amber-700 aria-pressed:ring-amber-300'
 
 /** One sentence: the Lao prompt plus one input per Chinese word. Remount (via `key`) for each new sentence. */
 export function Exercise({ sentence, onNext, sfx, voice }: Props) {
@@ -38,8 +36,6 @@ export function Exercise({ sentence, onNext, sfx, voice }: Props) {
   const inputs = useRef<(HTMLInputElement | null)[]>([])
   const nextButton = useRef<HTMLButtonElement>(null)
   const [revealed, setRevealed] = useState(false)
-  /** Bumped on every wrong check so the ink-blot ripple replays. */
-  const [misses, setMisses] = useState(0)
   const lastFocused = useRef(0)
   const lastKeyAt = useRef(0)
   const speakTimer = useRef<number>(undefined)
@@ -63,7 +59,6 @@ export function Exercise({ sentence, onNext, sfx, voice }: Props) {
       if (voice && canSpeak) speakTimer.current = window.setTimeout(() => speak(sentence.words.join('')), sfx ? 450 : 0)
     } else {
       if (sfx) playWrong()
-      setMisses((m) => m + 1)
       inputs.current[firstWrong]?.focus()
     }
   }
@@ -109,41 +104,19 @@ export function Exercise({ sentence, onNext, sfx, voice }: Props) {
   }
 
   return (
-    <div className="relative flex flex-col items-center gap-4 text-center">
-      {solved && (
-        <div className="absolute -top-4 right-0 sm:-right-4">
-          <Seal char="对" stamp className="size-12 text-2xl" />
-        </div>
-      )}
-      {/* Bao reacts to each check; floats in the corner so it adds no height. */}
-      <div className="pointer-events-none absolute -top-2 -left-2 flex items-start gap-1 sm:-left-6">
-        <Mascot key={`${solved}-${misses}`} mood={solved ? 'happy' : misses ? 'sad' : 'idle'} className="size-12" />
-        <span
-          key={`b-${solved}-${misses}`}
-          className="font-lao animate-pop hidden rounded-2xl rounded-tl-none border-2 border-stone-900 bg-surface px-2.5 py-0.5 text-xs font-semibold text-stone-800 sm:block"
-        >
-          {solved ? t.mascotCorrect : misses ? t.mascotWrong : t.mascotIdle}
-        </span>
-      </div>
-      <div className="space-y-2 pt-6 sm:pt-4">
-        <p className="text-sm font-medium tracking-wide text-stone-500">{t.instruction}</p>
-        <p lang="lo" className="font-lao-display text-2xl leading-snug font-bold text-stone-900 sm:text-[2rem]">
+    <div className="flex flex-col items-center gap-4 text-center">
+      <div className="space-y-2">
+        <p className="font-lao text-stone-600">{t.instruction}</p>
+        <p lang="lo" className="font-lao text-2xl leading-snug font-bold text-stone-900 sm:text-[2rem]">
           {sentence.lao}
         </p>
       </div>
 
-      <div className="relative flex flex-wrap justify-center gap-3" lang="zh-CN">
-        {misses > 0 && !solved && (
-          <span
-            key={misses}
-            aria-hidden
-            className="animate-ink pointer-events-none absolute top-1/2 left-1/2 -mt-10 -ml-10 size-20 rounded-full bg-stone-900"
-          />
-        )}
+      <div className="flex flex-wrap justify-center gap-3" lang="zh-CN">
         {sentence.words.map((word, i) => (
           <div key={i} className="flex flex-col items-center">
             <span
-              className={`tianzige block transition-colors focus-within:border-teal-700 focus-within:ring-4 focus-within:ring-teal-100 ${blankStyles[statuses[i]]}`}
+              className={`block rounded-2xl border-2 bg-surface transition-colors focus-within:border-teal-500 focus-within:ring-4 focus-within:ring-teal-100 ${blankStyles[statuses[i]]}`}
             >
               <input
                 ref={(el) => {
@@ -217,7 +190,7 @@ export function Exercise({ sentence, onNext, sfx, voice }: Props) {
       )}
 
       <div className="flex min-h-20 flex-col items-center gap-2.5">
-        <p aria-live="polite" className={`font-lao text-base ${solved ? 'text-emerald-700' : 'text-red-600'}`}>
+        <p aria-live="polite" className={`font-lao text-lg font-semibold ${solved ? 'text-emerald-700' : 'text-red-600'}`}>
           {solved ? t.correct : hasMistake ? t.wrong : ''}
         </p>
         {solved && <WordCard sentence={sentence} />}
@@ -225,14 +198,14 @@ export function Exercise({ sentence, onNext, sfx, voice }: Props) {
           <button
             ref={nextButton}
             onClick={onNext}
-            className="font-lao animate-pop rounded-full border-2 border-stone-900 bg-emerald-600 px-10 py-3 shadow-[0_4px_0_0_var(--color-stone-900)] active:translate-y-1 active:shadow-none font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus-visible:ring-4 focus-visible:ring-emerald-200 focus-visible:outline-none"
+            className="font-lao animate-pop min-h-14 rounded-full bg-emerald-600 px-12 text-lg font-semibold text-white transition hover:bg-emerald-700 focus-visible:ring-4 focus-visible:ring-emerald-200 focus-visible:outline-none"
           >
             {t.next} →
           </button>
         ) : (
           <button
             onClick={check}
-            className="font-lao rounded-full border-2 border-stone-900 bg-teal-700 px-10 py-3 shadow-[0_4px_0_0_var(--color-stone-900)] active:translate-y-1 active:shadow-none font-semibold text-white shadow-sm transition hover:bg-teal-800 focus-visible:ring-4 focus-visible:ring-teal-200 focus-visible:outline-none"
+            className="font-lao min-h-14 rounded-full bg-primary px-12 text-lg font-semibold text-on-primary transition hover:bg-primary-hover focus-visible:ring-4 focus-visible:ring-teal-200 focus-visible:outline-none"
           >
             {t.check}
           </button>

@@ -1,174 +1,68 @@
 @import 'tailwindcss';
 
 /*
- * "Ink & Cinnabar" theme: rice paper, black ink, cinnabar seal red, jade for correct answers.
- * The Tailwind palettes are remapped here so components keep their class names:
- *   teal → cinnabar (accent) · stone → paper/ink · emerald → jade · red → crimson (errors) · amber → ochre gold.
+ * Clean green theme, built for readability at any age.
+ *   text #091911 · background #f9fdfb · primary #47ce87 · secondary #96e8bc · accent #65e4a1
+ * Palettes are remapped so components keep their class names:
+ *   teal → brand green (300 accent, 200 secondary, `bg-primary` = #47ce87 with dark text; 700+ = dark green for text)
+ *   stone → green-tinted neutrals (900 = text colour, 50 = background) · emerald → correct · red → wrong · amber → hints.
  * Flat colours only, no gradients.
  */
 @theme {
   --font-sans: 'Noto Sans Lao', 'Noto Sans SC', system-ui, sans-serif;
   --font-lao: 'Noto Sans Lao', system-ui, sans-serif;
-  --font-zh: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
-  --font-lao-display: 'Noto Serif Lao', 'Noto Sans Lao', serif;
+  --font-zh: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
-  --color-surface: #fffdf8;
-  --color-sky-700: #2c5d8a;
-  --color-paper: #f3efe5;
+  --color-surface: #ffffff;
+  --color-paper: #f9fdfb;
+  --color-primary: #47ce87;
+  --color-primary-hover: #3bbd78;
+  --color-on-primary: #091911;
+  --color-secondary: #96e8bc;
+  --color-accent: #65e4a1;
 
-  --color-stone-50: #f3efe5;
-  --color-stone-100: #ebe5d8;
-  --color-stone-200: #ddd5c4;
-  --color-stone-300: #c7bda9;
-  --color-stone-400: #9c917e;
-  --color-stone-500: #736a5b;
-  --color-stone-600: #5a5246;
-  --color-stone-700: #423c33;
-  --color-stone-800: #2c2823;
-  --color-stone-900: #1c1a17;
-  --color-stone-950: #12100e;
+  --color-stone-50: #f9fdfb;
+  --color-stone-100: #eef5f1;
+  --color-stone-200: #d3e0d8;
+  --color-stone-300: #c3d3ca;
+  --color-stone-400: #8fa398;
+  --color-stone-500: #627569;
+  --color-stone-600: #47584e;
+  --color-stone-700: #313f37;
+  --color-stone-800: #1c2a22;
+  --color-stone-900: #091911;
+  --color-stone-950: #040d08;
 
-  --color-teal-50: #fbefec;
-  --color-teal-100: #f6dbd5;
-  --color-teal-200: #ecb3aa;
-  --color-teal-300: #e39a90;
-  --color-teal-400: #d8473a;
-  --color-teal-500: #c03b2e;
-  --color-teal-600: #b0362a;
-  --color-teal-700: #a83226;
-  --color-teal-800: #8a2a20;
-  --color-teal-900: #5e1d16;
+  --color-teal-50: #effbf5;
+  --color-teal-100: #dcf7e8;
+  --color-teal-200: #96e8bc;
+  --color-teal-300: #65e4a1;
+  --color-teal-400: #47ce87;
+  --color-teal-500: #33b672;
+  --color-teal-600: #23975b;
+  --color-teal-700: #187a48;
+  --color-teal-800: #135f39;
+  --color-teal-900: #0e472b;
 
-  --color-emerald-50: #ecf5ef;
-  --color-emerald-100: #d3eadb;
-  --color-emerald-200: #a9d4b8;
-  --color-emerald-300: #74b98e;
-  --color-emerald-400: #3f9a65;
-  --color-emerald-500: #2a8553;
-  --color-emerald-600: #1f7a4a;
-  --color-emerald-700: #17643c;
-  --color-emerald-800: #114d2e;
+  --color-emerald-50: #effbf5;
+  --color-emerald-100: #dcf7e8;
+  --color-emerald-200: #96e8bc;
+  --color-emerald-300: #65e4a1;
+  --color-emerald-500: #33b672;
+  --color-emerald-600: #187a48;
+  --color-emerald-700: #135f39;
+  --color-emerald-800: #0e472b;
 
-  --color-red-50: #fbeef2;
-  --color-red-100: #f6dbe3;
-  --color-red-200: #edb6c6;
-  --color-red-300: #df8aa4;
-  --color-red-400: #cc5a7e;
-  --color-red-500: #b8365f;
-  --color-red-600: #a12d53;
-  --color-red-700: #861f44;
-
-  --color-amber-50: #fbf4e4;
-  --color-amber-100: #f5e6c2;
-  --color-amber-200: #ead08a;
-  --color-amber-300: #dcb65a;
-  --color-amber-400: #cc9a2e;
-  --color-amber-500: #b8861f;
-  --color-amber-600: #a0731a;
-  --color-amber-700: #835d15;
-  --color-amber-800: #654710;
-  --color-amber-900: #47320b;
-
-  /* Paper-like: tighter corners than the old pill-heavy look. */
-  --radius-2xl: 0.75rem;
-  --radius-3xl: 1rem;
-  --shadow-sm: 0 1px 0 0 rgb(28 26 23 / 0.06), 0 2px 6px -2px rgb(28 26 23 / 0.08);
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+  --shadow-sm: 0 1px 3px 0 rgb(9 25 17 / 0.1), 0 4px 14px -2px rgb(9 25 17 / 0.12);
+  --shadow-md: 0 2px 4px 0 rgb(9 25 17 / 0.1), 0 10px 24px -4px rgb(9 25 17 / 0.18);
 
   --animate-shake: shake 0.4s ease-in-out;
-  --animate-rise: rise 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  --animate-pop: pop 0.3s cubic-bezier(0.3, 1.6, 0.5, 1) both;
-  --animate-stamp: stamp 0.5s cubic-bezier(0.3, 1.5, 0.5, 1) both;
-  --animate-ink: ink 0.7s ease-out both;
-  --animate-swing: swing 2.4s ease-in-out infinite;
-  --animate-flip: flip 0.45s cubic-bezier(0.3, 1.2, 0.5, 1) both;
+  --animate-rise: rise 0.35s ease-out both;
+  --animate-pop: pop 0.3s cubic-bezier(0.3, 1.5, 0.5, 1) both;
+  --animate-flip: flip 0.4s ease-out both;
 
-  --animate-bob: bob 2.6s ease-in-out infinite;
-  --animate-hop: hop 0.7s cubic-bezier(0.3, 1.4, 0.5, 1) both;
-  --animate-wobble: wobble 0.6s ease-in-out both;
-  --animate-blink: blink 4s infinite;
-  --animate-unroll: unroll 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) both;
-  --animate-float: float 6s ease-in-out infinite;
-
-  --animate-type: type 4.8s steps(1) infinite;
-  @keyframes type {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    10%,
-    85% {
-      opacity: 1;
-      transform: none;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes bob {
-    0%,
-    100% {
-      transform: translateY(0) scale(1, 1);
-    }
-    50% {
-      transform: translateY(-4px) scale(0.98, 1.02);
-    }
-  }
-  @keyframes hop {
-    0% {
-      transform: translateY(0) scale(1.15, 0.85);
-    }
-    40% {
-      transform: translateY(-22px) scale(0.9, 1.1) rotate(-6deg);
-    }
-    70% {
-      transform: translateY(0) scale(1.1, 0.9);
-    }
-    100% {
-      transform: none;
-    }
-  }
-  @keyframes wobble {
-    0%,
-    100% {
-      transform: rotate(0);
-    }
-    25% {
-      transform: rotate(-9deg);
-    }
-    50% {
-      transform: rotate(7deg);
-    }
-    75% {
-      transform: rotate(-4deg);
-    }
-  }
-  @keyframes blink {
-    0%,
-    92%,
-    100% {
-      transform: scaleY(1);
-    }
-    95% {
-      transform: scaleY(0.1);
-    }
-  }
-  @keyframes unroll {
-    from {
-      clip-path: inset(0 0 100% 0);
-    }
-    to {
-      clip-path: inset(0 0 0 0);
-    }
-  }
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0) rotate(-3deg);
-    }
-    50% {
-      transform: translateY(-10px) rotate(3deg);
-    }
-  }
   @keyframes shake {
     0%,
     100% {
@@ -186,7 +80,7 @@
   @keyframes rise {
     from {
       opacity: 0;
-      transform: translateY(12px);
+      transform: translateY(8px);
     }
     to {
       opacity: 1;
@@ -195,45 +89,12 @@
   }
   @keyframes pop {
     from {
-      transform: scale(0.6);
       opacity: 0;
+      transform: scale(0.7);
     }
     to {
-      transform: scale(1);
       opacity: 1;
-    }
-  }
-  @keyframes stamp {
-    0% {
-      transform: scale(2.4) rotate(-24deg);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(0.92) rotate(-10deg);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1) rotate(-12deg);
-      opacity: 1;
-    }
-  }
-  @keyframes ink {
-    from {
-      transform: scale(0.2);
-      opacity: 0.4;
-    }
-    to {
-      transform: scale(2.4);
-      opacity: 0;
-    }
-  }
-  @keyframes swing {
-    0%,
-    100% {
-      transform: rotate(-6deg);
-    }
-    50% {
-      transform: rotate(6deg);
+      transform: none;
     }
   }
   @keyframes flip {
@@ -248,10 +109,19 @@
     from {
       transform: translateY(-10vh) rotate(0);
     }
+    80% {
+      opacity: 1;
+    }
     to {
       transform: translateY(110vh) rotate(540deg);
+      opacity: 0;
     }
   }
+}
+
+html {
+  /* Slightly larger base text for easier reading. */
+  font-size: 106.25%;
 }
 
 body {
@@ -259,67 +129,23 @@ body {
   color: var(--color-stone-900);
 }
 
-/* Each page fades up when it opens (Layout keys this on the route). */
+/* Pages fade in gently when they open (Layout keys this on the route). */
 .page-enter > * {
   animation: var(--animate-rise);
 }
 
-/* Cards lift a little on hover; buttons press in. */
-a.rounded-2xl,
-a.rounded-3xl {
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    background-color 0.18s;
-}
-a.rounded-2xl:hover,
-a.rounded-3xl:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px -8px rgb(28 26 23 / 0.22);
-}
-button:active:not(:disabled) {
-  transform: scale(0.97);
+:focus-visible {
+  outline: 3px solid var(--color-teal-500);
+  outline-offset: 2px;
 }
 
-@layer components {
-/* 田字格 writing cell: red border with dashed centre guides. */
-.tianzige {
-  position: relative;
-  border: 2px solid var(--color-teal-400);
-  border-radius: 3px;
-  background-color: var(--color-surface);
-}
-.tianzige::before,
-.tianzige::after {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-}
-.tianzige::before {
-  inset: 50% 0 auto;
-  border-top: 1px dashed var(--color-teal-300);
-}
-.tianzige::after {
-  inset: 0 auto 0 50%;
-  border-left: 1px dashed var(--color-teal-300);
-}
-}
-
-/* Thin 回纹 (fret) rule under headings. */
-.fret {
-  height: 6px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6'%3E%3Cpath d='M0 5.5h3V.5h6v3H6' fill='none' stroke='%23a83226' stroke-width='1'/%3E%3C/svg%3E")
-    repeat-x;
-  opacity: 0.5;
-}
-
-/* Paper-cut confetti piece (Celebration component). */
+/* Confetti piece on end-of-round screens (ResultIcon). */
 .confetti-piece {
   position: fixed;
   top: 0;
   z-index: 50;
   pointer-events: none;
-  animation: confetti linear forwards;
+  animation: confetti linear both;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -336,62 +162,63 @@ button:active:not(:disabled) {
 }
 
 /*
- * Dark mode "ink night" (class "dark" on <html>). The palette flips: neutrals invert, pale tints become
- * deep tints, deep accents become bright. "white" is only used for text on coloured buttons.
+ * Dark mode (class "dark" on <html>). Neutrals invert, pale tints become deep tints, deep greens become bright.
+ * "white" is only used for text on coloured buttons, so it becomes near-black.
  */
 .dark {
   color-scheme: dark;
-  --color-surface: #1d1a17;
-  --color-sky-700: #8fbfe6;
-  --color-paper: #12100e;
-  --color-white: #12100e;
+  --color-surface: #112019;
+  --color-paper: #08130d;
+  --color-white: #08130d;
+  --color-primary-hover: #65e4a1;
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 4px 14px -2px rgb(0 0 0 / 0.5);
+  --shadow-md: 0 2px 4px 0 rgb(0 0 0 / 0.4), 0 10px 24px -4px rgb(0 0 0 / 0.6);
 
-  --color-stone-50: #12100e;
-  --color-stone-100: #26221e;
-  --color-stone-200: #36312b;
-  --color-stone-300: #4e473f;
-  --color-stone-400: #7a7062;
-  --color-stone-500: #a39885;
-  --color-stone-600: #c2b8a5;
-  --color-stone-700: #d9d0bf;
-  --color-stone-800: #ebe4d6;
-  --color-stone-900: #f5f0e6;
-  --color-stone-950: #fbf8f2;
+  --color-stone-50: #08130d;
+  --color-stone-100: #16271e;
+  --color-stone-200: #22362b;
+  --color-stone-300: #355042;
+  --color-stone-400: #5f7a6b;
+  --color-stone-500: #8ea597;
+  --color-stone-600: #b1c4b8;
+  --color-stone-700: #cfddd4;
+  --color-stone-800: #e4eee8;
+  --color-stone-900: #f2f8f4;
+  --color-stone-950: #f9fdfb;
 
-  --color-teal-50: #2c1512;
-  --color-teal-100: #431d18;
-  --color-teal-200: #66281f;
-  --color-teal-300: #8a3328;
-  --color-teal-400: #b4473a;
-  --color-teal-500: #d45b4b;
-  --color-teal-600: #e06b5a;
-  --color-teal-700: #ef8a78;
-  --color-teal-800: #f6b3a6;
-  --color-teal-900: #fbd9d1;
+  --color-teal-50: #0d2619;
+  --color-teal-100: #123624;
+  --color-teal-200: #1b5236;
+  --color-teal-300: #23744b;
+  --color-teal-500: #47ce87;
+  --color-teal-600: #65e4a1;
+  --color-teal-700: #65e4a1;
+  --color-teal-800: #96e8bc;
+  --color-teal-900: #c8f4dc;
 
-  --color-emerald-50: #0f241a;
-  --color-emerald-100: #133524;
-  --color-emerald-200: #1c5236;
-  --color-emerald-300: #2a7a4f;
-  --color-emerald-500: #4fb87e;
-  --color-emerald-600: #6fcf98;
-  --color-emerald-700: #95dfb4;
-  --color-emerald-800: #c0eed3;
+  --color-emerald-50: #0d2619;
+  --color-emerald-100: #123624;
+  --color-emerald-200: #1b5236;
+  --color-emerald-300: #23744b;
+  --color-emerald-500: #47ce87;
+  --color-emerald-600: #65e4a1;
+  --color-emerald-700: #96e8bc;
+  --color-emerald-800: #c8f4dc;
 
   --color-amber-50: #2a200c;
-  --color-amber-100: #3d2e10;
-  --color-amber-200: #5c4514;
-  --color-amber-300: #8a6a1e;
-  --color-amber-500: #e0b54a;
-  --color-amber-600: #ebc463;
-  --color-amber-700: #f2d48a;
-  --color-amber-800: #f7e3b2;
-  --color-amber-900: #fbf0d6;
+  --color-amber-100: #3d2c0c;
+  --color-amber-200: #5c410f;
+  --color-amber-300: #92400e;
+  --color-amber-500: #fbbf24;
+  --color-amber-600: #fbbf24;
+  --color-amber-700: #fcd34d;
+  --color-amber-800: #fde68a;
+  --color-amber-900: #fef3c7;
 
-  --color-red-50: #2d121b;
-  --color-red-200: #5c1d33;
-  --color-red-300: #8a2c4c;
-  --color-red-500: #ef7a9d;
-  --color-red-600: #ef7a9d;
-  --color-red-700: #f5a8bf;
+  --color-red-50: #2d1212;
+  --color-red-200: #5c1d1d;
+  --color-red-300: #7f1d1d;
+  --color-red-500: #f87171;
+  --color-red-600: #f87171;
+  --color-red-700: #fca5a5;
 }

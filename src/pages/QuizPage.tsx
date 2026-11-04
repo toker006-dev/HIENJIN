@@ -1,4 +1,4 @@
-import { ProgressTrail } from '../components/ProgressTrail.tsx'
+import { ProgressBar } from '../components/ProgressBar.tsx'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
 import { ResultIcon } from '../components/ResultIcon.tsx'
@@ -172,7 +172,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
           </div>
         )}
         <div className="mt-2 flex flex-wrap justify-center gap-3">
-          <button onClick={onRestart} autoFocus className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800">
+          <button onClick={onRestart} autoFocus className="font-lao rounded-md bg-primary px-8 py-3 font-semibold text-on-primary transition hover:bg-primary-hover">
             {t.restart}
           </button>
           <Link to={listLink} className="font-lao rounded-md px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100">
@@ -196,7 +196,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
       <button
         onClick={() => speak(q.word.word)}
         aria-label={t.listen}
-        className="grid size-24 place-items-center rounded-full bg-teal-700 text-white shadow-md transition hover:bg-teal-800"
+        className="grid size-24 place-items-center rounded-full bg-primary text-on-primary shadow-md transition hover:bg-primary-hover"
       >
         <svg viewBox="0 0 24 24" className="size-10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M11 5 6 9H2v6h4l5 4V5Z" />
@@ -212,7 +212,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
           <span className="font-lao text-sm font-medium text-stone-600">{label}</span>
           <span className="font-lao text-sm text-stone-500">{t.questionProgress(index + 1, questions.length)}</span>
         </div>
-        <ProgressTrail ratio={(index / questions.length)} />
+        <ProgressBar ratio={(index / questions.length)} />
       </div>
 
       <div className="flex flex-1 flex-col justify-center gap-6 py-6">

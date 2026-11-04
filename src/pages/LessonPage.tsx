@@ -1,4 +1,4 @@
-import { ProgressTrail } from '../components/ProgressTrail.tsx'
+import { ProgressBar } from '../components/ProgressBar.tsx'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { ResultIcon } from '../components/ResultIcon.tsx'
@@ -73,11 +73,11 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
             {t.progress(Math.min(index + 1, sentences.length), sentences.length)}
           </span>
         </div>
-        <ProgressTrail ratio={progress} />
+        <ProgressBar ratio={progress} />
       </div>
 
       <div className="flex flex-1 items-center py-3">
-        <div className="w-full rounded-3xl border-2 border-stone-900 bg-surface px-5 py-5 sm:py-6 shadow-[0_5px_0_0_var(--color-stone-900)] sm:px-12">
+        <div className="w-full rounded-3xl border border-stone-200 bg-surface px-5 py-5 sm:py-6 shadow-sm sm:px-12">
           {done ? (
             <div className="flex flex-col items-center gap-4 text-center">
               <ResultIcon />
@@ -88,7 +88,7 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
                   <Link
                     to={`/courses/${nextLesson.id}`}
                     autoFocus
-                    className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800"
+                    className="font-lao rounded-md bg-primary px-8 py-3 font-semibold text-on-primary transition hover:bg-primary-hover"
                   >
                     {t.nextLesson} →
                   </Link>

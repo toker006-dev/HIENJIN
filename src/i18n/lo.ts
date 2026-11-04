@@ -180,9 +180,4 @@ export const t = {
   heroLine: "ມື້ນີ້ມາຮຽນພາສາຈີນນຳກັນເດີ້",
   heroStart: "ເລີ່ມຮຽນເລີຍ",
   activitiesTitle: "ເລືອກກິດຈະກຳ",
-  hskPathTitle: "ເສັ້ນທາງ HSK",
-  mascotIdle: "ພິມເປັນພາສາຈີນເລີຍ!",
-  mascotCorrect: "ເກັ່ງຫຼາຍ!",
-  mascotWrong: "ເກືອບແລ້ວ ລອງໃໝ່!",
-  mascotName: "ເປົາ",
 };

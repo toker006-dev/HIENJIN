@@ -1,4 +1,4 @@
-import { ProgressTrail } from '../components/ProgressTrail.tsx'
+import { ProgressBar } from '../components/ProgressBar.tsx'
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { Headphones, Turtle } from 'lucide-react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
@@ -32,7 +32,7 @@ export function ListenSetPage() {
   if (!set) return <Navigate to="/courses" replace />
   return (
     <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-8">
-      <section className="flex flex-col gap-5 rounded-3xl border-2 border-stone-900 bg-surface p-4 shadow-[0_5px_0_0_var(--color-stone-900)] sm:flex-row sm:p-5">
+      <section className="flex flex-col gap-5 rounded-3xl border border-stone-200 bg-surface p-4 shadow-sm sm:flex-row sm:p-5">
         <div className="relative aspect-[16/10] shrink-0 overflow-hidden rounded-xl sm:w-72">
           <img src={set.cover} alt="" className="size-full object-cover" />
           <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm"><Headphones aria-hidden className="inline size-4 align-[-0.15em]" /> {set.title}</span>
@@ -51,7 +51,7 @@ export function ListenSetPage() {
             <Link
               key={id}
               to={`/courses/listen/${set.id}/${id}`}
-              className="rounded-3xl border-2 border-stone-900 bg-surface p-5 text-center text-lg font-bold text-stone-900 shadow-[0_5px_0_0_var(--color-stone-900)] transition hover:shadow-md hover:ring-teal-300"
+              className="rounded-3xl border border-stone-200 bg-surface p-5 text-center text-lg font-bold text-stone-900 shadow-sm transition hover:shadow-md hover:ring-teal-300"
             >
               {t.difficultyLevels(...levels)}
             </Link>
@@ -135,7 +135,7 @@ function ListenGame({ setId, difficulty, type }: { setId: string; difficulty: Di
           </ul>
         )}
         <div className="mt-2 flex flex-wrap justify-center gap-3">
-          <button onClick={playAgain} autoFocus className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800">
+          <button onClick={playAgain} autoFocus className="font-lao rounded-md bg-primary px-8 py-3 font-semibold text-on-primary transition hover:bg-primary-hover">
             {t.playAgain}
           </button>
           <Link to={`/courses/listen/${setId}`} className="font-lao rounded-md px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100">
@@ -157,10 +157,10 @@ function ListenGame({ setId, difficulty, type }: { setId: string; difficulty: Di
           <span className="font-lao text-sm font-medium text-stone-600">{t.difficultyLevels(...levelsOf(difficulty))}</span>
           <span className="font-lao text-sm text-stone-500">{t.progress(index + 1, round.length)}</span>
         </div>
-        <ProgressTrail ratio={(index / round.length)} />
+        <ProgressBar ratio={(index / round.length)} />
       </div>
       <div className="flex flex-1 items-center py-4">
-        <div className="w-full rounded-3xl border-2 border-stone-900 bg-surface px-6 py-8 shadow-[0_5px_0_0_var(--color-stone-900)] sm:px-12">
+        <div className="w-full rounded-3xl border border-stone-200 bg-surface px-6 py-8 shadow-sm sm:px-12">
           <ListenQuestion key={`${sentence.id}-${index}`} sentence={sentence} pool={pool} type={type} sfx={sfx} onMistake={miss} onNext={next} />
         </div>
       </div>
@@ -203,7 +203,7 @@ function ListenQuestion({ sentence, pool, type, sfx, onMistake, onNext }: Questi
           onClick={() => speak(text)}
           aria-label={t.listen}
           title={t.listen}
-          className="grid size-20 place-items-center rounded-full bg-teal-700 text-white shadow-md transition hover:bg-teal-800"
+          className="grid size-20 place-items-center rounded-full bg-primary text-on-primary shadow-md transition hover:bg-primary-hover"
         >
           <svg viewBox="0 0 24 24" className="size-9" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M11 5 6 9H2v6h4l5 4V5Z" />
