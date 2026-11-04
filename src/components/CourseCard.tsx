@@ -58,13 +58,13 @@ export function CourseCard({ course, lesson, progress, subtitle, onRemove }: Pro
             {!!progress?.rounds && <span className="font-semibold text-teal-700">{t.rounds(progress.rounds)}</span>}
           </div>
           <div className="h-1.5 overflow-hidden rounded-full bg-stone-100">
-            <div className="h-full rounded-full bg-teal-600" style={{ width: `${(solved / total) * 100}%` }} />
+            <div className="h-full rounded-full bg-primary" style={{ width: `${(solved / total) * 100}%` }} />
           </div>
         </div>
 
         <Link
           to={`/courses/${lesson.id}`}
-          className="font-lao mt-5 rounded-full bg-stone-900 py-2.5 text-center font-semibold text-on-primary transition hover:bg-primary"
+          className="font-lao mt-5 flex min-h-12 items-center justify-center rounded-full bg-primary font-semibold text-on-primary transition hover:bg-primary-hover"
         >
           {progress ? t.continueLesson(lesson.number) : t.startLesson(lesson.number)}
         </Link>

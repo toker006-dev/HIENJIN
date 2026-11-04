@@ -55,6 +55,8 @@ const toggle =
 export function Layout() {
   const location = useLocation()
   const page = pageInfo(location.pathname, location.search)
+  // Flashcards are sized to the screen (no page scroll); every other page grows and scrolls.
+  const fitsScreen = /\/cards$/.test(location.pathname)
   const [sfx, toggleSfx] = useSoundEffects()
   const [voice, toggleVoice] = useVoice()
   const [dark, toggleDark] = useDarkMode()
@@ -140,7 +142,7 @@ export function Layout() {
             </div>
           }
         >
-          <div key={location.pathname} className="page-enter h-full">
+          <div key={location.pathname} className={`page-enter ${fitsScreen ? 'h-full' : 'min-h-full'}`}>
             <Outlet />
           </div>
         </Suspense>
