@@ -8,13 +8,12 @@ export function WordCard({ sentence }: { sentence: Sentence }) {
   if (!info) return null
 
   return (
-    <div className="w-full max-w-sm rounded-2xl bg-teal-50 px-6 py-3 ring-1 ring-teal-200">
-      <p className="font-lao mb-1 text-xs font-medium tracking-wide text-teal-700">{t.wordOfSentence}</p>
-      <div className="flex flex-col items-center">
-        <span lang="zh-CN" className="font-zh text-5xl leading-tight text-stone-900">
+    <div title={t.wordOfSentence} className="animate-pop flex w-full max-w-sm flex-col items-center rounded-2xl border-2 border-teal-200 bg-teal-50 px-4 py-2">
+      <div className="flex items-center justify-center gap-2">
+        <span lang="zh-CN" className="font-zh text-4xl leading-tight text-stone-900">
           {sentence.target}
         </span>
-        <div className="mt-1 flex items-center gap-1.5">
+        <div className="flex items-center gap-1">
           <span className="text-xl font-medium text-teal-800">{info.pinyin}</span>
           {canSpeak && (
             <button
@@ -31,7 +30,7 @@ export function WordCard({ sentence }: { sentence: Sentence }) {
           )}
         </div>
       </div>
-      <div className="mt-2 flex items-center justify-center gap-3 border-t border-teal-200 pt-2">
+      <div className="mt-1.5 flex w-full items-center justify-center gap-2 border-t border-dashed border-teal-200 pt-1.5">
         <span className="font-lao rounded-full bg-surface px-2.5 py-0.5 text-xs font-semibold text-teal-800 ring-1 ring-teal-200">
           {t.pos[info.pos]}
         </span>

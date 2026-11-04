@@ -1,3 +1,4 @@
+import { ProgressTrail } from '../components/ProgressTrail.tsx'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
 import { ResultIcon } from '../components/ResultIcon.tsx'
@@ -103,15 +104,15 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
             <Link
               to={reviewLink}
               autoFocus
-              className="font-lao rounded-full bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800"
+              className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800"
             >
               {t.reviewLearning}
             </Link>
           )}
-          <button onClick={() => go(0)} className="font-lao rounded-full bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700">
+          <button onClick={() => go(0)} className="font-lao rounded-md bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700">
             {t.restart}
           </button>
-          <Link to={listLink} className="font-lao rounded-full px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100">
+          <Link to={listLink} className="font-lao rounded-md px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100">
             {t.backToVocabulary}
           </Link>
         </div>
@@ -131,18 +132,17 @@ function Flashcards({ label, deck, listLink, reviewLink, showLevel }: {
           </span>
           <span className="font-lao text-sm text-stone-500">{t.cardProgress(index + 1, deck.length)}</span>
         </div>
-        <div className="h-2 overflow-hidden rounded-full bg-stone-200">
-          <div className="h-full rounded-full bg-teal-600 transition-all duration-300" style={{ width: `${(index / deck.length) * 100}%` }} />
-        </div>
+        <ProgressTrail ratio={(index / deck.length)} />
       </div>
 
       <div className="flex flex-1 flex-col justify-center gap-5 py-6">
         <div
+          key={`${index}-${flipped}`}
           role="button"
           tabIndex={0}
           aria-label={t.flip}
           onClick={() => setFlipped(!flipped)}
-          className={`relative flex min-h-80 cursor-pointer flex-col items-center justify-center rounded-3xl px-6 py-8 text-center shadow-sm ring-1 transition select-none ${
+          className={`animate-flip relative flex min-h-80 cursor-pointer flex-col items-center justify-center rounded-3xl px-6 py-8 text-center shadow-sm ring-1 transition select-none ${
             isKnown ? 'bg-emerald-50/50 ring-emerald-200' : 'bg-surface ring-stone-200'
           }`}
         >

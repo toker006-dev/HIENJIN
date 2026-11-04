@@ -1,34 +1,28 @@
-import { Suspense, useState } from 'react'
-import { BookOpen, House, Pencil } from 'lucide-react'
-import { Link, NavLink, Outlet, useLocation } from 'react-router'
+import { Suspense } from 'react'
+import { ArrowLeft, BookOpen, House, Moon, Music, Pencil, Sun } from 'lucide-react'
+import { Link, Outlet, useLocation } from 'react-router'
 import { coursesById } from '../data/courses.ts'
 import { arrangeSetsById, levelsOf, type Difficulty } from '../data/arrange.ts'
 import { t } from '../i18n/lo.ts'
 import { useSoundEffects, useVoice } from '../lib/settings.ts'
 import { useDarkMode } from '../lib/theme.ts'
-
-const toggleButton =
-  'rounded-full p-1.5 transition aria-pressed:bg-teal-100 aria-pressed:text-teal-800 text-stone-400 hover:text-stone-700'
+import { Mascot } from './Mascot.tsx'
+import { Seal } from './Seal.tsx'
 
 const navItems = [
-  {
-    to: '/',
-    label: t.navHome,
-    icon: House,
-  },
-  {
-    to: '/vocabulary',
-    label: t.navVocabulary,
-    icon: BookOpen,
-  },
-  {
-    to: '/courses',
-    label: t.navCourses,
-    icon: Pencil,
-  },
+  { to: '/', label: t.navHome, icon: House },
+  { to: '/courses', label: t.navCourses, icon: Pencil },
+  { to: '/vocabulary', label: t.navVocabulary, icon: BookOpen },
 ]
 
-/** Header title, plus where the ← back arrow leads (course pages only). */
+/** Active-route match; the vocabulary item shouldn't light up on the review page. */
+function isActive(to: string, pathname: string) {
+  if (to === '/') return pathname === '/'
+  if (to === '/vocabulary') return pathname.startsWith('/vocabulary') && pathname !== '/vocabulary/review'
+  return pathname.startsWith(to)
+}
+
+/** Header title, plus where the ← back arrow leads (inner pages only). */
 function pageInfo(pathname: string, search: string): { title: string; back?: string } {
   if (pathname === '/') return { title: t.navHome }
   if (pathname === '/vocabulary/review') return { title: t.quickReview, back: '/' }
@@ -55,9 +49,11 @@ function pageInfo(pathname: string, search: string): { title: string; back?: str
   return { title: course, back: '/courses/translate' }
 }
 
-/** Side menu + header around every page. On small screens the menu slides in from a hamburger button. */
+const toggle =
+  'rounded-full p-2 text-stone-500 transition hover:bg-stone-100 hover:text-stone-900 aria-pressed:bg-teal-700 aria-pressed:text-white hover:rotate-12'
+
+/** Top bar (nav tabs on desktop), a slim back/title strip on inner pages, and a bottom tab bar on phones. */
 export function Layout() {
-  const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const page = pageInfo(location.pathname, location.search)
   const [sfx, toggleSfx] = useSoundEffects()
@@ -65,99 +61,103 @@ export function Layout() {
   const [dark, toggleDark] = useDarkMode()
 
   return (
-    <div className="flex h-svh bg-stone-50">
-      {/* Dimmed backdrop behind the open menu on small screens */}
-      {menuOpen && (
-        <button aria-label={t.closeMenu} onClick={() => setMenuOpen(false)} className="fixed inset-0 z-30 bg-stone-900/30 md:hidden" />
+    <div className="flex h-svh flex-col bg-paper">
+      <header className="z-20 shrink-0 border-b-2 border-stone-900 bg-surface">
+        <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 sm:px-6">
+          <Link to="/" className="group flex items-center gap-2.5">
+            <span className="transition group-hover:-rotate-12">
+              <Seal className="size-9 text-xl" />
+            </span>
+            <span className="text-lg font-black tracking-[0.2em] text-stone-900">{t.appTitle}</span>
+          </Link>
+
+          <nav className="ml-4 hidden items-center gap-1 md:flex">
+            {navItems.map((item) => {
+              const active = isActive(item.to, location.pathname)
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  aria-current={active ? 'page' : undefined}
+                  className={`font-lao relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
+                    active ? 'bg-stone-900 text-surface' : 'text-stone-600 hover:-translate-y-0.5 hover:bg-stone-100 hover:text-stone-900'
+                  }`}
+                >
+                  <item.icon aria-hidden className="size-4" />
+                  {item.label}
+                </Link>
+              )
+            })}
+          </nav>
+
+          <div className="ml-auto flex items-center gap-1">
+            <button onClick={toggleSfx} aria-pressed={sfx} aria-label={t.soundEffects} title={t.soundEffects} className={toggle}>
+              <Music aria-hidden className="size-5" />
+            </button>
+            <button onClick={toggleVoice} aria-pressed={voice} aria-label={t.voice} title={t.voice} className={toggle}>
+              {/* speaking head; crossed out when off */}
+              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 21v-3a4 4 0 0 0 4-4V9A7 7 0 0 0 4 9c0 3 1 4 2 5v7" />
+                <path d="M20 6a6 6 0 0 1 2 4M18 9a3 3 0 0 1 1 2" />
+                {!voice && <path d="m2 2 20 20" />}
+              </svg>
+            </button>
+            <button onClick={toggleDark} aria-label={t.darkMode} title={t.darkMode} className={toggle}>
+              {dark ? <Sun aria-hidden className="size-5" /> : <Moon aria-hidden className="size-5" />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {page.back && (
+        <div className="shrink-0 border-b border-stone-200 bg-surface/60">
+          <div className="mx-auto flex h-11 max-w-6xl items-center gap-2 px-4 sm:px-6">
+            <Link
+              to={page.back}
+              aria-label={t.back}
+              title={t.back}
+              className="group -ml-2 rounded-full p-1.5 text-stone-600 transition hover:bg-stone-100 hover:text-stone-900"
+            >
+              <ArrowLeft aria-hidden className="size-5 transition group-hover:-translate-x-1" />
+            </Link>
+            <h1 className="font-lao truncate font-semibold text-stone-900">{page.title}</h1>
+          </div>
+        </div>
       )}
 
-      <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-60 flex-col border-r border-stone-200 bg-surface transition-transform md:static md:translate-x-0 ${
-          menuOpen ? 'translate-x-0 shadow-xl' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex h-14 items-center px-5">
-          <span className="text-xl font-extrabold tracking-wide text-teal-700">{t.appTitle}</span>
-        </div>
-        <nav className="flex flex-col gap-1 px-3 py-2">
-          {navItems.map((item) => (
-            <NavLink
+      <main className="flex-1 overflow-y-auto pb-20 md:pb-0">
+        {/* Shown while a course's sentences load for the first time (see useLoadedCourse). */}
+        <Suspense
+          fallback={
+            <div role="status" aria-label={t.loading} className="flex h-full min-h-60 items-center justify-center">
+              <Mascot className="size-20" />
+            </div>
+          }
+        >
+          <div key={location.pathname} className="page-enter min-h-full">
+            <Outlet />
+          </div>
+        </Suspense>
+      </main>
+
+      <nav className="fixed inset-x-3 bottom-3 z-30 grid grid-cols-3 rounded-2xl border-2 border-stone-900 bg-surface p-1 shadow-[0_4px_0_0_var(--color-stone-900)] md:hidden">
+        {navItems.map((item) => {
+          const active = isActive(item.to, location.pathname)
+          return (
+            <Link
               key={item.to}
               to={item.to}
-              end={item.to === '/'}
-              onClick={() => setMenuOpen(false)}
-              className={({ isActive }) =>
-                `font-lao flex items-center gap-3 rounded-xl px-3 py-2.5 font-medium transition ${
-                  isActive ? 'bg-teal-50 text-teal-800' : 'text-stone-600 hover:bg-stone-100 hover:text-stone-900'
-                }`
-              }
+              aria-current={active ? 'page' : undefined}
+              className={`font-lao flex flex-col items-center gap-0.5 rounded-xl py-1.5 text-[11px] font-semibold transition ${
+                active ? 'bg-teal-700 text-white' : 'text-stone-500'
+              }`}
             >
-              <item.icon aria-hidden className="size-5" />
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
-      </aside>
-
-      <div className="flex min-w-0 flex-1 flex-col">
-        <header className="flex h-14 shrink-0 items-center gap-3 border-b border-stone-200 bg-surface/70 px-4 backdrop-blur">
-          <button onClick={() => setMenuOpen(true)} aria-label={t.openMenu} className="-ml-1 rounded-lg p-1.5 text-stone-600 hover:bg-stone-100 md:hidden">
-            <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-          {page.back && (
-            <Link to={page.back} aria-label={t.back} title={t.back} className="-ml-1 rounded-lg p-1.5 text-stone-600 hover:bg-stone-100">
-              <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-              </svg>
+              <item.icon aria-hidden className={`size-5 ${active ? 'animate-hop' : ''}`} />
+              <span className="max-w-full truncate px-1">{item.label}</span>
             </Link>
-          )}
-          <h1 className="font-lao flex-1 truncate text-lg font-semibold text-stone-900">{page.title}</h1>
-          <button onClick={toggleSfx} aria-pressed={sfx} aria-label={t.soundEffects} title={t.soundEffects} className={toggleButton}>
-            {/* music note; crossed out when off */}
-            <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 18V5l12-2v13" />
-              <circle cx="6" cy="18" r="3" />
-              <circle cx="18" cy="16" r="3" />
-              {!sfx && <path d="m2 2 20 20" />}
-            </svg>
-          </button>
-          <button onClick={toggleVoice} aria-pressed={voice} aria-label={t.voice} title={t.voice} className={toggleButton}>
-            {/* speaking head; crossed out when off */}
-            <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14 21v-3a4 4 0 0 0 4-4V9A7 7 0 0 0 4 9c0 3 1 4 2 5v7" />
-              <path d="M20 6a6 6 0 0 1 2 4M18 9a3 3 0 0 1 1 2" />
-              {!voice && <path d="m2 2 20 20" />}
-            </svg>
-          </button>
-          <button onClick={toggleDark} aria-label={t.darkMode} title={t.darkMode} className={toggleButton}>
-            <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              {dark ? (
-                <>
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-                </>
-              ) : (
-                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
-              )}
-            </svg>
-          </button>
-        </header>
-
-        <main className="flex-1 overflow-y-auto">
-          {/* Shown while a course's sentences load for the first time (see useLoadedCourse). */}
-          <Suspense
-            fallback={
-              <div role="status" aria-label={t.loading} className="flex h-full min-h-40 items-center justify-center">
-                <span className="size-8 animate-spin rounded-full border-4 border-teal-200 border-t-teal-700" />
-              </div>
-            }
-          >
-            <Outlet />
-          </Suspense>
-        </main>
-      </div>
+          )
+        })}
+      </nav>
     </div>
   )
 }

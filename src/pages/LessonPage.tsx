@@ -1,3 +1,4 @@
+import { ProgressTrail } from '../components/ProgressTrail.tsx'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
 import { ResultIcon } from '../components/ResultIcon.tsx'
@@ -65,20 +66,18 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
 
   return (
     <div className="mx-auto flex min-h-full w-full max-w-3xl flex-col px-4">
-      <div className="pt-4">
+      <div className="pt-3">
         <div className="mb-2 flex justify-between">
           <span className="font-lao text-sm font-medium text-stone-600">{t.lessonTitle(lesson.number)}</span>
           <span className="font-lao text-sm text-stone-500">
             {t.progress(Math.min(index + 1, sentences.length), sentences.length)}
           </span>
         </div>
-        <div className="h-2 overflow-hidden rounded-full bg-stone-200">
-          <div className="h-full rounded-full bg-teal-600 transition-all duration-500" style={{ width: `${progress * 100}%` }} />
-        </div>
+        <ProgressTrail ratio={progress} />
       </div>
 
-      <div className="flex flex-1 items-center py-4">
-        <div className="w-full rounded-3xl bg-surface px-6 py-8 shadow-sm ring-1 ring-stone-200 sm:px-12">
+      <div className="flex flex-1 items-center py-3">
+        <div className="w-full rounded-3xl border-2 border-stone-900 bg-surface px-5 py-5 sm:py-6 shadow-[0_5px_0_0_var(--color-stone-900)] sm:px-12">
           {done ? (
             <div className="flex flex-col items-center gap-4 text-center">
               <ResultIcon />
@@ -89,7 +88,7 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
                   <Link
                     to={`/courses/${nextLesson.id}`}
                     autoFocus
-                    className="font-lao rounded-full bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800"
+                    className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800"
                   >
                     {t.nextLesson} →
                   </Link>
@@ -97,13 +96,13 @@ function LessonPage({ course, lesson }: { course: LoadedCourse; lesson: Lesson }
                 <button
                   onClick={restart}
                   autoFocus={!nextLesson || !isPlayable(nextLesson)}
-                  className="font-lao rounded-full bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700"
+                  className="font-lao rounded-md bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700"
                 >
                   {t.restart}
                 </button>
                 <Link
                   to={`/courses/${course.id}`}
-                  className="font-lao rounded-full px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100"
+                  className="font-lao rounded-md px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100"
                 >
                   {t.backToCourses}
                 </Link>

@@ -1,3 +1,4 @@
+import { ProgressTrail } from '../components/ProgressTrail.tsx'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router'
 import { ResultIcon } from '../components/ResultIcon.tsx'
@@ -171,10 +172,10 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
           </div>
         )}
         <div className="mt-2 flex flex-wrap justify-center gap-3">
-          <button onClick={onRestart} autoFocus className="font-lao rounded-full bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800">
+          <button onClick={onRestart} autoFocus className="font-lao rounded-md bg-teal-700 px-8 py-3 font-semibold text-white transition hover:bg-teal-800">
             {t.restart}
           </button>
-          <Link to={listLink} className="font-lao rounded-full px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100">
+          <Link to={listLink} className="font-lao rounded-md px-8 py-3 font-semibold text-stone-700 ring-1 ring-stone-300 transition hover:bg-stone-100">
             {t.backToVocabulary}
           </Link>
         </div>
@@ -211,9 +212,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
           <span className="font-lao text-sm font-medium text-stone-600">{label}</span>
           <span className="font-lao text-sm text-stone-500">{t.questionProgress(index + 1, questions.length)}</span>
         </div>
-        <div className="h-2 overflow-hidden rounded-full bg-stone-200">
-          <div className="h-full rounded-full bg-teal-600 transition-all duration-300" style={{ width: `${(index / questions.length) * 100}%` }} />
-        </div>
+        <ProgressTrail ratio={(index / questions.length)} />
       </div>
 
       <div className="flex flex-1 flex-col justify-center gap-6 py-6">
@@ -265,7 +264,7 @@ function Quiz({ label, questions, listLink, onRestart }: { label: string; questi
 
         <div className="flex min-h-12 justify-center">
           {picked && (
-            <button onClick={next} autoFocus className="font-lao rounded-full bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700">
+            <button onClick={next} autoFocus className="font-lao rounded-md bg-stone-900 px-8 py-3 font-semibold text-white transition hover:bg-stone-700">
               {t.next} →
             </button>
           )}

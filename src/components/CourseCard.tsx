@@ -19,7 +19,7 @@ export function CourseCard({ course, lesson, progress, subtitle, onRemove }: Pro
   const solved = Math.min(progress?.solved ?? 0, total)
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200 transition hover:shadow-md hover:ring-teal-300">
+    <div className="group relative flex flex-col overflow-hidden rounded-3xl border-2 border-stone-900 bg-surface shadow-[0_5px_0_0_var(--color-stone-900)] transition hover:shadow-md hover:ring-teal-300">
       <div className="relative aspect-[16/9] overflow-hidden">
         <img src={course.cover} alt="" loading="lazy" className="size-full object-cover transition duration-300 group-hover:scale-105" />
         <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">

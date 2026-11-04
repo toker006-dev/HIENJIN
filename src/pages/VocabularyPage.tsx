@@ -78,7 +78,7 @@ function VocabularyPage({ level }: { level: number }) {
         ))}
       </nav>
 
-      <div className="mt-4 rounded-2xl bg-surface p-4 shadow-sm ring-1 ring-stone-200">
+      <div className="mt-4 rounded-3xl border-2 border-stone-900 bg-surface p-4 shadow-[0_5px_0_0_var(--color-stone-900)]">
         <div className="flex items-center justify-between gap-3">
           <span className="font-lao text-sm font-medium text-stone-700">{t.knownCount(knownCount, words.length)}</span>
           <span className="text-sm text-stone-400 tabular-nums">{Math.round((knownCount / words.length) * 100)}%</span>
@@ -146,7 +146,7 @@ function VocabularyPage({ level }: { level: number }) {
           {lessonWords.length === 0 ? (
             <p className="font-lao rounded-2xl bg-surface py-16 text-center text-stone-500 ring-1 ring-stone-200">{t.noWords}</p>
           ) : (
-            <ul className="divide-y divide-stone-100 overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200">
+            <ul className="divide-y divide-stone-100 overflow-hidden rounded-3xl border-2 border-stone-900 bg-surface shadow-[0_5px_0_0_var(--color-stone-900)]">
               {lessonWords.map((w) => (
                 <WordRow key={w.word} word={w} known={known.has(w.word)} open={open === w.word} onToggle={toggle} />
               ))}
@@ -198,7 +198,7 @@ function SearchResults({ query, filter, known, open, onToggle }: {
       {[...levels].map(([level, levelWords]) => (
         <section key={level} className="mt-3">
           <h3 className="mb-2 px-1 font-semibold text-stone-800">HSK {level}</h3>
-          <ul className="divide-y divide-stone-100 overflow-hidden rounded-2xl bg-surface shadow-sm ring-1 ring-stone-200">
+          <ul className="divide-y divide-stone-100 overflow-hidden rounded-3xl border-2 border-stone-900 bg-surface shadow-[0_5px_0_0_var(--color-stone-900)]">
             {levelWords.map((w) => (
               <WordRow
                 key={w.word}

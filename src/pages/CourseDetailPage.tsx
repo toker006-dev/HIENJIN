@@ -25,7 +25,7 @@ function CourseDetail({ course: info, category }: { course: Course; category: Ca
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-8">
-      <section className="flex flex-col gap-5 rounded-2xl bg-surface p-4 shadow-sm ring-1 ring-stone-200 sm:flex-row sm:p-5">
+      <section className="flex flex-col gap-5 rounded-3xl border-2 border-stone-900 bg-surface p-4 shadow-[0_5px_0_0_var(--color-stone-900)] sm:flex-row sm:p-5">
         <div className="relative aspect-[16/10] shrink-0 overflow-hidden rounded-xl sm:w-72">
           <img src={course.cover} alt="" className="size-full object-cover" />
           <span className="absolute bottom-2 left-2 rounded-lg bg-stone-900/80 px-2.5 py-1 text-lg font-bold text-white backdrop-blur-sm">
@@ -55,7 +55,7 @@ function CourseDetail({ course: info, category }: { course: Course; category: Ca
             {next && (
               <Link
                 to={`/courses/${next.id}`}
-                className="font-lao inline-flex items-center gap-2 rounded-full bg-teal-700 px-6 py-2.5 font-semibold text-white transition hover:bg-teal-800"
+                className="font-lao inline-flex items-center gap-2 rounded-md bg-teal-700 px-6 py-2.5 font-semibold text-white transition hover:bg-teal-800"
               >
                 <svg viewBox="0 0 24 24" className="size-4" fill="currentColor">
                   <path d="M7 4v16l13-8Z" />
@@ -67,7 +67,7 @@ function CourseDetail({ course: info, category }: { course: Course; category: Ca
         </div>
       </section>
 
-      <section className="rounded-2xl bg-surface p-4 shadow-sm ring-1 ring-stone-200 sm:p-5">
+      <section className="rounded-3xl border-2 border-stone-900 bg-surface p-4 shadow-[0_5px_0_0_var(--color-stone-900)] sm:p-5">
         <h3 className="font-lao text-lg font-bold text-stone-900">
           {t.outline}
           <span className="ml-2 text-sm font-normal text-stone-500">{t.lessonCount(course.lessons.length)}</span>
