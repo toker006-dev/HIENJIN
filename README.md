@@ -1,27 +1,180 @@
-# HIENJIN
+# HIENJIN · ຮຽນພາສາຈີນສຳລັບຄົນລາວ
 
-Translate Lao sentences into Chinese, one word per blank (`你 吃饭 了 吗` = 4 blanks).
+ເວັບແອັບຮຽນພາສາຈີນກາງ (Mandarin) 
+ຄອບຄຸມຄຳສັບ **HSK 1–6 ທັງໝົດ 4,991 ຄຳ** ພ້ອມປະໂຫຍກຕົວຢ່າງ ແລະ ຄຳແປພາສາລາວທຸກຄຳ.
 
-## Run
+**🌐 ທົດລອງໃຊ້ເລີຍ: [hienjin.tokerrrzdev006.workers.dev](https://hienjin.tokerrrzdev006.workers.dev/)**
+
+ແນວຄິດຫຼັກ: ຜູ້ຮຽນເຫັນປະໂຫຍກພາສາລາວ ແລ້ວພິມເປັນພາສາຈີນ **ໜຶ່ງຊ່ອງຕໍ່ໜຶ່ງຄຳ**
+(ເຊັ່ນ `你 吃饭 了 吗` = 4 ຊ່ອງ). ກົດ Enter ເພື່ອກວດ (ຜິດ = ສີແດງ, ຖືກ = ສີຂຽວ), ກົດ Enter ອີກຄັ້ງເພື່ອໄປປະໂຫຍກຕໍ່ໄປ.
+
+---
+
+## ຄຸນສົມບັດ
+
+| ໝວດ | ລາຍລະອຽດ |
+| --- | --- |
+| **ຄຳສັບ** | ລາຍການຄຳສັບ HSK 1–6, ຄົ້ນຫາ, ບັດຄຳ (flashcards), ແບບທົດສອບ (ຄວາມໝາຍ / ຕົວອັກສອນ / ສຽງ), ໝາຍຄຳທີ່ຈື່ໄດ້ແລ້ວ |
+| **ທົບທວນມື້ນີ້** | ສຸ່ມ 30 ຄຳທີ່ຈື່ໄດ້ແລ້ວ, ປ່ຽນໃໝ່ທຸກມື້ |
+| **ແປປະໂຫຍກ** | ແປພາສາລາວເປັນພາສາຈີນ, ບົດລະ 25 ປະໂຫຍກ, ຮອງຮັບແປ້ນພິມຈີນ (IME) |
+| **ຮຽງປະໂຫຍກ** | ກົດຄຳສັບໃຫ້ຮຽງເປັນປະໂຫຍກທີ່ຖືກຕ້ອງ (HSK 1–2 / 3–4 / 5–6) |
+| **ຝຶກຟັງ** | ຟັງປະໂຫຍກ ແລ້ວເລືອກຄວາມໝາຍ ຫຼື ພິມສິ່ງທີ່ໄດ້ຍິນ |
+| **ອື່ນໆ** | ໂໝດມືດ, ສຽງເອັບເຟັກ, ອ່ານອອກສຽງ, ບັນທຶກຄວາມຄືບໜ້າໃນເຄື່ອງ, ໃຊ້ໄດ້ທັງມືຖື ແລະ ຄອມພິວເຕີ |
+
+---
+
+## 1. Stack (ເຕັກໂນໂລຢີທີ່ໃຊ້)
+
+**ໜ້າເວັບ (Frontend)**
+- **React 19** + **TypeScript** — ສ້າງໜ້າຈໍ
+- **Vite** — ເຄື່ອງມື dev server ແລະ build
+- **Tailwind CSS v4** — ຈັດຮູບແບບ (ສີ ແລະ ຮູບແບບທັງໝົດຢູ່ `src/index.css`)
+- **React Router v7** — ຈັດການໜ້າ ແລະ ລິ້ງ
+- **lucide-react** — ໄອຄອນ
+- **Web Speech API** (`speechSynthesis`) — ອ່ານອອກສຽງພາສາຈີນດ້ວຍສຽງຂອງບຣາວເຊີ
+- **Web Audio API** — ສຽງເອັບເຟັກ (ພິມ, ຖືກ, ຜິດ)
+- **localStorage** — ເກັບຄວາມຄືບໜ້າ ແລະ ການຕັ້ງຄ່າໃນເຄື່ອງຜູ້ໃຊ້
+
+**ສ້າງເນື້ອຫາ (Scripts)**
+- **Node.js 24** — ແລ່ນໄຟລ໌ `.ts` ໄດ້ໂດຍກົງ
+- **Google Gemini API** — ສ້າງປະໂຫຍກຕົວຢ່າງ ແລະ ຄຳແປພາສາລາວ
+
+**ເຄື່ອງມືກວດໂຄດ**: `oxlint`, `tsc`
+
+> ຍັງບໍ່ມີ backend. ຂໍ້ມູນທັງໝົດເປັນໄຟລ໌ JSON ຄົງທີ່ ທີ່ສ້າງໄວ້ລ່ວງໜ້າ.
+
+---
+
+## 2. ວິທີສ້າງ ແລະ ແລ່ນ
+
+### ແລ່ນແອັບ
 
 ```sh
 npm install
-npm run dev
+npm run dev -- --port 5173      # ເປີດ http://localhost:5173
+npm run build                   # build ສຳລັບ production → dist/
+npm run lint                    # ກວດໂຄດ
 ```
 
-## Content pipeline
+ເປີດທົດສອບໃນມືຖື (Wi-Fi ດຽວກັນ): `npm run dev -- --port 5173 --host` ແລ້ວເປີດທີ່ຢູ່ Network ທີ່ສະແດງ.
 
-Sentences are generated ahead of time and shipped as static JSON (`src/data/sentences/hsk<level>.json`),
-so the Gemini key never reaches the browser.
+### ສ້າງເນື້ອຫາ (ບໍ່ຈຳເປັນ — ຂໍ້ມູນມີຄົບແລ້ວ)
 
 ```sh
-cp .env.example .env              # add GEMINI_API_KEY
-npm run hsk:fetch                 # HSK 2.0 word lists -> data/hsk/1..6.json
-npm run generate                  # 20 HSK1 sentences (resumes where it stopped)
-npm run generate -- --level 2 --count 50
-npm run generate -- --words 爱,吃 --force   # regenerate specific words
+cp .env.example .env                             # ໃສ່ GEMINI_API_KEY=key1,key2,...
+npm run hsk:fetch                                # ດາວໂຫຼດລາຍການຄຳສັບ HSK → data/hsk/1..6.json
+npm run hsk:english                              # ຄວາມໝາຍພາສາອັງກິດ → src/data/english/
+npm run generate -- --level 1 --count 150        # ສ້າງປະໂຫຍກສຳລັບຄຳທີ່ຍັງບໍ່ມີ
+npm run generate -- --words 爱,吃 --force        # ສ້າງໃໝ່ສະເພາະບາງຄຳ
 ```
 
-Each sentence is checked before it is saved: the target word must be its own blank, and every word must be
-HSK vocabulary (or made only of HSK characters, e.g. 吃饭). The free Gemini tier has small daily limits
-per model; when one runs out, set `GEMINI_MODEL` in `.env` to another model and re-run.
+### ຂັ້ນຕອນການພັດທະນາ (ໂດຍຫຍໍ້)
+
+1. ຂຽນ script ດຶງລາຍການຄຳສັບ HSK ແລະ ເຊື່ອມຕໍ່ Gemini API
+2. MVP: ທົດລອງ 20 ປະໂຫຍກຈາກ HSK 1 ກັບໜ້າແປປະໂຫຍກ
+3. ສ້າງປະໂຫຍກໃຫ້ຄົບທຸກຄຳ HSK 1–6 (ເປັນຊຸດ ~250 ຄຳ)
+4. ເພີ່ມໜ້າຄຳສັບ, ບັດຄຳ, ແບບທົດສອບ, ຮຽງປະໂຫຍກ, ຝຶກຟັງ
+5. ອອກແບບ UX/UI ຫຼາຍຮອບ ຈົນໄດ້ແບບປັດຈຸບັນ: ສະອາດ, ງ່າຍ, ອ່ານງ່າຍສຳລັບທຸກໄວ.
+
+---
+
+## 3. Data flow (ການໄຫຼຂອງຂໍ້ມູນ)
+
+```
+ ລາຍການຄຳສັບ HSK (GitHub)
+        │  npm run hsk:fetch
+        ▼
+ data/hsk/1..6.json ───────────────┐  npm run hsk:english
+        │                          ▼
+        │                  src/data/english/hskN.json  (ຄວາມໝາຍອັງກິດ)
+        │  npm run generate
+        ▼
+ Gemini API ──► ກວດສອບ ──► src/data/sentences/hskN.json
+  (ປະໂຫຍກ,     (ຜ່ານ = ບັນທຶກ,     { target, words[], lao,
+   ຄຳແປລາວ,     ບໍ່ຜ່ານ = ລອງໃໝ່)     info: { pinyin, pos, meaningLao } }
+   pinyin)
+        │  build (ລວມເປັນໄຟລ໌ຄົງທີ່)
+        ▼
+ ບຣາວເຊີ: ໂຫຼດປະໂຫຍກເທື່ອລະ HSK level ເມື່ອຕ້ອງການ (lazy load)
+        │
+        ├─► ໜ້າຕ່າງໆ (ແປ, ຄຳສັບ, ບັດຄຳ, ທົດສອບ, ຮຽງ, ຟັງ)
+        └─► localStorage: ຄວາມຄືບໜ້າ, ຄຳທີ່ຈື່ໄດ້, ການຕັ້ງຄ່າ, ໂໝດມືດ
+```
+
+**ການກວດສອບປະໂຫຍກ** ກ່ອນບັນທຶກ:
+- ມີ 2–10 ຄຳ, ຄຳເປົ້າໝາຍຕ້ອງເປັນຄຳແຍກຂອງມັນເອງ
+- ທຸກຄຳຕ້ອງຢູ່ໃນຄຳສັບ HSK ລະດັບນັ້ນ ຫຼື ຕ່ຳກວ່າ
+- ຄຳແປຕ້ອງເປັນອັກສອນລາວເທົ່ານັ້ນ (ບໍ່ມີອັກສອນໄທ), ບໍ່ມີຄຳຊ້ຳແບບ "ພວກພວກ"
+
+**ຄວາມປອດໄພ**: API key ຂອງ Gemini ໃຊ້ສະເພາະໃນ script ເທົ່ານັ້ນ, ບໍ່ເຄີຍສົ່ງໄປບຣາວເຊີ.
+
+### ໂຄງສ້າງໂຟນເດີ
+
+```
+src/
+  components/   ສ່ວນປະກອບ (Layout, Exercise, WordCard, ProgressBar, ...)
+  pages/        ແຕ່ລະໜ້າ (Home, Vocabulary, Flashcards, Quiz, Lesson, Arrange, Listen, ...)
+  data/         ຂໍ້ມູນ ແລະ ການໂຫຼດ (courses, vocabulary, arrange, sentences/, english/)
+  lib/          ເຄື່ອງມື (speech, sfx, storage, progress, known, theme, ...)
+  i18n/lo.ts    ຂໍ້ຄວາມ UI ພາສາລາວທັງໝົດ
+scripts/        script ສ້າງເນື້ອຫາ (fetch-hsk, generate-sentences, gemini, ...)
+```
+
+---
+
+## 4. ບັນຫາ ແລະ ສິ່ງທີ່ທ້າທາຍ
+
+- **ຄຸນນະພາບຂອງ AI ບໍ່ສະເໝີກັນ** — model ທີ່ຖືກກວ່າ (flash-lite) ບາງຄັ້ງໃຫ້ຄຳແປລາວທີ່ແປກ, ປົນອັກສອນໄທ ຫຼື ໃຊ້ຄຳສັບນອກ HSK. ຕ້ອງສ້າງລະບົບກວດສອບ ແລະ ລອງໃໝ່.
+- **ພາສາລາວເປັນພາສາທີ່ມີຂໍ້ມູນໜ້ອຍ** — AI ມັກສັບສົນກັບພາສາໄທ, ແລະ ຄຳດຽວກັນອາດຂຽນຕ່າງກັນ (ເຊັ່ນ ໝາກໂປມ / ໝາກແອບເປິ້ນ).
+- **ການແບ່ງຄຳພາສາຈີນ** — ພາສາຈີນບໍ່ມີຍະຫວ່າງ, ຕ້ອງໃຫ້ແຕ່ລະປະໂຫຍກແບ່ງເປັນຄຳຢ່າງຖືກຕ້ອງ ເພື່ອໃຫ້ "ໜຶ່ງຊ່ອງ = ໜຶ່ງຄຳ" ໃຊ້ໄດ້.
+- **ແປ້ນພິມຈີນ (IME)** — Enter / Space / Backspace ຖືກໃຊ້ໂດຍ IME ໃນຂະນະພິມ, ຕ້ອງແຍກໃຫ້ອອກວ່າເວລາໃດເປັນຂອງ IME ເວລາໃດເປັນຂອງແອັບ.
+- **ສຽງໃນມືຖື** — Chrome ໃນ Android ມັກບໍ່ມີສຽງພາສາຈີນ, ຕ້ອງເລືອກສຽງເອງ ແລະ ແກ້ບັນຫາສຽງຫາຍ. ຜູ້ໃຊ້ບາງຄົນຕ້ອງຕິດຕັ້ງສຽງຈີນໃນການຕັ້ງຄ່າໂທລະສັບ.
+- **ອອກແບບ UI ຫຼາຍຮອບ** — ທົດລອງຫຼາຍແນວ (ແບບຈີນດັ້ງເດີມ, neo-brutalism) ກ່ອນຈະເລືອກແບບສະອາດ ທີ່ໃຊ້ງ່າຍສຳລັບທຸກໄວ.
+- **ໃຫ້ໜ້າຈໍພໍດີ** — ໜ້າແປປະໂຫຍກ ແລະ ບັດຄຳ ຕ້ອງເຫັນຄົບໃນໜ້າດຽວໂດຍບໍ່ຕ້ອງເລື່ອນ ທັງໃນມືຖື ແລະ ຄອມ.
+
+---
+
+## 5. ແນວຄິດໃນອະນາຄົດ (ຍັງບໍ່ໄດ້ເຮັດ)
+
+- **ໄຟລ໌ສຽງສ້າງໄວ້ລ່ວງໜ້າ** — ໃຫ້ທຸກຄົນໄດ້ຍິນສຽງໂດຍບໍ່ຕ້ອງຕັ້ງຄ່າໂທລະສັບ
+- **ແຈ້ງເຕືອນໃນແອັບ** ເມື່ອໂທລະສັບບໍ່ມີສຽງພາສາຈີນ ພ້ອມວິທີຕິດຕັ້ງ
+- **ເລືອກສຽງ** (ຊາຍ / ຍິງ, ຄວາມໄວ)
+- **Backend** (Express + Prisma + PostgreSQL) — ບັນຊີຜູ້ໃຊ້, sync ຄວາມຄືບໜ້າຂ້າມເຄື່ອງ
+- **Spaced repetition** — ທົບທວນຄຳສັບຕາມເວລາທີ່ເໝາະສົມ
+- **Script ກວດຂໍ້ມູນ** `npm run check` (ຄຳຊ້ຳ, ອັກສອນໄທ, info ທີ່ຂາດ)
+- **ກວດ ແລະ ແກ້ຄຳແປ** ໃນຊ່ວງທີ່ສ້າງດ້ວຍ flash-lite (ລາຍລະອຽດຢູ່ `CLAUDE.md`)
+- ສຽງເອັບເຟັກທີ່ດີຂຶ້ນ, PWA ໃຊ້ແບບ offline, ຮູບແບບການຝຶກໃໝ່ໆ
+
+---
+
+## 6. ສະຫຼຸບ
+
+HIENJIN ສະແດງໃຫ້ເຫັນວ່າ ການໃຊ້ AI ສ້າງເນື້ອຫາລ່ວງໜ້າ ຮ່ວມກັບລະບົບກວດສອບອັດຕະໂນມັດ
+ສາມາດສ້າງບົດຮຽນພາສາຈີນສຳລັບພາສາທີ່ມີຂໍ້ມູນໜ້ອຍຄືພາສາລາວໄດ້ ໃນຂະໜາດໃຫຍ່ (ເກືອບ 5,000 ຄຳ)
+ໂດຍບໍ່ຕ້ອງມີ server ແລະ ບໍ່ມີຄ່າໃຊ້ຈ່າຍໃນການໃຊ້ງານ. ແອັບເປັນໄຟລ໌ຄົງທີ່ ໂຫຼດໄວ ແລະ ເຮັດວຽກໄດ້ທັງໃນມືຖື ແລະ ຄອມພິວເຕີ.
+ສິ່ງສຳຄັນຕໍ່ໄປຄື ປັບປຸງຄຸນນະພາບຄຳແປລາວ ແລະ ເຮັດໃຫ້ສຽງໃຊ້ໄດ້ທຸກເຄື່ອງ.
+
+---
+
+## 7. ເຄຣດິດ ແລະ ຄຳເຕືອນ
+
+### ເຄຣດິດ
+
+- **ລາຍການຄຳສັບ HSK 2.0** ແລະ ຄວາມໝາຍພາສາອັງກິດ: [drkameleon/complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary)
+- **ປະໂຫຍກຕົວຢ່າງ, ຄຳແປລາວ ແລະ pinyin**: ສ້າງໂດຍ [Google Gemini](https://ai.google.dev/)
+- **ຟອນ**: [Noto Sans Lao](https://fonts.google.com/noto/specimen/Noto+Sans+Lao) ແລະ [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC) (Google Fonts)
+- **ໄອຄອນ**: [Lucide](https://lucide.dev/)
+- **ເຄື່ອງມື**: React, Vite, Tailwind CSS, React Router, TypeScript
+- ພັດທະນາຮ່ວມກັບ **Claude Code** (Anthropic)
+
+### ⚠️ ຄຳເຕືອນ
+
+- **ເນື້ອຫາສ້າງໂດຍ AI**: ປະໂຫຍກ, ຄຳແປລາວ ແລະ pinyin ສ້າງໂດຍອັດຕະໂນມັດ ແລະ **ອາດມີຂໍ້ຜິດພາດ**.
+  ບາງຊ່ວງທີ່ສ້າງດ້ວຍ model ລະດັບຕ່ຳ ຍັງບໍ່ໄດ້ກວດໂດຍຄົນ. ກະລຸນາກວດສອບກັບແຫຼ່ງທີ່ເຊື່ອຖືໄດ້ ຫຼື ຄູສອນ ກ່ອນນຳໄປໃຊ້ສອບແທ້.
+- **ບໍ່ແມ່ນເຄື່ອງມືທາງການຂອງ HSK**: ໂຄງການນີ້ບໍ່ມີສ່ວນກ່ຽວຂ້ອງກັບ Chinese Testing International ຫຼື ອົງການ HSK ໃດໆ.
+  ລາຍການຄຳສັບອີງຕາມ HSK 2.0 (ລະບົບເກົ່າ 6 ລະດັບ), ບໍ່ແມ່ນ HSK 3.0.
+- **ສຽງອ່ານ** ໃຊ້ສຽງຂອງບຣາວເຊີ/ໂທລະສັບ — ຄຸນນະພາບຂຶ້ນກັບອຸປະກອນ, ແລະ ບາງເຄື່ອງຕ້ອງຕິດຕັ້ງສຽງພາສາຈີນເອງ.
+- **ຂໍ້ມູນເກັບໃນເຄື່ອງ** (localStorage): ຖ້າລຶບຂໍ້ມູນບຣາວເຊີ ຄວາມຄືບໜ້າຈະຫາຍ.
+- **API key**: ຫ້າມ commit ໄຟລ໌ `.env` ຫຼື ເອົາ key ໃສ່ໃນໂຄດຝັ່ງບຣາວເຊີ.
+- **ລິຂະສິດ**: ກະລຸນາກວດເງື່ອນໄຂລິຂະສິດຂອງແຫຼ່ງຂໍ້ມູນຄຳສັບ ແລະ ເງື່ອນໄຂການໃຊ້ງານຂອງ Gemini API ກ່ອນນຳໄປໃຊ້ທາງການຄ້າ.
+  ຮູບໜ້າປົກ (`src/assets/`) ຕ້ອງກວດແຫຼ່ງທີ່ມາ ແລະ ສິດການໃຊ້ງານກ່ອນເຜີຍແຜ່.
